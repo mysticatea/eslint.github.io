@@ -2127,45 +2127,51 @@ module.exports = {
 
 },{}],10:[function(require,module,exports){
 module.exports={
-  "name": "espree",
-  "description": "An actively-maintained fork of Esprima, the ECMAScript parsing infrastructure for multipurpose analysis",
-  "author": {
-    "name": "Nicholas C. Zakas",
-    "email": "nicholas+npm@nczconsulting.com"
+  "_args": [
+    [
+      "espree@^2.2.4",
+      "C:\\Users\\t-nagashima.AD\\Documents\\GitHub\\eslint"
+    ]
+  ],
+  "_from": "espree@>=2.2.4 <3.0.0",
+  "_id": "espree@2.2.5",
+  "_inCache": true,
+  "_location": "/espree",
+  "_npmUser": {
+    "email": "nicholas@nczconsulting.com",
+    "name": "nzakas"
   },
-  "homepage": "https://github.com/eslint/espree",
-  "main": "espree.js",
+  "_npmVersion": "1.4.28",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "espree",
+    "raw": "espree@^2.2.4",
+    "rawSpec": "^2.2.4",
+    "scope": null,
+    "spec": ">=2.2.4 <3.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/espree/-/espree-2.2.5.tgz",
+  "_shasum": "df691b9310889402aeb29cc066708c56690b854b",
+  "_shrinkwrap": null,
+  "_spec": "espree@^2.2.4",
+  "_where": "C:\\Users\\t-nagashima.AD\\Documents\\GitHub\\eslint",
+  "author": {
+    "email": "nicholas+npm@nczconsulting.com",
+    "name": "Nicholas C. Zakas"
+  },
   "bin": {
     "esparse": "./bin/esparse.js",
     "esvalidate": "./bin/esvalidate.js"
   },
-  "version": "2.2.4",
-  "files": [
-    "bin",
-    "lib",
-    "test/run.js",
-    "test/runner.js",
-    "test/test.js",
-    "test/compat.js",
-    "test/reflect.js",
-    "espree.js"
-  ],
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "http://github.com/eslint/espree.git"
-  },
   "bugs": {
     "url": "http://github.com/eslint/espree.git"
   },
-  "licenses": [
-    {
-      "type": "BSD",
-      "url": "http://github.com/nzakas/espree/raw/master/LICENSE"
-    }
-  ],
+  "dependencies": {},
+  "description": "An actively-maintained fork of Esprima, the ECMAScript parsing infrastructure for multipurpose analysis",
   "devDependencies": {
     "browserify": "^7.0.0",
     "chai": "^1.10.0",
@@ -2186,6 +2192,27 @@ module.exports={
     "shelljs-nodecli": "^0.1.1",
     "unicode-6.3.0": "~0.1.0"
   },
+  "directories": {},
+  "dist": {
+    "shasum": "df691b9310889402aeb29cc066708c56690b854b",
+    "tarball": "http://registry.npmjs.org/espree/-/espree-2.2.5.tgz"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "files": [
+    "bin",
+    "espree.js",
+    "lib",
+    "test/compat.js",
+    "test/reflect.js",
+    "test/run.js",
+    "test/runner.js",
+    "test/test.js"
+  ],
+  "gitHead": "eeeeb05b879783901ff2308efcbd0cda76753cbe",
+  "homepage": "https://github.com/eslint/espree",
+  "installable": true,
   "keywords": [
     "ast",
     "ecmascript",
@@ -2193,30 +2220,43 @@ module.exports={
     "parser",
     "syntax"
   ],
+  "licenses": [
+    {
+      "type": "BSD",
+      "url": "http://github.com/nzakas/espree/raw/master/LICENSE"
+    }
+  ],
+  "main": "espree.js",
+  "maintainers": [
+    {
+      "name": "nzakas",
+      "email": "nicholas@nczconsulting.com"
+    }
+  ],
+  "name": "espree",
+  "optionalDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/eslint/espree.git"
+  },
   "scripts": {
-    "generate-regex": "node tools/generate-identifier-regex.js",
-    "test": "npm run-script lint && node Makefile.js test && node test/run.js",
-    "lint": "node Makefile.js lint",
-    "patch": "node Makefile.js patch",
-    "minor": "node Makefile.js minor",
-    "major": "node Makefile.js major",
-    "browserify": "node Makefile.js browserify",
-    "coverage": "npm run-script analyze-coverage && npm run-script check-coverage",
+    "analyze-complexity": "node tools/list-complexity.js",
     "analyze-coverage": "node node_modules/istanbul/lib/cli.js cover test/runner.js",
+    "benchmark": "node test/benchmarks.js",
+    "benchmark-quick": "node test/benchmarks.js quick",
+    "browserify": "node Makefile.js browserify",
+    "check-complexity": "node node_modules/complexity-report/src/cli.js --maxcc 14 --silent -l -w espree.js",
     "check-coverage": "node node_modules/istanbul/lib/cli.js check-coverage --statement 99 --branch 99 --function 99",
     "complexity": "npm run-script analyze-complexity && npm run-script check-complexity",
-    "analyze-complexity": "node tools/list-complexity.js",
-    "check-complexity": "node node_modules/complexity-report/src/cli.js --maxcc 14 --silent -l -w espree.js",
-    "benchmark": "node test/benchmarks.js",
-    "benchmark-quick": "node test/benchmarks.js quick"
+    "coverage": "npm run-script analyze-coverage && npm run-script check-coverage",
+    "generate-regex": "node tools/generate-identifier-regex.js",
+    "lint": "node Makefile.js lint",
+    "major": "node Makefile.js major",
+    "minor": "node Makefile.js minor",
+    "patch": "node Makefile.js patch",
+    "test": "npm run-script lint && node Makefile.js test && node test/run.js"
   },
-  "dependencies": {},
-  "readme": "# Espree\n\nEspree is an actively-maintained fork Esprima, a high performance,\nstandard-compliant [ECMAScript](http://www.ecma-international.org/publications/standards/Ecma-262.htm)\nparser written in ECMAScript (also popularly known as\n[JavaScript](http://en.wikipedia.org/wiki/JavaScript)).\n\n## Features\n\n- Full support for ECMAScript 5.1 ([ECMA-262](http://www.ecma-international.org/publications/standards/Ecma-262.htm))\n- Implements [ESTree](https://github.com/estree/estree) (both ES5 and ES6 specs) as the AST format.\n- Optional tracking of syntax node location (index-based and line-column)\n- Heavily tested and battle-hardened by inclusion in [ESLint](http://eslint.org)\n\n## Usage\n\nInstall:\n\n```\nnpm i espree --save\n```\n\nAnd in your Node.js code:\n\n```javascript\nvar espree = require(\"espree\");\n\nvar ast = espree.parse(code);\n```\n\nThere is a second argument to `parse()` that allows you to specify various options:\n\n```javascript\nvar espree = require(\"espree\");\n\nvar ast = espree.parse(code, {\n\n    // attach range information to each node\n    range: true,\n\n    // attach line/column location information to each node\n    loc: true,\n\n    // create a top-level comments array containing all comments\n    comments: true,\n\n    // attach comments to the closest relevant node as leadingComments and\n    // trailingComments\n    attachComment: true,\n\n    // create a top-level tokens array containing all tokens\n    tokens: true,\n\n    // try to continue parsing if an error is encountered, store errors in a\n    // top-level errors array\n    tolerant: true,\n\n    // specify parsing features (default only has blockBindings: true)\n    // setting this option replaces the default values\n    ecmaFeatures: {\n\n        // enable parsing of arrow functions\n        arrowFunctions: true,\n\n        // enable parsing of let/const\n        blockBindings: true,\n\n        // enable parsing of destructured arrays and objects\n        destructuring: true,\n\n        // enable parsing of regular expression y flag\n        regexYFlag: true,\n\n        // enable parsing of regular expression u flag\n        regexUFlag: true,\n\n        // enable parsing of template strings\n        templateStrings: true,\n\n        // enable parsing of binary literals\n        binaryLiterals: true,\n\n        // enable parsing of ES6 octal literals\n        octalLiterals: true,\n\n        // enable parsing unicode code point escape sequences\n        unicodeCodePointEscapes: true,\n\n        // enable parsing of default parameters\n        defaultParams: true,\n\n        // enable parsing of rest parameters\n        restParams: true,\n\n        // enable parsing of for-of statement\n        forOf: true,\n\n        // enable parsing computed object literal properties\n        objectLiteralComputedProperties: true,\n\n        // enable parsing of shorthand object literal methods\n        objectLiteralShorthandMethods: true,\n\n        // enable parsing of shorthand object literal properties\n        objectLiteralShorthandProperties: true,\n\n        // Allow duplicate object literal properties (except '__proto__')\n        objectLiteralDuplicateProperties: true,\n\n        // enable parsing of generators/yield\n        generators: true,\n\n        // enable parsing spread operator\n        spread: true,\n\n        // enable super in functions\n        superInFunctions: true,\n\n        // enable parsing classes\n        classes: true,\n\n        // enable parsing of new.target\n        newTarget: false,\n\n        // enable parsing of modules\n        modules: true,\n\n        // enable React JSX parsing\n        jsx: true,\n\n        // enable return in global scope\n        globalReturn: true,\n\n        // allow experimental object rest/spread\n        experimentalObjectRestSpread: true\n    }\n});\n```\n\n## Plans\n\nEspree starts as a fork of Esprima v1.2.2, the last stable published released of Esprima before work on ECMAScript 6 began. Espree's first version is therefore v1.2.2 and is 100% compatible with Esprima v1.2.2 as a drop-in replacement. The version number will be incremented based on [semantic versioning](http://semver.org/) as features and bug fixes are added.\n\nThe immediate plans are:\n\n1. Move away from giant files and move towards small, modular files that are easier to manage.\n1. Move towards CommonJS for all files and use browserify to create browser bundles.\n1. Support ECMAScript version filtering, allowing users to specify which version the parser should work in (similar to Acorn's `ecmaVersion` property).\n1. Add tests to track comment attachment.\n1. Add well-thought-out features that are useful for tools developers.\n1. Add full support for ECMAScript 6.\n1. Add optional parsing of JSX.\n\n## Esprima Compatibility Going Forward\n\nThe primary goal is to produce the exact same AST structure as Esprima and Acorn, and that takes precedence over anything else. (The AST structure being the ESTree API with JSX extensions.) Separate from that, Espree may deviate from what Esprima outputs in terms of where and how comments are attached, as well as what additional information is available on AST nodes. That is to say, Espree may add more things to the AST nodes than Esprima does but the overall AST structure produced will be the same.\n\nEspree may also deviate from Esprima in the interface it exposes.\n\n## Frequent and Incremental Releases\n\nEspree will not do giant releases. Releases will happen periodically as changes are made and incremental releases will be made towards larger goals. For instance, we will not have one big release for ECMAScript 6 support. Instead, we will implement ECMAScript 6, piece-by-piece, hiding those pieces behind an `ecmaFeatures` property that allows you to opt-in to use those features.\n\n## Contributing\n\nIssues and pull requests will be triaged and responded to as quickly as possible. We operate under the [ESLint Contributor Guidelines](http://eslint.org/docs/developer-guide/contributing.html), so please be sure to read them before contributing. If you're not sure where to dig in, check out the [issues](https://github.com/eslint/espree/issues).\n\nEspree is licensed under a permissive BSD 2-clause license.\n\n## Build Commands\n\n* `npm test` - run all linting and tests\n* `npm run lint` - run all linting\n* `npm run browserify` - creates a version of Espree that is usable in a browser\n\n## Known Incompatibilities\n\nIn an effort to help those wanting to transition from other parsers to Espree, the following is a list of noteworthy incompatibilities with other parsers. These are known differences that we do not intend to change.\n\n### Esprima 1.2.2\n\n* None.\n\n### Esprima/Harmony Branch\n\n* Esprima/Harmony uses a different comment attachment algorithm that results in some comments being added in different places than Espree. The algorithm Espree uses is the same one used in Esprima 1.2.2.\n* Espree uses ESTree format for the AST nodes whereas Esprima/Harmony uses a nonstandard format.\n\n### Esprima-FB\n\n* All Esprima/Harmony incompatibilities.\n\n## Frequently Asked Questions\n\n### Why are you forking Esprima?\n\n[ESLint](http://eslint.org) has been relying on Esprima as its parser from the beginning. While that was fine when the JavaScript language was evolving slowly, the pace of development has increased dramatically and Esprima has fallen behind. ESLint, like many other tools reliant on Esprima, has been stuck in using new JavaScript language features until Esprima updates, and that has caused our users frustration.\n\nWe decided the only way for us to move forward was to create our own parser, bringing us inline with JSHint and JSLint, and allowing us to keep implementing new features as we need them. We chose to fork Esprima instead of starting from scratch in order to move as quickly as possible with a compatible API.\n\n### Have you tried working with Esprima?\n\nYes. Since the start of ESLint, we've regularly filed bugs and feature requests with Esprima. Unfortunately, we've been unable to make much progress towards getting our needs addressed.\n\nWe are actively working with Esprima as part of its adoption by the jQuery Foundation. We are hoping to reconcile Espree with Esprima at some point in the future, but there are some different philosophies around how the projects work that need to be worked through. We're committed to a goal of merging Espree back into Esprima, or at the very least, to have Espree track Esprima as an upstream target so there's no duplication of effort. In the meantime, we will continue to update and maintain Espree.\n\n### Why don't you just use Facebook's Esprima fork?\n\n`esprima-fb` is Facebook's Esprima fork that features JSX and Flow type annotations. We tried working with `esprima-fb` in our evaluation of how to support ECMAScript 6 and JSX in ESLint. Unfortunately, we were hampered by bugs that were part of Esprima (not necessarily Facebook's code). Since `esprima-fb` tracks the Esprima Harmony branch, that means we still were unable to get fixes or features we needed in a timely manner.\n\n### Why don't you just use Acorn?\n\nAcorn is a great JavaScript parser that produces an AST that is compatible with Esprima. Unfortunately, ESLint relies on more than just the AST to do its job. It relies on Esprima's tokens and comment attachment features to get a complete picture of the source code. We investigated switching to Acorn, but the inconsistencies between Esprima and Acorn created too much work for a project like ESLint.\n\nWe expect there are other tools like ESLint that rely on more than just the AST produced by Esprima, and so a drop-in replacement will help those projects as well as ESLint.\n\n### What ECMAScript 6 features do you support?\n\nAll of them.\n\n### Why use Espree instead of Esprima?\n\n* Faster turnaround time on bug fixes\n* More frequent releases\n* Better communication and responsiveness to issues\n* Ongoing development\n\n### Why use Espree instead of Esprima-FB?\n\n* Opt-in to just the ECMAScript 6 features you want\n* JSX support is off by default, so you're not forced to use it to use ECMAScript 6\n* Stricter ECMAScript 6 support\n",
-  "readmeFilename": "README.md",
-  "gitHead": "da58617f378c17fb01273f374f439956fb465aa7",
-  "_id": "espree@2.2.4",
-  "_shasum": "1068771b2c91aaf26a62ae4f9a46e74b34481219",
-  "_from": "espree@^2.2.4"
+  "version": "2.2.5"
 }
 
 },{}],"espree":[function(require,module,exports){
@@ -5782,6 +5822,7 @@ function parseAssignmentExpression() {
 
         token = lex();
         right = parseAssignmentExpression();
+
         node = markerApply(marker, astNodeFactory.createAssignmentExpression(token.value, left, right));
     }
 
@@ -6117,6 +6158,11 @@ function parseForStatement(opts) {
             state.allowIn = false;
             init = parseExpression();
             state.allowIn = true;
+
+            if (init.type === astNodeTypes.ArrayExpression) {
+                init.type = astNodeTypes.ArrayPattern;
+            }
+
 
             if (allowForOf && matchContextualKeyword("of")) {
                 operator = lex();
@@ -7889,13 +7935,14 @@ module.exports = {
     }
 };
 
-},{"globals":142}],3:[function(require,module,exports){
+},{"globals":108}],3:[function(require,module,exports){
 module.exports={
     "parser": "espree",
     "ecmaFeatures": {},
     "rules": {
         "no-alert": 0,
         "no-array-constructor": 0,
+        "no-arrow-condition": 0,
         "no-bitwise": 0,
         "no-caller": 0,
         "no-catch-shadow": 0,
@@ -8464,1089 +8511,474 @@ var objectKeys = Object.keys || function (obj) {
   return keys;
 };
 
-},{"util/":12}],6:[function(require,module,exports){
-(function (global){
-/*global window, global*/
-var util = require("util")
-var assert = require("assert")
-var now = require("date-now")
+},{"util/":121}],6:[function(require,module,exports){
+'use strict';
 
-var slice = Array.prototype.slice
-var console
-var times = {}
+var copy       = require('es5-ext/object/copy')
+  , map        = require('es5-ext/object/map')
+  , callable   = require('es5-ext/object/valid-callable')
+  , validValue = require('es5-ext/object/valid-value')
 
-if (typeof global !== "undefined" && global.console) {
-    console = global.console
-} else if (typeof window !== "undefined" && window.console) {
-    console = window.console
-} else {
-    console = {}
-}
+  , bind = Function.prototype.bind, defineProperty = Object.defineProperty
+  , hasOwnProperty = Object.prototype.hasOwnProperty
+  , define;
 
-var functions = [
-    [log, "log"],
-    [info, "info"],
-    [warn, "warn"],
-    [error, "error"],
-    [time, "time"],
-    [timeEnd, "timeEnd"],
-    [trace, "trace"],
-    [dir, "dir"],
-    [consoleAssert, "assert"]
-]
-
-for (var i = 0; i < functions.length; i++) {
-    var tuple = functions[i]
-    var f = tuple[0]
-    var name = tuple[1]
-
-    if (!console[name]) {
-        console[name] = f
-    }
-}
-
-module.exports = console
-
-function log() {}
-
-function info() {
-    console.log.apply(console, arguments)
-}
-
-function warn() {
-    console.log.apply(console, arguments)
-}
-
-function error() {
-    console.warn.apply(console, arguments)
-}
-
-function time(label) {
-    times[label] = now()
-}
-
-function timeEnd(label) {
-    var time = times[label]
-    if (!time) {
-        throw new Error("No such label: " + label)
-    }
-
-    var duration = now() - time
-    console.log(label + ": " + duration + "ms")
-}
-
-function trace() {
-    var err = new Error()
-    err.name = "Trace"
-    err.message = util.format.apply(null, arguments)
-    console.error(err.stack)
-}
-
-function dir(object) {
-    console.log(util.inspect(object) + "\n")
-}
-
-function consoleAssert(expression) {
-    if (!expression) {
-        var arr = slice.call(arguments, 1)
-        assert.ok(false, util.format.apply(null, arr))
-    }
-}
-
-}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"assert":5,"date-now":7,"util":12}],7:[function(require,module,exports){
-module.exports = now
-
-function now() {
-    return new Date().getTime()
-}
-
-},{}],8:[function(require,module,exports){
-// Copyright Joyent, Inc. and other Node contributors.
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the
-// "Software"), to deal in the Software without restriction, including
-// without limitation the rights to use, copy, modify, merge, publish,
-// distribute, sublicense, and/or sell copies of the Software, and to permit
-// persons to whom the Software is furnished to do so, subject to the
-// following conditions:
-//
-// The above copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
-// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
-// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
-// USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-function EventEmitter() {
-  this._events = this._events || {};
-  this._maxListeners = this._maxListeners || undefined;
-}
-module.exports = EventEmitter;
-
-// Backwards-compat with node 0.10.x
-EventEmitter.EventEmitter = EventEmitter;
-
-EventEmitter.prototype._events = undefined;
-EventEmitter.prototype._maxListeners = undefined;
-
-// By default EventEmitters will print a warning if more than 10 listeners are
-// added to it. This is a useful default which helps finding memory leaks.
-EventEmitter.defaultMaxListeners = 10;
-
-// Obviously not all Emitters should be limited to 10. This function allows
-// that to be increased. Set to zero for unlimited.
-EventEmitter.prototype.setMaxListeners = function(n) {
-  if (!isNumber(n) || n < 0 || isNaN(n))
-    throw TypeError('n must be a positive number');
-  this._maxListeners = n;
-  return this;
+define = function (name, desc, bindTo) {
+	var value = validValue(desc) && callable(desc.value), dgs;
+	dgs = copy(desc);
+	delete dgs.writable;
+	delete dgs.value;
+	dgs.get = function () {
+		if (hasOwnProperty.call(this, name)) return value;
+		desc.value = bind.call(value, (bindTo == null) ? this : this[bindTo]);
+		defineProperty(this, name, desc);
+		return this[name];
+	};
+	return dgs;
 };
 
-EventEmitter.prototype.emit = function(type) {
-  var er, handler, len, args, i, listeners;
-
-  if (!this._events)
-    this._events = {};
-
-  // If there is no 'error' event listener then throw.
-  if (type === 'error') {
-    if (!this._events.error ||
-        (isObject(this._events.error) && !this._events.error.length)) {
-      er = arguments[1];
-      if (er instanceof Error) {
-        throw er; // Unhandled 'error' event
-      }
-      throw TypeError('Uncaught, unspecified "error" event.');
-    }
-  }
-
-  handler = this._events[type];
-
-  if (isUndefined(handler))
-    return false;
-
-  if (isFunction(handler)) {
-    switch (arguments.length) {
-      // fast cases
-      case 1:
-        handler.call(this);
-        break;
-      case 2:
-        handler.call(this, arguments[1]);
-        break;
-      case 3:
-        handler.call(this, arguments[1], arguments[2]);
-        break;
-      // slower
-      default:
-        len = arguments.length;
-        args = new Array(len - 1);
-        for (i = 1; i < len; i++)
-          args[i - 1] = arguments[i];
-        handler.apply(this, args);
-    }
-  } else if (isObject(handler)) {
-    len = arguments.length;
-    args = new Array(len - 1);
-    for (i = 1; i < len; i++)
-      args[i - 1] = arguments[i];
-
-    listeners = handler.slice();
-    len = listeners.length;
-    for (i = 0; i < len; i++)
-      listeners[i].apply(this, args);
-  }
-
-  return true;
+module.exports = function (props/*, bindTo*/) {
+	var bindTo = arguments[1];
+	return map(props, function (desc, name) {
+		return define(name, desc, bindTo);
+	});
 };
 
-EventEmitter.prototype.addListener = function(type, listener) {
-  var m;
+},{"es5-ext/object/copy":29,"es5-ext/object/map":37,"es5-ext/object/valid-callable":43,"es5-ext/object/valid-value":45}],7:[function(require,module,exports){
+'use strict';
 
-  if (!isFunction(listener))
-    throw TypeError('listener must be a function');
+var assign        = require('es5-ext/object/assign')
+  , normalizeOpts = require('es5-ext/object/normalize-options')
+  , isCallable    = require('es5-ext/object/is-callable')
+  , contains      = require('es5-ext/string/#/contains')
 
-  if (!this._events)
-    this._events = {};
+  , d;
 
-  // To avoid recursion in the case that type === "newListener"! Before
-  // adding it to the listeners, first emit "newListener".
-  if (this._events.newListener)
-    this.emit('newListener', type,
-              isFunction(listener.listener) ?
-              listener.listener : listener);
+d = module.exports = function (dscr, value/*, options*/) {
+	var c, e, w, options, desc;
+	if ((arguments.length < 2) || (typeof dscr !== 'string')) {
+		options = value;
+		value = dscr;
+		dscr = null;
+	} else {
+		options = arguments[2];
+	}
+	if (dscr == null) {
+		c = w = true;
+		e = false;
+	} else {
+		c = contains.call(dscr, 'c');
+		e = contains.call(dscr, 'e');
+		w = contains.call(dscr, 'w');
+	}
 
-  if (!this._events[type])
-    // Optimize the case of one listener. Don't need the extra array object.
-    this._events[type] = listener;
-  else if (isObject(this._events[type]))
-    // If we've already got an array, just append.
-    this._events[type].push(listener);
-  else
-    // Adding the second element, need to change to array.
-    this._events[type] = [this._events[type], listener];
-
-  // Check for listener leak
-  if (isObject(this._events[type]) && !this._events[type].warned) {
-    var m;
-    if (!isUndefined(this._maxListeners)) {
-      m = this._maxListeners;
-    } else {
-      m = EventEmitter.defaultMaxListeners;
-    }
-
-    if (m && m > 0 && this._events[type].length > m) {
-      this._events[type].warned = true;
-      console.error('(node) warning: possible EventEmitter memory ' +
-                    'leak detected. %d listeners added. ' +
-                    'Use emitter.setMaxListeners() to increase limit.',
-                    this._events[type].length);
-      if (typeof console.trace === 'function') {
-        // not supported in IE 10
-        console.trace();
-      }
-    }
-  }
-
-  return this;
+	desc = { value: value, configurable: c, enumerable: e, writable: w };
+	return !options ? desc : assign(normalizeOpts(options), desc);
 };
 
-EventEmitter.prototype.on = EventEmitter.prototype.addListener;
+d.gs = function (dscr, get, set/*, options*/) {
+	var c, e, options, desc;
+	if (typeof dscr !== 'string') {
+		options = set;
+		set = get;
+		get = dscr;
+		dscr = null;
+	} else {
+		options = arguments[3];
+	}
+	if (get == null) {
+		get = undefined;
+	} else if (!isCallable(get)) {
+		options = get;
+		get = set = undefined;
+	} else if (set == null) {
+		set = undefined;
+	} else if (!isCallable(set)) {
+		options = set;
+		set = undefined;
+	}
+	if (dscr == null) {
+		c = true;
+		e = false;
+	} else {
+		c = contains.call(dscr, 'c');
+		e = contains.call(dscr, 'e');
+	}
 
-EventEmitter.prototype.once = function(type, listener) {
-  if (!isFunction(listener))
-    throw TypeError('listener must be a function');
-
-  var fired = false;
-
-  function g() {
-    this.removeListener(type, g);
-
-    if (!fired) {
-      fired = true;
-      listener.apply(this, arguments);
-    }
-  }
-
-  g.listener = listener;
-  this.on(type, g);
-
-  return this;
+	desc = { get: get, set: set, configurable: c, enumerable: e };
+	return !options ? desc : assign(normalizeOpts(options), desc);
 };
 
-// emits a 'removeListener' event iff the listener was removed
-EventEmitter.prototype.removeListener = function(type, listener) {
-  var list, position, length, i;
+},{"es5-ext/object/assign":26,"es5-ext/object/is-callable":32,"es5-ext/object/normalize-options":38,"es5-ext/string/#/contains":46}],8:[function(require,module,exports){
 
-  if (!isFunction(listener))
-    throw TypeError('listener must be a function');
+/**
+ * This is the web browser implementation of `debug()`.
+ *
+ * Expose `debug()` as the module.
+ */
 
-  if (!this._events || !this._events[type])
-    return this;
+exports = module.exports = require('./debug');
+exports.log = log;
+exports.formatArgs = formatArgs;
+exports.save = save;
+exports.load = load;
+exports.useColors = useColors;
+exports.storage = 'undefined' != typeof chrome
+               && 'undefined' != typeof chrome.storage
+                  ? chrome.storage.local
+                  : localstorage();
 
-  list = this._events[type];
-  length = list.length;
-  position = -1;
+/**
+ * Colors.
+ */
 
-  if (list === listener ||
-      (isFunction(list.listener) && list.listener === listener)) {
-    delete this._events[type];
-    if (this._events.removeListener)
-      this.emit('removeListener', type, listener);
+exports.colors = [
+  'lightseagreen',
+  'forestgreen',
+  'goldenrod',
+  'dodgerblue',
+  'darkorchid',
+  'crimson'
+];
 
-  } else if (isObject(list)) {
-    for (i = length; i-- > 0;) {
-      if (list[i] === listener ||
-          (list[i].listener && list[i].listener === listener)) {
-        position = i;
-        break;
-      }
-    }
+/**
+ * Currently only WebKit-based Web Inspectors, Firefox >= v31,
+ * and the Firebug extension (any Firefox version) are known
+ * to support "%c" CSS customizations.
+ *
+ * TODO: add a `localStorage` variable to explicitly enable/disable colors
+ */
 
-    if (position < 0)
-      return this;
-
-    if (list.length === 1) {
-      list.length = 0;
-      delete this._events[type];
-    } else {
-      list.splice(position, 1);
-    }
-
-    if (this._events.removeListener)
-      this.emit('removeListener', type, listener);
-  }
-
-  return this;
-};
-
-EventEmitter.prototype.removeAllListeners = function(type) {
-  var key, listeners;
-
-  if (!this._events)
-    return this;
-
-  // not listening for removeListener, no need to emit
-  if (!this._events.removeListener) {
-    if (arguments.length === 0)
-      this._events = {};
-    else if (this._events[type])
-      delete this._events[type];
-    return this;
-  }
-
-  // emit removeListener for all listeners on all events
-  if (arguments.length === 0) {
-    for (key in this._events) {
-      if (key === 'removeListener') continue;
-      this.removeAllListeners(key);
-    }
-    this.removeAllListeners('removeListener');
-    this._events = {};
-    return this;
-  }
-
-  listeners = this._events[type];
-
-  if (isFunction(listeners)) {
-    this.removeListener(type, listeners);
-  } else {
-    // LIFO order
-    while (listeners.length)
-      this.removeListener(type, listeners[listeners.length - 1]);
-  }
-  delete this._events[type];
-
-  return this;
-};
-
-EventEmitter.prototype.listeners = function(type) {
-  var ret;
-  if (!this._events || !this._events[type])
-    ret = [];
-  else if (isFunction(this._events[type]))
-    ret = [this._events[type]];
-  else
-    ret = this._events[type].slice();
-  return ret;
-};
-
-EventEmitter.listenerCount = function(emitter, type) {
-  var ret;
-  if (!emitter._events || !emitter._events[type])
-    ret = 0;
-  else if (isFunction(emitter._events[type]))
-    ret = 1;
-  else
-    ret = emitter._events[type].length;
-  return ret;
-};
-
-function isFunction(arg) {
-  return typeof arg === 'function';
+function useColors() {
+  // is webkit? http://stackoverflow.com/a/16459606/376773
+  return ('WebkitAppearance' in document.documentElement.style) ||
+    // is firebug? http://stackoverflow.com/a/398120/376773
+    (window.console && (console.firebug || (console.exception && console.table))) ||
+    // is firefox >= v31?
+    // https://developer.mozilla.org/en-US/docs/Tools/Web_Console#Styling_messages
+    (navigator.userAgent.toLowerCase().match(/firefox\/(\d+)/) && parseInt(RegExp.$1, 10) >= 31);
 }
 
-function isNumber(arg) {
-  return typeof arg === 'number';
-}
+/**
+ * Map %j to `JSON.stringify()`, since no Web Inspectors do that by default.
+ */
 
-function isObject(arg) {
-  return typeof arg === 'object' && arg !== null;
-}
-
-function isUndefined(arg) {
-  return arg === void 0;
-}
-
-},{}],9:[function(require,module,exports){
-if (typeof Object.create === 'function') {
-  // implementation from standard node.js 'util' module
-  module.exports = function inherits(ctor, superCtor) {
-    ctor.super_ = superCtor
-    ctor.prototype = Object.create(superCtor.prototype, {
-      constructor: {
-        value: ctor,
-        enumerable: false,
-        writable: true,
-        configurable: true
-      }
-    });
-  };
-} else {
-  // old school shim for old browsers
-  module.exports = function inherits(ctor, superCtor) {
-    ctor.super_ = superCtor
-    var TempCtor = function () {}
-    TempCtor.prototype = superCtor.prototype
-    ctor.prototype = new TempCtor()
-    ctor.prototype.constructor = ctor
-  }
-}
-
-},{}],10:[function(require,module,exports){
-// shim for using process in browser
-
-var process = module.exports = {};
-var queue = [];
-var draining = false;
-
-function drainQueue() {
-    if (draining) {
-        return;
-    }
-    draining = true;
-    var currentQueue;
-    var len = queue.length;
-    while(len) {
-        currentQueue = queue;
-        queue = [];
-        var i = -1;
-        while (++i < len) {
-            currentQueue[i]();
-        }
-        len = queue.length;
-    }
-    draining = false;
-}
-process.nextTick = function (fun) {
-    queue.push(fun);
-    if (!draining) {
-        setTimeout(drainQueue, 0);
-    }
+exports.formatters.j = function(v) {
+  return JSON.stringify(v);
 };
 
-process.title = 'browser';
-process.browser = true;
-process.env = {};
-process.argv = [];
-process.version = ''; // empty string to avoid regexp issues
-process.versions = {};
 
-function noop() {}
+/**
+ * Colorize log arguments if enabled.
+ *
+ * @api public
+ */
 
-process.on = noop;
-process.addListener = noop;
-process.once = noop;
-process.off = noop;
-process.removeListener = noop;
-process.removeAllListeners = noop;
-process.emit = noop;
-
-process.binding = function (name) {
-    throw new Error('process.binding is not supported');
-};
-
-// TODO(shtylman)
-process.cwd = function () { return '/' };
-process.chdir = function (dir) {
-    throw new Error('process.chdir is not supported');
-};
-process.umask = function() { return 0; };
-
-},{}],11:[function(require,module,exports){
-module.exports = function isBuffer(arg) {
-  return arg && typeof arg === 'object'
-    && typeof arg.copy === 'function'
-    && typeof arg.fill === 'function'
-    && typeof arg.readUInt8 === 'function';
-}
-},{}],12:[function(require,module,exports){
-(function (process,global){
-// Copyright Joyent, Inc. and other Node contributors.
-//
-// Permission is hereby granted, free of charge, to any person obtaining a
-// copy of this software and associated documentation files (the
-// "Software"), to deal in the Software without restriction, including
-// without limitation the rights to use, copy, modify, merge, publish,
-// distribute, sublicense, and/or sell copies of the Software, and to permit
-// persons to whom the Software is furnished to do so, subject to the
-// following conditions:
-//
-// The above copyright notice and this permission notice shall be included
-// in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
-// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
-// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
-// USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-var formatRegExp = /%[sdj%]/g;
-exports.format = function(f) {
-  if (!isString(f)) {
-    var objects = [];
-    for (var i = 0; i < arguments.length; i++) {
-      objects.push(inspect(arguments[i]));
-    }
-    return objects.join(' ');
-  }
-
-  var i = 1;
+function formatArgs() {
   var args = arguments;
-  var len = args.length;
-  var str = String(f).replace(formatRegExp, function(x) {
-    if (x === '%%') return '%';
-    if (i >= len) return x;
-    switch (x) {
-      case '%s': return String(args[i++]);
-      case '%d': return Number(args[i++]);
-      case '%j':
-        try {
-          return JSON.stringify(args[i++]);
-        } catch (_) {
-          return '[Circular]';
-        }
-      default:
-        return x;
+  var useColors = this.useColors;
+
+  args[0] = (useColors ? '%c' : '')
+    + this.namespace
+    + (useColors ? ' %c' : ' ')
+    + args[0]
+    + (useColors ? '%c ' : ' ')
+    + '+' + exports.humanize(this.diff);
+
+  if (!useColors) return args;
+
+  var c = 'color: ' + this.color;
+  args = [args[0], c, 'color: inherit'].concat(Array.prototype.slice.call(args, 1));
+
+  // the final "%c" is somewhat tricky, because there could be other
+  // arguments passed either before or after the %c, so we need to
+  // figure out the correct index to insert the CSS into
+  var index = 0;
+  var lastC = 0;
+  args[0].replace(/%[a-z%]/g, function(match) {
+    if ('%%' === match) return;
+    index++;
+    if ('%c' === match) {
+      // we only are interested in the *last* %c
+      // (the user may have provided their own)
+      lastC = index;
     }
   });
-  for (var x = args[i]; i < len; x = args[++i]) {
-    if (isNull(x) || !isObject(x)) {
-      str += ' ' + x;
-    } else {
-      str += ' ' + inspect(x);
-    }
-  }
-  return str;
-};
 
-
-// Mark that a method should not be used.
-// Returns a modified function which warns once by default.
-// If --no-deprecation is set, then it is a no-op.
-exports.deprecate = function(fn, msg) {
-  // Allow for deprecating things in the process of starting up.
-  if (isUndefined(global.process)) {
-    return function() {
-      return exports.deprecate(fn, msg).apply(this, arguments);
-    };
-  }
-
-  if (process.noDeprecation === true) {
-    return fn;
-  }
-
-  var warned = false;
-  function deprecated() {
-    if (!warned) {
-      if (process.throwDeprecation) {
-        throw new Error(msg);
-      } else if (process.traceDeprecation) {
-        console.trace(msg);
-      } else {
-        console.error(msg);
-      }
-      warned = true;
-    }
-    return fn.apply(this, arguments);
-  }
-
-  return deprecated;
-};
-
-
-var debugs = {};
-var debugEnviron;
-exports.debuglog = function(set) {
-  if (isUndefined(debugEnviron))
-    debugEnviron = process.env.NODE_DEBUG || '';
-  set = set.toUpperCase();
-  if (!debugs[set]) {
-    if (new RegExp('\\b' + set + '\\b', 'i').test(debugEnviron)) {
-      var pid = process.pid;
-      debugs[set] = function() {
-        var msg = exports.format.apply(exports, arguments);
-        console.error('%s %d: %s', set, pid, msg);
-      };
-    } else {
-      debugs[set] = function() {};
-    }
-  }
-  return debugs[set];
-};
-
+  args.splice(lastC, 0, c);
+  return args;
+}
 
 /**
- * Echos the value of a value. Trys to print the value out
- * in the best way possible given the different types.
+ * Invokes `console.log()` when available.
+ * No-op when `console.log` is not a "function".
  *
- * @param {Object} obj The object to print out.
- * @param {Object} opts Optional options object that alters the output.
+ * @api public
  */
-/* legacy: obj, showHidden, depth, colors*/
-function inspect(obj, opts) {
-  // default options
-  var ctx = {
-    seen: [],
-    stylize: stylizeNoColor
-  };
-  // legacy...
-  if (arguments.length >= 3) ctx.depth = arguments[2];
-  if (arguments.length >= 4) ctx.colors = arguments[3];
-  if (isBoolean(opts)) {
-    // legacy...
-    ctx.showHidden = opts;
-  } else if (opts) {
-    // got an "options" object
-    exports._extend(ctx, opts);
-  }
-  // set default options
-  if (isUndefined(ctx.showHidden)) ctx.showHidden = false;
-  if (isUndefined(ctx.depth)) ctx.depth = 2;
-  if (isUndefined(ctx.colors)) ctx.colors = false;
-  if (isUndefined(ctx.customInspect)) ctx.customInspect = true;
-  if (ctx.colors) ctx.stylize = stylizeWithColor;
-  return formatValue(ctx, obj, ctx.depth);
-}
-exports.inspect = inspect;
 
-
-// http://en.wikipedia.org/wiki/ANSI_escape_code#graphics
-inspect.colors = {
-  'bold' : [1, 22],
-  'italic' : [3, 23],
-  'underline' : [4, 24],
-  'inverse' : [7, 27],
-  'white' : [37, 39],
-  'grey' : [90, 39],
-  'black' : [30, 39],
-  'blue' : [34, 39],
-  'cyan' : [36, 39],
-  'green' : [32, 39],
-  'magenta' : [35, 39],
-  'red' : [31, 39],
-  'yellow' : [33, 39]
-};
-
-// Don't use 'blue' not visible on cmd.exe
-inspect.styles = {
-  'special': 'cyan',
-  'number': 'yellow',
-  'boolean': 'yellow',
-  'undefined': 'grey',
-  'null': 'bold',
-  'string': 'green',
-  'date': 'magenta',
-  // "name": intentionally not styling
-  'regexp': 'red'
-};
-
-
-function stylizeWithColor(str, styleType) {
-  var style = inspect.styles[styleType];
-
-  if (style) {
-    return '\u001b[' + inspect.colors[style][0] + 'm' + str +
-           '\u001b[' + inspect.colors[style][1] + 'm';
-  } else {
-    return str;
-  }
+function log() {
+  // this hackery is required for IE8/9, where
+  // the `console.log` function doesn't have 'apply'
+  return 'object' === typeof console
+    && console.log
+    && Function.prototype.apply.call(console.log, console, arguments);
 }
 
+/**
+ * Save `namespaces`.
+ *
+ * @param {String} namespaces
+ * @api private
+ */
 
-function stylizeNoColor(str, styleType) {
-  return str;
-}
-
-
-function arrayToHash(array) {
-  var hash = {};
-
-  array.forEach(function(val, idx) {
-    hash[val] = true;
-  });
-
-  return hash;
-}
-
-
-function formatValue(ctx, value, recurseTimes) {
-  // Provide a hook for user-specified inspect functions.
-  // Check that value is an object with an inspect function on it
-  if (ctx.customInspect &&
-      value &&
-      isFunction(value.inspect) &&
-      // Filter out the util module, it's inspect function is special
-      value.inspect !== exports.inspect &&
-      // Also filter out any prototype objects using the circular check.
-      !(value.constructor && value.constructor.prototype === value)) {
-    var ret = value.inspect(recurseTimes, ctx);
-    if (!isString(ret)) {
-      ret = formatValue(ctx, ret, recurseTimes);
-    }
-    return ret;
-  }
-
-  // Primitive types cannot have properties
-  var primitive = formatPrimitive(ctx, value);
-  if (primitive) {
-    return primitive;
-  }
-
-  // Look up the keys of the object.
-  var keys = Object.keys(value);
-  var visibleKeys = arrayToHash(keys);
-
-  if (ctx.showHidden) {
-    keys = Object.getOwnPropertyNames(value);
-  }
-
-  // IE doesn't make error fields non-enumerable
-  // http://msdn.microsoft.com/en-us/library/ie/dww52sbt(v=vs.94).aspx
-  if (isError(value)
-      && (keys.indexOf('message') >= 0 || keys.indexOf('description') >= 0)) {
-    return formatError(value);
-  }
-
-  // Some type of object without properties can be shortcutted.
-  if (keys.length === 0) {
-    if (isFunction(value)) {
-      var name = value.name ? ': ' + value.name : '';
-      return ctx.stylize('[Function' + name + ']', 'special');
-    }
-    if (isRegExp(value)) {
-      return ctx.stylize(RegExp.prototype.toString.call(value), 'regexp');
-    }
-    if (isDate(value)) {
-      return ctx.stylize(Date.prototype.toString.call(value), 'date');
-    }
-    if (isError(value)) {
-      return formatError(value);
-    }
-  }
-
-  var base = '', array = false, braces = ['{', '}'];
-
-  // Make Array say that they are Array
-  if (isArray(value)) {
-    array = true;
-    braces = ['[', ']'];
-  }
-
-  // Make functions say that they are functions
-  if (isFunction(value)) {
-    var n = value.name ? ': ' + value.name : '';
-    base = ' [Function' + n + ']';
-  }
-
-  // Make RegExps say that they are RegExps
-  if (isRegExp(value)) {
-    base = ' ' + RegExp.prototype.toString.call(value);
-  }
-
-  // Make dates with properties first say the date
-  if (isDate(value)) {
-    base = ' ' + Date.prototype.toUTCString.call(value);
-  }
-
-  // Make error with message first say the error
-  if (isError(value)) {
-    base = ' ' + formatError(value);
-  }
-
-  if (keys.length === 0 && (!array || value.length == 0)) {
-    return braces[0] + base + braces[1];
-  }
-
-  if (recurseTimes < 0) {
-    if (isRegExp(value)) {
-      return ctx.stylize(RegExp.prototype.toString.call(value), 'regexp');
+function save(namespaces) {
+  try {
+    if (null == namespaces) {
+      exports.storage.removeItem('debug');
     } else {
-      return ctx.stylize('[Object]', 'special');
+      exports.storage.debug = namespaces;
     }
+  } catch(e) {}
+}
+
+/**
+ * Load `namespaces`.
+ *
+ * @return {String} returns the previously persisted debug modes
+ * @api private
+ */
+
+function load() {
+  var r;
+  try {
+    r = exports.storage.debug;
+  } catch(e) {}
+  return r;
+}
+
+/**
+ * Enable namespaces listed in `localStorage.debug` initially.
+ */
+
+exports.enable(load());
+
+/**
+ * Localstorage attempts to return the localstorage.
+ *
+ * This is necessary because safari throws
+ * when a user disables cookies/localstorage
+ * and you attempt to access it.
+ *
+ * @return {LocalStorage}
+ * @api private
+ */
+
+function localstorage(){
+  try {
+    return window.localStorage;
+  } catch (e) {}
+}
+
+},{"./debug":9}],9:[function(require,module,exports){
+
+/**
+ * This is the common logic for both the Node.js and web browser
+ * implementations of `debug()`.
+ *
+ * Expose `debug()` as the module.
+ */
+
+exports = module.exports = debug;
+exports.coerce = coerce;
+exports.disable = disable;
+exports.enable = enable;
+exports.enabled = enabled;
+exports.humanize = require('ms');
+
+/**
+ * The currently active debug mode names, and names to skip.
+ */
+
+exports.names = [];
+exports.skips = [];
+
+/**
+ * Map of special "%n" handling functions, for the debug "format" argument.
+ *
+ * Valid key names are a single, lowercased letter, i.e. "n".
+ */
+
+exports.formatters = {};
+
+/**
+ * Previously assigned color.
+ */
+
+var prevColor = 0;
+
+/**
+ * Previous log timestamp.
+ */
+
+var prevTime;
+
+/**
+ * Select a color.
+ *
+ * @return {Number}
+ * @api private
+ */
+
+function selectColor() {
+  return exports.colors[prevColor++ % exports.colors.length];
+}
+
+/**
+ * Create a debugger with the given `namespace`.
+ *
+ * @param {String} namespace
+ * @return {Function}
+ * @api public
+ */
+
+function debug(namespace) {
+
+  // define the `disabled` version
+  function disabled() {
   }
+  disabled.enabled = false;
 
-  ctx.seen.push(value);
+  // define the `enabled` version
+  function enabled() {
 
-  var output;
-  if (array) {
-    output = formatArray(ctx, value, recurseTimes, visibleKeys, keys);
-  } else {
-    output = keys.map(function(key) {
-      return formatProperty(ctx, value, recurseTimes, visibleKeys, key, array);
+    var self = enabled;
+
+    // set `diff` timestamp
+    var curr = +new Date();
+    var ms = curr - (prevTime || curr);
+    self.diff = ms;
+    self.prev = prevTime;
+    self.curr = curr;
+    prevTime = curr;
+
+    // add the `color` if not set
+    if (null == self.useColors) self.useColors = exports.useColors();
+    if (null == self.color && self.useColors) self.color = selectColor();
+
+    var args = Array.prototype.slice.call(arguments);
+
+    args[0] = exports.coerce(args[0]);
+
+    if ('string' !== typeof args[0]) {
+      // anything else let's inspect with %o
+      args = ['%o'].concat(args);
+    }
+
+    // apply any `formatters` transformations
+    var index = 0;
+    args[0] = args[0].replace(/%([a-z%])/g, function(match, format) {
+      // if we encounter an escaped % then don't increase the array index
+      if (match === '%%') return match;
+      index++;
+      var formatter = exports.formatters[format];
+      if ('function' === typeof formatter) {
+        var val = args[index];
+        match = formatter.call(self, val);
+
+        // now we need to remove `args[index]` since it's inlined in the `format`
+        args.splice(index, 1);
+        index--;
+      }
+      return match;
     });
-  }
 
-  ctx.seen.pop();
-
-  return reduceToSingleString(output, base, braces);
-}
-
-
-function formatPrimitive(ctx, value) {
-  if (isUndefined(value))
-    return ctx.stylize('undefined', 'undefined');
-  if (isString(value)) {
-    var simple = '\'' + JSON.stringify(value).replace(/^"|"$/g, '')
-                                             .replace(/'/g, "\\'")
-                                             .replace(/\\"/g, '"') + '\'';
-    return ctx.stylize(simple, 'string');
-  }
-  if (isNumber(value))
-    return ctx.stylize('' + value, 'number');
-  if (isBoolean(value))
-    return ctx.stylize('' + value, 'boolean');
-  // For some reason typeof null is "object", so special case here.
-  if (isNull(value))
-    return ctx.stylize('null', 'null');
-}
-
-
-function formatError(value) {
-  return '[' + Error.prototype.toString.call(value) + ']';
-}
-
-
-function formatArray(ctx, value, recurseTimes, visibleKeys, keys) {
-  var output = [];
-  for (var i = 0, l = value.length; i < l; ++i) {
-    if (hasOwnProperty(value, String(i))) {
-      output.push(formatProperty(ctx, value, recurseTimes, visibleKeys,
-          String(i), true));
-    } else {
-      output.push('');
+    if ('function' === typeof exports.formatArgs) {
+      args = exports.formatArgs.apply(self, args);
     }
+    var logFn = enabled.log || exports.log || console.log.bind(console);
+    logFn.apply(self, args);
   }
-  keys.forEach(function(key) {
-    if (!key.match(/^\d+$/)) {
-      output.push(formatProperty(ctx, value, recurseTimes, visibleKeys,
-          key, true));
-    }
-  });
-  return output;
+  enabled.enabled = true;
+
+  var fn = exports.enabled(namespace) ? enabled : disabled;
+
+  fn.namespace = namespace;
+
+  return fn;
 }
-
-
-function formatProperty(ctx, value, recurseTimes, visibleKeys, key, array) {
-  var name, str, desc;
-  desc = Object.getOwnPropertyDescriptor(value, key) || { value: value[key] };
-  if (desc.get) {
-    if (desc.set) {
-      str = ctx.stylize('[Getter/Setter]', 'special');
-    } else {
-      str = ctx.stylize('[Getter]', 'special');
-    }
-  } else {
-    if (desc.set) {
-      str = ctx.stylize('[Setter]', 'special');
-    }
-  }
-  if (!hasOwnProperty(visibleKeys, key)) {
-    name = '[' + key + ']';
-  }
-  if (!str) {
-    if (ctx.seen.indexOf(desc.value) < 0) {
-      if (isNull(recurseTimes)) {
-        str = formatValue(ctx, desc.value, null);
-      } else {
-        str = formatValue(ctx, desc.value, recurseTimes - 1);
-      }
-      if (str.indexOf('\n') > -1) {
-        if (array) {
-          str = str.split('\n').map(function(line) {
-            return '  ' + line;
-          }).join('\n').substr(2);
-        } else {
-          str = '\n' + str.split('\n').map(function(line) {
-            return '   ' + line;
-          }).join('\n');
-        }
-      }
-    } else {
-      str = ctx.stylize('[Circular]', 'special');
-    }
-  }
-  if (isUndefined(name)) {
-    if (array && key.match(/^\d+$/)) {
-      return str;
-    }
-    name = JSON.stringify('' + key);
-    if (name.match(/^"([a-zA-Z_][a-zA-Z_0-9]*)"$/)) {
-      name = name.substr(1, name.length - 2);
-      name = ctx.stylize(name, 'name');
-    } else {
-      name = name.replace(/'/g, "\\'")
-                 .replace(/\\"/g, '"')
-                 .replace(/(^"|"$)/g, "'");
-      name = ctx.stylize(name, 'string');
-    }
-  }
-
-  return name + ': ' + str;
-}
-
-
-function reduceToSingleString(output, base, braces) {
-  var numLinesEst = 0;
-  var length = output.reduce(function(prev, cur) {
-    numLinesEst++;
-    if (cur.indexOf('\n') >= 0) numLinesEst++;
-    return prev + cur.replace(/\u001b\[\d\d?m/g, '').length + 1;
-  }, 0);
-
-  if (length > 60) {
-    return braces[0] +
-           (base === '' ? '' : base + '\n ') +
-           ' ' +
-           output.join(',\n  ') +
-           ' ' +
-           braces[1];
-  }
-
-  return braces[0] + base + ' ' + output.join(', ') + ' ' + braces[1];
-}
-
-
-// NOTE: These type checking functions intentionally don't use `instanceof`
-// because it is fragile and can be easily faked with `Object.create()`.
-function isArray(ar) {
-  return Array.isArray(ar);
-}
-exports.isArray = isArray;
-
-function isBoolean(arg) {
-  return typeof arg === 'boolean';
-}
-exports.isBoolean = isBoolean;
-
-function isNull(arg) {
-  return arg === null;
-}
-exports.isNull = isNull;
-
-function isNullOrUndefined(arg) {
-  return arg == null;
-}
-exports.isNullOrUndefined = isNullOrUndefined;
-
-function isNumber(arg) {
-  return typeof arg === 'number';
-}
-exports.isNumber = isNumber;
-
-function isString(arg) {
-  return typeof arg === 'string';
-}
-exports.isString = isString;
-
-function isSymbol(arg) {
-  return typeof arg === 'symbol';
-}
-exports.isSymbol = isSymbol;
-
-function isUndefined(arg) {
-  return arg === void 0;
-}
-exports.isUndefined = isUndefined;
-
-function isRegExp(re) {
-  return isObject(re) && objectToString(re) === '[object RegExp]';
-}
-exports.isRegExp = isRegExp;
-
-function isObject(arg) {
-  return typeof arg === 'object' && arg !== null;
-}
-exports.isObject = isObject;
-
-function isDate(d) {
-  return isObject(d) && objectToString(d) === '[object Date]';
-}
-exports.isDate = isDate;
-
-function isError(e) {
-  return isObject(e) &&
-      (objectToString(e) === '[object Error]' || e instanceof Error);
-}
-exports.isError = isError;
-
-function isFunction(arg) {
-  return typeof arg === 'function';
-}
-exports.isFunction = isFunction;
-
-function isPrimitive(arg) {
-  return arg === null ||
-         typeof arg === 'boolean' ||
-         typeof arg === 'number' ||
-         typeof arg === 'string' ||
-         typeof arg === 'symbol' ||  // ES6 symbol
-         typeof arg === 'undefined';
-}
-exports.isPrimitive = isPrimitive;
-
-exports.isBuffer = require('./support/isBuffer');
-
-function objectToString(o) {
-  return Object.prototype.toString.call(o);
-}
-
-
-function pad(n) {
-  return n < 10 ? '0' + n.toString(10) : n.toString(10);
-}
-
-
-var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep',
-              'Oct', 'Nov', 'Dec'];
-
-// 26 Feb 16:19:34
-function timestamp() {
-  var d = new Date();
-  var time = [pad(d.getHours()),
-              pad(d.getMinutes()),
-              pad(d.getSeconds())].join(':');
-  return [d.getDate(), months[d.getMonth()], time].join(' ');
-}
-
-
-// log is just a thin wrapper to console.log that prepends a timestamp
-exports.log = function() {
-  console.log('%s - %s', timestamp(), exports.format.apply(exports, arguments));
-};
-
 
 /**
- * Inherit the prototype methods from one constructor into another.
+ * Enables a debug mode by namespaces. This can include modes
+ * separated by a colon and wildcards.
  *
- * The Function.prototype.inherits from lang.js rewritten as a standalone
- * function (not on Function.prototype). NOTE: If this file is to be loaded
- * during bootstrapping this function needs to be rewritten using some native
- * functions as prototype setup using normal JavaScript does not work as
- * expected during bootstrapping (see mirror.js in r114903).
- *
- * @param {function} ctor Constructor function which needs to inherit the
- *     prototype.
- * @param {function} superCtor Constructor function to inherit prototype from.
+ * @param {String} namespaces
+ * @api public
  */
-exports.inherits = require('inherits');
 
-exports._extend = function(origin, add) {
-  // Don't do anything if add isn't an object
-  if (!add || !isObject(add)) return origin;
+function enable(namespaces) {
+  exports.save(namespaces);
 
-  var keys = Object.keys(add);
-  var i = keys.length;
-  while (i--) {
-    origin[keys[i]] = add[keys[i]];
+  var split = (namespaces || '').split(/[\s,]+/);
+  var len = split.length;
+
+  for (var i = 0; i < len; i++) {
+    if (!split[i]) continue; // ignore empty strings
+    namespaces = split[i].replace(/\*/g, '.*?');
+    if (namespaces[0] === '-') {
+      exports.skips.push(new RegExp('^' + namespaces.substr(1) + '$'));
+    } else {
+      exports.names.push(new RegExp('^' + namespaces + '$'));
+    }
   }
-  return origin;
-};
-
-function hasOwnProperty(obj, prop) {
-  return Object.prototype.hasOwnProperty.call(obj, prop);
 }
 
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./support/isBuffer":11,"_process":10,"inherits":9}],13:[function(require,module,exports){
+/**
+ * Disable debug output.
+ *
+ * @api public
+ */
+
+function disable() {
+  exports.enable('');
+}
+
+/**
+ * Returns true if the given mode name is enabled, false otherwise.
+ *
+ * @param {String} name
+ * @return {Boolean}
+ * @api public
+ */
+
+function enabled(name) {
+  var i, len;
+  for (i = 0, len = exports.skips.length; i < len; i++) {
+    if (exports.skips[i].test(name)) {
+      return false;
+    }
+  }
+  for (i = 0, len = exports.names.length; i < len; i++) {
+    if (exports.names[i].test(name)) {
+      return true;
+    }
+  }
+  return false;
+}
+
+/**
+ * Coerce `val`.
+ *
+ * @param {Mixed} val
+ * @return {Mixed}
+ * @api private
+ */
+
+function coerce(val) {
+  if (val instanceof Error) return val.stack || val.message;
+  return val;
+}
+
+},{"ms":115}],10:[function(require,module,exports){
 /*
   Copyright (C) 2012-2014 Yusuke Suzuki <utatane.tea@gmail.com>
   Copyright (C) 2014 Dan Tao <daniel.tao@gmail.com>
@@ -10366,7 +9798,7 @@ function hasOwnProperty(obj, prop) {
 }());
 /* vim: set sw=4 ts=4 et tw=80 : */
 
-},{"./typed":14,"./utility":15,"esutils":19,"isarray":20}],14:[function(require,module,exports){
+},{"./typed":11,"./utility":12,"esutils":16,"isarray":113}],11:[function(require,module,exports){
 /*
   Copyright (C) 2012-2014 Yusuke Suzuki <utatane.tea@gmail.com>
   Copyright (C) 2014 Dan Tao <daniel.tao@gmail.com>
@@ -11629,7 +11061,7 @@ function hasOwnProperty(obj, prop) {
 }());
 /* vim: set sw=4 ts=4 et tw=80 : */
 
-},{"./utility":15,"esutils":19}],15:[function(require,module,exports){
+},{"./utility":12,"esutils":16}],12:[function(require,module,exports){
 /*
   Copyright (C) 2014 Yusuke Suzuki <utatane.tea@gmail.com>
 
@@ -11685,7 +11117,7 @@ function hasOwnProperty(obj, prop) {
 
 /* vim: set sw=4 ts=4 et tw=80 : */
 
-},{"../package.json":21,"assert":5}],16:[function(require,module,exports){
+},{"../package.json":17,"assert":5}],13:[function(require,module,exports){
 /*
   Copyright (C) 2013 Yusuke Suzuki <utatane.tea@gmail.com>
 
@@ -11831,7 +11263,7 @@ function hasOwnProperty(obj, prop) {
 }());
 /* vim: set sw=4 ts=4 et tw=80 : */
 
-},{}],17:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 /*
   Copyright (C) 2013-2014 Yusuke Suzuki <utatane.tea@gmail.com>
   Copyright (C) 2014 Ivan Nikulin <ifaaan@gmail.com>
@@ -11934,7 +11366,7 @@ function hasOwnProperty(obj, prop) {
 }());
 /* vim: set sw=4 ts=4 et tw=80 : */
 
-},{}],18:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 /*
   Copyright (C) 2013 Yusuke Suzuki <utatane.tea@gmail.com>
 
@@ -12073,7 +11505,7 @@ function hasOwnProperty(obj, prop) {
 }());
 /* vim: set sw=4 ts=4 et tw=80 : */
 
-},{"./code":17}],19:[function(require,module,exports){
+},{"./code":14}],16:[function(require,module,exports){
 /*
   Copyright (C) 2013 Yusuke Suzuki <utatane.tea@gmail.com>
 
@@ -12108,42 +11540,48 @@ function hasOwnProperty(obj, prop) {
 }());
 /* vim: set sw=4 ts=4 et tw=80 : */
 
-},{"./ast":16,"./code":17,"./keyword":18}],20:[function(require,module,exports){
-module.exports = Array.isArray || function (arr) {
-  return Object.prototype.toString.call(arr) == '[object Array]';
-};
-
-},{}],21:[function(require,module,exports){
+},{"./ast":13,"./code":14,"./keyword":15}],17:[function(require,module,exports){
 module.exports={
-  "name": "doctrine",
+  "_args": [
+    [
+      "doctrine@^0.7.0",
+      "C:\\Users\\t-nagashima.AD\\Documents\\GitHub\\eslint"
+    ]
+  ],
+  "_from": "doctrine@>=0.7.0 <0.8.0",
+  "_id": "doctrine@0.7.0",
+  "_inCache": true,
+  "_location": "/doctrine",
+  "_npmUser": {
+    "email": "nicholas@nczconsulting.com",
+    "name": "nzakas"
+  },
+  "_npmVersion": "1.4.28",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "doctrine",
+    "raw": "doctrine@^0.7.0",
+    "rawSpec": "^0.7.0",
+    "scope": null,
+    "spec": ">=0.7.0 <0.8.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/doctrine/-/doctrine-0.7.0.tgz",
+  "_shasum": "dcc9589850b043d6e58abe24b561ccd57176cfd3",
+  "_shrinkwrap": null,
+  "_spec": "doctrine@^0.7.0",
+  "_where": "C:\\Users\\t-nagashima.AD\\Documents\\GitHub\\eslint",
+  "bugs": {
+    "url": "https://github.com/eslint/doctrine/issues"
+  },
+  "dependencies": {
+    "esutils": "^1.1.6",
+    "isarray": "0.0.1"
+  },
   "description": "JSDoc parser",
-  "homepage": "http://github.com/Constellation/doctrine.html",
-  "main": "lib/doctrine.js",
-  "version": "0.7.0",
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "directories": {
-    "lib": "./lib"
-  },
-  "files": [
-    "lib",
-    "LICENSE.BSD",
-    "LICENSE.closure-compiler",
-    "LICENSE.esprima",
-    "README.md"
-  ],
-  "maintainers": [
-    {
-      "name": "Yusuke Suzuki",
-      "email": "utatane.tea@gmail.com",
-      "url": "http://github.com/Constellation"
-    }
-  ],
-  "repository": {
-    "type": "git",
-    "url": "http://github.com/eslint/doctrine.git"
-  },
   "devDependencies": {
     "coveralls": "^2.11.2",
     "gulp": "^3.8.10",
@@ -12158,34 +11596,1293 @@ module.exports={
     "jshint-stylish": "^1.0.0",
     "should": "^5.0.1"
   },
+  "directories": {
+    "lib": "./lib"
+  },
+  "dist": {
+    "shasum": "dcc9589850b043d6e58abe24b561ccd57176cfd3",
+    "tarball": "http://registry.npmjs.org/doctrine/-/doctrine-0.7.0.tgz"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "files": [
+    "LICENSE.BSD",
+    "LICENSE.closure-compiler",
+    "LICENSE.esprima",
+    "README.md",
+    "lib"
+  ],
+  "gitHead": "0d059e422bdfd630eaa15d583567c8668923f7e6",
+  "homepage": "http://github.com/Constellation/doctrine.html",
+  "installable": true,
   "licenses": [
     {
       "type": "BSD",
       "url": "http://github.com/eslint/doctrine/raw/master/LICENSE.BSD"
     }
   ],
+  "main": "lib/doctrine.js",
+  "maintainers": [
+    {
+      "name": "constellation",
+      "email": "utatane.tea@gmail.com"
+    },
+    {
+      "name": "nzakas",
+      "email": "nicholas@nczconsulting.com"
+    }
+  ],
+  "name": "doctrine",
+  "optionalDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/eslint/doctrine.git"
+  },
   "scripts": {
-    "test": "gulp",
-    "unit-test": "gulp test",
+    "coveralls": "cat ./coverage/lcov.info | coveralls && rm -rf ./coverage",
     "lint": "gulp lint",
-    "coveralls": "cat ./coverage/lcov.info | coveralls && rm -rf ./coverage"
+    "test": "gulp",
+    "unit-test": "gulp test"
   },
-  "dependencies": {
-    "esutils": "^1.1.6",
-    "isarray": "0.0.1"
-  },
-  "readme": "[![NPM version][npm-image]][npm-url]\n[![build status][travis-image]][travis-url]\n[![Test coverage][coveralls-image]][coveralls-url]\n[![Downloads][downloads-image]][downloads-url]\n[![Join the chat at https://gitter.im/eslint/doctrine](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/eslint/doctrine?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)\n\n# Doctrine\n\nDoctrine is a [JSDoc](http://usejsdoc.org) parser that parses documentation comments from JavaScript (you need to pass in the comment, not a whole JavaScript file).\n\n## Installation\n\nYou can install Doctrine using [npm](https://npmjs.com):\n\n```\n$ npm install doctrine --save-dev\n```\n\nDoctrine can also be used in web browsers using [Browserify](http://browserify.org).\n\n## Usage\n\nRequire doctrine inside of your JavaScript:\n\n```js\nvar doctrine = require(\"doctrine\");\n```\n\n### parse()\n\nThe primary method is `parse()`, which accepts two arguments: the JSDoc comment to parse and an optional options object. The available options are:\n\n* `unwrap` - set to `true` to delete the leading `/**`, any `*` that begins a line, and the trailing `*/` from the source text. Default: `false`.\n* `tags` - an array of tags to return. When specified, Doctrine returns only tags in this array. For example, if `tags` is `[\"param\"]`, then only `@param` tags will be returned. Default: `null`.\n* `recoverable` - set to `true` to keep parsing even when syntax errors occur. Default: `false`.\n* `sloppy` - set to `true` to allow optional parameters to be specified in brackets (`@param {string} [foo]`). Default: `false`.\n* `lineNumberes` - set to `true` to add `lineNumber` to each node, specifying the line on which the node is found in the source. Default: `false`.\n\nHere's a simple example:\n\n```js\nvar ast = doctrine.parse(\n    [\n        \"/**\",\n        \" * This function comment is parsed by doctrine\",\n        \" * @param {{ok:String}} userName\",\n        \"*/\"\n    ].join('\\n'), { unwrap: true });\n```\n\nThis example returns the following AST:\n\n    {\n        \"description\": \"This function comment is parsed by doctrine\",\n        \"tags\": [\n            {\n                \"title\": \"param\",\n                \"description\": null,\n                \"type\": {\n                    \"type\": \"RecordType\",\n                    \"fields\": [\n                        {\n                            \"type\": \"FieldType\",\n                            \"key\": \"ok\",\n                            \"value\": {\n                                \"type\": \"NameExpression\",\n                                \"name\": \"String\"\n                            }\n                        }\n                    ]\n                },\n                \"name\": \"userName\"\n            }\n        ]\n    }\n\nSee the [demo page](http://eslint.org/doctrine/demo/) more detail.\n\n## Team\n\nThese folks keep the project moving and are resources for help:\n\n* Nicholas C. Zakas ([@nzakas](https://github.com/nzakas)) - project lead\n* Yusuke Suzuki ([@constellation](https://github.com/constellation)) - reviewer\n\n## Contributing\n\nIssues and pull requests will be triaged and responded to as quickly as possible. We operate under the [ESLint Contributor Guidelines](http://eslint.org/docs/developer-guide/contributing), so please be sure to read them before contributing. If you're not sure where to dig in, check out the [issues](https://github.com/eslint/doctrine/issues).\n\n## Frequently Asked Questions\n\n### Can I pass a whole JavaScript file to Doctrine?\n\nNo. Doctrine can only parse JSDoc comments, so you'll need to pass just the JSDoc comment to Doctrine in order to work.\n\n\n### License\n\n#### doctrine\n\nCopyright (C) 2012 [Yusuke Suzuki](http://github.com/Constellation)\n (twitter: [@Constellation](http://twitter.com/Constellation)) and other contributors.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n  * Redistributions of source code must retain the above copyright\n    notice, this list of conditions and the following disclaimer.\n\n  * Redistributions in binary form must reproduce the above copyright\n    notice, this list of conditions and the following disclaimer in the\n    documentation and/or other materials provided with the distribution.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\nAND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\nARE DISCLAIMED. IN NO EVENT SHALL <COPYRIGHT HOLDER> BE LIABLE FOR ANY\nDIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES\n(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;\nLOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND\nON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF\nTHIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\n#### esprima\n\nsome of functions is derived from esprima\n\nCopyright (C) 2012, 2011 [Ariya Hidayat](http://ariya.ofilabs.com/about)\n (twitter: [@ariyahidayat](http://twitter.com/ariyahidayat)) and other contributors.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n  * Redistributions of source code must retain the above copyright\n    notice, this list of conditions and the following disclaimer.\n\n  * Redistributions in binary form must reproduce the above copyright\n    notice, this list of conditions and the following disclaimer in the\n    documentation and/or other materials provided with the distribution.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\nAND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\nARE DISCLAIMED. IN NO EVENT SHALL <COPYRIGHT HOLDER> BE LIABLE FOR ANY\nDIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES\n(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;\nLOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND\nON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF\nTHIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\n\n#### closure-compiler\n\nsome of extensions is derived from closure-compiler\n\nApache License\nVersion 2.0, January 2004\nhttp://www.apache.org/licenses/\n\n\n### Where to ask for help?\n\nJoin our [Chatroom](https://gitter.im/eslint/doctrine)\n\n[npm-image]: https://img.shields.io/npm/v/doctrine.svg?style=flat-square\n[npm-url]: https://www.npmjs.com/package/doctrine\n[travis-image]: https://img.shields.io/travis/eslint/doctrine/master.svg?style=flat-square\n[travis-url]: https://travis-ci.org/eslint/doctrine\n[coveralls-image]: https://img.shields.io/coveralls/eslint/doctrine/master.svg?style=flat-square\n[coveralls-url]: https://coveralls.io/r/eslint/doctrine?branch=master\n[downloads-image]: http://img.shields.io/npm/dm/doctrine.svg?style=flat-square\n[downloads-url]: https://www.npmjs.com/package/doctrine\n",
-  "readmeFilename": "README.md",
-  "gitHead": "0d059e422bdfd630eaa15d583567c8668923f7e6",
-  "bugs": {
-    "url": "https://github.com/eslint/doctrine/issues"
-  },
-  "_id": "doctrine@0.7.0",
-  "_shasum": "dcc9589850b043d6e58abe24b561ccd57176cfd3",
-  "_from": "doctrine@^0.7.0"
+  "version": "0.7.0"
 }
 
+},{}],18:[function(require,module,exports){
+// Inspired by Google Closure:
+// http://closure-library.googlecode.com/svn/docs/
+// closure_goog_array_array.js.html#goog.array.clear
+
+'use strict';
+
+var value = require('../../object/valid-value');
+
+module.exports = function () {
+	value(this).length = 0;
+	return this;
+};
+
+},{"../../object/valid-value":45}],19:[function(require,module,exports){
+'use strict';
+
+var toPosInt = require('../../number/to-pos-integer')
+  , value    = require('../../object/valid-value')
+
+  , indexOf = Array.prototype.indexOf
+  , hasOwnProperty = Object.prototype.hasOwnProperty
+  , abs = Math.abs, floor = Math.floor;
+
+module.exports = function (searchElement/*, fromIndex*/) {
+	var i, l, fromIndex, val;
+	if (searchElement === searchElement) { //jslint: ignore
+		return indexOf.apply(this, arguments);
+	}
+
+	l = toPosInt(value(this).length);
+	fromIndex = arguments[1];
+	if (isNaN(fromIndex)) fromIndex = 0;
+	else if (fromIndex >= 0) fromIndex = floor(fromIndex);
+	else fromIndex = toPosInt(this.length) - floor(abs(fromIndex));
+
+	for (i = fromIndex; i < l; ++i) {
+		if (hasOwnProperty.call(this, i)) {
+			val = this[i];
+			if (val !== val) return i; //jslint: ignore
+		}
+	}
+	return -1;
+};
+
+},{"../../number/to-pos-integer":24,"../../object/valid-value":45}],20:[function(require,module,exports){
+'use strict';
+
+module.exports = require('./is-implemented')()
+	? Math.sign
+	: require('./shim');
+
+},{"./is-implemented":21,"./shim":22}],21:[function(require,module,exports){
+'use strict';
+
+module.exports = function () {
+	var sign = Math.sign;
+	if (typeof sign !== 'function') return false;
+	return ((sign(10) === 1) && (sign(-20) === -1));
+};
+
 },{}],22:[function(require,module,exports){
+'use strict';
+
+module.exports = function (value) {
+	value = Number(value);
+	if (isNaN(value) || (value === 0)) return value;
+	return (value > 0) ? 1 : -1;
+};
+
+},{}],23:[function(require,module,exports){
+'use strict';
+
+var sign = require('../math/sign')
+
+  , abs = Math.abs, floor = Math.floor;
+
+module.exports = function (value) {
+	if (isNaN(value)) return 0;
+	value = Number(value);
+	if ((value === 0) || !isFinite(value)) return value;
+	return sign(value) * floor(abs(value));
+};
+
+},{"../math/sign":20}],24:[function(require,module,exports){
+'use strict';
+
+var toInteger = require('./to-integer')
+
+  , max = Math.max;
+
+module.exports = function (value) { return max(0, toInteger(value)); };
+
+},{"./to-integer":23}],25:[function(require,module,exports){
+// Internal method, used by iteration functions.
+// Calls a function for each key-value pair found in object
+// Optionally takes compareFn to iterate object in specific order
+
+'use strict';
+
+var callable = require('./valid-callable')
+  , value    = require('./valid-value')
+
+  , bind = Function.prototype.bind, call = Function.prototype.call, keys = Object.keys
+  , propertyIsEnumerable = Object.prototype.propertyIsEnumerable;
+
+module.exports = function (method, defVal) {
+	return function (obj, cb/*, thisArg, compareFn*/) {
+		var list, thisArg = arguments[2], compareFn = arguments[3];
+		obj = Object(value(obj));
+		callable(cb);
+
+		list = keys(obj);
+		if (compareFn) {
+			list.sort((typeof compareFn === 'function') ? bind.call(compareFn, obj) : undefined);
+		}
+		if (typeof method !== 'function') method = list[method];
+		return call.call(method, list, function (key, index) {
+			if (!propertyIsEnumerable.call(obj, key)) return defVal;
+			return call.call(cb, thisArg, obj[key], key, obj, index);
+		});
+	};
+};
+
+},{"./valid-callable":43,"./valid-value":45}],26:[function(require,module,exports){
+'use strict';
+
+module.exports = require('./is-implemented')()
+	? Object.assign
+	: require('./shim');
+
+},{"./is-implemented":27,"./shim":28}],27:[function(require,module,exports){
+'use strict';
+
+module.exports = function () {
+	var assign = Object.assign, obj;
+	if (typeof assign !== 'function') return false;
+	obj = { foo: 'raz' };
+	assign(obj, { bar: 'dwa' }, { trzy: 'trzy' });
+	return (obj.foo + obj.bar + obj.trzy) === 'razdwatrzy';
+};
+
+},{}],28:[function(require,module,exports){
+'use strict';
+
+var keys  = require('../keys')
+  , value = require('../valid-value')
+
+  , max = Math.max;
+
+module.exports = function (dest, src/*, …srcn*/) {
+	var error, i, l = max(arguments.length, 2), assign;
+	dest = Object(value(dest));
+	assign = function (key) {
+		try { dest[key] = src[key]; } catch (e) {
+			if (!error) error = e;
+		}
+	};
+	for (i = 1; i < l; ++i) {
+		src = arguments[i];
+		keys(src).forEach(assign);
+	}
+	if (error !== undefined) throw error;
+	return dest;
+};
+
+},{"../keys":34,"../valid-value":45}],29:[function(require,module,exports){
+'use strict';
+
+var assign = require('./assign')
+  , value  = require('./valid-value');
+
+module.exports = function (obj) {
+	var copy = Object(value(obj));
+	if (copy !== obj) return copy;
+	return assign({}, obj);
+};
+
+},{"./assign":26,"./valid-value":45}],30:[function(require,module,exports){
+// Workaround for http://code.google.com/p/v8/issues/detail?id=2804
+
+'use strict';
+
+var create = Object.create, shim;
+
+if (!require('./set-prototype-of/is-implemented')()) {
+	shim = require('./set-prototype-of/shim');
+}
+
+module.exports = (function () {
+	var nullObject, props, desc;
+	if (!shim) return create;
+	if (shim.level !== 1) return create;
+
+	nullObject = {};
+	props = {};
+	desc = { configurable: false, enumerable: false, writable: true,
+		value: undefined };
+	Object.getOwnPropertyNames(Object.prototype).forEach(function (name) {
+		if (name === '__proto__') {
+			props[name] = { configurable: true, enumerable: false, writable: true,
+				value: undefined };
+			return;
+		}
+		props[name] = desc;
+	});
+	Object.defineProperties(nullObject, props);
+
+	Object.defineProperty(shim, 'nullPolyfill', { configurable: false,
+		enumerable: false, writable: false, value: nullObject });
+
+	return function (prototype, props) {
+		return create((prototype === null) ? nullObject : prototype, props);
+	};
+}());
+
+},{"./set-prototype-of/is-implemented":41,"./set-prototype-of/shim":42}],31:[function(require,module,exports){
+'use strict';
+
+module.exports = require('./_iterate')('forEach');
+
+},{"./_iterate":25}],32:[function(require,module,exports){
+// Deprecated
+
+'use strict';
+
+module.exports = function (obj) { return typeof obj === 'function'; };
+
+},{}],33:[function(require,module,exports){
+'use strict';
+
+var map = { function: true, object: true };
+
+module.exports = function (x) {
+	return ((x != null) && map[typeof x]) || false;
+};
+
+},{}],34:[function(require,module,exports){
+'use strict';
+
+module.exports = require('./is-implemented')()
+	? Object.keys
+	: require('./shim');
+
+},{"./is-implemented":35,"./shim":36}],35:[function(require,module,exports){
+'use strict';
+
+module.exports = function () {
+	try {
+		Object.keys('primitive');
+		return true;
+	} catch (e) { return false; }
+};
+
+},{}],36:[function(require,module,exports){
+'use strict';
+
+var keys = Object.keys;
+
+module.exports = function (object) {
+	return keys(object == null ? object : Object(object));
+};
+
+},{}],37:[function(require,module,exports){
+'use strict';
+
+var callable = require('./valid-callable')
+  , forEach  = require('./for-each')
+
+  , call = Function.prototype.call;
+
+module.exports = function (obj, cb/*, thisArg*/) {
+	var o = {}, thisArg = arguments[2];
+	callable(cb);
+	forEach(obj, function (value, key, obj, index) {
+		o[key] = call.call(cb, thisArg, value, key, obj, index);
+	});
+	return o;
+};
+
+},{"./for-each":31,"./valid-callable":43}],38:[function(require,module,exports){
+'use strict';
+
+var forEach = Array.prototype.forEach, create = Object.create;
+
+var process = function (src, obj) {
+	var key;
+	for (key in src) obj[key] = src[key];
+};
+
+module.exports = function (options/*, …options*/) {
+	var result = create(null);
+	forEach.call(arguments, function (options) {
+		if (options == null) return;
+		process(Object(options), result);
+	});
+	return result;
+};
+
+},{}],39:[function(require,module,exports){
+'use strict';
+
+var forEach = Array.prototype.forEach, create = Object.create;
+
+module.exports = function (arg/*, …args*/) {
+	var set = create(null);
+	forEach.call(arguments, function (name) { set[name] = true; });
+	return set;
+};
+
+},{}],40:[function(require,module,exports){
+'use strict';
+
+module.exports = require('./is-implemented')()
+	? Object.setPrototypeOf
+	: require('./shim');
+
+},{"./is-implemented":41,"./shim":42}],41:[function(require,module,exports){
+'use strict';
+
+var create = Object.create, getPrototypeOf = Object.getPrototypeOf
+  , x = {};
+
+module.exports = function (/*customCreate*/) {
+	var setPrototypeOf = Object.setPrototypeOf
+	  , customCreate = arguments[0] || create;
+	if (typeof setPrototypeOf !== 'function') return false;
+	return getPrototypeOf(setPrototypeOf(customCreate(null), x)) === x;
+};
+
+},{}],42:[function(require,module,exports){
+// Big thanks to @WebReflection for sorting this out
+// https://gist.github.com/WebReflection/5593554
+
+'use strict';
+
+var isObject      = require('../is-object')
+  , value         = require('../valid-value')
+
+  , isPrototypeOf = Object.prototype.isPrototypeOf
+  , defineProperty = Object.defineProperty
+  , nullDesc = { configurable: true, enumerable: false, writable: true,
+		value: undefined }
+  , validate;
+
+validate = function (obj, prototype) {
+	value(obj);
+	if ((prototype === null) || isObject(prototype)) return obj;
+	throw new TypeError('Prototype must be null or an object');
+};
+
+module.exports = (function (status) {
+	var fn, set;
+	if (!status) return null;
+	if (status.level === 2) {
+		if (status.set) {
+			set = status.set;
+			fn = function (obj, prototype) {
+				set.call(validate(obj, prototype), prototype);
+				return obj;
+			};
+		} else {
+			fn = function (obj, prototype) {
+				validate(obj, prototype).__proto__ = prototype;
+				return obj;
+			};
+		}
+	} else {
+		fn = function self(obj, prototype) {
+			var isNullBase;
+			validate(obj, prototype);
+			isNullBase = isPrototypeOf.call(self.nullPolyfill, obj);
+			if (isNullBase) delete self.nullPolyfill.__proto__;
+			if (prototype === null) prototype = self.nullPolyfill;
+			obj.__proto__ = prototype;
+			if (isNullBase) defineProperty(self.nullPolyfill, '__proto__', nullDesc);
+			return obj;
+		};
+	}
+	return Object.defineProperty(fn, 'level', { configurable: false,
+		enumerable: false, writable: false, value: status.level });
+}((function () {
+	var x = Object.create(null), y = {}, set
+	  , desc = Object.getOwnPropertyDescriptor(Object.prototype, '__proto__');
+
+	if (desc) {
+		try {
+			set = desc.set; // Opera crashes at this point
+			set.call(x, y);
+		} catch (ignore) { }
+		if (Object.getPrototypeOf(x) === y) return { set: set, level: 2 };
+	}
+
+	x.__proto__ = y;
+	if (Object.getPrototypeOf(x) === y) return { level: 2 };
+
+	x = {};
+	x.__proto__ = y;
+	if (Object.getPrototypeOf(x) === y) return { level: 1 };
+
+	return false;
+}())));
+
+require('../create');
+
+},{"../create":30,"../is-object":33,"../valid-value":45}],43:[function(require,module,exports){
+'use strict';
+
+module.exports = function (fn) {
+	if (typeof fn !== 'function') throw new TypeError(fn + " is not a function");
+	return fn;
+};
+
+},{}],44:[function(require,module,exports){
+'use strict';
+
+var isObject = require('./is-object');
+
+module.exports = function (value) {
+	if (!isObject(value)) throw new TypeError(value + " is not an Object");
+	return value;
+};
+
+},{"./is-object":33}],45:[function(require,module,exports){
+'use strict';
+
+module.exports = function (value) {
+	if (value == null) throw new TypeError("Cannot use null or undefined");
+	return value;
+};
+
+},{}],46:[function(require,module,exports){
+'use strict';
+
+module.exports = require('./is-implemented')()
+	? String.prototype.contains
+	: require('./shim');
+
+},{"./is-implemented":47,"./shim":48}],47:[function(require,module,exports){
+'use strict';
+
+var str = 'razdwatrzy';
+
+module.exports = function () {
+	if (typeof str.contains !== 'function') return false;
+	return ((str.contains('dwa') === true) && (str.contains('foo') === false));
+};
+
+},{}],48:[function(require,module,exports){
+'use strict';
+
+var indexOf = String.prototype.indexOf;
+
+module.exports = function (searchString/*, position*/) {
+	return indexOf.call(this, searchString, arguments[1]) > -1;
+};
+
+},{}],49:[function(require,module,exports){
+'use strict';
+
+var toString = Object.prototype.toString
+
+  , id = toString.call('');
+
+module.exports = function (x) {
+	return (typeof x === 'string') || (x && (typeof x === 'object') &&
+		((x instanceof String) || (toString.call(x) === id))) || false;
+};
+
+},{}],50:[function(require,module,exports){
+'use strict';
+
+var setPrototypeOf = require('es5-ext/object/set-prototype-of')
+  , contains       = require('es5-ext/string/#/contains')
+  , d              = require('d')
+  , Iterator       = require('./')
+
+  , defineProperty = Object.defineProperty
+  , ArrayIterator;
+
+ArrayIterator = module.exports = function (arr, kind) {
+	if (!(this instanceof ArrayIterator)) return new ArrayIterator(arr, kind);
+	Iterator.call(this, arr);
+	if (!kind) kind = 'value';
+	else if (contains.call(kind, 'key+value')) kind = 'key+value';
+	else if (contains.call(kind, 'key')) kind = 'key';
+	else kind = 'value';
+	defineProperty(this, '__kind__', d('', kind));
+};
+if (setPrototypeOf) setPrototypeOf(ArrayIterator, Iterator);
+
+ArrayIterator.prototype = Object.create(Iterator.prototype, {
+	constructor: d(ArrayIterator),
+	_resolve: d(function (i) {
+		if (this.__kind__ === 'value') return this.__list__[i];
+		if (this.__kind__ === 'key+value') return [i, this.__list__[i]];
+		return i;
+	}),
+	toString: d(function () { return '[object Array Iterator]'; })
+});
+
+},{"./":53,"d":7,"es5-ext/object/set-prototype-of":40,"es5-ext/string/#/contains":46}],51:[function(require,module,exports){
+'use strict';
+
+var callable = require('es5-ext/object/valid-callable')
+  , isString = require('es5-ext/string/is-string')
+  , get      = require('./get')
+
+  , isArray = Array.isArray, call = Function.prototype.call;
+
+module.exports = function (iterable, cb/*, thisArg*/) {
+	var mode, thisArg = arguments[2], result, doBreak, broken, i, l, char, code;
+	if (isArray(iterable)) mode = 'array';
+	else if (isString(iterable)) mode = 'string';
+	else iterable = get(iterable);
+
+	callable(cb);
+	doBreak = function () { broken = true; };
+	if (mode === 'array') {
+		iterable.some(function (value) {
+			call.call(cb, thisArg, value, doBreak);
+			if (broken) return true;
+		});
+		return;
+	}
+	if (mode === 'string') {
+		l = iterable.length;
+		for (i = 0; i < l; ++i) {
+			char = iterable[i];
+			if ((i + 1) < l) {
+				code = char.charCodeAt(0);
+				if ((code >= 0xD800) && (code <= 0xDBFF)) char += iterable[++i];
+			}
+			call.call(cb, thisArg, char, doBreak);
+			if (broken) break;
+		}
+		return;
+	}
+	result = iterable.next();
+
+	while (!result.done) {
+		call.call(cb, thisArg, result.value, doBreak);
+		if (broken) return;
+		result = iterable.next();
+	}
+};
+
+},{"./get":52,"es5-ext/object/valid-callable":43,"es5-ext/string/is-string":49}],52:[function(require,module,exports){
+'use strict';
+
+var isString = require('es5-ext/string/is-string')
+  , ArrayIterator  = require('./array')
+  , StringIterator = require('./string')
+  , iterable       = require('./valid-iterable')
+  , iteratorSymbol = require('es6-symbol').iterator;
+
+module.exports = function (obj) {
+	if (typeof iterable(obj)[iteratorSymbol] === 'function') return obj[iteratorSymbol]();
+	if (isString(obj)) return new StringIterator(obj);
+	return new ArrayIterator(obj);
+};
+
+},{"./array":50,"./string":60,"./valid-iterable":61,"es5-ext/string/is-string":49,"es6-symbol":55}],53:[function(require,module,exports){
+'use strict';
+
+var clear    = require('es5-ext/array/#/clear')
+  , assign   = require('es5-ext/object/assign')
+  , callable = require('es5-ext/object/valid-callable')
+  , value    = require('es5-ext/object/valid-value')
+  , d        = require('d')
+  , autoBind = require('d/auto-bind')
+  , Symbol   = require('es6-symbol')
+
+  , defineProperty = Object.defineProperty
+  , defineProperties = Object.defineProperties
+  , Iterator;
+
+module.exports = Iterator = function (list, context) {
+	if (!(this instanceof Iterator)) return new Iterator(list, context);
+	defineProperties(this, {
+		__list__: d('w', value(list)),
+		__context__: d('w', context),
+		__nextIndex__: d('w', 0)
+	});
+	if (!context) return;
+	callable(context.on);
+	context.on('_add', this._onAdd);
+	context.on('_delete', this._onDelete);
+	context.on('_clear', this._onClear);
+};
+
+defineProperties(Iterator.prototype, assign({
+	constructor: d(Iterator),
+	_next: d(function () {
+		var i;
+		if (!this.__list__) return;
+		if (this.__redo__) {
+			i = this.__redo__.shift();
+			if (i !== undefined) return i;
+		}
+		if (this.__nextIndex__ < this.__list__.length) return this.__nextIndex__++;
+		this._unBind();
+	}),
+	next: d(function () { return this._createResult(this._next()); }),
+	_createResult: d(function (i) {
+		if (i === undefined) return { done: true, value: undefined };
+		return { done: false, value: this._resolve(i) };
+	}),
+	_resolve: d(function (i) { return this.__list__[i]; }),
+	_unBind: d(function () {
+		this.__list__ = null;
+		delete this.__redo__;
+		if (!this.__context__) return;
+		this.__context__.off('_add', this._onAdd);
+		this.__context__.off('_delete', this._onDelete);
+		this.__context__.off('_clear', this._onClear);
+		this.__context__ = null;
+	}),
+	toString: d(function () { return '[object Iterator]'; })
+}, autoBind({
+	_onAdd: d(function (index) {
+		if (index >= this.__nextIndex__) return;
+		++this.__nextIndex__;
+		if (!this.__redo__) {
+			defineProperty(this, '__redo__', d('c', [index]));
+			return;
+		}
+		this.__redo__.forEach(function (redo, i) {
+			if (redo >= index) this.__redo__[i] = ++redo;
+		}, this);
+		this.__redo__.push(index);
+	}),
+	_onDelete: d(function (index) {
+		var i;
+		if (index >= this.__nextIndex__) return;
+		--this.__nextIndex__;
+		if (!this.__redo__) return;
+		i = this.__redo__.indexOf(index);
+		if (i !== -1) this.__redo__.splice(i, 1);
+		this.__redo__.forEach(function (redo, i) {
+			if (redo > index) this.__redo__[i] = --redo;
+		}, this);
+	}),
+	_onClear: d(function () {
+		if (this.__redo__) clear.call(this.__redo__);
+		this.__nextIndex__ = 0;
+	})
+})));
+
+defineProperty(Iterator.prototype, Symbol.iterator, d(function () {
+	return this;
+}));
+defineProperty(Iterator.prototype, Symbol.toStringTag, d('', 'Iterator'));
+
+},{"d":7,"d/auto-bind":6,"es5-ext/array/#/clear":18,"es5-ext/object/assign":26,"es5-ext/object/valid-callable":43,"es5-ext/object/valid-value":45,"es6-symbol":55}],54:[function(require,module,exports){
+'use strict';
+
+var isString       = require('es5-ext/string/is-string')
+  , iteratorSymbol = require('es6-symbol').iterator
+
+  , isArray = Array.isArray;
+
+module.exports = function (value) {
+	if (value == null) return false;
+	if (isArray(value)) return true;
+	if (isString(value)) return true;
+	return (typeof value[iteratorSymbol] === 'function');
+};
+
+},{"es5-ext/string/is-string":49,"es6-symbol":55}],55:[function(require,module,exports){
+'use strict';
+
+module.exports = require('./is-implemented')() ? Symbol : require('./polyfill');
+
+},{"./is-implemented":56,"./polyfill":58}],56:[function(require,module,exports){
+'use strict';
+
+module.exports = function () {
+	var symbol;
+	if (typeof Symbol !== 'function') return false;
+	symbol = Symbol('test symbol');
+	try { String(symbol); } catch (e) { return false; }
+	if (typeof Symbol.iterator === 'symbol') return true;
+
+	// Return 'true' for polyfills
+	if (typeof Symbol.isConcatSpreadable !== 'object') return false;
+	if (typeof Symbol.iterator !== 'object') return false;
+	if (typeof Symbol.toPrimitive !== 'object') return false;
+	if (typeof Symbol.toStringTag !== 'object') return false;
+	if (typeof Symbol.unscopables !== 'object') return false;
+
+	return true;
+};
+
+},{}],57:[function(require,module,exports){
+'use strict';
+
+module.exports = function (x) {
+	return (x && ((typeof x === 'symbol') || (x['@@toStringTag'] === 'Symbol'))) || false;
+};
+
+},{}],58:[function(require,module,exports){
+'use strict';
+
+var d              = require('d')
+  , validateSymbol = require('./validate-symbol')
+
+  , create = Object.create, defineProperties = Object.defineProperties
+  , defineProperty = Object.defineProperty, objPrototype = Object.prototype
+  , Symbol, HiddenSymbol, globalSymbols = create(null);
+
+var generateName = (function () {
+	var created = create(null);
+	return function (desc) {
+		var postfix = 0, name;
+		while (created[desc + (postfix || '')]) ++postfix;
+		desc += (postfix || '');
+		created[desc] = true;
+		name = '@@' + desc;
+		defineProperty(objPrototype, name, d.gs(null, function (value) {
+			defineProperty(this, name, d(value));
+		}));
+		return name;
+	};
+}());
+
+HiddenSymbol = function Symbol(description) {
+	if (this instanceof HiddenSymbol) throw new TypeError('TypeError: Symbol is not a constructor');
+	return Symbol(description);
+};
+module.exports = Symbol = function Symbol(description) {
+	var symbol;
+	if (this instanceof Symbol) throw new TypeError('TypeError: Symbol is not a constructor');
+	symbol = create(HiddenSymbol.prototype);
+	description = (description === undefined ? '' : String(description));
+	return defineProperties(symbol, {
+		__description__: d('', description),
+		__name__: d('', generateName(description))
+	});
+};
+defineProperties(Symbol, {
+	for: d(function (key) {
+		if (globalSymbols[key]) return globalSymbols[key];
+		return (globalSymbols[key] = Symbol(String(key)));
+	}),
+	keyFor: d(function (s) {
+		var key;
+		validateSymbol(s);
+		for (key in globalSymbols) if (globalSymbols[key] === s) return key;
+	}),
+	hasInstance: d('', Symbol('hasInstance')),
+	isConcatSpreadable: d('', Symbol('isConcatSpreadable')),
+	iterator: d('', Symbol('iterator')),
+	match: d('', Symbol('match')),
+	replace: d('', Symbol('replace')),
+	search: d('', Symbol('search')),
+	species: d('', Symbol('species')),
+	split: d('', Symbol('split')),
+	toPrimitive: d('', Symbol('toPrimitive')),
+	toStringTag: d('', Symbol('toStringTag')),
+	unscopables: d('', Symbol('unscopables'))
+});
+defineProperties(HiddenSymbol.prototype, {
+	constructor: d(Symbol),
+	toString: d('', function () { return this.__name__; })
+});
+
+defineProperties(Symbol.prototype, {
+	toString: d(function () { return 'Symbol (' + validateSymbol(this).__description__ + ')'; }),
+	valueOf: d(function () { return validateSymbol(this); })
+});
+defineProperty(Symbol.prototype, Symbol.toPrimitive, d('',
+	function () { return validateSymbol(this); }));
+defineProperty(Symbol.prototype, Symbol.toStringTag, d('c', 'Symbol'));
+
+defineProperty(HiddenSymbol.prototype, Symbol.toPrimitive,
+	d('c', Symbol.prototype[Symbol.toPrimitive]));
+defineProperty(HiddenSymbol.prototype, Symbol.toStringTag,
+	d('c', Symbol.prototype[Symbol.toStringTag]));
+
+},{"./validate-symbol":59,"d":7}],59:[function(require,module,exports){
+'use strict';
+
+var isSymbol = require('./is-symbol');
+
+module.exports = function (value) {
+	if (!isSymbol(value)) throw new TypeError(value + " is not a symbol");
+	return value;
+};
+
+},{"./is-symbol":57}],60:[function(require,module,exports){
+// Thanks @mathiasbynens
+// http://mathiasbynens.be/notes/javascript-unicode#iterating-over-symbols
+
+'use strict';
+
+var setPrototypeOf = require('es5-ext/object/set-prototype-of')
+  , d              = require('d')
+  , Iterator       = require('./')
+
+  , defineProperty = Object.defineProperty
+  , StringIterator;
+
+StringIterator = module.exports = function (str) {
+	if (!(this instanceof StringIterator)) return new StringIterator(str);
+	str = String(str);
+	Iterator.call(this, str);
+	defineProperty(this, '__length__', d('', str.length));
+
+};
+if (setPrototypeOf) setPrototypeOf(StringIterator, Iterator);
+
+StringIterator.prototype = Object.create(Iterator.prototype, {
+	constructor: d(StringIterator),
+	_next: d(function () {
+		if (!this.__list__) return;
+		if (this.__nextIndex__ < this.__length__) return this.__nextIndex__++;
+		this._unBind();
+	}),
+	_resolve: d(function (i) {
+		var char = this.__list__[i], code;
+		if (this.__nextIndex__ === this.__length__) return char;
+		code = char.charCodeAt(0);
+		if ((code >= 0xD800) && (code <= 0xDBFF)) return char + this.__list__[this.__nextIndex__++];
+		return char;
+	}),
+	toString: d(function () { return '[object String Iterator]'; })
+});
+
+},{"./":53,"d":7,"es5-ext/object/set-prototype-of":40}],61:[function(require,module,exports){
+'use strict';
+
+var isIterable = require('./is-iterable');
+
+module.exports = function (value) {
+	if (!isIterable(value)) throw new TypeError(value + " is not iterable");
+	return value;
+};
+
+},{"./is-iterable":54}],62:[function(require,module,exports){
+'use strict';
+
+module.exports = require('./is-implemented')() ? Map : require('./polyfill');
+
+},{"./is-implemented":63,"./polyfill":67}],63:[function(require,module,exports){
+'use strict';
+
+module.exports = function () {
+	var map, iterator, result;
+	if (typeof Map !== 'function') return false;
+	try {
+		// WebKit doesn't support arguments and crashes
+		map = new Map([['raz', 'one'], ['dwa', 'two'], ['trzy', 'three']]);
+	} catch (e) {
+		return false;
+	}
+	if (map.size !== 3) return false;
+	if (typeof map.clear !== 'function') return false;
+	if (typeof map.delete !== 'function') return false;
+	if (typeof map.entries !== 'function') return false;
+	if (typeof map.forEach !== 'function') return false;
+	if (typeof map.get !== 'function') return false;
+	if (typeof map.has !== 'function') return false;
+	if (typeof map.keys !== 'function') return false;
+	if (typeof map.set !== 'function') return false;
+	if (typeof map.values !== 'function') return false;
+
+	iterator = map.entries();
+	result = iterator.next();
+	if (result.done !== false) return false;
+	if (!result.value) return false;
+	if (result.value[0] !== 'raz') return false;
+	if (result.value[1] !== 'one') return false;
+	return true;
+};
+
+},{}],64:[function(require,module,exports){
+// Exports true if environment provides native `Map` implementation,
+// whatever that is.
+
+'use strict';
+
+module.exports = (function () {
+	if (typeof Map === 'undefined') return false;
+	return (Object.prototype.toString.call(Map.prototype) === '[object Map]');
+}());
+
+},{}],65:[function(require,module,exports){
+'use strict';
+
+module.exports = require('es5-ext/object/primitive-set')('key',
+	'value', 'key+value');
+
+},{"es5-ext/object/primitive-set":39}],66:[function(require,module,exports){
+'use strict';
+
+var setPrototypeOf    = require('es5-ext/object/set-prototype-of')
+  , d                 = require('d')
+  , Iterator          = require('es6-iterator')
+  , toStringTagSymbol = require('es6-symbol').toStringTag
+  , kinds             = require('./iterator-kinds')
+
+  , defineProperties = Object.defineProperties
+  , unBind = Iterator.prototype._unBind
+  , MapIterator;
+
+MapIterator = module.exports = function (map, kind) {
+	if (!(this instanceof MapIterator)) return new MapIterator(map, kind);
+	Iterator.call(this, map.__mapKeysData__, map);
+	if (!kind || !kinds[kind]) kind = 'key+value';
+	defineProperties(this, {
+		__kind__: d('', kind),
+		__values__: d('w', map.__mapValuesData__)
+	});
+};
+if (setPrototypeOf) setPrototypeOf(MapIterator, Iterator);
+
+MapIterator.prototype = Object.create(Iterator.prototype, {
+	constructor: d(MapIterator),
+	_resolve: d(function (i) {
+		if (this.__kind__ === 'value') return this.__values__[i];
+		if (this.__kind__ === 'key') return this.__list__[i];
+		return [this.__list__[i], this.__values__[i]];
+	}),
+	_unBind: d(function () {
+		this.__values__ = null;
+		unBind.call(this);
+	}),
+	toString: d(function () { return '[object Map Iterator]'; })
+});
+Object.defineProperty(MapIterator.prototype, toStringTagSymbol,
+	d('c', 'Map Iterator'));
+
+},{"./iterator-kinds":65,"d":7,"es5-ext/object/set-prototype-of":40,"es6-iterator":53,"es6-symbol":68}],67:[function(require,module,exports){
+'use strict';
+
+var clear          = require('es5-ext/array/#/clear')
+  , eIndexOf       = require('es5-ext/array/#/e-index-of')
+  , setPrototypeOf = require('es5-ext/object/set-prototype-of')
+  , callable       = require('es5-ext/object/valid-callable')
+  , validValue     = require('es5-ext/object/valid-value')
+  , d              = require('d')
+  , ee             = require('event-emitter')
+  , Symbol         = require('es6-symbol')
+  , iterator       = require('es6-iterator/valid-iterable')
+  , forOf          = require('es6-iterator/for-of')
+  , Iterator       = require('./lib/iterator')
+  , isNative       = require('./is-native-implemented')
+
+  , call = Function.prototype.call, defineProperties = Object.defineProperties
+  , MapPoly;
+
+module.exports = MapPoly = function (/*iterable*/) {
+	var iterable = arguments[0], keys, values;
+	if (!(this instanceof MapPoly)) return new MapPoly(iterable);
+	if (this.__mapKeysData__ !== undefined) {
+		throw new TypeError(this + " cannot be reinitialized");
+	}
+	if (iterable != null) iterator(iterable);
+	defineProperties(this, {
+		__mapKeysData__: d('c', keys = []),
+		__mapValuesData__: d('c', values = [])
+	});
+	if (!iterable) return;
+	forOf(iterable, function (value) {
+		var key = validValue(value)[0];
+		value = value[1];
+		if (eIndexOf.call(keys, key) !== -1) return;
+		keys.push(key);
+		values.push(value);
+	}, this);
+};
+
+if (isNative) {
+	if (setPrototypeOf) setPrototypeOf(MapPoly, Map);
+	MapPoly.prototype = Object.create(Map.prototype, {
+		constructor: d(MapPoly)
+	});
+}
+
+ee(defineProperties(MapPoly.prototype, {
+	clear: d(function () {
+		if (!this.__mapKeysData__.length) return;
+		clear.call(this.__mapKeysData__);
+		clear.call(this.__mapValuesData__);
+		this.emit('_clear');
+	}),
+	delete: d(function (key) {
+		var index = eIndexOf.call(this.__mapKeysData__, key);
+		if (index === -1) return false;
+		this.__mapKeysData__.splice(index, 1);
+		this.__mapValuesData__.splice(index, 1);
+		this.emit('_delete', index, key);
+		return true;
+	}),
+	entries: d(function () { return new Iterator(this, 'key+value'); }),
+	forEach: d(function (cb/*, thisArg*/) {
+		var thisArg = arguments[1], iterator, result;
+		callable(cb);
+		iterator = this.entries();
+		result = iterator._next();
+		while (result !== undefined) {
+			call.call(cb, thisArg, this.__mapValuesData__[result],
+				this.__mapKeysData__[result], this);
+			result = iterator._next();
+		}
+	}),
+	get: d(function (key) {
+		var index = eIndexOf.call(this.__mapKeysData__, key);
+		if (index === -1) return;
+		return this.__mapValuesData__[index];
+	}),
+	has: d(function (key) {
+		return (eIndexOf.call(this.__mapKeysData__, key) !== -1);
+	}),
+	keys: d(function () { return new Iterator(this, 'key'); }),
+	set: d(function (key, value) {
+		var index = eIndexOf.call(this.__mapKeysData__, key), emit;
+		if (index === -1) {
+			index = this.__mapKeysData__.push(key) - 1;
+			emit = true;
+		}
+		this.__mapValuesData__[index] = value;
+		if (emit) this.emit('_add', index, key);
+		return this;
+	}),
+	size: d.gs(function () { return this.__mapKeysData__.length; }),
+	values: d(function () { return new Iterator(this, 'value'); }),
+	toString: d(function () { return '[object Map]'; })
+}));
+Object.defineProperty(MapPoly.prototype, Symbol.iterator, d(function () {
+	return this.entries();
+}));
+Object.defineProperty(MapPoly.prototype, Symbol.toStringTag, d('c', 'Map'));
+
+},{"./is-native-implemented":64,"./lib/iterator":66,"d":7,"es5-ext/array/#/clear":18,"es5-ext/array/#/e-index-of":19,"es5-ext/object/set-prototype-of":40,"es5-ext/object/valid-callable":43,"es5-ext/object/valid-value":45,"es6-iterator/for-of":51,"es6-iterator/valid-iterable":61,"es6-symbol":68,"event-emitter":103}],68:[function(require,module,exports){
+arguments[4][55][0].apply(exports,arguments)
+},{"./is-implemented":69,"./polyfill":70,"dup":55}],69:[function(require,module,exports){
+'use strict';
+
+module.exports = function () {
+	var symbol;
+	if (typeof Symbol !== 'function') return false;
+	symbol = Symbol('test symbol');
+	try { String(symbol); } catch (e) { return false; }
+	if (typeof Symbol.iterator === 'symbol') return true;
+
+	// Return 'true' for polyfills
+	if (typeof Symbol.isConcatSpreadable !== 'object') return false;
+	if (typeof Symbol.isRegExp !== 'object') return false;
+	if (typeof Symbol.iterator !== 'object') return false;
+	if (typeof Symbol.toPrimitive !== 'object') return false;
+	if (typeof Symbol.toStringTag !== 'object') return false;
+	if (typeof Symbol.unscopables !== 'object') return false;
+
+	return true;
+};
+
+},{}],70:[function(require,module,exports){
+'use strict';
+
+var d = require('d')
+
+  , create = Object.create, defineProperties = Object.defineProperties
+  , generateName, Symbol;
+
+generateName = (function () {
+	var created = create(null);
+	return function (desc) {
+		var postfix = 0;
+		while (created[desc + (postfix || '')]) ++postfix;
+		desc += (postfix || '');
+		created[desc] = true;
+		return '@@' + desc;
+	};
+}());
+
+module.exports = Symbol = function (description) {
+	var symbol;
+	if (this instanceof Symbol) {
+		throw new TypeError('TypeError: Symbol is not a constructor');
+	}
+	symbol = create(Symbol.prototype);
+	description = (description === undefined ? '' : String(description));
+	return defineProperties(symbol, {
+		__description__: d('', description),
+		__name__: d('', generateName(description))
+	});
+};
+
+Object.defineProperties(Symbol, {
+	create: d('', Symbol('create')),
+	hasInstance: d('', Symbol('hasInstance')),
+	isConcatSpreadable: d('', Symbol('isConcatSpreadable')),
+	isRegExp: d('', Symbol('isRegExp')),
+	iterator: d('', Symbol('iterator')),
+	toPrimitive: d('', Symbol('toPrimitive')),
+	toStringTag: d('', Symbol('toStringTag')),
+	unscopables: d('', Symbol('unscopables'))
+});
+
+defineProperties(Symbol.prototype, {
+	properToString: d(function () {
+		return 'Symbol (' + this.__description__ + ')';
+	}),
+	toString: d('', function () { return this.__name__; })
+});
+Object.defineProperty(Symbol.prototype, Symbol.toPrimitive, d('',
+	function (hint) {
+		throw new TypeError("Conversion of symbol objects is not allowed");
+	}));
+Object.defineProperty(Symbol.prototype, Symbol.toStringTag, d('c', 'Symbol'));
+
+},{"d":7}],71:[function(require,module,exports){
+'use strict';
+
+module.exports = require('./is-implemented')() ?
+		WeakMap : require('./polyfill');
+
+},{"./is-implemented":72,"./polyfill":79}],72:[function(require,module,exports){
+'use strict';
+
+module.exports = function () {
+	var map;
+	if (typeof WeakMap !== 'function') return false;
+	map = new WeakMap();
+	if (typeof map.set !== 'function') return false;
+	if (map.set({}, 1) !== map) return false;
+	if (typeof map.clear !== 'function') return false;
+	if (typeof map.delete !== 'function') return false;
+	if (typeof map.has !== 'function') return false;
+
+	return true;
+};
+
+},{}],73:[function(require,module,exports){
+// Exports true if environment provides native `WeakMap` implementation,
+// whatever that is.
+
+'use strict';
+
+module.exports = (function () {
+	if (typeof WeakMap === 'undefined') return false;
+	return (Object.prototype.toString.call(WeakMap.prototype) ===
+			'[object WeakMap]');
+}());
+
+},{}],74:[function(require,module,exports){
+arguments[4][55][0].apply(exports,arguments)
+},{"./is-implemented":75,"./polyfill":77,"dup":55}],75:[function(require,module,exports){
+arguments[4][56][0].apply(exports,arguments)
+},{"dup":56}],76:[function(require,module,exports){
+arguments[4][57][0].apply(exports,arguments)
+},{"dup":57}],77:[function(require,module,exports){
+arguments[4][58][0].apply(exports,arguments)
+},{"./validate-symbol":78,"d":7,"dup":58}],78:[function(require,module,exports){
+arguments[4][59][0].apply(exports,arguments)
+},{"./is-symbol":76,"dup":59}],79:[function(require,module,exports){
+'use strict';
+
+var setPrototypeOf    = require('es5-ext/object/set-prototype-of')
+  , object            = require('es5-ext/object/valid-object')
+  , value             = require('es5-ext/object/valid-value')
+  , d                 = require('d')
+  , getIterator       = require('es6-iterator/get')
+  , forOf             = require('es6-iterator/for-of')
+  , toStringTagSymbol = require('es6-symbol').toStringTag
+  , isNative          = require('./is-native-implemented')
+
+  , isArray = Array.isArray, defineProperty = Object.defineProperty, random = Math.random
+  , hasOwnProperty = Object.prototype.hasOwnProperty
+  , genId, WeakMapPoly;
+
+genId = (function () {
+	var generated = Object.create(null);
+	return function () {
+		var id;
+		do { id = random().toString(36).slice(2); } while (generated[id]);
+		generated[id] = true;
+		return id;
+	};
+}());
+
+module.exports = WeakMapPoly = function (/*iterable*/) {
+	var iterable = arguments[0];
+	if (!(this instanceof WeakMapPoly)) return new WeakMapPoly(iterable);
+	if (this.__weakMapData__ !== undefined) {
+		throw new TypeError(this + " cannot be reinitialized");
+	}
+	if (iterable != null) {
+		if (!isArray(iterable)) iterable = getIterator(iterable);
+	}
+	defineProperty(this, '__weakMapData__', d('c', '$weakMap$' + genId()));
+	if (!iterable) return;
+	forOf(iterable, function (val) {
+		value(val);
+		this.set(val[0], val[1]);
+	}, this);
+};
+
+if (isNative) {
+	if (setPrototypeOf) setPrototypeOf(WeakMapPoly, WeakMap);
+	WeakMapPoly.prototype = Object.create(WeakMap.prototype, {
+		constructor: d(WeakMapPoly)
+	});
+}
+
+Object.defineProperties(WeakMapPoly.prototype, {
+	clear: d(function () {
+		defineProperty(this, '__weakMapData__', d('c', '$weakMap$' + genId()));
+	}),
+	delete: d(function (key) {
+		if (hasOwnProperty.call(object(key), this.__weakMapData__)) {
+			delete key[this.__weakMapData__];
+			return true;
+		}
+		return false;
+	}),
+	get: d(function (key) {
+		if (hasOwnProperty.call(object(key), this.__weakMapData__)) {
+			return key[this.__weakMapData__];
+		}
+	}),
+	has: d(function (key) {
+		return hasOwnProperty.call(object(key), this.__weakMapData__);
+	}),
+	set: d(function (key, value) {
+		defineProperty(object(key), this.__weakMapData__, d('c', value));
+		return this;
+	}),
+	toString: d(function () { return '[object WeakMap]'; })
+});
+defineProperty(WeakMapPoly.prototype, toStringTagSymbol, d('c', 'WeakMap'));
+
+},{"./is-native-implemented":73,"d":7,"es5-ext/object/set-prototype-of":40,"es5-ext/object/valid-object":44,"es5-ext/object/valid-value":45,"es6-iterator/for-of":51,"es6-iterator/get":52,"es6-symbol":74}],80:[function(require,module,exports){
 'use strict';
 
 var matchOperatorsRe = /[|\\{}()[\]^$+*?.]/g;
@@ -12198,7 +12895,7 @@ module.exports = function (str) {
 	return str.replace(matchOperatorsRe,  '\\$&');
 };
 
-},{}],23:[function(require,module,exports){
+},{}],81:[function(require,module,exports){
 "use strict";
 
 var _interopRequire = function (obj) { return obj && obj.__esModule ? obj["default"] : obj; };
@@ -12299,7 +12996,7 @@ exports.ParameterDefinition = ParameterDefinition;
 /* vim: set sw=4 ts=4 et tw=80 : */
 exports.Definition = Definition;
 
-},{"./variable":29}],24:[function(require,module,exports){
+},{"./variable":87}],82:[function(require,module,exports){
 "use strict";
 
 var _interopRequire = function (obj) { return obj && obj.__esModule ? obj["default"] : obj; };
@@ -12454,7 +13151,7 @@ exports.ScopeManager = ScopeManager;
 
 /** @name module:escope.ScopeManager */
 
-},{"../package.json":132,"./reference":25,"./referencer":26,"./scope":28,"./scope-manager":27,"./variable":29,"assert":5}],25:[function(require,module,exports){
+},{"../package.json":90,"./reference":83,"./referencer":84,"./scope":86,"./scope-manager":85,"./variable":87,"assert":5}],83:[function(require,module,exports){
 "use strict";
 
 var _createClass = (function () { function defineProperties(target, props) { for (var key in props) { var prop = props[key]; prop.configurable = true; if (prop.value) prop.writable = true; } Object.defineProperties(target, props); } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
@@ -12644,7 +13341,7 @@ Reference.RW = RW;
 
 /* vim: set sw=4 ts=4 et tw=80 : */
 
-},{}],26:[function(require,module,exports){
+},{}],84:[function(require,module,exports){
 "use strict";
 
 var _interopRequire = function (obj) { return obj && obj.__esModule ? obj["default"] : obj; };
@@ -13399,7 +14096,7 @@ module.exports = Referencer;
 
 /* vim: set sw=4 ts=4 et tw=80 : */
 
-},{"./definition":23,"./reference":25,"./variable":29,"assert":5,"esrecurse":128,"estraverse":130}],27:[function(require,module,exports){
+},{"./definition":81,"./reference":83,"./variable":87,"assert":5,"esrecurse":91,"estraverse":88}],85:[function(require,module,exports){
 "use strict";
 
 var _interopRequire = function (obj) { return obj && obj.__esModule ? obj["default"] : obj; };
@@ -13693,7 +14390,7 @@ module.exports = ScopeManager;
 
 /* vim: set sw=4 ts=4 et tw=80 : */
 
-},{"./scope":28,"assert":5,"es6-weak-map":85}],28:[function(require,module,exports){
+},{"./scope":86,"assert":5,"es6-weak-map":71}],86:[function(require,module,exports){
 "use strict";
 
 var _interopRequire = function (obj) { return obj && obj.__esModule ? obj["default"] : obj; };
@@ -14442,7 +15139,7 @@ var ClassScope = exports.ClassScope = (function (_Scope11) {
 
 /* vim: set sw=4 ts=4 et tw=80 : */
 
-},{"./definition":23,"./reference":25,"./variable":29,"assert":5,"es6-map":30,"estraverse":130}],29:[function(require,module,exports){
+},{"./definition":81,"./reference":83,"./variable":87,"assert":5,"es6-map":62,"estraverse":88}],87:[function(require,module,exports){
 "use strict";
 
 var _classCallCheck = function (instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } };
@@ -14532,1736 +15229,7 @@ Variable.ImplicitGlobalVariable = "ImplicitGlobalVariable";
 
 /* vim: set sw=4 ts=4 et tw=80 : */
 
-},{}],30:[function(require,module,exports){
-'use strict';
-
-module.exports = require('./is-implemented')() ? Map : require('./polyfill');
-
-},{"./is-implemented":31,"./polyfill":84}],31:[function(require,module,exports){
-'use strict';
-
-module.exports = function () {
-	var map, iterator, result;
-	if (typeof Map !== 'function') return false;
-	try {
-		// WebKit doesn't support arguments and crashes
-		map = new Map([['raz', 'one'], ['dwa', 'two'], ['trzy', 'three']]);
-	} catch (e) {
-		return false;
-	}
-	if (map.size !== 3) return false;
-	if (typeof map.clear !== 'function') return false;
-	if (typeof map.delete !== 'function') return false;
-	if (typeof map.entries !== 'function') return false;
-	if (typeof map.forEach !== 'function') return false;
-	if (typeof map.get !== 'function') return false;
-	if (typeof map.has !== 'function') return false;
-	if (typeof map.keys !== 'function') return false;
-	if (typeof map.set !== 'function') return false;
-	if (typeof map.values !== 'function') return false;
-
-	iterator = map.entries();
-	result = iterator.next();
-	if (result.done !== false) return false;
-	if (!result.value) return false;
-	if (result.value[0] !== 'raz') return false;
-	if (result.value[1] !== 'one') return false;
-	return true;
-};
-
-},{}],32:[function(require,module,exports){
-// Exports true if environment provides native `Map` implementation,
-// whatever that is.
-
-'use strict';
-
-module.exports = (function () {
-	if (typeof Map === 'undefined') return false;
-	return (Object.prototype.toString.call(Map.prototype) === '[object Map]');
-}());
-
-},{}],33:[function(require,module,exports){
-'use strict';
-
-module.exports = require('es5-ext/object/primitive-set')('key',
-	'value', 'key+value');
-
-},{"es5-ext/object/primitive-set":58}],34:[function(require,module,exports){
-'use strict';
-
-var setPrototypeOf    = require('es5-ext/object/set-prototype-of')
-  , d                 = require('d')
-  , Iterator          = require('es6-iterator')
-  , toStringTagSymbol = require('es6-symbol').toStringTag
-  , kinds             = require('./iterator-kinds')
-
-  , defineProperties = Object.defineProperties
-  , unBind = Iterator.prototype._unBind
-  , MapIterator;
-
-MapIterator = module.exports = function (map, kind) {
-	if (!(this instanceof MapIterator)) return new MapIterator(map, kind);
-	Iterator.call(this, map.__mapKeysData__, map);
-	if (!kind || !kinds[kind]) kind = 'key+value';
-	defineProperties(this, {
-		__kind__: d('', kind),
-		__values__: d('w', map.__mapValuesData__)
-	});
-};
-if (setPrototypeOf) setPrototypeOf(MapIterator, Iterator);
-
-MapIterator.prototype = Object.create(Iterator.prototype, {
-	constructor: d(MapIterator),
-	_resolve: d(function (i) {
-		if (this.__kind__ === 'value') return this.__values__[i];
-		if (this.__kind__ === 'key') return this.__list__[i];
-		return [this.__list__[i], this.__values__[i]];
-	}),
-	_unBind: d(function () {
-		this.__values__ = null;
-		unBind.call(this);
-	}),
-	toString: d(function () { return '[object Map Iterator]'; })
-});
-Object.defineProperty(MapIterator.prototype, toStringTagSymbol,
-	d('c', 'Map Iterator'));
-
-},{"./iterator-kinds":33,"d":36,"es5-ext/object/set-prototype-of":59,"es6-iterator":71,"es6-symbol":80}],35:[function(require,module,exports){
-'use strict';
-
-var copy       = require('es5-ext/object/copy')
-  , map        = require('es5-ext/object/map')
-  , callable   = require('es5-ext/object/valid-callable')
-  , validValue = require('es5-ext/object/valid-value')
-
-  , bind = Function.prototype.bind, defineProperty = Object.defineProperty
-  , hasOwnProperty = Object.prototype.hasOwnProperty
-  , define;
-
-define = function (name, desc, bindTo) {
-	var value = validValue(desc) && callable(desc.value), dgs;
-	dgs = copy(desc);
-	delete dgs.writable;
-	delete dgs.value;
-	dgs.get = function () {
-		if (hasOwnProperty.call(this, name)) return value;
-		desc.value = bind.call(value, (bindTo == null) ? this : this[bindTo]);
-		defineProperty(this, name, desc);
-		return this[name];
-	};
-	return dgs;
-};
-
-module.exports = function (props/*, bindTo*/) {
-	var bindTo = arguments[1];
-	return map(props, function (desc, name) {
-		return define(name, desc, bindTo);
-	});
-};
-
-},{"es5-ext/object/copy":48,"es5-ext/object/map":56,"es5-ext/object/valid-callable":62,"es5-ext/object/valid-value":63}],36:[function(require,module,exports){
-'use strict';
-
-var assign        = require('es5-ext/object/assign')
-  , normalizeOpts = require('es5-ext/object/normalize-options')
-  , isCallable    = require('es5-ext/object/is-callable')
-  , contains      = require('es5-ext/string/#/contains')
-
-  , d;
-
-d = module.exports = function (dscr, value/*, options*/) {
-	var c, e, w, options, desc;
-	if ((arguments.length < 2) || (typeof dscr !== 'string')) {
-		options = value;
-		value = dscr;
-		dscr = null;
-	} else {
-		options = arguments[2];
-	}
-	if (dscr == null) {
-		c = w = true;
-		e = false;
-	} else {
-		c = contains.call(dscr, 'c');
-		e = contains.call(dscr, 'e');
-		w = contains.call(dscr, 'w');
-	}
-
-	desc = { value: value, configurable: c, enumerable: e, writable: w };
-	return !options ? desc : assign(normalizeOpts(options), desc);
-};
-
-d.gs = function (dscr, get, set/*, options*/) {
-	var c, e, options, desc;
-	if (typeof dscr !== 'string') {
-		options = set;
-		set = get;
-		get = dscr;
-		dscr = null;
-	} else {
-		options = arguments[3];
-	}
-	if (get == null) {
-		get = undefined;
-	} else if (!isCallable(get)) {
-		options = get;
-		get = set = undefined;
-	} else if (set == null) {
-		set = undefined;
-	} else if (!isCallable(set)) {
-		options = set;
-		set = undefined;
-	}
-	if (dscr == null) {
-		c = true;
-		e = false;
-	} else {
-		c = contains.call(dscr, 'c');
-		e = contains.call(dscr, 'e');
-	}
-
-	desc = { get: get, set: set, configurable: c, enumerable: e };
-	return !options ? desc : assign(normalizeOpts(options), desc);
-};
-
-},{"es5-ext/object/assign":45,"es5-ext/object/is-callable":51,"es5-ext/object/normalize-options":57,"es5-ext/string/#/contains":64}],37:[function(require,module,exports){
-// Inspired by Google Closure:
-// http://closure-library.googlecode.com/svn/docs/
-// closure_goog_array_array.js.html#goog.array.clear
-
-'use strict';
-
-var value = require('../../object/valid-value');
-
-module.exports = function () {
-	value(this).length = 0;
-	return this;
-};
-
-},{"../../object/valid-value":63}],38:[function(require,module,exports){
-'use strict';
-
-var toPosInt = require('../../number/to-pos-integer')
-  , value    = require('../../object/valid-value')
-
-  , indexOf = Array.prototype.indexOf
-  , hasOwnProperty = Object.prototype.hasOwnProperty
-  , abs = Math.abs, floor = Math.floor;
-
-module.exports = function (searchElement/*, fromIndex*/) {
-	var i, l, fromIndex, val;
-	if (searchElement === searchElement) { //jslint: ignore
-		return indexOf.apply(this, arguments);
-	}
-
-	l = toPosInt(value(this).length);
-	fromIndex = arguments[1];
-	if (isNaN(fromIndex)) fromIndex = 0;
-	else if (fromIndex >= 0) fromIndex = floor(fromIndex);
-	else fromIndex = toPosInt(this.length) - floor(abs(fromIndex));
-
-	for (i = fromIndex; i < l; ++i) {
-		if (hasOwnProperty.call(this, i)) {
-			val = this[i];
-			if (val !== val) return i; //jslint: ignore
-		}
-	}
-	return -1;
-};
-
-},{"../../number/to-pos-integer":43,"../../object/valid-value":63}],39:[function(require,module,exports){
-'use strict';
-
-module.exports = require('./is-implemented')()
-	? Math.sign
-	: require('./shim');
-
-},{"./is-implemented":40,"./shim":41}],40:[function(require,module,exports){
-'use strict';
-
-module.exports = function () {
-	var sign = Math.sign;
-	if (typeof sign !== 'function') return false;
-	return ((sign(10) === 1) && (sign(-20) === -1));
-};
-
-},{}],41:[function(require,module,exports){
-'use strict';
-
-module.exports = function (value) {
-	value = Number(value);
-	if (isNaN(value) || (value === 0)) return value;
-	return (value > 0) ? 1 : -1;
-};
-
-},{}],42:[function(require,module,exports){
-'use strict';
-
-var sign = require('../math/sign')
-
-  , abs = Math.abs, floor = Math.floor;
-
-module.exports = function (value) {
-	if (isNaN(value)) return 0;
-	value = Number(value);
-	if ((value === 0) || !isFinite(value)) return value;
-	return sign(value) * floor(abs(value));
-};
-
-},{"../math/sign":39}],43:[function(require,module,exports){
-'use strict';
-
-var toInteger = require('./to-integer')
-
-  , max = Math.max;
-
-module.exports = function (value) { return max(0, toInteger(value)); };
-
-},{"./to-integer":42}],44:[function(require,module,exports){
-// Internal method, used by iteration functions.
-// Calls a function for each key-value pair found in object
-// Optionally takes compareFn to iterate object in specific order
-
-'use strict';
-
-var isCallable = require('./is-callable')
-  , callable   = require('./valid-callable')
-  , value      = require('./valid-value')
-
-  , call = Function.prototype.call, keys = Object.keys
-  , propertyIsEnumerable = Object.prototype.propertyIsEnumerable;
-
-module.exports = function (method, defVal) {
-	return function (obj, cb/*, thisArg, compareFn*/) {
-		var list, thisArg = arguments[2], compareFn = arguments[3];
-		obj = Object(value(obj));
-		callable(cb);
-
-		list = keys(obj);
-		if (compareFn) {
-			list.sort(isCallable(compareFn) ? compareFn.bind(obj) : undefined);
-		}
-		return list[method](function (key, index) {
-			if (!propertyIsEnumerable.call(obj, key)) return defVal;
-			return call.call(cb, thisArg, obj[key], key, obj, index);
-		});
-	};
-};
-
-},{"./is-callable":51,"./valid-callable":62,"./valid-value":63}],45:[function(require,module,exports){
-'use strict';
-
-module.exports = require('./is-implemented')()
-	? Object.assign
-	: require('./shim');
-
-},{"./is-implemented":46,"./shim":47}],46:[function(require,module,exports){
-'use strict';
-
-module.exports = function () {
-	var assign = Object.assign, obj;
-	if (typeof assign !== 'function') return false;
-	obj = { foo: 'raz' };
-	assign(obj, { bar: 'dwa' }, { trzy: 'trzy' });
-	return (obj.foo + obj.bar + obj.trzy) === 'razdwatrzy';
-};
-
-},{}],47:[function(require,module,exports){
-'use strict';
-
-var keys  = require('../keys')
-  , value = require('../valid-value')
-
-  , max = Math.max;
-
-module.exports = function (dest, src/*, …srcn*/) {
-	var error, i, l = max(arguments.length, 2), assign;
-	dest = Object(value(dest));
-	assign = function (key) {
-		try { dest[key] = src[key]; } catch (e) {
-			if (!error) error = e;
-		}
-	};
-	for (i = 1; i < l; ++i) {
-		src = arguments[i];
-		keys(src).forEach(assign);
-	}
-	if (error !== undefined) throw error;
-	return dest;
-};
-
-},{"../keys":53,"../valid-value":63}],48:[function(require,module,exports){
-'use strict';
-
-var assign = require('./assign')
-  , value  = require('./valid-value');
-
-module.exports = function (obj) {
-	var copy = Object(value(obj));
-	if (copy !== obj) return copy;
-	return assign({}, obj);
-};
-
-},{"./assign":45,"./valid-value":63}],49:[function(require,module,exports){
-// Workaround for http://code.google.com/p/v8/issues/detail?id=2804
-
-'use strict';
-
-var create = Object.create, shim;
-
-if (!require('./set-prototype-of/is-implemented')()) {
-	shim = require('./set-prototype-of/shim');
-}
-
-module.exports = (function () {
-	var nullObject, props, desc;
-	if (!shim) return create;
-	if (shim.level !== 1) return create;
-
-	nullObject = {};
-	props = {};
-	desc = { configurable: false, enumerable: false, writable: true,
-		value: undefined };
-	Object.getOwnPropertyNames(Object.prototype).forEach(function (name) {
-		if (name === '__proto__') {
-			props[name] = { configurable: true, enumerable: false, writable: true,
-				value: undefined };
-			return;
-		}
-		props[name] = desc;
-	});
-	Object.defineProperties(nullObject, props);
-
-	Object.defineProperty(shim, 'nullPolyfill', { configurable: false,
-		enumerable: false, writable: false, value: nullObject });
-
-	return function (prototype, props) {
-		return create((prototype === null) ? nullObject : prototype, props);
-	};
-}());
-
-},{"./set-prototype-of/is-implemented":60,"./set-prototype-of/shim":61}],50:[function(require,module,exports){
-'use strict';
-
-module.exports = require('./_iterate')('forEach');
-
-},{"./_iterate":44}],51:[function(require,module,exports){
-// Deprecated
-
-'use strict';
-
-module.exports = function (obj) { return typeof obj === 'function'; };
-
-},{}],52:[function(require,module,exports){
-'use strict';
-
-var map = { function: true, object: true };
-
-module.exports = function (x) {
-	return ((x != null) && map[typeof x]) || false;
-};
-
-},{}],53:[function(require,module,exports){
-'use strict';
-
-module.exports = require('./is-implemented')()
-	? Object.keys
-	: require('./shim');
-
-},{"./is-implemented":54,"./shim":55}],54:[function(require,module,exports){
-'use strict';
-
-module.exports = function () {
-	try {
-		Object.keys('primitive');
-		return true;
-	} catch (e) { return false; }
-};
-
-},{}],55:[function(require,module,exports){
-'use strict';
-
-var keys = Object.keys;
-
-module.exports = function (object) {
-	return keys(object == null ? object : Object(object));
-};
-
-},{}],56:[function(require,module,exports){
-'use strict';
-
-var callable = require('./valid-callable')
-  , forEach  = require('./for-each')
-
-  , call = Function.prototype.call;
-
-module.exports = function (obj, cb/*, thisArg*/) {
-	var o = {}, thisArg = arguments[2];
-	callable(cb);
-	forEach(obj, function (value, key, obj, index) {
-		o[key] = call.call(cb, thisArg, value, key, obj, index);
-	});
-	return o;
-};
-
-},{"./for-each":50,"./valid-callable":62}],57:[function(require,module,exports){
-'use strict';
-
-var forEach = Array.prototype.forEach, create = Object.create;
-
-var process = function (src, obj) {
-	var key;
-	for (key in src) obj[key] = src[key];
-};
-
-module.exports = function (options/*, …options*/) {
-	var result = create(null);
-	forEach.call(arguments, function (options) {
-		if (options == null) return;
-		process(Object(options), result);
-	});
-	return result;
-};
-
-},{}],58:[function(require,module,exports){
-'use strict';
-
-var forEach = Array.prototype.forEach, create = Object.create;
-
-module.exports = function (arg/*, …args*/) {
-	var set = create(null);
-	forEach.call(arguments, function (name) { set[name] = true; });
-	return set;
-};
-
-},{}],59:[function(require,module,exports){
-'use strict';
-
-module.exports = require('./is-implemented')()
-	? Object.setPrototypeOf
-	: require('./shim');
-
-},{"./is-implemented":60,"./shim":61}],60:[function(require,module,exports){
-'use strict';
-
-var create = Object.create, getPrototypeOf = Object.getPrototypeOf
-  , x = {};
-
-module.exports = function (/*customCreate*/) {
-	var setPrototypeOf = Object.setPrototypeOf
-	  , customCreate = arguments[0] || create;
-	if (typeof setPrototypeOf !== 'function') return false;
-	return getPrototypeOf(setPrototypeOf(customCreate(null), x)) === x;
-};
-
-},{}],61:[function(require,module,exports){
-// Big thanks to @WebReflection for sorting this out
-// https://gist.github.com/WebReflection/5593554
-
-'use strict';
-
-var isObject      = require('../is-object')
-  , value         = require('../valid-value')
-
-  , isPrototypeOf = Object.prototype.isPrototypeOf
-  , defineProperty = Object.defineProperty
-  , nullDesc = { configurable: true, enumerable: false, writable: true,
-		value: undefined }
-  , validate;
-
-validate = function (obj, prototype) {
-	value(obj);
-	if ((prototype === null) || isObject(prototype)) return obj;
-	throw new TypeError('Prototype must be null or an object');
-};
-
-module.exports = (function (status) {
-	var fn, set;
-	if (!status) return null;
-	if (status.level === 2) {
-		if (status.set) {
-			set = status.set;
-			fn = function (obj, prototype) {
-				set.call(validate(obj, prototype), prototype);
-				return obj;
-			};
-		} else {
-			fn = function (obj, prototype) {
-				validate(obj, prototype).__proto__ = prototype;
-				return obj;
-			};
-		}
-	} else {
-		fn = function self(obj, prototype) {
-			var isNullBase;
-			validate(obj, prototype);
-			isNullBase = isPrototypeOf.call(self.nullPolyfill, obj);
-			if (isNullBase) delete self.nullPolyfill.__proto__;
-			if (prototype === null) prototype = self.nullPolyfill;
-			obj.__proto__ = prototype;
-			if (isNullBase) defineProperty(self.nullPolyfill, '__proto__', nullDesc);
-			return obj;
-		};
-	}
-	return Object.defineProperty(fn, 'level', { configurable: false,
-		enumerable: false, writable: false, value: status.level });
-}((function () {
-	var x = Object.create(null), y = {}, set
-	  , desc = Object.getOwnPropertyDescriptor(Object.prototype, '__proto__');
-
-	if (desc) {
-		try {
-			set = desc.set; // Opera crashes at this point
-			set.call(x, y);
-		} catch (ignore) { }
-		if (Object.getPrototypeOf(x) === y) return { set: set, level: 2 };
-	}
-
-	x.__proto__ = y;
-	if (Object.getPrototypeOf(x) === y) return { level: 2 };
-
-	x = {};
-	x.__proto__ = y;
-	if (Object.getPrototypeOf(x) === y) return { level: 1 };
-
-	return false;
-}())));
-
-require('../create');
-
-},{"../create":49,"../is-object":52,"../valid-value":63}],62:[function(require,module,exports){
-'use strict';
-
-module.exports = function (fn) {
-	if (typeof fn !== 'function') throw new TypeError(fn + " is not a function");
-	return fn;
-};
-
-},{}],63:[function(require,module,exports){
-'use strict';
-
-module.exports = function (value) {
-	if (value == null) throw new TypeError("Cannot use null or undefined");
-	return value;
-};
-
-},{}],64:[function(require,module,exports){
-'use strict';
-
-module.exports = require('./is-implemented')()
-	? String.prototype.contains
-	: require('./shim');
-
-},{"./is-implemented":65,"./shim":66}],65:[function(require,module,exports){
-'use strict';
-
-var str = 'razdwatrzy';
-
-module.exports = function () {
-	if (typeof str.contains !== 'function') return false;
-	return ((str.contains('dwa') === true) && (str.contains('foo') === false));
-};
-
-},{}],66:[function(require,module,exports){
-'use strict';
-
-var indexOf = String.prototype.indexOf;
-
-module.exports = function (searchString/*, position*/) {
-	return indexOf.call(this, searchString, arguments[1]) > -1;
-};
-
-},{}],67:[function(require,module,exports){
-'use strict';
-
-var toString = Object.prototype.toString
-
-  , id = toString.call('');
-
-module.exports = function (x) {
-	return (typeof x === 'string') || (x && (typeof x === 'object') &&
-		((x instanceof String) || (toString.call(x) === id))) || false;
-};
-
-},{}],68:[function(require,module,exports){
-'use strict';
-
-var setPrototypeOf = require('es5-ext/object/set-prototype-of')
-  , contains       = require('es5-ext/string/#/contains')
-  , d              = require('d')
-  , Iterator       = require('./')
-
-  , defineProperty = Object.defineProperty
-  , ArrayIterator;
-
-ArrayIterator = module.exports = function (arr, kind) {
-	if (!(this instanceof ArrayIterator)) return new ArrayIterator(arr, kind);
-	Iterator.call(this, arr);
-	if (!kind) kind = 'value';
-	else if (contains.call(kind, 'key+value')) kind = 'key+value';
-	else if (contains.call(kind, 'key')) kind = 'key';
-	else kind = 'value';
-	defineProperty(this, '__kind__', d('', kind));
-};
-if (setPrototypeOf) setPrototypeOf(ArrayIterator, Iterator);
-
-ArrayIterator.prototype = Object.create(Iterator.prototype, {
-	constructor: d(ArrayIterator),
-	_resolve: d(function (i) {
-		if (this.__kind__ === 'value') return this.__list__[i];
-		if (this.__kind__ === 'key+value') return [i, this.__list__[i]];
-		return i;
-	}),
-	toString: d(function () { return '[object Array Iterator]'; })
-});
-
-},{"./":71,"d":36,"es5-ext/object/set-prototype-of":59,"es5-ext/string/#/contains":64}],69:[function(require,module,exports){
-'use strict';
-
-var callable = require('es5-ext/object/valid-callable')
-  , isString = require('es5-ext/string/is-string')
-  , get      = require('./get')
-
-  , isArray = Array.isArray, call = Function.prototype.call;
-
-module.exports = function (iterable, cb/*, thisArg*/) {
-	var mode, thisArg = arguments[2], result, doBreak, broken, i, l, char, code;
-	if (isArray(iterable)) mode = 'array';
-	else if (isString(iterable)) mode = 'string';
-	else iterable = get(iterable);
-
-	callable(cb);
-	doBreak = function () { broken = true; };
-	if (mode === 'array') {
-		iterable.some(function (value) {
-			call.call(cb, thisArg, value, doBreak);
-			if (broken) return true;
-		});
-		return;
-	}
-	if (mode === 'string') {
-		l = iterable.length;
-		for (i = 0; i < l; ++i) {
-			char = iterable[i];
-			if ((i + 1) < l) {
-				code = char.charCodeAt(0);
-				if ((code >= 0xD800) && (code <= 0xDBFF)) char += iterable[++i];
-			}
-			call.call(cb, thisArg, char, doBreak);
-			if (broken) break;
-		}
-		return;
-	}
-	result = iterable.next();
-
-	while (!result.done) {
-		call.call(cb, thisArg, result.value, doBreak);
-		if (broken) return;
-		result = iterable.next();
-	}
-};
-
-},{"./get":70,"es5-ext/object/valid-callable":62,"es5-ext/string/is-string":67}],70:[function(require,module,exports){
-'use strict';
-
-var isString = require('es5-ext/string/is-string')
-  , ArrayIterator  = require('./array')
-  , StringIterator = require('./string')
-  , iterable       = require('./valid-iterable')
-  , iteratorSymbol = require('es6-symbol').iterator;
-
-module.exports = function (obj) {
-	if (typeof iterable(obj)[iteratorSymbol] === 'function') return obj[iteratorSymbol]();
-	if (isString(obj)) return new StringIterator(obj);
-	return new ArrayIterator(obj);
-};
-
-},{"./array":68,"./string":78,"./valid-iterable":79,"es5-ext/string/is-string":67,"es6-symbol":73}],71:[function(require,module,exports){
-'use strict';
-
-var clear    = require('es5-ext/array/#/clear')
-  , assign   = require('es5-ext/object/assign')
-  , callable = require('es5-ext/object/valid-callable')
-  , value    = require('es5-ext/object/valid-value')
-  , d        = require('d')
-  , autoBind = require('d/auto-bind')
-  , Symbol   = require('es6-symbol')
-
-  , defineProperty = Object.defineProperty
-  , defineProperties = Object.defineProperties
-  , Iterator;
-
-module.exports = Iterator = function (list, context) {
-	if (!(this instanceof Iterator)) return new Iterator(list, context);
-	defineProperties(this, {
-		__list__: d('w', value(list)),
-		__context__: d('w', context),
-		__nextIndex__: d('w', 0)
-	});
-	if (!context) return;
-	callable(context.on);
-	context.on('_add', this._onAdd);
-	context.on('_delete', this._onDelete);
-	context.on('_clear', this._onClear);
-};
-
-defineProperties(Iterator.prototype, assign({
-	constructor: d(Iterator),
-	_next: d(function () {
-		var i;
-		if (!this.__list__) return;
-		if (this.__redo__) {
-			i = this.__redo__.shift();
-			if (i !== undefined) return i;
-		}
-		if (this.__nextIndex__ < this.__list__.length) return this.__nextIndex__++;
-		this._unBind();
-	}),
-	next: d(function () { return this._createResult(this._next()); }),
-	_createResult: d(function (i) {
-		if (i === undefined) return { done: true, value: undefined };
-		return { done: false, value: this._resolve(i) };
-	}),
-	_resolve: d(function (i) { return this.__list__[i]; }),
-	_unBind: d(function () {
-		this.__list__ = null;
-		delete this.__redo__;
-		if (!this.__context__) return;
-		this.__context__.off('_add', this._onAdd);
-		this.__context__.off('_delete', this._onDelete);
-		this.__context__.off('_clear', this._onClear);
-		this.__context__ = null;
-	}),
-	toString: d(function () { return '[object Iterator]'; })
-}, autoBind({
-	_onAdd: d(function (index) {
-		if (index >= this.__nextIndex__) return;
-		++this.__nextIndex__;
-		if (!this.__redo__) {
-			defineProperty(this, '__redo__', d('c', [index]));
-			return;
-		}
-		this.__redo__.forEach(function (redo, i) {
-			if (redo >= index) this.__redo__[i] = ++redo;
-		}, this);
-		this.__redo__.push(index);
-	}),
-	_onDelete: d(function (index) {
-		var i;
-		if (index >= this.__nextIndex__) return;
-		--this.__nextIndex__;
-		if (!this.__redo__) return;
-		i = this.__redo__.indexOf(index);
-		if (i !== -1) this.__redo__.splice(i, 1);
-		this.__redo__.forEach(function (redo, i) {
-			if (redo > index) this.__redo__[i] = --redo;
-		}, this);
-	}),
-	_onClear: d(function () {
-		if (this.__redo__) clear.call(this.__redo__);
-		this.__nextIndex__ = 0;
-	})
-})));
-
-defineProperty(Iterator.prototype, Symbol.iterator, d(function () {
-	return this;
-}));
-defineProperty(Iterator.prototype, Symbol.toStringTag, d('', 'Iterator'));
-
-},{"d":36,"d/auto-bind":35,"es5-ext/array/#/clear":37,"es5-ext/object/assign":45,"es5-ext/object/valid-callable":62,"es5-ext/object/valid-value":63,"es6-symbol":73}],72:[function(require,module,exports){
-'use strict';
-
-var isString       = require('es5-ext/string/is-string')
-  , iteratorSymbol = require('es6-symbol').iterator
-
-  , isArray = Array.isArray;
-
-module.exports = function (value) {
-	if (value == null) return false;
-	if (isArray(value)) return true;
-	if (isString(value)) return true;
-	return (typeof value[iteratorSymbol] === 'function');
-};
-
-},{"es5-ext/string/is-string":67,"es6-symbol":73}],73:[function(require,module,exports){
-'use strict';
-
-module.exports = require('./is-implemented')() ? Symbol : require('./polyfill');
-
-},{"./is-implemented":74,"./polyfill":76}],74:[function(require,module,exports){
-'use strict';
-
-module.exports = function () {
-	var symbol;
-	if (typeof Symbol !== 'function') return false;
-	symbol = Symbol('test symbol');
-	try { String(symbol); } catch (e) { return false; }
-	if (typeof Symbol.iterator === 'symbol') return true;
-
-	// Return 'true' for polyfills
-	if (typeof Symbol.isConcatSpreadable !== 'object') return false;
-	if (typeof Symbol.iterator !== 'object') return false;
-	if (typeof Symbol.toPrimitive !== 'object') return false;
-	if (typeof Symbol.toStringTag !== 'object') return false;
-	if (typeof Symbol.unscopables !== 'object') return false;
-
-	return true;
-};
-
-},{}],75:[function(require,module,exports){
-'use strict';
-
-module.exports = function (x) {
-	return (x && ((typeof x === 'symbol') || (x['@@toStringTag'] === 'Symbol'))) || false;
-};
-
-},{}],76:[function(require,module,exports){
-'use strict';
-
-var d              = require('d')
-  , validateSymbol = require('./validate-symbol')
-
-  , create = Object.create, defineProperties = Object.defineProperties
-  , defineProperty = Object.defineProperty, objPrototype = Object.prototype
-  , Symbol, HiddenSymbol, globalSymbols = create(null);
-
-var generateName = (function () {
-	var created = create(null);
-	return function (desc) {
-		var postfix = 0, name;
-		while (created[desc + (postfix || '')]) ++postfix;
-		desc += (postfix || '');
-		created[desc] = true;
-		name = '@@' + desc;
-		defineProperty(objPrototype, name, d.gs(null, function (value) {
-			defineProperty(this, name, d(value));
-		}));
-		return name;
-	};
-}());
-
-HiddenSymbol = function Symbol(description) {
-	if (this instanceof HiddenSymbol) throw new TypeError('TypeError: Symbol is not a constructor');
-	return Symbol(description);
-};
-module.exports = Symbol = function Symbol(description) {
-	var symbol;
-	if (this instanceof Symbol) throw new TypeError('TypeError: Symbol is not a constructor');
-	symbol = create(HiddenSymbol.prototype);
-	description = (description === undefined ? '' : String(description));
-	return defineProperties(symbol, {
-		__description__: d('', description),
-		__name__: d('', generateName(description))
-	});
-};
-defineProperties(Symbol, {
-	for: d(function (key) {
-		if (globalSymbols[key]) return globalSymbols[key];
-		return (globalSymbols[key] = Symbol(String(key)));
-	}),
-	keyFor: d(function (s) {
-		var key;
-		validateSymbol(s);
-		for (key in globalSymbols) if (globalSymbols[key] === s) return key;
-	}),
-	hasInstance: d('', Symbol('hasInstance')),
-	isConcatSpreadable: d('', Symbol('isConcatSpreadable')),
-	iterator: d('', Symbol('iterator')),
-	match: d('', Symbol('match')),
-	replace: d('', Symbol('replace')),
-	search: d('', Symbol('search')),
-	species: d('', Symbol('species')),
-	split: d('', Symbol('split')),
-	toPrimitive: d('', Symbol('toPrimitive')),
-	toStringTag: d('', Symbol('toStringTag')),
-	unscopables: d('', Symbol('unscopables'))
-});
-defineProperties(HiddenSymbol.prototype, {
-	constructor: d(Symbol),
-	toString: d('', function () { return this.__name__; })
-});
-
-defineProperties(Symbol.prototype, {
-	toString: d(function () { return 'Symbol (' + validateSymbol(this).__description__ + ')'; }),
-	valueOf: d(function () { return validateSymbol(this); })
-});
-defineProperty(Symbol.prototype, Symbol.toPrimitive, d('',
-	function () { return validateSymbol(this); }));
-defineProperty(Symbol.prototype, Symbol.toStringTag, d('c', 'Symbol'));
-
-defineProperty(HiddenSymbol.prototype, Symbol.toPrimitive,
-	d('c', Symbol.prototype[Symbol.toPrimitive]));
-defineProperty(HiddenSymbol.prototype, Symbol.toStringTag,
-	d('c', Symbol.prototype[Symbol.toStringTag]));
-
-},{"./validate-symbol":77,"d":36}],77:[function(require,module,exports){
-'use strict';
-
-var isSymbol = require('./is-symbol');
-
-module.exports = function (value) {
-	if (!isSymbol(value)) throw new TypeError(value + " is not a symbol");
-	return value;
-};
-
-},{"./is-symbol":75}],78:[function(require,module,exports){
-// Thanks @mathiasbynens
-// http://mathiasbynens.be/notes/javascript-unicode#iterating-over-symbols
-
-'use strict';
-
-var setPrototypeOf = require('es5-ext/object/set-prototype-of')
-  , d              = require('d')
-  , Iterator       = require('./')
-
-  , defineProperty = Object.defineProperty
-  , StringIterator;
-
-StringIterator = module.exports = function (str) {
-	if (!(this instanceof StringIterator)) return new StringIterator(str);
-	str = String(str);
-	Iterator.call(this, str);
-	defineProperty(this, '__length__', d('', str.length));
-
-};
-if (setPrototypeOf) setPrototypeOf(StringIterator, Iterator);
-
-StringIterator.prototype = Object.create(Iterator.prototype, {
-	constructor: d(StringIterator),
-	_next: d(function () {
-		if (!this.__list__) return;
-		if (this.__nextIndex__ < this.__length__) return this.__nextIndex__++;
-		this._unBind();
-	}),
-	_resolve: d(function (i) {
-		var char = this.__list__[i], code;
-		if (this.__nextIndex__ === this.__length__) return char;
-		code = char.charCodeAt(0);
-		if ((code >= 0xD800) && (code <= 0xDBFF)) return char + this.__list__[this.__nextIndex__++];
-		return char;
-	}),
-	toString: d(function () { return '[object String Iterator]'; })
-});
-
-},{"./":71,"d":36,"es5-ext/object/set-prototype-of":59}],79:[function(require,module,exports){
-'use strict';
-
-var isIterable = require('./is-iterable');
-
-module.exports = function (value) {
-	if (!isIterable(value)) throw new TypeError(value + " is not iterable");
-	return value;
-};
-
-},{"./is-iterable":72}],80:[function(require,module,exports){
-arguments[4][73][0].apply(exports,arguments)
-},{"./is-implemented":81,"./polyfill":82,"dup":73}],81:[function(require,module,exports){
-'use strict';
-
-module.exports = function () {
-	var symbol;
-	if (typeof Symbol !== 'function') return false;
-	symbol = Symbol('test symbol');
-	try { String(symbol); } catch (e) { return false; }
-	if (typeof Symbol.iterator === 'symbol') return true;
-
-	// Return 'true' for polyfills
-	if (typeof Symbol.isConcatSpreadable !== 'object') return false;
-	if (typeof Symbol.isRegExp !== 'object') return false;
-	if (typeof Symbol.iterator !== 'object') return false;
-	if (typeof Symbol.toPrimitive !== 'object') return false;
-	if (typeof Symbol.toStringTag !== 'object') return false;
-	if (typeof Symbol.unscopables !== 'object') return false;
-
-	return true;
-};
-
-},{}],82:[function(require,module,exports){
-'use strict';
-
-var d = require('d')
-
-  , create = Object.create, defineProperties = Object.defineProperties
-  , generateName, Symbol;
-
-generateName = (function () {
-	var created = create(null);
-	return function (desc) {
-		var postfix = 0;
-		while (created[desc + (postfix || '')]) ++postfix;
-		desc += (postfix || '');
-		created[desc] = true;
-		return '@@' + desc;
-	};
-}());
-
-module.exports = Symbol = function (description) {
-	var symbol;
-	if (this instanceof Symbol) {
-		throw new TypeError('TypeError: Symbol is not a constructor');
-	}
-	symbol = create(Symbol.prototype);
-	description = (description === undefined ? '' : String(description));
-	return defineProperties(symbol, {
-		__description__: d('', description),
-		__name__: d('', generateName(description))
-	});
-};
-
-Object.defineProperties(Symbol, {
-	create: d('', Symbol('create')),
-	hasInstance: d('', Symbol('hasInstance')),
-	isConcatSpreadable: d('', Symbol('isConcatSpreadable')),
-	isRegExp: d('', Symbol('isRegExp')),
-	iterator: d('', Symbol('iterator')),
-	toPrimitive: d('', Symbol('toPrimitive')),
-	toStringTag: d('', Symbol('toStringTag')),
-	unscopables: d('', Symbol('unscopables'))
-});
-
-defineProperties(Symbol.prototype, {
-	properToString: d(function () {
-		return 'Symbol (' + this.__description__ + ')';
-	}),
-	toString: d('', function () { return this.__name__; })
-});
-Object.defineProperty(Symbol.prototype, Symbol.toPrimitive, d('',
-	function (hint) {
-		throw new TypeError("Conversion of symbol objects is not allowed");
-	}));
-Object.defineProperty(Symbol.prototype, Symbol.toStringTag, d('c', 'Symbol'));
-
-},{"d":36}],83:[function(require,module,exports){
-'use strict';
-
-var d        = require('d')
-  , callable = require('es5-ext/object/valid-callable')
-
-  , apply = Function.prototype.apply, call = Function.prototype.call
-  , create = Object.create, defineProperty = Object.defineProperty
-  , defineProperties = Object.defineProperties
-  , hasOwnProperty = Object.prototype.hasOwnProperty
-  , descriptor = { configurable: true, enumerable: false, writable: true }
-
-  , on, once, off, emit, methods, descriptors, base;
-
-on = function (type, listener) {
-	var data;
-
-	callable(listener);
-
-	if (!hasOwnProperty.call(this, '__ee__')) {
-		data = descriptor.value = create(null);
-		defineProperty(this, '__ee__', descriptor);
-		descriptor.value = null;
-	} else {
-		data = this.__ee__;
-	}
-	if (!data[type]) data[type] = listener;
-	else if (typeof data[type] === 'object') data[type].push(listener);
-	else data[type] = [data[type], listener];
-
-	return this;
-};
-
-once = function (type, listener) {
-	var once, self;
-
-	callable(listener);
-	self = this;
-	on.call(this, type, once = function () {
-		off.call(self, type, once);
-		apply.call(listener, this, arguments);
-	});
-
-	once.__eeOnceListener__ = listener;
-	return this;
-};
-
-off = function (type, listener) {
-	var data, listeners, candidate, i;
-
-	callable(listener);
-
-	if (!hasOwnProperty.call(this, '__ee__')) return this;
-	data = this.__ee__;
-	if (!data[type]) return this;
-	listeners = data[type];
-
-	if (typeof listeners === 'object') {
-		for (i = 0; (candidate = listeners[i]); ++i) {
-			if ((candidate === listener) ||
-					(candidate.__eeOnceListener__ === listener)) {
-				if (listeners.length === 2) data[type] = listeners[i ? 0 : 1];
-				else listeners.splice(i, 1);
-			}
-		}
-	} else {
-		if ((listeners === listener) ||
-				(listeners.__eeOnceListener__ === listener)) {
-			delete data[type];
-		}
-	}
-
-	return this;
-};
-
-emit = function (type) {
-	var i, l, listener, listeners, args;
-
-	if (!hasOwnProperty.call(this, '__ee__')) return;
-	listeners = this.__ee__[type];
-	if (!listeners) return;
-
-	if (typeof listeners === 'object') {
-		l = arguments.length;
-		args = new Array(l - 1);
-		for (i = 1; i < l; ++i) args[i - 1] = arguments[i];
-
-		listeners = listeners.slice();
-		for (i = 0; (listener = listeners[i]); ++i) {
-			apply.call(listener, this, args);
-		}
-	} else {
-		switch (arguments.length) {
-		case 1:
-			call.call(listeners, this);
-			break;
-		case 2:
-			call.call(listeners, this, arguments[1]);
-			break;
-		case 3:
-			call.call(listeners, this, arguments[1], arguments[2]);
-			break;
-		default:
-			l = arguments.length;
-			args = new Array(l - 1);
-			for (i = 1; i < l; ++i) {
-				args[i - 1] = arguments[i];
-			}
-			apply.call(listeners, this, args);
-		}
-	}
-};
-
-methods = {
-	on: on,
-	once: once,
-	off: off,
-	emit: emit
-};
-
-descriptors = {
-	on: d(on),
-	once: d(once),
-	off: d(off),
-	emit: d(emit)
-};
-
-base = defineProperties({}, descriptors);
-
-module.exports = exports = function (o) {
-	return (o == null) ? create(base) : defineProperties(Object(o), descriptors);
-};
-exports.methods = methods;
-
-},{"d":36,"es5-ext/object/valid-callable":62}],84:[function(require,module,exports){
-'use strict';
-
-var clear          = require('es5-ext/array/#/clear')
-  , eIndexOf       = require('es5-ext/array/#/e-index-of')
-  , setPrototypeOf = require('es5-ext/object/set-prototype-of')
-  , callable       = require('es5-ext/object/valid-callable')
-  , validValue     = require('es5-ext/object/valid-value')
-  , d              = require('d')
-  , ee             = require('event-emitter')
-  , Symbol         = require('es6-symbol')
-  , iterator       = require('es6-iterator/valid-iterable')
-  , forOf          = require('es6-iterator/for-of')
-  , Iterator       = require('./lib/iterator')
-  , isNative       = require('./is-native-implemented')
-
-  , call = Function.prototype.call, defineProperties = Object.defineProperties
-  , MapPoly;
-
-module.exports = MapPoly = function (/*iterable*/) {
-	var iterable = arguments[0], keys, values;
-	if (!(this instanceof MapPoly)) return new MapPoly(iterable);
-	if (this.__mapKeysData__ !== undefined) {
-		throw new TypeError(this + " cannot be reinitialized");
-	}
-	if (iterable != null) iterator(iterable);
-	defineProperties(this, {
-		__mapKeysData__: d('c', keys = []),
-		__mapValuesData__: d('c', values = [])
-	});
-	if (!iterable) return;
-	forOf(iterable, function (value) {
-		var key = validValue(value)[0];
-		value = value[1];
-		if (eIndexOf.call(keys, key) !== -1) return;
-		keys.push(key);
-		values.push(value);
-	}, this);
-};
-
-if (isNative) {
-	if (setPrototypeOf) setPrototypeOf(MapPoly, Map);
-	MapPoly.prototype = Object.create(Map.prototype, {
-		constructor: d(MapPoly)
-	});
-}
-
-ee(defineProperties(MapPoly.prototype, {
-	clear: d(function () {
-		if (!this.__mapKeysData__.length) return;
-		clear.call(this.__mapKeysData__);
-		clear.call(this.__mapValuesData__);
-		this.emit('_clear');
-	}),
-	delete: d(function (key) {
-		var index = eIndexOf.call(this.__mapKeysData__, key);
-		if (index === -1) return false;
-		this.__mapKeysData__.splice(index, 1);
-		this.__mapValuesData__.splice(index, 1);
-		this.emit('_delete', index, key);
-		return true;
-	}),
-	entries: d(function () { return new Iterator(this, 'key+value'); }),
-	forEach: d(function (cb/*, thisArg*/) {
-		var thisArg = arguments[1], iterator, result;
-		callable(cb);
-		iterator = this.entries();
-		result = iterator._next();
-		while (result !== undefined) {
-			call.call(cb, thisArg, this.__mapValuesData__[result],
-				this.__mapKeysData__[result], this);
-			result = iterator._next();
-		}
-	}),
-	get: d(function (key) {
-		var index = eIndexOf.call(this.__mapKeysData__, key);
-		if (index === -1) return;
-		return this.__mapValuesData__[index];
-	}),
-	has: d(function (key) {
-		return (eIndexOf.call(this.__mapKeysData__, key) !== -1);
-	}),
-	keys: d(function () { return new Iterator(this, 'key'); }),
-	set: d(function (key, value) {
-		var index = eIndexOf.call(this.__mapKeysData__, key), emit;
-		if (index === -1) {
-			index = this.__mapKeysData__.push(key) - 1;
-			emit = true;
-		}
-		this.__mapValuesData__[index] = value;
-		if (emit) this.emit('_add', index, key);
-		return this;
-	}),
-	size: d.gs(function () { return this.__mapKeysData__.length; }),
-	values: d(function () { return new Iterator(this, 'value'); }),
-	toString: d(function () { return '[object Map]'; })
-}));
-Object.defineProperty(MapPoly.prototype, Symbol.iterator, d(function () {
-	return this.entries();
-}));
-Object.defineProperty(MapPoly.prototype, Symbol.toStringTag, d('c', 'Map'));
-
-},{"./is-native-implemented":32,"./lib/iterator":34,"d":36,"es5-ext/array/#/clear":37,"es5-ext/array/#/e-index-of":38,"es5-ext/object/set-prototype-of":59,"es5-ext/object/valid-callable":62,"es5-ext/object/valid-value":63,"es6-iterator/for-of":69,"es6-iterator/valid-iterable":79,"es6-symbol":80,"event-emitter":83}],85:[function(require,module,exports){
-'use strict';
-
-module.exports = require('./is-implemented')() ?
-		WeakMap : require('./polyfill');
-
-},{"./is-implemented":86,"./polyfill":127}],86:[function(require,module,exports){
-'use strict';
-
-module.exports = function () {
-	var map;
-	if (typeof WeakMap !== 'function') return false;
-	map = new WeakMap();
-	if (typeof map.set !== 'function') return false;
-	if (map.set({}, 1) !== map) return false;
-	if (typeof map.clear !== 'function') return false;
-	if (typeof map.delete !== 'function') return false;
-	if (typeof map.has !== 'function') return false;
-
-	return true;
-};
-
-},{}],87:[function(require,module,exports){
-// Exports true if environment provides native `WeakMap` implementation,
-// whatever that is.
-
-'use strict';
-
-module.exports = (function () {
-	if (typeof WeakMap === 'undefined') return false;
-	return (Object.prototype.toString.call(WeakMap.prototype) ===
-			'[object WeakMap]');
-}());
-
 },{}],88:[function(require,module,exports){
-arguments[4][35][0].apply(exports,arguments)
-},{"dup":35,"es5-ext/object/copy":95,"es5-ext/object/map":103,"es5-ext/object/valid-callable":108,"es5-ext/object/valid-value":110}],89:[function(require,module,exports){
-arguments[4][36][0].apply(exports,arguments)
-},{"dup":36,"es5-ext/object/assign":92,"es5-ext/object/is-callable":98,"es5-ext/object/normalize-options":104,"es5-ext/string/#/contains":111}],90:[function(require,module,exports){
-arguments[4][37][0].apply(exports,arguments)
-},{"../../object/valid-value":110,"dup":37}],91:[function(require,module,exports){
-arguments[4][44][0].apply(exports,arguments)
-},{"./is-callable":98,"./valid-callable":108,"./valid-value":110,"dup":44}],92:[function(require,module,exports){
-arguments[4][45][0].apply(exports,arguments)
-},{"./is-implemented":93,"./shim":94,"dup":45}],93:[function(require,module,exports){
-arguments[4][46][0].apply(exports,arguments)
-},{"dup":46}],94:[function(require,module,exports){
-arguments[4][47][0].apply(exports,arguments)
-},{"../keys":100,"../valid-value":110,"dup":47}],95:[function(require,module,exports){
-arguments[4][48][0].apply(exports,arguments)
-},{"./assign":92,"./valid-value":110,"dup":48}],96:[function(require,module,exports){
-arguments[4][49][0].apply(exports,arguments)
-},{"./set-prototype-of/is-implemented":106,"./set-prototype-of/shim":107,"dup":49}],97:[function(require,module,exports){
-arguments[4][50][0].apply(exports,arguments)
-},{"./_iterate":91,"dup":50}],98:[function(require,module,exports){
-arguments[4][51][0].apply(exports,arguments)
-},{"dup":51}],99:[function(require,module,exports){
-arguments[4][52][0].apply(exports,arguments)
-},{"dup":52}],100:[function(require,module,exports){
-arguments[4][53][0].apply(exports,arguments)
-},{"./is-implemented":101,"./shim":102,"dup":53}],101:[function(require,module,exports){
-arguments[4][54][0].apply(exports,arguments)
-},{"dup":54}],102:[function(require,module,exports){
-arguments[4][55][0].apply(exports,arguments)
-},{"dup":55}],103:[function(require,module,exports){
-arguments[4][56][0].apply(exports,arguments)
-},{"./for-each":97,"./valid-callable":108,"dup":56}],104:[function(require,module,exports){
-arguments[4][57][0].apply(exports,arguments)
-},{"dup":57}],105:[function(require,module,exports){
-arguments[4][59][0].apply(exports,arguments)
-},{"./is-implemented":106,"./shim":107,"dup":59}],106:[function(require,module,exports){
-arguments[4][60][0].apply(exports,arguments)
-},{"dup":60}],107:[function(require,module,exports){
-arguments[4][61][0].apply(exports,arguments)
-},{"../create":96,"../is-object":99,"../valid-value":110,"dup":61}],108:[function(require,module,exports){
-arguments[4][62][0].apply(exports,arguments)
-},{"dup":62}],109:[function(require,module,exports){
-'use strict';
-
-var isObject = require('./is-object');
-
-module.exports = function (value) {
-	if (!isObject(value)) throw new TypeError(value + " is not an Object");
-	return value;
-};
-
-},{"./is-object":99}],110:[function(require,module,exports){
-arguments[4][63][0].apply(exports,arguments)
-},{"dup":63}],111:[function(require,module,exports){
-arguments[4][64][0].apply(exports,arguments)
-},{"./is-implemented":112,"./shim":113,"dup":64}],112:[function(require,module,exports){
-arguments[4][65][0].apply(exports,arguments)
-},{"dup":65}],113:[function(require,module,exports){
-arguments[4][66][0].apply(exports,arguments)
-},{"dup":66}],114:[function(require,module,exports){
-arguments[4][67][0].apply(exports,arguments)
-},{"dup":67}],115:[function(require,module,exports){
-arguments[4][68][0].apply(exports,arguments)
-},{"./":118,"d":89,"dup":68,"es5-ext/object/set-prototype-of":105,"es5-ext/string/#/contains":111}],116:[function(require,module,exports){
-arguments[4][69][0].apply(exports,arguments)
-},{"./get":117,"dup":69,"es5-ext/object/valid-callable":108,"es5-ext/string/is-string":114}],117:[function(require,module,exports){
-arguments[4][70][0].apply(exports,arguments)
-},{"./array":115,"./string":120,"./valid-iterable":121,"dup":70,"es5-ext/string/is-string":114,"es6-symbol":122}],118:[function(require,module,exports){
-arguments[4][71][0].apply(exports,arguments)
-},{"d":89,"d/auto-bind":88,"dup":71,"es5-ext/array/#/clear":90,"es5-ext/object/assign":92,"es5-ext/object/valid-callable":108,"es5-ext/object/valid-value":110,"es6-symbol":122}],119:[function(require,module,exports){
-arguments[4][72][0].apply(exports,arguments)
-},{"dup":72,"es5-ext/string/is-string":114,"es6-symbol":122}],120:[function(require,module,exports){
-arguments[4][78][0].apply(exports,arguments)
-},{"./":118,"d":89,"dup":78,"es5-ext/object/set-prototype-of":105}],121:[function(require,module,exports){
-arguments[4][79][0].apply(exports,arguments)
-},{"./is-iterable":119,"dup":79}],122:[function(require,module,exports){
-arguments[4][73][0].apply(exports,arguments)
-},{"./is-implemented":123,"./polyfill":125,"dup":73}],123:[function(require,module,exports){
-arguments[4][74][0].apply(exports,arguments)
-},{"dup":74}],124:[function(require,module,exports){
-arguments[4][75][0].apply(exports,arguments)
-},{"dup":75}],125:[function(require,module,exports){
-arguments[4][76][0].apply(exports,arguments)
-},{"./validate-symbol":126,"d":89,"dup":76}],126:[function(require,module,exports){
-arguments[4][77][0].apply(exports,arguments)
-},{"./is-symbol":124,"dup":77}],127:[function(require,module,exports){
-'use strict';
-
-var setPrototypeOf    = require('es5-ext/object/set-prototype-of')
-  , object            = require('es5-ext/object/valid-object')
-  , value             = require('es5-ext/object/valid-value')
-  , d                 = require('d')
-  , getIterator       = require('es6-iterator/get')
-  , forOf             = require('es6-iterator/for-of')
-  , toStringTagSymbol = require('es6-symbol').toStringTag
-  , isNative          = require('./is-native-implemented')
-
-  , isArray = Array.isArray, defineProperty = Object.defineProperty, random = Math.random
-  , hasOwnProperty = Object.prototype.hasOwnProperty
-  , genId, WeakMapPoly;
-
-genId = (function () {
-	var generated = Object.create(null);
-	return function () {
-		var id;
-		do { id = random().toString(36).slice(2); } while (generated[id]);
-		generated[id] = true;
-		return id;
-	};
-}());
-
-module.exports = WeakMapPoly = function (/*iterable*/) {
-	var iterable = arguments[0];
-	if (!(this instanceof WeakMapPoly)) return new WeakMapPoly(iterable);
-	if (this.__weakMapData__ !== undefined) {
-		throw new TypeError(this + " cannot be reinitialized");
-	}
-	if (iterable != null) {
-		if (!isArray(iterable)) iterable = getIterator(iterable);
-	}
-	defineProperty(this, '__weakMapData__', d('c', '$weakMap$' + genId()));
-	if (!iterable) return;
-	forOf(iterable, function (val) {
-		value(val);
-		this.set(val[0], val[1]);
-	}, this);
-};
-
-if (isNative) {
-	if (setPrototypeOf) setPrototypeOf(WeakMapPoly, WeakMap);
-	WeakMapPoly.prototype = Object.create(WeakMap.prototype, {
-		constructor: d(WeakMapPoly)
-	});
-}
-
-Object.defineProperties(WeakMapPoly.prototype, {
-	clear: d(function () {
-		defineProperty(this, '__weakMapData__', d('c', '$weakMap$' + genId()));
-	}),
-	delete: d(function (key) {
-		if (hasOwnProperty.call(object(key), this.__weakMapData__)) {
-			delete key[this.__weakMapData__];
-			return true;
-		}
-		return false;
-	}),
-	get: d(function (key) {
-		if (hasOwnProperty.call(object(key), this.__weakMapData__)) {
-			return key[this.__weakMapData__];
-		}
-	}),
-	has: d(function (key) {
-		return hasOwnProperty.call(object(key), this.__weakMapData__);
-	}),
-	set: d(function (key, value) {
-		defineProperty(object(key), this.__weakMapData__, d('c', value));
-		return this;
-	}),
-	toString: d(function () { return '[object WeakMap]'; })
-});
-defineProperty(WeakMapPoly.prototype, toStringTagSymbol, d('c', 'WeakMap'));
-
-},{"./is-native-implemented":87,"d":89,"es5-ext/object/set-prototype-of":105,"es5-ext/object/valid-object":109,"es5-ext/object/valid-value":110,"es6-iterator/for-of":116,"es6-iterator/get":117,"es6-symbol":122}],128:[function(require,module,exports){
-/*
-  Copyright (C) 2014 Yusuke Suzuki <utatane.tea@gmail.com>
-
-  Redistribution and use in source and binary forms, with or without
-  modification, are permitted provided that the following conditions are met:
-
-    * Redistributions of source code must retain the above copyright
-      notice, this list of conditions and the following disclaimer.
-    * Redistributions in binary form must reproduce the above copyright
-      notice, this list of conditions and the following disclaimer in the
-      documentation and/or other materials provided with the distribution.
-
-  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-  ARE DISCLAIMED. IN NO EVENT SHALL <COPYRIGHT HOLDER> BE LIABLE FOR ANY
-  DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
-  (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
-  ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-  THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-*/
-(function () {
-    'use strict';
-
-    var estraverse,
-        isArray,
-        objectKeys;
-
-    estraverse = require('estraverse');
-
-    isArray = Array.isArray;
-    if (!isArray) {
-        isArray = function isArray(array) {
-            return Object.prototype.toString.call(array) === '[object Array]';
-        };
-    }
-
-    objectKeys = Object.keys || function (o) {
-        var keys = [], key;
-        for (key in o) {
-            keys.push(key);
-        }
-        return keys;
-    };
-
-    function isNode(node) {
-        if (node == null) {
-            return false;
-        }
-        return typeof node === 'object' && typeof node.type === 'string';
-    }
-
-    function isProperty(nodeType, key) {
-        return (nodeType === estraverse.Syntax.ObjectExpression || nodeType === estraverse.Syntax.ObjectPattern) && key === 'properties';
-    }
-
-    function Visitor(visitor) {
-        this.__visitor = visitor ||  this;
-    }
-
-    /* Default method for visiting children.
-     * When you need to call default visiting operation inside custom visiting
-     * operation, you can use it with `this.visitChildren(node)`.
-     */
-    Visitor.prototype.visitChildren = function (node) {
-        var type, children, i, iz, j, jz, child;
-
-        if (node == null) {
-            return;
-        }
-
-        type = node.type || estraverse.Syntax.Property;
-
-        children = estraverse.VisitorKeys[type];
-        if (!children) {
-            children = objectKeys(node);
-        }
-
-        for (i = 0, iz = children.length; i < iz; ++i) {
-            child = node[children[i]];
-            if (child) {
-                if (Array.isArray(child)) {
-                    for (j = 0, jz = child.length; j < jz; ++j) {
-                        if (child[j]) {
-                            if (isNode(child[j]) || isProperty(type, children[i])) {
-                                this.visit(child[j]);
-                            }
-                        }
-                    }
-                } else if (isNode(child)) {
-                    this.visit(child);
-                }
-            }
-        }
-    };
-
-    /* Dispatching node. */
-    Visitor.prototype.visit = function (node) {
-        var type;
-
-        if (node == null) {
-            return;
-        }
-
-        type = node.type || estraverse.Syntax.Property;
-        if (this.__visitor[type]) {
-            this.__visitor[type].call(this, node);
-            return;
-        }
-        this.visitChildren(node);
-    };
-
-    exports.version = require('./package.json').version;
-    exports.Visitor = Visitor;
-    exports.visit = function (node, visitor) {
-        var v = new Visitor(visitor);
-        v.visit(node);
-    };
-}());
-/* vim: set sw=4 ts=4 et tw=80 : */
-
-},{"./package.json":129,"estraverse":130}],129:[function(require,module,exports){
-module.exports={
-  "name": "esrecurse",
-  "description": "ECMAScript scope analyzer",
-  "homepage": "http://github.com/estools/esrecurse",
-  "main": "esrecurse.js",
-  "version": "3.1.1",
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "maintainers": [
-    {
-      "name": "constellation",
-      "email": "utatane.tea@gmail.com"
-    },
-    {
-      "name": "michaelficarra",
-      "email": "npm@michael.ficarra.me"
-    }
-  ],
-  "repository": {
-    "type": "git",
-    "url": "http://github.com/estools/esrecurse.git"
-  },
-  "dependencies": {
-    "estraverse": "~3.1.0"
-  },
-  "devDependencies": {
-    "chai": "^2.1.1",
-    "coffee-script": "^1.9.1",
-    "esprima": "^2.1.0",
-    "gulp": "~3.8.10",
-    "gulp-bump": "^0.2.2",
-    "gulp-eslint": "^0.6.0",
-    "gulp-filter": "^2.0.2",
-    "gulp-git": "^1.1.0",
-    "gulp-mocha": "~2.0.0",
-    "gulp-tag-version": "^1.2.1",
-    "jsdoc": "~3.3.0-alpha10",
-    "minimist": "^1.1.0"
-  },
-  "licenses": [
-    {
-      "type": "BSD",
-      "url": "http://github.com/estools/esrecurse/raw/master/LICENSE.BSD"
-    }
-  ],
-  "scripts": {
-    "test": "gulp travis",
-    "unit-test": "gulp test",
-    "lint": "gulp lint"
-  },
-  "gitHead": "600a8aac5e7b313875a873134fd110b47a76fc77",
-  "bugs": {
-    "url": "https://github.com/estools/esrecurse/issues"
-  },
-  "_id": "esrecurse@3.1.1",
-  "_shasum": "8feb963699d4d1b2d65a576cd4b1296672a0f0e9",
-  "_from": "esrecurse@^3.1.1",
-  "_npmVersion": "2.0.0-alpha-5",
-  "_npmUser": {
-    "name": "constellation",
-    "email": "utatane.tea@gmail.com"
-  },
-  "dist": {
-    "shasum": "8feb963699d4d1b2d65a576cd4b1296672a0f0e9",
-    "tarball": "http://registry.npmjs.org/esrecurse/-/esrecurse-3.1.1.tgz"
-  },
-  "directories": {},
-  "_resolved": "https://registry.npmjs.org/esrecurse/-/esrecurse-3.1.1.tgz",
-  "readme": "ERROR: No README data found!"
-}
-
-},{}],130:[function(require,module,exports){
 /*
   Copyright (C) 2012-2013 Yusuke Suzuki <utatane.tea@gmail.com>
   Copyright (C) 2012 Ariya Hidayat <ariya.hidayat@gmail.com>
@@ -17104,30 +16072,45 @@ module.exports={
 }(exports));
 /* vim: set sw=4 ts=4 et tw=80 : */
 
-},{"./package.json":131}],131:[function(require,module,exports){
+},{"./package.json":89}],89:[function(require,module,exports){
 module.exports={
-  "name": "estraverse",
-  "description": "ECMAScript JS AST traversal functions",
-  "homepage": "https://github.com/estools/estraverse",
-  "main": "estraverse.js",
-  "version": "3.1.0",
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "maintainers": [
-    {
-      "name": "constellation",
-      "email": "utatane.tea@gmail.com"
-    },
-    {
-      "name": "michaelficarra",
-      "email": "npm@michael.ficarra.me"
-    }
+  "_args": [
+    [
+      "estraverse@^3.1.0",
+      "C:\\Users\\t-nagashima.AD\\Documents\\GitHub\\eslint\\node_modules\\escope"
+    ]
   ],
-  "repository": {
-    "type": "git",
-    "url": "http://github.com/estools/estraverse.git"
+  "_from": "estraverse@>=3.1.0 <4.0.0",
+  "_id": "estraverse@3.1.0",
+  "_inCache": true,
+  "_location": "/escope/estraverse",
+  "_npmUser": {
+    "email": "utatane.tea@gmail.com",
+    "name": "constellation"
   },
+  "_npmVersion": "2.0.0-alpha-5",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "estraverse",
+    "raw": "estraverse@^3.1.0",
+    "rawSpec": "^3.1.0",
+    "scope": null,
+    "spec": ">=3.1.0 <4.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/escope"
+  ],
+  "_resolved": "https://registry.npmjs.org/estraverse/-/estraverse-3.1.0.tgz",
+  "_shasum": "15e28a446b8b82bc700ccc8b96c78af4da0d6cba",
+  "_shrinkwrap": null,
+  "_spec": "estraverse@^3.1.0",
+  "_where": "C:\\Users\\t-nagashima.AD\\Documents\\GitHub\\eslint\\node_modules\\escope",
+  "bugs": {
+    "url": "https://github.com/estools/estraverse/issues"
+  },
+  "dependencies": {},
+  "description": "ECMAScript JS AST traversal functions",
   "devDependencies": {
     "chai": "^2.1.1",
     "coffee-script": "^1.8.0",
@@ -17140,48 +16123,24 @@ module.exports={
     "jshint": "^2.5.6",
     "mocha": "^2.1.0"
   },
+  "directories": {},
+  "dist": {
+    "shasum": "15e28a446b8b82bc700ccc8b96c78af4da0d6cba",
+    "tarball": "http://registry.npmjs.org/estraverse/-/estraverse-3.1.0.tgz"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "gitHead": "166ebbe0a8d45ceb2391b6f5ef5d1bab6bfb267a",
+  "homepage": "https://github.com/estools/estraverse",
+  "installable": true,
   "licenses": [
     {
       "type": "BSD",
       "url": "http://github.com/estools/estraverse/raw/master/LICENSE.BSD"
     }
   ],
-  "scripts": {
-    "test": "npm run-script lint && npm run-script unit-test",
-    "lint": "jshint estraverse.js",
-    "unit-test": "mocha --compilers coffee:coffee-script/register"
-  },
-  "gitHead": "166ebbe0a8d45ceb2391b6f5ef5d1bab6bfb267a",
-  "bugs": {
-    "url": "https://github.com/estools/estraverse/issues"
-  },
-  "_id": "estraverse@3.1.0",
-  "_shasum": "15e28a446b8b82bc700ccc8b96c78af4da0d6cba",
-  "_from": "estraverse@^3.1.0",
-  "_npmVersion": "2.0.0-alpha-5",
-  "_npmUser": {
-    "name": "constellation",
-    "email": "utatane.tea@gmail.com"
-  },
-  "dist": {
-    "shasum": "15e28a446b8b82bc700ccc8b96c78af4da0d6cba",
-    "tarball": "http://registry.npmjs.org/estraverse/-/estraverse-3.1.0.tgz"
-  },
-  "directories": {},
-  "_resolved": "https://registry.npmjs.org/estraverse/-/estraverse-3.1.0.tgz",
-  "readme": "ERROR: No README data found!"
-}
-
-},{}],132:[function(require,module,exports){
-module.exports={
-  "name": "escope",
-  "description": "ECMAScript scope analyzer",
-  "homepage": "http://github.com/estools/escope",
-  "main": "lib/index.js",
-  "version": "3.2.0",
-  "engines": {
-    "node": ">=0.4.0"
-  },
+  "main": "estraverse.js",
   "maintainers": [
     {
       "name": "constellation",
@@ -17192,9 +16151,57 @@ module.exports={
       "email": "npm@michael.ficarra.me"
     }
   ],
+  "name": "estraverse",
+  "optionalDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/estools/escope.git"
+    "url": "http://github.com/estools/estraverse.git"
+  },
+  "scripts": {
+    "lint": "jshint estraverse.js",
+    "test": "npm run-script lint && npm run-script unit-test",
+    "unit-test": "mocha --compilers coffee:coffee-script/register"
+  },
+  "version": "3.1.0"
+}
+
+},{}],90:[function(require,module,exports){
+module.exports={
+  "_args": [
+    [
+      "escope@^3.2.0",
+      "C:\\Users\\t-nagashima.AD\\Documents\\GitHub\\eslint"
+    ]
+  ],
+  "_from": "escope@>=3.2.0 <4.0.0",
+  "_id": "escope@3.2.0",
+  "_inCache": true,
+  "_location": "/escope",
+  "_nodeVersion": "2.3.3",
+  "_npmUser": {
+    "email": "utatane.tea@gmail.com",
+    "name": "constellation"
+  },
+  "_npmVersion": "2.11.3",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "escope",
+    "raw": "escope@^3.2.0",
+    "rawSpec": "^3.2.0",
+    "scope": null,
+    "spec": ">=3.2.0 <4.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/escope/-/escope-3.2.0.tgz",
+  "_shasum": "b6215dc102c00bdc3624f22c26145d3b515ee1c7",
+  "_shrinkwrap": null,
+  "_spec": "escope@^3.2.0",
+  "_where": "C:\\Users\\t-nagashima.AD\\Documents\\GitHub\\eslint",
+  "bugs": {
+    "url": "https://github.com/estools/escope/issues"
   },
   "dependencies": {
     "es6-map": "^0.1.1",
@@ -17202,6 +16209,7 @@ module.exports={
     "esrecurse": "^3.1.1",
     "estraverse": "^3.1.0"
   },
+  "description": "ECMAScript scope analyzer",
   "devDependencies": {
     "acorn": "^0.12.0",
     "babel": "^4.7.12",
@@ -17227,36 +16235,361 @@ module.exports={
     "minimist": "^1.1.0",
     "vinyl-source-stream": "^1.0.0"
   },
-  "license": "BSD-2-Clause",
-  "scripts": {
-    "test": "gulp travis",
-    "unit-test": "gulp test",
-    "lint": "gulp lint",
-    "jsdoc": "jsdoc src/*.js README.md"
-  },
-  "gitHead": "c932340e2810ef5f83deb2b376df0917cae83b55",
-  "bugs": {
-    "url": "https://github.com/estools/escope/issues"
-  },
-  "_id": "escope@3.2.0",
-  "_shasum": "b6215dc102c00bdc3624f22c26145d3b515ee1c7",
-  "_from": "escope@^3.2.0",
-  "_npmVersion": "2.11.3",
-  "_nodeVersion": "2.3.3",
-  "_npmUser": {
-    "name": "constellation",
-    "email": "utatane.tea@gmail.com"
-  },
+  "directories": {},
   "dist": {
     "shasum": "b6215dc102c00bdc3624f22c26145d3b515ee1c7",
     "tarball": "http://registry.npmjs.org/escope/-/escope-3.2.0.tgz"
   },
-  "directories": {},
-  "_resolved": "https://registry.npmjs.org/escope/-/escope-3.2.0.tgz",
-  "readme": "ERROR: No README data found!"
+  "engines": {
+    "node": ">=0.4.0"
+  },
+  "gitHead": "c932340e2810ef5f83deb2b376df0917cae83b55",
+  "homepage": "http://github.com/estools/escope",
+  "installable": true,
+  "license": "BSD-2-Clause",
+  "main": "lib/index.js",
+  "maintainers": [
+    {
+      "name": "constellation",
+      "email": "utatane.tea@gmail.com"
+    },
+    {
+      "name": "michaelficarra",
+      "email": "npm@michael.ficarra.me"
+    }
+  ],
+  "name": "escope",
+  "optionalDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/estools/escope.git"
+  },
+  "scripts": {
+    "jsdoc": "jsdoc src/*.js README.md",
+    "lint": "gulp lint",
+    "test": "gulp travis",
+    "unit-test": "gulp test"
+  },
+  "version": "3.2.0"
 }
 
-},{}],133:[function(require,module,exports){
+},{}],91:[function(require,module,exports){
+/*
+  Copyright (C) 2014 Yusuke Suzuki <utatane.tea@gmail.com>
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions are met:
+
+    * Redistributions of source code must retain the above copyright
+      notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above copyright
+      notice, this list of conditions and the following disclaimer in the
+      documentation and/or other materials provided with the distribution.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  ARE DISCLAIMED. IN NO EVENT SHALL <COPYRIGHT HOLDER> BE LIABLE FOR ANY
+  DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+  (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+  ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+  THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+(function () {
+    'use strict';
+
+    var estraverse,
+        isArray,
+        objectKeys;
+
+    estraverse = require('estraverse');
+
+    isArray = Array.isArray;
+    if (!isArray) {
+        isArray = function isArray(array) {
+            return Object.prototype.toString.call(array) === '[object Array]';
+        };
+    }
+
+    objectKeys = Object.keys || function (o) {
+        var keys = [], key;
+        for (key in o) {
+            keys.push(key);
+        }
+        return keys;
+    };
+
+    function isNode(node) {
+        if (node == null) {
+            return false;
+        }
+        return typeof node === 'object' && typeof node.type === 'string';
+    }
+
+    function isProperty(nodeType, key) {
+        return (nodeType === estraverse.Syntax.ObjectExpression || nodeType === estraverse.Syntax.ObjectPattern) && key === 'properties';
+    }
+
+    function Visitor(visitor) {
+        this.__visitor = visitor ||  this;
+    }
+
+    /* Default method for visiting children.
+     * When you need to call default visiting operation inside custom visiting
+     * operation, you can use it with `this.visitChildren(node)`.
+     */
+    Visitor.prototype.visitChildren = function (node) {
+        var type, children, i, iz, j, jz, child;
+
+        if (node == null) {
+            return;
+        }
+
+        type = node.type || estraverse.Syntax.Property;
+
+        children = estraverse.VisitorKeys[type];
+        if (!children) {
+            children = objectKeys(node);
+        }
+
+        for (i = 0, iz = children.length; i < iz; ++i) {
+            child = node[children[i]];
+            if (child) {
+                if (Array.isArray(child)) {
+                    for (j = 0, jz = child.length; j < jz; ++j) {
+                        if (child[j]) {
+                            if (isNode(child[j]) || isProperty(type, children[i])) {
+                                this.visit(child[j]);
+                            }
+                        }
+                    }
+                } else if (isNode(child)) {
+                    this.visit(child);
+                }
+            }
+        }
+    };
+
+    /* Dispatching node. */
+    Visitor.prototype.visit = function (node) {
+        var type;
+
+        if (node == null) {
+            return;
+        }
+
+        type = node.type || estraverse.Syntax.Property;
+        if (this.__visitor[type]) {
+            this.__visitor[type].call(this, node);
+            return;
+        }
+        this.visitChildren(node);
+    };
+
+    exports.version = require('./package.json').version;
+    exports.Visitor = Visitor;
+    exports.visit = function (node, visitor) {
+        var v = new Visitor(visitor);
+        v.visit(node);
+    };
+}());
+/* vim: set sw=4 ts=4 et tw=80 : */
+
+},{"./package.json":94,"estraverse":92}],92:[function(require,module,exports){
+arguments[4][88][0].apply(exports,arguments)
+},{"./package.json":93,"dup":88}],93:[function(require,module,exports){
+module.exports={
+  "_args": [
+    [
+      "estraverse@~3.1.0",
+      "C:\\Users\\t-nagashima.AD\\Documents\\GitHub\\eslint\\node_modules\\esrecurse"
+    ]
+  ],
+  "_from": "estraverse@>=3.1.0 <3.2.0",
+  "_id": "estraverse@3.1.0",
+  "_inCache": true,
+  "_location": "/esrecurse/estraverse",
+  "_npmUser": {
+    "email": "utatane.tea@gmail.com",
+    "name": "constellation"
+  },
+  "_npmVersion": "2.0.0-alpha-5",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "estraverse",
+    "raw": "estraverse@~3.1.0",
+    "rawSpec": "~3.1.0",
+    "scope": null,
+    "spec": ">=3.1.0 <3.2.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/esrecurse"
+  ],
+  "_resolved": "https://registry.npmjs.org/estraverse/-/estraverse-3.1.0.tgz",
+  "_shasum": "15e28a446b8b82bc700ccc8b96c78af4da0d6cba",
+  "_shrinkwrap": null,
+  "_spec": "estraverse@~3.1.0",
+  "_where": "C:\\Users\\t-nagashima.AD\\Documents\\GitHub\\eslint\\node_modules\\esrecurse",
+  "bugs": {
+    "url": "https://github.com/estools/estraverse/issues"
+  },
+  "dependencies": {},
+  "description": "ECMAScript JS AST traversal functions",
+  "devDependencies": {
+    "chai": "^2.1.1",
+    "coffee-script": "^1.8.0",
+    "espree": "^1.11.0",
+    "gulp": "^3.8.10",
+    "gulp-bump": "^0.2.2",
+    "gulp-filter": "^2.0.0",
+    "gulp-git": "^1.0.1",
+    "gulp-tag-version": "^1.2.1",
+    "jshint": "^2.5.6",
+    "mocha": "^2.1.0"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "15e28a446b8b82bc700ccc8b96c78af4da0d6cba",
+    "tarball": "http://registry.npmjs.org/estraverse/-/estraverse-3.1.0.tgz"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "gitHead": "166ebbe0a8d45ceb2391b6f5ef5d1bab6bfb267a",
+  "homepage": "https://github.com/estools/estraverse",
+  "installable": true,
+  "licenses": [
+    {
+      "type": "BSD",
+      "url": "http://github.com/estools/estraverse/raw/master/LICENSE.BSD"
+    }
+  ],
+  "main": "estraverse.js",
+  "maintainers": [
+    {
+      "name": "constellation",
+      "email": "utatane.tea@gmail.com"
+    },
+    {
+      "name": "michaelficarra",
+      "email": "npm@michael.ficarra.me"
+    }
+  ],
+  "name": "estraverse",
+  "optionalDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/estools/estraverse.git"
+  },
+  "scripts": {
+    "lint": "jshint estraverse.js",
+    "test": "npm run-script lint && npm run-script unit-test",
+    "unit-test": "mocha --compilers coffee:coffee-script/register"
+  },
+  "version": "3.1.0"
+}
+
+},{}],94:[function(require,module,exports){
+module.exports={
+  "_args": [
+    [
+      "esrecurse@^3.1.1",
+      "C:\\Users\\t-nagashima.AD\\Documents\\GitHub\\eslint\\node_modules\\escope"
+    ]
+  ],
+  "_from": "esrecurse@>=3.1.1 <4.0.0",
+  "_id": "esrecurse@3.1.1",
+  "_inCache": true,
+  "_location": "/esrecurse",
+  "_npmUser": {
+    "email": "utatane.tea@gmail.com",
+    "name": "constellation"
+  },
+  "_npmVersion": "2.0.0-alpha-5",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "esrecurse",
+    "raw": "esrecurse@^3.1.1",
+    "rawSpec": "^3.1.1",
+    "scope": null,
+    "spec": ">=3.1.1 <4.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/escope"
+  ],
+  "_resolved": "https://registry.npmjs.org/esrecurse/-/esrecurse-3.1.1.tgz",
+  "_shasum": "8feb963699d4d1b2d65a576cd4b1296672a0f0e9",
+  "_shrinkwrap": null,
+  "_spec": "esrecurse@^3.1.1",
+  "_where": "C:\\Users\\t-nagashima.AD\\Documents\\GitHub\\eslint\\node_modules\\escope",
+  "bugs": {
+    "url": "https://github.com/estools/esrecurse/issues"
+  },
+  "dependencies": {
+    "estraverse": "~3.1.0"
+  },
+  "description": "ECMAScript scope analyzer",
+  "devDependencies": {
+    "chai": "^2.1.1",
+    "coffee-script": "^1.9.1",
+    "esprima": "^2.1.0",
+    "gulp": "~3.8.10",
+    "gulp-bump": "^0.2.2",
+    "gulp-eslint": "^0.6.0",
+    "gulp-filter": "^2.0.2",
+    "gulp-git": "^1.1.0",
+    "gulp-mocha": "~2.0.0",
+    "gulp-tag-version": "^1.2.1",
+    "jsdoc": "~3.3.0-alpha10",
+    "minimist": "^1.1.0"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "8feb963699d4d1b2d65a576cd4b1296672a0f0e9",
+    "tarball": "http://registry.npmjs.org/esrecurse/-/esrecurse-3.1.1.tgz"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "gitHead": "600a8aac5e7b313875a873134fd110b47a76fc77",
+  "homepage": "http://github.com/estools/esrecurse",
+  "installable": true,
+  "licenses": [
+    {
+      "type": "BSD",
+      "url": "http://github.com/estools/esrecurse/raw/master/LICENSE.BSD"
+    }
+  ],
+  "main": "esrecurse.js",
+  "maintainers": [
+    {
+      "name": "constellation",
+      "email": "utatane.tea@gmail.com"
+    },
+    {
+      "name": "michaelficarra",
+      "email": "npm@michael.ficarra.me"
+    }
+  ],
+  "name": "esrecurse",
+  "optionalDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/estools/esrecurse.git"
+  },
+  "scripts": {
+    "lint": "gulp lint",
+    "test": "gulp travis",
+    "unit-test": "gulp test"
+  },
+  "version": "3.1.1"
+}
+
+},{}],95:[function(require,module,exports){
 var estraverse = module.exports = require('estraverse');
 
 var VisitorKeys = require('./keys');
@@ -17270,7 +16603,7 @@ for (var nodeType in VisitorKeys) {
 		estraverse.VisitorKeys[nodeType] = keys;
 	}
 }
-},{"./keys":134,"estraverse":135}],134:[function(require,module,exports){
+},{"./keys":96,"estraverse":97}],96:[function(require,module,exports){
 var unprefixedKeys = {
 	Identifier: [],
 	NamespacedName: ['namespace', 'name'],
@@ -17328,7 +16661,7 @@ for (var key in unprefixedKeys) {
 for (var key in flowKeys) {
 	exports[key] = flowKeys[key];
 }
-},{}],135:[function(require,module,exports){
+},{}],97:[function(require,module,exports){
 /*
   Copyright (C) 2012-2013 Yusuke Suzuki <utatane.tea@gmail.com>
   Copyright (C) 2012 Ariya Hidayat <ariya.hidayat@gmail.com>
@@ -18173,30 +17506,46 @@ for (var key in flowKeys) {
 }(exports));
 /* vim: set sw=4 ts=4 et tw=80 : */
 
-},{"./package.json":136}],136:[function(require,module,exports){
+},{"./package.json":98}],98:[function(require,module,exports){
 module.exports={
-  "name": "estraverse",
-  "description": "ECMAScript JS AST traversal functions",
-  "homepage": "https://github.com/estools/estraverse",
-  "main": "estraverse.js",
-  "version": "4.1.0",
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "maintainers": [
-    {
-      "name": "constellation",
-      "email": "utatane.tea@gmail.com"
-    },
-    {
-      "name": "michaelficarra",
-      "email": "npm@michael.ficarra.me"
-    }
+  "_args": [
+    [
+      "estraverse@^4.1.0",
+      "C:\\Users\\t-nagashima.AD\\Documents\\GitHub\\eslint"
+    ]
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/estools/estraverse.git"
+  "_from": "estraverse@>=4.1.0 <5.0.0",
+  "_id": "estraverse@4.1.0",
+  "_inCache": true,
+  "_location": "/estraverse",
+  "_nodeVersion": "1.8.1",
+  "_npmUser": {
+    "email": "utatane.tea@gmail.com",
+    "name": "constellation"
   },
+  "_npmVersion": "2.8.3",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "estraverse",
+    "raw": "estraverse@^4.1.0",
+    "rawSpec": "^4.1.0",
+    "scope": null,
+    "spec": ">=4.1.0 <5.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/estraverse/-/estraverse-4.1.0.tgz",
+  "_shasum": "40f23a76092041be6467d7f235c933b670766e05",
+  "_shrinkwrap": null,
+  "_spec": "estraverse@^4.1.0",
+  "_where": "C:\\Users\\t-nagashima.AD\\Documents\\GitHub\\eslint",
+  "bugs": {
+    "url": "https://github.com/estools/estraverse/issues"
+  },
+  "dependencies": {},
+  "description": "ECMAScript JS AST traversal functions",
   "devDependencies": {
     "chai": "^2.1.1",
     "coffee-script": "^1.8.0",
@@ -18209,41 +17558,51 @@ module.exports={
     "jshint": "^2.5.6",
     "mocha": "^2.1.0"
   },
+  "directories": {},
+  "dist": {
+    "shasum": "40f23a76092041be6467d7f235c933b670766e05",
+    "tarball": "http://registry.npmjs.org/estraverse/-/estraverse-4.1.0.tgz"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "gitHead": "347d52996336719b5910c7ffb5ff3ea8ecb87cf3",
+  "homepage": "https://github.com/estools/estraverse",
+  "installable": true,
   "licenses": [
     {
       "type": "BSD",
       "url": "http://github.com/estools/estraverse/raw/master/LICENSE.BSD"
     }
   ],
+  "main": "estraverse.js",
+  "maintainers": [
+    {
+      "name": "constellation",
+      "email": "utatane.tea@gmail.com"
+    },
+    {
+      "name": "michaelficarra",
+      "email": "npm@michael.ficarra.me"
+    }
+  ],
+  "name": "estraverse",
+  "optionalDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/estools/estraverse.git"
+  },
   "scripts": {
-    "test": "npm run-script lint && npm run-script unit-test",
     "lint": "jshint estraverse.js",
+    "test": "npm run-script lint && npm run-script unit-test",
     "unit-test": "mocha --compilers coffee:coffee-script/register"
   },
-  "gitHead": "347d52996336719b5910c7ffb5ff3ea8ecb87cf3",
-  "bugs": {
-    "url": "https://github.com/estools/estraverse/issues"
-  },
-  "_id": "estraverse@4.1.0",
-  "_shasum": "40f23a76092041be6467d7f235c933b670766e05",
-  "_from": "estraverse@^4.1.0",
-  "_npmVersion": "2.8.3",
-  "_nodeVersion": "1.8.1",
-  "_npmUser": {
-    "name": "constellation",
-    "email": "utatane.tea@gmail.com"
-  },
-  "dist": {
-    "shasum": "40f23a76092041be6467d7f235c933b670766e05",
-    "tarball": "http://registry.npmjs.org/estraverse/-/estraverse-4.1.0.tgz"
-  },
-  "directories": {},
-  "_resolved": "https://registry.npmjs.org/estraverse/-/estraverse-4.1.0.tgz"
+  "version": "4.1.0"
 }
 
-},{}],137:[function(require,module,exports){
-arguments[4][16][0].apply(exports,arguments)
-},{"dup":16}],138:[function(require,module,exports){
+},{}],99:[function(require,module,exports){
+arguments[4][13][0].apply(exports,arguments)
+},{"dup":13}],100:[function(require,module,exports){
 /*
   Copyright (C) 2013-2014 Yusuke Suzuki <utatane.tea@gmail.com>
   Copyright (C) 2014 Ivan Nikulin <ifaaan@gmail.com>
@@ -18380,7 +17739,7 @@ arguments[4][16][0].apply(exports,arguments)
 }());
 /* vim: set sw=4 ts=4 et tw=80 : */
 
-},{}],139:[function(require,module,exports){
+},{}],101:[function(require,module,exports){
 /*
   Copyright (C) 2013 Yusuke Suzuki <utatane.tea@gmail.com>
 
@@ -18547,9 +17906,523 @@ arguments[4][16][0].apply(exports,arguments)
 }());
 /* vim: set sw=4 ts=4 et tw=80 : */
 
-},{"./code":138}],140:[function(require,module,exports){
-arguments[4][19][0].apply(exports,arguments)
-},{"./ast":137,"./code":138,"./keyword":139,"dup":19}],141:[function(require,module,exports){
+},{"./code":100}],102:[function(require,module,exports){
+arguments[4][16][0].apply(exports,arguments)
+},{"./ast":99,"./code":100,"./keyword":101,"dup":16}],103:[function(require,module,exports){
+'use strict';
+
+var d        = require('d')
+  , callable = require('es5-ext/object/valid-callable')
+
+  , apply = Function.prototype.apply, call = Function.prototype.call
+  , create = Object.create, defineProperty = Object.defineProperty
+  , defineProperties = Object.defineProperties
+  , hasOwnProperty = Object.prototype.hasOwnProperty
+  , descriptor = { configurable: true, enumerable: false, writable: true }
+
+  , on, once, off, emit, methods, descriptors, base;
+
+on = function (type, listener) {
+	var data;
+
+	callable(listener);
+
+	if (!hasOwnProperty.call(this, '__ee__')) {
+		data = descriptor.value = create(null);
+		defineProperty(this, '__ee__', descriptor);
+		descriptor.value = null;
+	} else {
+		data = this.__ee__;
+	}
+	if (!data[type]) data[type] = listener;
+	else if (typeof data[type] === 'object') data[type].push(listener);
+	else data[type] = [data[type], listener];
+
+	return this;
+};
+
+once = function (type, listener) {
+	var once, self;
+
+	callable(listener);
+	self = this;
+	on.call(this, type, once = function () {
+		off.call(self, type, once);
+		apply.call(listener, this, arguments);
+	});
+
+	once.__eeOnceListener__ = listener;
+	return this;
+};
+
+off = function (type, listener) {
+	var data, listeners, candidate, i;
+
+	callable(listener);
+
+	if (!hasOwnProperty.call(this, '__ee__')) return this;
+	data = this.__ee__;
+	if (!data[type]) return this;
+	listeners = data[type];
+
+	if (typeof listeners === 'object') {
+		for (i = 0; (candidate = listeners[i]); ++i) {
+			if ((candidate === listener) ||
+					(candidate.__eeOnceListener__ === listener)) {
+				if (listeners.length === 2) data[type] = listeners[i ? 0 : 1];
+				else listeners.splice(i, 1);
+			}
+		}
+	} else {
+		if ((listeners === listener) ||
+				(listeners.__eeOnceListener__ === listener)) {
+			delete data[type];
+		}
+	}
+
+	return this;
+};
+
+emit = function (type) {
+	var i, l, listener, listeners, args;
+
+	if (!hasOwnProperty.call(this, '__ee__')) return;
+	listeners = this.__ee__[type];
+	if (!listeners) return;
+
+	if (typeof listeners === 'object') {
+		l = arguments.length;
+		args = new Array(l - 1);
+		for (i = 1; i < l; ++i) args[i - 1] = arguments[i];
+
+		listeners = listeners.slice();
+		for (i = 0; (listener = listeners[i]); ++i) {
+			apply.call(listener, this, args);
+		}
+	} else {
+		switch (arguments.length) {
+		case 1:
+			call.call(listeners, this);
+			break;
+		case 2:
+			call.call(listeners, this, arguments[1]);
+			break;
+		case 3:
+			call.call(listeners, this, arguments[1], arguments[2]);
+			break;
+		default:
+			l = arguments.length;
+			args = new Array(l - 1);
+			for (i = 1; i < l; ++i) {
+				args[i - 1] = arguments[i];
+			}
+			apply.call(listeners, this, args);
+		}
+	}
+};
+
+methods = {
+	on: on,
+	once: once,
+	off: off,
+	emit: emit
+};
+
+descriptors = {
+	on: d(on),
+	once: d(once),
+	off: d(off),
+	emit: d(emit)
+};
+
+base = defineProperties({}, descriptors);
+
+module.exports = exports = function (o) {
+	return (o == null) ? create(base) : defineProperties(Object(o), descriptors);
+};
+exports.methods = methods;
+
+},{"d":7,"es5-ext/object/valid-callable":43}],104:[function(require,module,exports){
+// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+function EventEmitter() {
+  this._events = this._events || {};
+  this._maxListeners = this._maxListeners || undefined;
+}
+module.exports = EventEmitter;
+
+// Backwards-compat with node 0.10.x
+EventEmitter.EventEmitter = EventEmitter;
+
+EventEmitter.prototype._events = undefined;
+EventEmitter.prototype._maxListeners = undefined;
+
+// By default EventEmitters will print a warning if more than 10 listeners are
+// added to it. This is a useful default which helps finding memory leaks.
+EventEmitter.defaultMaxListeners = 10;
+
+// Obviously not all Emitters should be limited to 10. This function allows
+// that to be increased. Set to zero for unlimited.
+EventEmitter.prototype.setMaxListeners = function(n) {
+  if (!isNumber(n) || n < 0 || isNaN(n))
+    throw TypeError('n must be a positive number');
+  this._maxListeners = n;
+  return this;
+};
+
+EventEmitter.prototype.emit = function(type) {
+  var er, handler, len, args, i, listeners;
+
+  if (!this._events)
+    this._events = {};
+
+  // If there is no 'error' event listener then throw.
+  if (type === 'error') {
+    if (!this._events.error ||
+        (isObject(this._events.error) && !this._events.error.length)) {
+      er = arguments[1];
+      if (er instanceof Error) {
+        throw er; // Unhandled 'error' event
+      }
+      throw TypeError('Uncaught, unspecified "error" event.');
+    }
+  }
+
+  handler = this._events[type];
+
+  if (isUndefined(handler))
+    return false;
+
+  if (isFunction(handler)) {
+    switch (arguments.length) {
+      // fast cases
+      case 1:
+        handler.call(this);
+        break;
+      case 2:
+        handler.call(this, arguments[1]);
+        break;
+      case 3:
+        handler.call(this, arguments[1], arguments[2]);
+        break;
+      // slower
+      default:
+        len = arguments.length;
+        args = new Array(len - 1);
+        for (i = 1; i < len; i++)
+          args[i - 1] = arguments[i];
+        handler.apply(this, args);
+    }
+  } else if (isObject(handler)) {
+    len = arguments.length;
+    args = new Array(len - 1);
+    for (i = 1; i < len; i++)
+      args[i - 1] = arguments[i];
+
+    listeners = handler.slice();
+    len = listeners.length;
+    for (i = 0; i < len; i++)
+      listeners[i].apply(this, args);
+  }
+
+  return true;
+};
+
+EventEmitter.prototype.addListener = function(type, listener) {
+  var m;
+
+  if (!isFunction(listener))
+    throw TypeError('listener must be a function');
+
+  if (!this._events)
+    this._events = {};
+
+  // To avoid recursion in the case that type === "newListener"! Before
+  // adding it to the listeners, first emit "newListener".
+  if (this._events.newListener)
+    this.emit('newListener', type,
+              isFunction(listener.listener) ?
+              listener.listener : listener);
+
+  if (!this._events[type])
+    // Optimize the case of one listener. Don't need the extra array object.
+    this._events[type] = listener;
+  else if (isObject(this._events[type]))
+    // If we've already got an array, just append.
+    this._events[type].push(listener);
+  else
+    // Adding the second element, need to change to array.
+    this._events[type] = [this._events[type], listener];
+
+  // Check for listener leak
+  if (isObject(this._events[type]) && !this._events[type].warned) {
+    var m;
+    if (!isUndefined(this._maxListeners)) {
+      m = this._maxListeners;
+    } else {
+      m = EventEmitter.defaultMaxListeners;
+    }
+
+    if (m && m > 0 && this._events[type].length > m) {
+      this._events[type].warned = true;
+      console.error('(node) warning: possible EventEmitter memory ' +
+                    'leak detected. %d listeners added. ' +
+                    'Use emitter.setMaxListeners() to increase limit.',
+                    this._events[type].length);
+      if (typeof console.trace === 'function') {
+        // not supported in IE 10
+        console.trace();
+      }
+    }
+  }
+
+  return this;
+};
+
+EventEmitter.prototype.on = EventEmitter.prototype.addListener;
+
+EventEmitter.prototype.once = function(type, listener) {
+  if (!isFunction(listener))
+    throw TypeError('listener must be a function');
+
+  var fired = false;
+
+  function g() {
+    this.removeListener(type, g);
+
+    if (!fired) {
+      fired = true;
+      listener.apply(this, arguments);
+    }
+  }
+
+  g.listener = listener;
+  this.on(type, g);
+
+  return this;
+};
+
+// emits a 'removeListener' event iff the listener was removed
+EventEmitter.prototype.removeListener = function(type, listener) {
+  var list, position, length, i;
+
+  if (!isFunction(listener))
+    throw TypeError('listener must be a function');
+
+  if (!this._events || !this._events[type])
+    return this;
+
+  list = this._events[type];
+  length = list.length;
+  position = -1;
+
+  if (list === listener ||
+      (isFunction(list.listener) && list.listener === listener)) {
+    delete this._events[type];
+    if (this._events.removeListener)
+      this.emit('removeListener', type, listener);
+
+  } else if (isObject(list)) {
+    for (i = length; i-- > 0;) {
+      if (list[i] === listener ||
+          (list[i].listener && list[i].listener === listener)) {
+        position = i;
+        break;
+      }
+    }
+
+    if (position < 0)
+      return this;
+
+    if (list.length === 1) {
+      list.length = 0;
+      delete this._events[type];
+    } else {
+      list.splice(position, 1);
+    }
+
+    if (this._events.removeListener)
+      this.emit('removeListener', type, listener);
+  }
+
+  return this;
+};
+
+EventEmitter.prototype.removeAllListeners = function(type) {
+  var key, listeners;
+
+  if (!this._events)
+    return this;
+
+  // not listening for removeListener, no need to emit
+  if (!this._events.removeListener) {
+    if (arguments.length === 0)
+      this._events = {};
+    else if (this._events[type])
+      delete this._events[type];
+    return this;
+  }
+
+  // emit removeListener for all listeners on all events
+  if (arguments.length === 0) {
+    for (key in this._events) {
+      if (key === 'removeListener') continue;
+      this.removeAllListeners(key);
+    }
+    this.removeAllListeners('removeListener');
+    this._events = {};
+    return this;
+  }
+
+  listeners = this._events[type];
+
+  if (isFunction(listeners)) {
+    this.removeListener(type, listeners);
+  } else {
+    // LIFO order
+    while (listeners.length)
+      this.removeListener(type, listeners[listeners.length - 1]);
+  }
+  delete this._events[type];
+
+  return this;
+};
+
+EventEmitter.prototype.listeners = function(type) {
+  var ret;
+  if (!this._events || !this._events[type])
+    ret = [];
+  else if (isFunction(this._events[type]))
+    ret = [this._events[type]];
+  else
+    ret = this._events[type].slice();
+  return ret;
+};
+
+EventEmitter.listenerCount = function(emitter, type) {
+  var ret;
+  if (!emitter._events || !emitter._events[type])
+    ret = 0;
+  else if (isFunction(emitter._events[type]))
+    ret = 1;
+  else
+    ret = emitter._events[type].length;
+  return ret;
+};
+
+function isFunction(arg) {
+  return typeof arg === 'function';
+}
+
+function isNumber(arg) {
+  return typeof arg === 'number';
+}
+
+function isObject(arg) {
+  return typeof arg === 'object' && arg !== null;
+}
+
+function isUndefined(arg) {
+  return arg === void 0;
+}
+
+},{}],105:[function(require,module,exports){
+var util = require('util')
+
+var INDENT_START = /[\{\[]/
+var INDENT_END = /[\}\]]/
+
+module.exports = function() {
+  var lines = []
+  var indent = 0
+
+  var push = function(str) {
+    var spaces = ''
+    while (spaces.length < indent*2) spaces += '  '
+    lines.push(spaces+str)
+  }
+
+  var line = function(fmt) {
+    if (!fmt) return line
+
+    if (INDENT_END.test(fmt.trim()[0]) && INDENT_START.test(fmt[fmt.length-1])) {
+      indent--
+      push(util.format.apply(util, arguments))
+      indent++
+      return line
+    }
+    if (INDENT_START.test(fmt[fmt.length-1])) {
+      push(util.format.apply(util, arguments))
+      indent++
+      return line
+    }
+    if (INDENT_END.test(fmt.trim()[0])) {
+      indent--
+      push(util.format.apply(util, arguments))
+      return line
+    }
+
+    push(util.format.apply(util, arguments))
+    return line
+  }
+
+  line.toString = function() {
+    return lines.join('\n')
+  }
+
+  line.toFunction = function(scope) {
+    var src = 'return ('+line.toString()+')'
+
+    var keys = Object.keys(scope || {}).map(function(key) {
+      return key
+    })
+
+    var vals = keys.map(function(key) {
+      return scope[key]
+    })
+
+    return Function.apply(null, keys.concat(src)).apply(null, vals)
+  }
+
+  if (arguments.length) line.apply(null, arguments)
+
+  return line
+}
+
+},{"util":121}],106:[function(require,module,exports){
+var isProperty = require('is-property')
+
+var gen = function(obj, prop) {
+  return isProperty(prop) ? obj+'.'+prop : obj+'['+JSON.stringify(prop)+']'
+}
+
+gen.valid = isProperty
+gen.property = function (prop) {
+ return isProperty(prop) ? prop : JSON.stringify(prop)
+}
+
+module.exports = gen
+
+},{"is-property":112}],107:[function(require,module,exports){
 module.exports={
 	"builtin": {
 		"Array": false,
@@ -19661,10 +19534,35 @@ module.exports={
 	}
 }
 
-},{}],142:[function(require,module,exports){
+},{}],108:[function(require,module,exports){
 module.exports = require('./globals.json');
 
-},{"./globals.json":141}],143:[function(require,module,exports){
+},{"./globals.json":107}],109:[function(require,module,exports){
+if (typeof Object.create === 'function') {
+  // implementation from standard node.js 'util' module
+  module.exports = function inherits(ctor, superCtor) {
+    ctor.super_ = superCtor
+    ctor.prototype = Object.create(superCtor.prototype, {
+      constructor: {
+        value: ctor,
+        enumerable: false,
+        writable: true,
+        configurable: true
+      }
+    });
+  };
+} else {
+  // old school shim for old browsers
+  module.exports = function inherits(ctor, superCtor) {
+    ctor.super_ = superCtor
+    var TempCtor = function () {}
+    TempCtor.prototype = superCtor.prototype
+    ctor.prototype = new TempCtor()
+    ctor.prototype.constructor = ctor
+  }
+}
+
+},{}],110:[function(require,module,exports){
 exports['date-time'] = /^\d{4}-(?:0[0-9]{1}|1[0-2]{1})-[0-9]{2}[tT ]\d{2}:\d{2}:\d{2}(\.\d+)?([zZ]|[+-]\d{2}:\d{2})$/
 exports['date'] = /^\d{4}-(?:0[0-9]{1}|1[0-2]{1})-[0-9]{2}$/
 exports['time'] = /^\d{2}:\d{2}:\d{2}$/
@@ -19680,7 +19578,7 @@ exports['style'] = /\s*(.+?):\s*([^;]+);?/g
 exports['phone'] = /^\+(?:[0-9] ?){6,14}[0-9]$/
 exports['utc-millisec'] = /^[0-9]+(\.?[0-9]+)?$/
 
-},{}],144:[function(require,module,exports){
+},{}],111:[function(require,module,exports){
 var genobj = require('generate-object-property')
 var genfun = require('generate-function')
 var jsonpointer = require('jsonpointer')
@@ -20201,7 +20099,11 @@ var compile = function(schema, cache, root, reporter, opts) {
 
     if (properties) {
       Object.keys(properties).forEach(function(p) {
+        if (Array.isArray(type) && type.indexOf('null') !== -1) validate('if (%s !== null) {', name)
+
         visit(genobj(name, p), properties[p], reporter, filter)
+
+        if (Array.isArray(type) && type.indexOf('null') !== -1) validate('}')
       })
     }
 
@@ -20251,92 +20153,18 @@ module.exports.filter = function(schema, opts) {
   }
 }
 
-},{"./formats":143,"generate-function":145,"generate-object-property":146,"jsonpointer":148,"xtend":149}],145:[function(require,module,exports){
-var util = require('util')
-
-var INDENT_START = /[\{\[]/
-var INDENT_END = /[\}\]]/
-
-module.exports = function() {
-  var lines = []
-  var indent = 0
-
-  var push = function(str) {
-    var spaces = ''
-    while (spaces.length < indent*2) spaces += '  '
-    lines.push(spaces+str)
-  }
-
-  var line = function(fmt) {
-    if (!fmt) return line
-
-    if (INDENT_END.test(fmt.trim()[0]) && INDENT_START.test(fmt[fmt.length-1])) {
-      indent--
-      push(util.format.apply(util, arguments))
-      indent++
-      return line
-    }
-    if (INDENT_START.test(fmt[fmt.length-1])) {
-      push(util.format.apply(util, arguments))
-      indent++
-      return line
-    }
-    if (INDENT_END.test(fmt.trim()[0])) {
-      indent--
-      push(util.format.apply(util, arguments))
-      return line
-    }
-
-    push(util.format.apply(util, arguments))
-    return line
-  }
-
-  line.toString = function() {
-    return lines.join('\n')
-  }
-
-  line.toFunction = function(scope) {
-    var src = 'return ('+line.toString()+')'
-
-    var keys = Object.keys(scope || {}).map(function(key) {
-      return key
-    })
-
-    var vals = keys.map(function(key) {
-      return scope[key]
-    })
-
-    return Function.apply(null, keys.concat(src)).apply(null, vals)
-  }
-
-  if (arguments.length) line.apply(null, arguments)
-
-  return line
-}
-
-},{"util":12}],146:[function(require,module,exports){
-var isProperty = require('is-property')
-
-var gen = function(obj, prop) {
-  return isProperty(prop) ? obj+'.'+prop : obj+'['+JSON.stringify(prop)+']'
-}
-
-gen.valid = isProperty
-gen.property = function (prop) {
- return isProperty(prop) ? prop : JSON.stringify(prop)
-}
-
-module.exports = gen
-
-},{"is-property":147}],147:[function(require,module,exports){
+},{"./formats":110,"generate-function":105,"generate-object-property":106,"jsonpointer":114,"xtend":122}],112:[function(require,module,exports){
 "use strict"
 function isProperty(str) {
   return /^[$A-Z\_a-z\xaa\xb5\xba\xc0-\xd6\xd8-\xf6\xf8-\u02c1\u02c6-\u02d1\u02e0-\u02e4\u02ec\u02ee\u0370-\u0374\u0376\u0377\u037a-\u037d\u0386\u0388-\u038a\u038c\u038e-\u03a1\u03a3-\u03f5\u03f7-\u0481\u048a-\u0527\u0531-\u0556\u0559\u0561-\u0587\u05d0-\u05ea\u05f0-\u05f2\u0620-\u064a\u066e\u066f\u0671-\u06d3\u06d5\u06e5\u06e6\u06ee\u06ef\u06fa-\u06fc\u06ff\u0710\u0712-\u072f\u074d-\u07a5\u07b1\u07ca-\u07ea\u07f4\u07f5\u07fa\u0800-\u0815\u081a\u0824\u0828\u0840-\u0858\u08a0\u08a2-\u08ac\u0904-\u0939\u093d\u0950\u0958-\u0961\u0971-\u0977\u0979-\u097f\u0985-\u098c\u098f\u0990\u0993-\u09a8\u09aa-\u09b0\u09b2\u09b6-\u09b9\u09bd\u09ce\u09dc\u09dd\u09df-\u09e1\u09f0\u09f1\u0a05-\u0a0a\u0a0f\u0a10\u0a13-\u0a28\u0a2a-\u0a30\u0a32\u0a33\u0a35\u0a36\u0a38\u0a39\u0a59-\u0a5c\u0a5e\u0a72-\u0a74\u0a85-\u0a8d\u0a8f-\u0a91\u0a93-\u0aa8\u0aaa-\u0ab0\u0ab2\u0ab3\u0ab5-\u0ab9\u0abd\u0ad0\u0ae0\u0ae1\u0b05-\u0b0c\u0b0f\u0b10\u0b13-\u0b28\u0b2a-\u0b30\u0b32\u0b33\u0b35-\u0b39\u0b3d\u0b5c\u0b5d\u0b5f-\u0b61\u0b71\u0b83\u0b85-\u0b8a\u0b8e-\u0b90\u0b92-\u0b95\u0b99\u0b9a\u0b9c\u0b9e\u0b9f\u0ba3\u0ba4\u0ba8-\u0baa\u0bae-\u0bb9\u0bd0\u0c05-\u0c0c\u0c0e-\u0c10\u0c12-\u0c28\u0c2a-\u0c33\u0c35-\u0c39\u0c3d\u0c58\u0c59\u0c60\u0c61\u0c85-\u0c8c\u0c8e-\u0c90\u0c92-\u0ca8\u0caa-\u0cb3\u0cb5-\u0cb9\u0cbd\u0cde\u0ce0\u0ce1\u0cf1\u0cf2\u0d05-\u0d0c\u0d0e-\u0d10\u0d12-\u0d3a\u0d3d\u0d4e\u0d60\u0d61\u0d7a-\u0d7f\u0d85-\u0d96\u0d9a-\u0db1\u0db3-\u0dbb\u0dbd\u0dc0-\u0dc6\u0e01-\u0e30\u0e32\u0e33\u0e40-\u0e46\u0e81\u0e82\u0e84\u0e87\u0e88\u0e8a\u0e8d\u0e94-\u0e97\u0e99-\u0e9f\u0ea1-\u0ea3\u0ea5\u0ea7\u0eaa\u0eab\u0ead-\u0eb0\u0eb2\u0eb3\u0ebd\u0ec0-\u0ec4\u0ec6\u0edc-\u0edf\u0f00\u0f40-\u0f47\u0f49-\u0f6c\u0f88-\u0f8c\u1000-\u102a\u103f\u1050-\u1055\u105a-\u105d\u1061\u1065\u1066\u106e-\u1070\u1075-\u1081\u108e\u10a0-\u10c5\u10c7\u10cd\u10d0-\u10fa\u10fc-\u1248\u124a-\u124d\u1250-\u1256\u1258\u125a-\u125d\u1260-\u1288\u128a-\u128d\u1290-\u12b0\u12b2-\u12b5\u12b8-\u12be\u12c0\u12c2-\u12c5\u12c8-\u12d6\u12d8-\u1310\u1312-\u1315\u1318-\u135a\u1380-\u138f\u13a0-\u13f4\u1401-\u166c\u166f-\u167f\u1681-\u169a\u16a0-\u16ea\u16ee-\u16f0\u1700-\u170c\u170e-\u1711\u1720-\u1731\u1740-\u1751\u1760-\u176c\u176e-\u1770\u1780-\u17b3\u17d7\u17dc\u1820-\u1877\u1880-\u18a8\u18aa\u18b0-\u18f5\u1900-\u191c\u1950-\u196d\u1970-\u1974\u1980-\u19ab\u19c1-\u19c7\u1a00-\u1a16\u1a20-\u1a54\u1aa7\u1b05-\u1b33\u1b45-\u1b4b\u1b83-\u1ba0\u1bae\u1baf\u1bba-\u1be5\u1c00-\u1c23\u1c4d-\u1c4f\u1c5a-\u1c7d\u1ce9-\u1cec\u1cee-\u1cf1\u1cf5\u1cf6\u1d00-\u1dbf\u1e00-\u1f15\u1f18-\u1f1d\u1f20-\u1f45\u1f48-\u1f4d\u1f50-\u1f57\u1f59\u1f5b\u1f5d\u1f5f-\u1f7d\u1f80-\u1fb4\u1fb6-\u1fbc\u1fbe\u1fc2-\u1fc4\u1fc6-\u1fcc\u1fd0-\u1fd3\u1fd6-\u1fdb\u1fe0-\u1fec\u1ff2-\u1ff4\u1ff6-\u1ffc\u2071\u207f\u2090-\u209c\u2102\u2107\u210a-\u2113\u2115\u2119-\u211d\u2124\u2126\u2128\u212a-\u212d\u212f-\u2139\u213c-\u213f\u2145-\u2149\u214e\u2160-\u2188\u2c00-\u2c2e\u2c30-\u2c5e\u2c60-\u2ce4\u2ceb-\u2cee\u2cf2\u2cf3\u2d00-\u2d25\u2d27\u2d2d\u2d30-\u2d67\u2d6f\u2d80-\u2d96\u2da0-\u2da6\u2da8-\u2dae\u2db0-\u2db6\u2db8-\u2dbe\u2dc0-\u2dc6\u2dc8-\u2dce\u2dd0-\u2dd6\u2dd8-\u2dde\u2e2f\u3005-\u3007\u3021-\u3029\u3031-\u3035\u3038-\u303c\u3041-\u3096\u309d-\u309f\u30a1-\u30fa\u30fc-\u30ff\u3105-\u312d\u3131-\u318e\u31a0-\u31ba\u31f0-\u31ff\u3400-\u4db5\u4e00-\u9fcc\ua000-\ua48c\ua4d0-\ua4fd\ua500-\ua60c\ua610-\ua61f\ua62a\ua62b\ua640-\ua66e\ua67f-\ua697\ua6a0-\ua6ef\ua717-\ua71f\ua722-\ua788\ua78b-\ua78e\ua790-\ua793\ua7a0-\ua7aa\ua7f8-\ua801\ua803-\ua805\ua807-\ua80a\ua80c-\ua822\ua840-\ua873\ua882-\ua8b3\ua8f2-\ua8f7\ua8fb\ua90a-\ua925\ua930-\ua946\ua960-\ua97c\ua984-\ua9b2\ua9cf\uaa00-\uaa28\uaa40-\uaa42\uaa44-\uaa4b\uaa60-\uaa76\uaa7a\uaa80-\uaaaf\uaab1\uaab5\uaab6\uaab9-\uaabd\uaac0\uaac2\uaadb-\uaadd\uaae0-\uaaea\uaaf2-\uaaf4\uab01-\uab06\uab09-\uab0e\uab11-\uab16\uab20-\uab26\uab28-\uab2e\uabc0-\uabe2\uac00-\ud7a3\ud7b0-\ud7c6\ud7cb-\ud7fb\uf900-\ufa6d\ufa70-\ufad9\ufb00-\ufb06\ufb13-\ufb17\ufb1d\ufb1f-\ufb28\ufb2a-\ufb36\ufb38-\ufb3c\ufb3e\ufb40\ufb41\ufb43\ufb44\ufb46-\ufbb1\ufbd3-\ufd3d\ufd50-\ufd8f\ufd92-\ufdc7\ufdf0-\ufdfb\ufe70-\ufe74\ufe76-\ufefc\uff21-\uff3a\uff41-\uff5a\uff66-\uffbe\uffc2-\uffc7\uffca-\uffcf\uffd2-\uffd7\uffda-\uffdc][$A-Z\_a-z\xaa\xb5\xba\xc0-\xd6\xd8-\xf6\xf8-\u02c1\u02c6-\u02d1\u02e0-\u02e4\u02ec\u02ee\u0370-\u0374\u0376\u0377\u037a-\u037d\u0386\u0388-\u038a\u038c\u038e-\u03a1\u03a3-\u03f5\u03f7-\u0481\u048a-\u0527\u0531-\u0556\u0559\u0561-\u0587\u05d0-\u05ea\u05f0-\u05f2\u0620-\u064a\u066e\u066f\u0671-\u06d3\u06d5\u06e5\u06e6\u06ee\u06ef\u06fa-\u06fc\u06ff\u0710\u0712-\u072f\u074d-\u07a5\u07b1\u07ca-\u07ea\u07f4\u07f5\u07fa\u0800-\u0815\u081a\u0824\u0828\u0840-\u0858\u08a0\u08a2-\u08ac\u0904-\u0939\u093d\u0950\u0958-\u0961\u0971-\u0977\u0979-\u097f\u0985-\u098c\u098f\u0990\u0993-\u09a8\u09aa-\u09b0\u09b2\u09b6-\u09b9\u09bd\u09ce\u09dc\u09dd\u09df-\u09e1\u09f0\u09f1\u0a05-\u0a0a\u0a0f\u0a10\u0a13-\u0a28\u0a2a-\u0a30\u0a32\u0a33\u0a35\u0a36\u0a38\u0a39\u0a59-\u0a5c\u0a5e\u0a72-\u0a74\u0a85-\u0a8d\u0a8f-\u0a91\u0a93-\u0aa8\u0aaa-\u0ab0\u0ab2\u0ab3\u0ab5-\u0ab9\u0abd\u0ad0\u0ae0\u0ae1\u0b05-\u0b0c\u0b0f\u0b10\u0b13-\u0b28\u0b2a-\u0b30\u0b32\u0b33\u0b35-\u0b39\u0b3d\u0b5c\u0b5d\u0b5f-\u0b61\u0b71\u0b83\u0b85-\u0b8a\u0b8e-\u0b90\u0b92-\u0b95\u0b99\u0b9a\u0b9c\u0b9e\u0b9f\u0ba3\u0ba4\u0ba8-\u0baa\u0bae-\u0bb9\u0bd0\u0c05-\u0c0c\u0c0e-\u0c10\u0c12-\u0c28\u0c2a-\u0c33\u0c35-\u0c39\u0c3d\u0c58\u0c59\u0c60\u0c61\u0c85-\u0c8c\u0c8e-\u0c90\u0c92-\u0ca8\u0caa-\u0cb3\u0cb5-\u0cb9\u0cbd\u0cde\u0ce0\u0ce1\u0cf1\u0cf2\u0d05-\u0d0c\u0d0e-\u0d10\u0d12-\u0d3a\u0d3d\u0d4e\u0d60\u0d61\u0d7a-\u0d7f\u0d85-\u0d96\u0d9a-\u0db1\u0db3-\u0dbb\u0dbd\u0dc0-\u0dc6\u0e01-\u0e30\u0e32\u0e33\u0e40-\u0e46\u0e81\u0e82\u0e84\u0e87\u0e88\u0e8a\u0e8d\u0e94-\u0e97\u0e99-\u0e9f\u0ea1-\u0ea3\u0ea5\u0ea7\u0eaa\u0eab\u0ead-\u0eb0\u0eb2\u0eb3\u0ebd\u0ec0-\u0ec4\u0ec6\u0edc-\u0edf\u0f00\u0f40-\u0f47\u0f49-\u0f6c\u0f88-\u0f8c\u1000-\u102a\u103f\u1050-\u1055\u105a-\u105d\u1061\u1065\u1066\u106e-\u1070\u1075-\u1081\u108e\u10a0-\u10c5\u10c7\u10cd\u10d0-\u10fa\u10fc-\u1248\u124a-\u124d\u1250-\u1256\u1258\u125a-\u125d\u1260-\u1288\u128a-\u128d\u1290-\u12b0\u12b2-\u12b5\u12b8-\u12be\u12c0\u12c2-\u12c5\u12c8-\u12d6\u12d8-\u1310\u1312-\u1315\u1318-\u135a\u1380-\u138f\u13a0-\u13f4\u1401-\u166c\u166f-\u167f\u1681-\u169a\u16a0-\u16ea\u16ee-\u16f0\u1700-\u170c\u170e-\u1711\u1720-\u1731\u1740-\u1751\u1760-\u176c\u176e-\u1770\u1780-\u17b3\u17d7\u17dc\u1820-\u1877\u1880-\u18a8\u18aa\u18b0-\u18f5\u1900-\u191c\u1950-\u196d\u1970-\u1974\u1980-\u19ab\u19c1-\u19c7\u1a00-\u1a16\u1a20-\u1a54\u1aa7\u1b05-\u1b33\u1b45-\u1b4b\u1b83-\u1ba0\u1bae\u1baf\u1bba-\u1be5\u1c00-\u1c23\u1c4d-\u1c4f\u1c5a-\u1c7d\u1ce9-\u1cec\u1cee-\u1cf1\u1cf5\u1cf6\u1d00-\u1dbf\u1e00-\u1f15\u1f18-\u1f1d\u1f20-\u1f45\u1f48-\u1f4d\u1f50-\u1f57\u1f59\u1f5b\u1f5d\u1f5f-\u1f7d\u1f80-\u1fb4\u1fb6-\u1fbc\u1fbe\u1fc2-\u1fc4\u1fc6-\u1fcc\u1fd0-\u1fd3\u1fd6-\u1fdb\u1fe0-\u1fec\u1ff2-\u1ff4\u1ff6-\u1ffc\u2071\u207f\u2090-\u209c\u2102\u2107\u210a-\u2113\u2115\u2119-\u211d\u2124\u2126\u2128\u212a-\u212d\u212f-\u2139\u213c-\u213f\u2145-\u2149\u214e\u2160-\u2188\u2c00-\u2c2e\u2c30-\u2c5e\u2c60-\u2ce4\u2ceb-\u2cee\u2cf2\u2cf3\u2d00-\u2d25\u2d27\u2d2d\u2d30-\u2d67\u2d6f\u2d80-\u2d96\u2da0-\u2da6\u2da8-\u2dae\u2db0-\u2db6\u2db8-\u2dbe\u2dc0-\u2dc6\u2dc8-\u2dce\u2dd0-\u2dd6\u2dd8-\u2dde\u2e2f\u3005-\u3007\u3021-\u3029\u3031-\u3035\u3038-\u303c\u3041-\u3096\u309d-\u309f\u30a1-\u30fa\u30fc-\u30ff\u3105-\u312d\u3131-\u318e\u31a0-\u31ba\u31f0-\u31ff\u3400-\u4db5\u4e00-\u9fcc\ua000-\ua48c\ua4d0-\ua4fd\ua500-\ua60c\ua610-\ua61f\ua62a\ua62b\ua640-\ua66e\ua67f-\ua697\ua6a0-\ua6ef\ua717-\ua71f\ua722-\ua788\ua78b-\ua78e\ua790-\ua793\ua7a0-\ua7aa\ua7f8-\ua801\ua803-\ua805\ua807-\ua80a\ua80c-\ua822\ua840-\ua873\ua882-\ua8b3\ua8f2-\ua8f7\ua8fb\ua90a-\ua925\ua930-\ua946\ua960-\ua97c\ua984-\ua9b2\ua9cf\uaa00-\uaa28\uaa40-\uaa42\uaa44-\uaa4b\uaa60-\uaa76\uaa7a\uaa80-\uaaaf\uaab1\uaab5\uaab6\uaab9-\uaabd\uaac0\uaac2\uaadb-\uaadd\uaae0-\uaaea\uaaf2-\uaaf4\uab01-\uab06\uab09-\uab0e\uab11-\uab16\uab20-\uab26\uab28-\uab2e\uabc0-\uabe2\uac00-\ud7a3\ud7b0-\ud7c6\ud7cb-\ud7fb\uf900-\ufa6d\ufa70-\ufad9\ufb00-\ufb06\ufb13-\ufb17\ufb1d\ufb1f-\ufb28\ufb2a-\ufb36\ufb38-\ufb3c\ufb3e\ufb40\ufb41\ufb43\ufb44\ufb46-\ufbb1\ufbd3-\ufd3d\ufd50-\ufd8f\ufd92-\ufdc7\ufdf0-\ufdfb\ufe70-\ufe74\ufe76-\ufefc\uff21-\uff3a\uff41-\uff5a\uff66-\uffbe\uffc2-\uffc7\uffca-\uffcf\uffd2-\uffd7\uffda-\uffdc0-9\u0300-\u036f\u0483-\u0487\u0591-\u05bd\u05bf\u05c1\u05c2\u05c4\u05c5\u05c7\u0610-\u061a\u064b-\u0669\u0670\u06d6-\u06dc\u06df-\u06e4\u06e7\u06e8\u06ea-\u06ed\u06f0-\u06f9\u0711\u0730-\u074a\u07a6-\u07b0\u07c0-\u07c9\u07eb-\u07f3\u0816-\u0819\u081b-\u0823\u0825-\u0827\u0829-\u082d\u0859-\u085b\u08e4-\u08fe\u0900-\u0903\u093a-\u093c\u093e-\u094f\u0951-\u0957\u0962\u0963\u0966-\u096f\u0981-\u0983\u09bc\u09be-\u09c4\u09c7\u09c8\u09cb-\u09cd\u09d7\u09e2\u09e3\u09e6-\u09ef\u0a01-\u0a03\u0a3c\u0a3e-\u0a42\u0a47\u0a48\u0a4b-\u0a4d\u0a51\u0a66-\u0a71\u0a75\u0a81-\u0a83\u0abc\u0abe-\u0ac5\u0ac7-\u0ac9\u0acb-\u0acd\u0ae2\u0ae3\u0ae6-\u0aef\u0b01-\u0b03\u0b3c\u0b3e-\u0b44\u0b47\u0b48\u0b4b-\u0b4d\u0b56\u0b57\u0b62\u0b63\u0b66-\u0b6f\u0b82\u0bbe-\u0bc2\u0bc6-\u0bc8\u0bca-\u0bcd\u0bd7\u0be6-\u0bef\u0c01-\u0c03\u0c3e-\u0c44\u0c46-\u0c48\u0c4a-\u0c4d\u0c55\u0c56\u0c62\u0c63\u0c66-\u0c6f\u0c82\u0c83\u0cbc\u0cbe-\u0cc4\u0cc6-\u0cc8\u0cca-\u0ccd\u0cd5\u0cd6\u0ce2\u0ce3\u0ce6-\u0cef\u0d02\u0d03\u0d3e-\u0d44\u0d46-\u0d48\u0d4a-\u0d4d\u0d57\u0d62\u0d63\u0d66-\u0d6f\u0d82\u0d83\u0dca\u0dcf-\u0dd4\u0dd6\u0dd8-\u0ddf\u0df2\u0df3\u0e31\u0e34-\u0e3a\u0e47-\u0e4e\u0e50-\u0e59\u0eb1\u0eb4-\u0eb9\u0ebb\u0ebc\u0ec8-\u0ecd\u0ed0-\u0ed9\u0f18\u0f19\u0f20-\u0f29\u0f35\u0f37\u0f39\u0f3e\u0f3f\u0f71-\u0f84\u0f86\u0f87\u0f8d-\u0f97\u0f99-\u0fbc\u0fc6\u102b-\u103e\u1040-\u1049\u1056-\u1059\u105e-\u1060\u1062-\u1064\u1067-\u106d\u1071-\u1074\u1082-\u108d\u108f-\u109d\u135d-\u135f\u1712-\u1714\u1732-\u1734\u1752\u1753\u1772\u1773\u17b4-\u17d3\u17dd\u17e0-\u17e9\u180b-\u180d\u1810-\u1819\u18a9\u1920-\u192b\u1930-\u193b\u1946-\u194f\u19b0-\u19c0\u19c8\u19c9\u19d0-\u19d9\u1a17-\u1a1b\u1a55-\u1a5e\u1a60-\u1a7c\u1a7f-\u1a89\u1a90-\u1a99\u1b00-\u1b04\u1b34-\u1b44\u1b50-\u1b59\u1b6b-\u1b73\u1b80-\u1b82\u1ba1-\u1bad\u1bb0-\u1bb9\u1be6-\u1bf3\u1c24-\u1c37\u1c40-\u1c49\u1c50-\u1c59\u1cd0-\u1cd2\u1cd4-\u1ce8\u1ced\u1cf2-\u1cf4\u1dc0-\u1de6\u1dfc-\u1dff\u200c\u200d\u203f\u2040\u2054\u20d0-\u20dc\u20e1\u20e5-\u20f0\u2cef-\u2cf1\u2d7f\u2de0-\u2dff\u302a-\u302f\u3099\u309a\ua620-\ua629\ua66f\ua674-\ua67d\ua69f\ua6f0\ua6f1\ua802\ua806\ua80b\ua823-\ua827\ua880\ua881\ua8b4-\ua8c4\ua8d0-\ua8d9\ua8e0-\ua8f1\ua900-\ua909\ua926-\ua92d\ua947-\ua953\ua980-\ua983\ua9b3-\ua9c0\ua9d0-\ua9d9\uaa29-\uaa36\uaa43\uaa4c\uaa4d\uaa50-\uaa59\uaa7b\uaab0\uaab2-\uaab4\uaab7\uaab8\uaabe\uaabf\uaac1\uaaeb-\uaaef\uaaf5\uaaf6\uabe3-\uabea\uabec\uabed\uabf0-\uabf9\ufb1e\ufe00-\ufe0f\ufe20-\ufe26\ufe33\ufe34\ufe4d-\ufe4f\uff10-\uff19\uff3f]*$/.test(str)
 }
 module.exports = isProperty
-},{}],148:[function(require,module,exports){
-var console = require("console");
+},{}],113:[function(require,module,exports){
+module.exports = Array.isArray || function (arr) {
+  return Object.prototype.toString.call(arr) == '[object Array]';
+};
 
+},{}],114:[function(require,module,exports){
 var untilde = function(str) {
   return str.replace(/~./g, function(m) {
     switch (m) {
@@ -20345,16 +20173,15 @@ var untilde = function(str) {
       case "~1":
         return "/";
     }
-    throw("Invalid tilde escape: " + m);
+    throw new Error("Invalid tilde escape: " + m);
   });
 }
 
 var traverse = function(obj, pointer, value) {
   // assert(isArray(pointer))
   var part = untilde(pointer.shift());
-  if(typeof obj[part] === "undefined") {
-    throw("Value for pointer '" + pointer + "' not found.");
-    return;
+  if(!obj.hasOwnProperty(part)) {
+    return null;
   }
   if(pointer.length !== 0) { // keep traversin!
     return traverse(obj[part], pointer, value);
@@ -20376,7 +20203,7 @@ var traverse = function(obj, pointer, value) {
 
 var validate_input = function(obj, pointer) {
   if(typeof obj !== "object") {
-    throw("Invalid input object.");
+    throw new Error("Invalid input object.");
   }
 
   if(pointer === "") {
@@ -20384,13 +20211,13 @@ var validate_input = function(obj, pointer) {
   }
 
   if(!pointer) {
-    throw("Invalid JSON pointer.");
+    throw new Error("Invalid JSON pointer.");
   }
 
   pointer = pointer.split("/");
   var first = pointer.shift();
   if (first !== "") {
-    throw("Invalid JSON pointer.");
+    throw new Error("Invalid JSON pointer.");
   }
 
   return pointer;
@@ -20407,7 +20234,7 @@ var get = function(obj, pointer) {
 var set = function(obj, pointer, value) {
   pointer = validate_input(obj, pointer);
   if (pointer.length === 0) {
-    throw("Invalid JSON pointer for set.")
+    throw new Error("Invalid JSON pointer for set.")
   }
   return traverse(obj, pointer, value);
 }
@@ -20415,26 +20242,134 @@ var set = function(obj, pointer, value) {
 exports.get = get
 exports.set = set
 
-},{"console":6}],149:[function(require,module,exports){
-module.exports = extend
+},{}],115:[function(require,module,exports){
+/**
+ * Helpers.
+ */
 
-function extend() {
-    var target = {}
+var s = 1000;
+var m = s * 60;
+var h = m * 60;
+var d = h * 24;
+var y = d * 365.25;
 
-    for (var i = 0; i < arguments.length; i++) {
-        var source = arguments[i]
+/**
+ * Parse or format the given `val`.
+ *
+ * Options:
+ *
+ *  - `long` verbose formatting [false]
+ *
+ * @param {String|Number} val
+ * @param {Object} options
+ * @return {String|Number}
+ * @api public
+ */
 
-        for (var key in source) {
-            if (source.hasOwnProperty(key)) {
-                target[key] = source[key]
-            }
-        }
-    }
+module.exports = function(val, options){
+  options = options || {};
+  if ('string' == typeof val) return parse(val);
+  return options.long
+    ? long(val)
+    : short(val);
+};
 
-    return target
+/**
+ * Parse the given `str` and return milliseconds.
+ *
+ * @param {String} str
+ * @return {Number}
+ * @api private
+ */
+
+function parse(str) {
+  str = '' + str;
+  if (str.length > 10000) return;
+  var match = /^((?:\d+)?\.?\d+) *(milliseconds?|msecs?|ms|seconds?|secs?|s|minutes?|mins?|m|hours?|hrs?|h|days?|d|years?|yrs?|y)?$/i.exec(str);
+  if (!match) return;
+  var n = parseFloat(match[1]);
+  var type = (match[2] || 'ms').toLowerCase();
+  switch (type) {
+    case 'years':
+    case 'year':
+    case 'yrs':
+    case 'yr':
+    case 'y':
+      return n * y;
+    case 'days':
+    case 'day':
+    case 'd':
+      return n * d;
+    case 'hours':
+    case 'hour':
+    case 'hrs':
+    case 'hr':
+    case 'h':
+      return n * h;
+    case 'minutes':
+    case 'minute':
+    case 'mins':
+    case 'min':
+    case 'm':
+      return n * m;
+    case 'seconds':
+    case 'second':
+    case 'secs':
+    case 'sec':
+    case 's':
+      return n * s;
+    case 'milliseconds':
+    case 'millisecond':
+    case 'msecs':
+    case 'msec':
+    case 'ms':
+      return n;
+  }
 }
 
-},{}],150:[function(require,module,exports){
+/**
+ * Short format for `ms`.
+ *
+ * @param {Number} ms
+ * @return {String}
+ * @api private
+ */
+
+function short(ms) {
+  if (ms >= d) return Math.round(ms / d) + 'd';
+  if (ms >= h) return Math.round(ms / h) + 'h';
+  if (ms >= m) return Math.round(ms / m) + 'm';
+  if (ms >= s) return Math.round(ms / s) + 's';
+  return ms + 'ms';
+}
+
+/**
+ * Long format for `ms`.
+ *
+ * @param {Number} ms
+ * @return {String}
+ * @api private
+ */
+
+function long(ms) {
+  return plural(ms, d, 'day')
+    || plural(ms, h, 'hour')
+    || plural(ms, m, 'minute')
+    || plural(ms, s, 'second')
+    || ms + ' ms';
+}
+
+/**
+ * Pluralization helper.
+ */
+
+function plural(ms, n, name) {
+  if (ms < n) return;
+  if (ms < n * 1.5) return Math.floor(ms / n) + ' ' + name;
+  return Math.ceil(ms / n) + ' ' + name + 's';
+}
+
+},{}],116:[function(require,module,exports){
 'use strict';
 
 function ToObject(val) {
@@ -20462,7 +20397,67 @@ module.exports = Object.assign || function (target, source) {
 	return to;
 };
 
-},{}],151:[function(require,module,exports){
+},{}],117:[function(require,module,exports){
+// shim for using process in browser
+
+var process = module.exports = {};
+var queue = [];
+var draining = false;
+
+function drainQueue() {
+    if (draining) {
+        return;
+    }
+    draining = true;
+    var currentQueue;
+    var len = queue.length;
+    while(len) {
+        currentQueue = queue;
+        queue = [];
+        var i = -1;
+        while (++i < len) {
+            currentQueue[i]();
+        }
+        len = queue.length;
+    }
+    draining = false;
+}
+process.nextTick = function (fun) {
+    queue.push(fun);
+    if (!draining) {
+        setTimeout(drainQueue, 0);
+    }
+};
+
+process.title = 'browser';
+process.browser = true;
+process.env = {};
+process.argv = [];
+process.version = ''; // empty string to avoid regexp issues
+process.versions = {};
+
+function noop() {}
+
+process.on = noop;
+process.addListener = noop;
+process.once = noop;
+process.off = noop;
+process.removeListener = noop;
+process.removeAllListeners = noop;
+process.emit = noop;
+
+process.binding = function (name) {
+    throw new Error('process.binding is not supported');
+};
+
+// TODO(shtylman)
+process.cwd = function () { return '/' };
+process.chdir = function (dir) {
+    throw new Error('process.chdir is not supported');
+};
+process.umask = function() { return 0; };
+
+},{}],118:[function(require,module,exports){
 'use strict';
 module.exports = function (str) {
 	return str.replace(/(?:\\*)?'([^'\\]*\\.)*[^']*'/g, function (match) {
@@ -20474,7 +20469,7 @@ module.exports = function (str) {
 	});
 };
 
-},{}],152:[function(require,module,exports){
+},{}],119:[function(require,module,exports){
 'use strict';
 module.exports = function (str) {
 	return str.replace(/(?:\\*)?"([^"\\]*\\.)*[^"]*"/g, function (match) {
@@ -20487,7 +20482,623 @@ module.exports = function (str) {
 	});
 };
 
-},{}],153:[function(require,module,exports){
+},{}],120:[function(require,module,exports){
+module.exports = function isBuffer(arg) {
+  return arg && typeof arg === 'object'
+    && typeof arg.copy === 'function'
+    && typeof arg.fill === 'function'
+    && typeof arg.readUInt8 === 'function';
+}
+},{}],121:[function(require,module,exports){
+(function (process,global){
+// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+var formatRegExp = /%[sdj%]/g;
+exports.format = function(f) {
+  if (!isString(f)) {
+    var objects = [];
+    for (var i = 0; i < arguments.length; i++) {
+      objects.push(inspect(arguments[i]));
+    }
+    return objects.join(' ');
+  }
+
+  var i = 1;
+  var args = arguments;
+  var len = args.length;
+  var str = String(f).replace(formatRegExp, function(x) {
+    if (x === '%%') return '%';
+    if (i >= len) return x;
+    switch (x) {
+      case '%s': return String(args[i++]);
+      case '%d': return Number(args[i++]);
+      case '%j':
+        try {
+          return JSON.stringify(args[i++]);
+        } catch (_) {
+          return '[Circular]';
+        }
+      default:
+        return x;
+    }
+  });
+  for (var x = args[i]; i < len; x = args[++i]) {
+    if (isNull(x) || !isObject(x)) {
+      str += ' ' + x;
+    } else {
+      str += ' ' + inspect(x);
+    }
+  }
+  return str;
+};
+
+
+// Mark that a method should not be used.
+// Returns a modified function which warns once by default.
+// If --no-deprecation is set, then it is a no-op.
+exports.deprecate = function(fn, msg) {
+  // Allow for deprecating things in the process of starting up.
+  if (isUndefined(global.process)) {
+    return function() {
+      return exports.deprecate(fn, msg).apply(this, arguments);
+    };
+  }
+
+  if (process.noDeprecation === true) {
+    return fn;
+  }
+
+  var warned = false;
+  function deprecated() {
+    if (!warned) {
+      if (process.throwDeprecation) {
+        throw new Error(msg);
+      } else if (process.traceDeprecation) {
+        console.trace(msg);
+      } else {
+        console.error(msg);
+      }
+      warned = true;
+    }
+    return fn.apply(this, arguments);
+  }
+
+  return deprecated;
+};
+
+
+var debugs = {};
+var debugEnviron;
+exports.debuglog = function(set) {
+  if (isUndefined(debugEnviron))
+    debugEnviron = process.env.NODE_DEBUG || '';
+  set = set.toUpperCase();
+  if (!debugs[set]) {
+    if (new RegExp('\\b' + set + '\\b', 'i').test(debugEnviron)) {
+      var pid = process.pid;
+      debugs[set] = function() {
+        var msg = exports.format.apply(exports, arguments);
+        console.error('%s %d: %s', set, pid, msg);
+      };
+    } else {
+      debugs[set] = function() {};
+    }
+  }
+  return debugs[set];
+};
+
+
+/**
+ * Echos the value of a value. Trys to print the value out
+ * in the best way possible given the different types.
+ *
+ * @param {Object} obj The object to print out.
+ * @param {Object} opts Optional options object that alters the output.
+ */
+/* legacy: obj, showHidden, depth, colors*/
+function inspect(obj, opts) {
+  // default options
+  var ctx = {
+    seen: [],
+    stylize: stylizeNoColor
+  };
+  // legacy...
+  if (arguments.length >= 3) ctx.depth = arguments[2];
+  if (arguments.length >= 4) ctx.colors = arguments[3];
+  if (isBoolean(opts)) {
+    // legacy...
+    ctx.showHidden = opts;
+  } else if (opts) {
+    // got an "options" object
+    exports._extend(ctx, opts);
+  }
+  // set default options
+  if (isUndefined(ctx.showHidden)) ctx.showHidden = false;
+  if (isUndefined(ctx.depth)) ctx.depth = 2;
+  if (isUndefined(ctx.colors)) ctx.colors = false;
+  if (isUndefined(ctx.customInspect)) ctx.customInspect = true;
+  if (ctx.colors) ctx.stylize = stylizeWithColor;
+  return formatValue(ctx, obj, ctx.depth);
+}
+exports.inspect = inspect;
+
+
+// http://en.wikipedia.org/wiki/ANSI_escape_code#graphics
+inspect.colors = {
+  'bold' : [1, 22],
+  'italic' : [3, 23],
+  'underline' : [4, 24],
+  'inverse' : [7, 27],
+  'white' : [37, 39],
+  'grey' : [90, 39],
+  'black' : [30, 39],
+  'blue' : [34, 39],
+  'cyan' : [36, 39],
+  'green' : [32, 39],
+  'magenta' : [35, 39],
+  'red' : [31, 39],
+  'yellow' : [33, 39]
+};
+
+// Don't use 'blue' not visible on cmd.exe
+inspect.styles = {
+  'special': 'cyan',
+  'number': 'yellow',
+  'boolean': 'yellow',
+  'undefined': 'grey',
+  'null': 'bold',
+  'string': 'green',
+  'date': 'magenta',
+  // "name": intentionally not styling
+  'regexp': 'red'
+};
+
+
+function stylizeWithColor(str, styleType) {
+  var style = inspect.styles[styleType];
+
+  if (style) {
+    return '\u001b[' + inspect.colors[style][0] + 'm' + str +
+           '\u001b[' + inspect.colors[style][1] + 'm';
+  } else {
+    return str;
+  }
+}
+
+
+function stylizeNoColor(str, styleType) {
+  return str;
+}
+
+
+function arrayToHash(array) {
+  var hash = {};
+
+  array.forEach(function(val, idx) {
+    hash[val] = true;
+  });
+
+  return hash;
+}
+
+
+function formatValue(ctx, value, recurseTimes) {
+  // Provide a hook for user-specified inspect functions.
+  // Check that value is an object with an inspect function on it
+  if (ctx.customInspect &&
+      value &&
+      isFunction(value.inspect) &&
+      // Filter out the util module, it's inspect function is special
+      value.inspect !== exports.inspect &&
+      // Also filter out any prototype objects using the circular check.
+      !(value.constructor && value.constructor.prototype === value)) {
+    var ret = value.inspect(recurseTimes, ctx);
+    if (!isString(ret)) {
+      ret = formatValue(ctx, ret, recurseTimes);
+    }
+    return ret;
+  }
+
+  // Primitive types cannot have properties
+  var primitive = formatPrimitive(ctx, value);
+  if (primitive) {
+    return primitive;
+  }
+
+  // Look up the keys of the object.
+  var keys = Object.keys(value);
+  var visibleKeys = arrayToHash(keys);
+
+  if (ctx.showHidden) {
+    keys = Object.getOwnPropertyNames(value);
+  }
+
+  // IE doesn't make error fields non-enumerable
+  // http://msdn.microsoft.com/en-us/library/ie/dww52sbt(v=vs.94).aspx
+  if (isError(value)
+      && (keys.indexOf('message') >= 0 || keys.indexOf('description') >= 0)) {
+    return formatError(value);
+  }
+
+  // Some type of object without properties can be shortcutted.
+  if (keys.length === 0) {
+    if (isFunction(value)) {
+      var name = value.name ? ': ' + value.name : '';
+      return ctx.stylize('[Function' + name + ']', 'special');
+    }
+    if (isRegExp(value)) {
+      return ctx.stylize(RegExp.prototype.toString.call(value), 'regexp');
+    }
+    if (isDate(value)) {
+      return ctx.stylize(Date.prototype.toString.call(value), 'date');
+    }
+    if (isError(value)) {
+      return formatError(value);
+    }
+  }
+
+  var base = '', array = false, braces = ['{', '}'];
+
+  // Make Array say that they are Array
+  if (isArray(value)) {
+    array = true;
+    braces = ['[', ']'];
+  }
+
+  // Make functions say that they are functions
+  if (isFunction(value)) {
+    var n = value.name ? ': ' + value.name : '';
+    base = ' [Function' + n + ']';
+  }
+
+  // Make RegExps say that they are RegExps
+  if (isRegExp(value)) {
+    base = ' ' + RegExp.prototype.toString.call(value);
+  }
+
+  // Make dates with properties first say the date
+  if (isDate(value)) {
+    base = ' ' + Date.prototype.toUTCString.call(value);
+  }
+
+  // Make error with message first say the error
+  if (isError(value)) {
+    base = ' ' + formatError(value);
+  }
+
+  if (keys.length === 0 && (!array || value.length == 0)) {
+    return braces[0] + base + braces[1];
+  }
+
+  if (recurseTimes < 0) {
+    if (isRegExp(value)) {
+      return ctx.stylize(RegExp.prototype.toString.call(value), 'regexp');
+    } else {
+      return ctx.stylize('[Object]', 'special');
+    }
+  }
+
+  ctx.seen.push(value);
+
+  var output;
+  if (array) {
+    output = formatArray(ctx, value, recurseTimes, visibleKeys, keys);
+  } else {
+    output = keys.map(function(key) {
+      return formatProperty(ctx, value, recurseTimes, visibleKeys, key, array);
+    });
+  }
+
+  ctx.seen.pop();
+
+  return reduceToSingleString(output, base, braces);
+}
+
+
+function formatPrimitive(ctx, value) {
+  if (isUndefined(value))
+    return ctx.stylize('undefined', 'undefined');
+  if (isString(value)) {
+    var simple = '\'' + JSON.stringify(value).replace(/^"|"$/g, '')
+                                             .replace(/'/g, "\\'")
+                                             .replace(/\\"/g, '"') + '\'';
+    return ctx.stylize(simple, 'string');
+  }
+  if (isNumber(value))
+    return ctx.stylize('' + value, 'number');
+  if (isBoolean(value))
+    return ctx.stylize('' + value, 'boolean');
+  // For some reason typeof null is "object", so special case here.
+  if (isNull(value))
+    return ctx.stylize('null', 'null');
+}
+
+
+function formatError(value) {
+  return '[' + Error.prototype.toString.call(value) + ']';
+}
+
+
+function formatArray(ctx, value, recurseTimes, visibleKeys, keys) {
+  var output = [];
+  for (var i = 0, l = value.length; i < l; ++i) {
+    if (hasOwnProperty(value, String(i))) {
+      output.push(formatProperty(ctx, value, recurseTimes, visibleKeys,
+          String(i), true));
+    } else {
+      output.push('');
+    }
+  }
+  keys.forEach(function(key) {
+    if (!key.match(/^\d+$/)) {
+      output.push(formatProperty(ctx, value, recurseTimes, visibleKeys,
+          key, true));
+    }
+  });
+  return output;
+}
+
+
+function formatProperty(ctx, value, recurseTimes, visibleKeys, key, array) {
+  var name, str, desc;
+  desc = Object.getOwnPropertyDescriptor(value, key) || { value: value[key] };
+  if (desc.get) {
+    if (desc.set) {
+      str = ctx.stylize('[Getter/Setter]', 'special');
+    } else {
+      str = ctx.stylize('[Getter]', 'special');
+    }
+  } else {
+    if (desc.set) {
+      str = ctx.stylize('[Setter]', 'special');
+    }
+  }
+  if (!hasOwnProperty(visibleKeys, key)) {
+    name = '[' + key + ']';
+  }
+  if (!str) {
+    if (ctx.seen.indexOf(desc.value) < 0) {
+      if (isNull(recurseTimes)) {
+        str = formatValue(ctx, desc.value, null);
+      } else {
+        str = formatValue(ctx, desc.value, recurseTimes - 1);
+      }
+      if (str.indexOf('\n') > -1) {
+        if (array) {
+          str = str.split('\n').map(function(line) {
+            return '  ' + line;
+          }).join('\n').substr(2);
+        } else {
+          str = '\n' + str.split('\n').map(function(line) {
+            return '   ' + line;
+          }).join('\n');
+        }
+      }
+    } else {
+      str = ctx.stylize('[Circular]', 'special');
+    }
+  }
+  if (isUndefined(name)) {
+    if (array && key.match(/^\d+$/)) {
+      return str;
+    }
+    name = JSON.stringify('' + key);
+    if (name.match(/^"([a-zA-Z_][a-zA-Z_0-9]*)"$/)) {
+      name = name.substr(1, name.length - 2);
+      name = ctx.stylize(name, 'name');
+    } else {
+      name = name.replace(/'/g, "\\'")
+                 .replace(/\\"/g, '"')
+                 .replace(/(^"|"$)/g, "'");
+      name = ctx.stylize(name, 'string');
+    }
+  }
+
+  return name + ': ' + str;
+}
+
+
+function reduceToSingleString(output, base, braces) {
+  var numLinesEst = 0;
+  var length = output.reduce(function(prev, cur) {
+    numLinesEst++;
+    if (cur.indexOf('\n') >= 0) numLinesEst++;
+    return prev + cur.replace(/\u001b\[\d\d?m/g, '').length + 1;
+  }, 0);
+
+  if (length > 60) {
+    return braces[0] +
+           (base === '' ? '' : base + '\n ') +
+           ' ' +
+           output.join(',\n  ') +
+           ' ' +
+           braces[1];
+  }
+
+  return braces[0] + base + ' ' + output.join(', ') + ' ' + braces[1];
+}
+
+
+// NOTE: These type checking functions intentionally don't use `instanceof`
+// because it is fragile and can be easily faked with `Object.create()`.
+function isArray(ar) {
+  return Array.isArray(ar);
+}
+exports.isArray = isArray;
+
+function isBoolean(arg) {
+  return typeof arg === 'boolean';
+}
+exports.isBoolean = isBoolean;
+
+function isNull(arg) {
+  return arg === null;
+}
+exports.isNull = isNull;
+
+function isNullOrUndefined(arg) {
+  return arg == null;
+}
+exports.isNullOrUndefined = isNullOrUndefined;
+
+function isNumber(arg) {
+  return typeof arg === 'number';
+}
+exports.isNumber = isNumber;
+
+function isString(arg) {
+  return typeof arg === 'string';
+}
+exports.isString = isString;
+
+function isSymbol(arg) {
+  return typeof arg === 'symbol';
+}
+exports.isSymbol = isSymbol;
+
+function isUndefined(arg) {
+  return arg === void 0;
+}
+exports.isUndefined = isUndefined;
+
+function isRegExp(re) {
+  return isObject(re) && objectToString(re) === '[object RegExp]';
+}
+exports.isRegExp = isRegExp;
+
+function isObject(arg) {
+  return typeof arg === 'object' && arg !== null;
+}
+exports.isObject = isObject;
+
+function isDate(d) {
+  return isObject(d) && objectToString(d) === '[object Date]';
+}
+exports.isDate = isDate;
+
+function isError(e) {
+  return isObject(e) &&
+      (objectToString(e) === '[object Error]' || e instanceof Error);
+}
+exports.isError = isError;
+
+function isFunction(arg) {
+  return typeof arg === 'function';
+}
+exports.isFunction = isFunction;
+
+function isPrimitive(arg) {
+  return arg === null ||
+         typeof arg === 'boolean' ||
+         typeof arg === 'number' ||
+         typeof arg === 'string' ||
+         typeof arg === 'symbol' ||  // ES6 symbol
+         typeof arg === 'undefined';
+}
+exports.isPrimitive = isPrimitive;
+
+exports.isBuffer = require('./support/isBuffer');
+
+function objectToString(o) {
+  return Object.prototype.toString.call(o);
+}
+
+
+function pad(n) {
+  return n < 10 ? '0' + n.toString(10) : n.toString(10);
+}
+
+
+var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep',
+              'Oct', 'Nov', 'Dec'];
+
+// 26 Feb 16:19:34
+function timestamp() {
+  var d = new Date();
+  var time = [pad(d.getHours()),
+              pad(d.getMinutes()),
+              pad(d.getSeconds())].join(':');
+  return [d.getDate(), months[d.getMonth()], time].join(' ');
+}
+
+
+// log is just a thin wrapper to console.log that prepends a timestamp
+exports.log = function() {
+  console.log('%s - %s', timestamp(), exports.format.apply(exports, arguments));
+};
+
+
+/**
+ * Inherit the prototype methods from one constructor into another.
+ *
+ * The Function.prototype.inherits from lang.js rewritten as a standalone
+ * function (not on Function.prototype). NOTE: If this file is to be loaded
+ * during bootstrapping this function needs to be rewritten using some native
+ * functions as prototype setup using normal JavaScript does not work as
+ * expected during bootstrapping (see mirror.js in r114903).
+ *
+ * @param {function} ctor Constructor function which needs to inherit the
+ *     prototype.
+ * @param {function} superCtor Constructor function to inherit prototype from.
+ */
+exports.inherits = require('inherits');
+
+exports._extend = function(origin, add) {
+  // Don't do anything if add isn't an object
+  if (!add || !isObject(add)) return origin;
+
+  var keys = Object.keys(add);
+  var i = keys.length;
+  while (i--) {
+    origin[keys[i]] = add[keys[i]];
+  }
+  return origin;
+};
+
+function hasOwnProperty(obj, prop) {
+  return Object.prototype.hasOwnProperty.call(obj, prop);
+}
+
+}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{"./support/isBuffer":120,"_process":117,"inherits":109}],122:[function(require,module,exports){
+module.exports = extend
+
+function extend() {
+    var target = {}
+
+    for (var i = 0; i < arguments.length; i++) {
+        var source = arguments[i]
+
+        for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+                target[key] = source[key]
+            }
+        }
+    }
+
+    return target
+}
+
+},{}],123:[function(require,module,exports){
 /**
  * @fileoverview Common utils for AST.
  * @author Gyandeep Singh
@@ -20622,7 +21233,2821 @@ module.exports = {
     getTrailingStatement: esutils.ast.trailingStatement
 };
 
-},{"esutils":140}],154:[function(require,module,exports){
+},{"esutils":102}],124:[function(require,module,exports){
+/**
+ * @fileoverview A class of the code path analyzer.
+ * @author Toru Nagashima
+ * @copyright 2015 Toru Nagashima. All rights reserved.
+ * See LICENSE file in root directory for full license.
+ */
+
+"use strict";
+
+//------------------------------------------------------------------------------
+// Requirements
+//------------------------------------------------------------------------------
+
+var assert = require("assert"),
+    CodePath = require("./code-path"),
+    CodePathSegment = require("./code-path-segment"),
+    IdGenerator = require("./id-generator"),
+    debug = require("./debug-helpers"),
+    getLast = require("../util").getLast;
+
+//------------------------------------------------------------------------------
+// Helpers
+//------------------------------------------------------------------------------
+
+/**
+ * Checks whether or not a given node is a `case` node (not `default` node).
+ *
+ * @param {ASTNode} node - A `SwitchCase` node to check.
+ * @returns {boolean} `true` if the node is a `case` node (not `default` node).
+ */
+function isCaseNode(node) {
+    return Boolean(node.test);
+}
+
+/**
+ * Checks whether or not a given logical expression node goes different path
+ * between the `true` case and the `false` case.
+ *
+ * @param {ASTNode} node - A node to check.
+ * @returns {boolean} `true` if the node is a test of a choice statement.
+ */
+function isForkingByTrueOrFalse(node) {
+    var parent = node.parent;
+    switch (parent.type) {
+        case "ConditionalExpression":
+        case "IfStatement":
+        case "WhileStatement":
+        case "DoWhileStatement":
+        case "ForStatement":
+            return parent.test === node;
+
+        case "LogicalExpression":
+            return true;
+
+        default:
+            return false;
+    }
+}
+
+/**
+ * Gets a label text from a given loop node.
+ *
+ * @param {ASTNode} node - A loop node to get. The node type is one of
+ *   `WhileStatement`, `DoWhileStatement`, `ForStatement`, `ForInStatement`,
+ *   and `ForOfStatement`.
+ * @returns {string|null} The label text of the given node. Or `null` if there
+ *   is not any label.
+ */
+function getLabel(node) {
+    if (node.parent.type === "LabeledStatement") {
+        return node.parent.label.name;
+    }
+    return null;
+}
+
+/**
+ * Gets the boolean value of a given literal node.
+ *
+ * This is used to detect infinity loops (e.g. `while (true) {}`).
+ * Statements preceded by an infinity loop are unreachable if the loop didn't
+ * have any `break` statement.
+ *
+ * @param {ASTNode} node - A node to get.
+ * @returns {boolean|undefined} a boolean value if the node is a Literal node,
+ *   otherwise `undefined`.
+ */
+function getBooleanValueIfSimpleConstant(node) {
+    if (node.type === "Literal") {
+        return Boolean(node.value);
+    }
+    return void 0;
+}
+
+/**
+ * Checks that a given identifier node is a reference or not.
+ *
+ * This is used to detect the first throwable node in a `try` block.
+ *
+ * @param {ASTNode} node - An Identifier node to check.
+ * @returns {boolean} `true` if the node is a reference.
+ */
+function isIdentifierReference(node) {
+    var parent = node.parent;
+
+    switch (parent.type) {
+        case "LabeledStatement":
+        case "BreakStatement":
+        case "ContinueStatement":
+        case "ArrayPattern":
+        case "RestElement":
+        case "ImportSpecifier":
+        case "ImportDefaultSpecifier":
+        case "ImportNamespaceSpecifier":
+        case "CatchClause":
+            return false;
+
+        case "FunctionDeclaration":
+        case "FunctionExpression":
+        case "ArrowFunctionExpression":
+        case "ClassDeclaration":
+        case "ClassExpression":
+        case "VariableDeclarator":
+            return parent.id !== node;
+
+        case "Property":
+        case "MethodDefinition":
+            return (
+                parent.key !== node ||
+                parent.computed ||
+                parent.shorthand
+            );
+
+        case "AssignmentPattern":
+            return parent.key !== node;
+
+        default:
+            return true;
+    }
+}
+
+/**
+ * Updates the current segment with the head segment.
+ * This is similar to local branches and tracking branches of git.
+ *
+ * To separate the current and the head is in order to not make useless segments.
+ *
+ * In this process, both "onCodePathSegmentStart" and "onCodePathSegmentEnd" events
+ * are fired.
+ *
+ * @param {CodePathAnalyzer} analyzer - The instance.
+ * @param {ASTNode} node - The current AST node.
+ * @returns {void}
+ */
+function forwardCurrentToHead(analyzer, node) {
+    var codePath = analyzer.codePath;
+    var state = CodePath.getState(codePath);
+    var currentSegments = state.currentSegments;
+    var headSegments = state.headSegments;
+    var end = end = Math.max(currentSegments.length, headSegments.length);
+    var i, currentSegment, headSegment;
+
+    // Fires leaving events.
+    for (i = 0; i < end; ++i) {
+        currentSegment = currentSegments[i];
+        headSegment = headSegments[i];
+
+        if (currentSegment !== headSegment && currentSegment) {
+            debug.dump("onCodePathSegmentEnd " + currentSegment.id);
+
+            if (currentSegment.reachable) {
+                analyzer.emitter.emit(
+                    "onCodePathSegmentEnd",
+                    currentSegment,
+                    node);
+            }
+        }
+    }
+
+    // Update state.
+    state.currentSegments = headSegments;
+
+    // Fires entering events.
+    for (i = 0; i < end; ++i) {
+        currentSegment = currentSegments[i];
+        headSegment = headSegments[i];
+
+        if (currentSegment !== headSegment && headSegment) {
+            debug.dump("onCodePathSegmentStart " + headSegment.id);
+
+            CodePathSegment.markUsed(headSegment);
+            if (headSegment.reachable) {
+                analyzer.emitter.emit(
+                    "onCodePathSegmentStart",
+                    headSegment,
+                    node);
+            }
+        }
+    }
+
+}
+
+/**
+ * Updates the current segment with empty.
+ * This is called at the last of functions or the program.
+ *
+ * @param {CodePathAnalyzer} analyzer - The instance.
+ * @param {ASTNode} node - The current AST node.
+ * @returns {void}
+ */
+function leaveFromCurrentSegment(analyzer, node) {
+    var state = CodePath.getState(analyzer.codePath);
+    var currentSegments = state.currentSegments;
+
+    for (var i = 0; i < currentSegments.length; ++i) {
+        var currentSegment = currentSegments[i];
+
+        debug.dump("onCodePathSegmentEnd " + currentSegment.id);
+        if (currentSegment.reachable) {
+            analyzer.emitter.emit(
+                "onCodePathSegmentEnd",
+                currentSegment,
+                node);
+        }
+    }
+    state.currentSegments = [];
+}
+
+/**
+ * Updates the code path due to the position of a given node in the parent node
+ * thereof.
+ *
+ * For example, if the node is `parent.consequent`, this creates a fork from the
+ * current path.
+ *
+ * @param {CodePathAnalyzer} analyzer - The instance.
+ * @param {ASTNode} node - The current AST node.
+ * @returns {void}
+ */
+function preprocess(analyzer, node) {
+    var codePath = analyzer.codePath;
+    var state = CodePath.getState(codePath);
+    var parent = node.parent;
+
+    switch (parent.type) {
+        case "LogicalExpression":
+            if (parent.right === node) {
+                state.makeLogicalRight();
+            }
+            break;
+
+        case "ConditionalExpression":
+        case "IfStatement":
+            // Fork if this node is at `consequent`/`alternate`.
+            // `popForkContext()` exists at `IfStatement:exit` and
+            // `ConditionalExpression:exit`.
+            if (parent.consequent === node) {
+                state.makeIfConsequent();
+            } else if (parent.alternate === node) {
+                state.makeIfAlternate();
+            }
+            break;
+
+        case "SwitchCase":
+            if (parent.consequent[0] === node) {
+                state.makeSwitchCaseBody(false, !parent.test);
+            }
+            break;
+
+        case "TryStatement":
+            if (parent.handler === node) {
+                state.makeCatchBlock();
+            } else if (parent.finalizer === node) {
+                state.makeFinallyBlock();
+            }
+            break;
+
+        case "WhileStatement":
+            if (parent.test === node) {
+                state.makeWhileTest(getBooleanValueIfSimpleConstant(node));
+            } else {
+                assert(parent.body === node);
+                state.makeWhileBody();
+            }
+            break;
+
+        case "DoWhileStatement":
+            if (parent.body === node) {
+                state.makeDoWhileBody();
+            } else {
+                assert(parent.test === node);
+                state.makeDoWhileTest(getBooleanValueIfSimpleConstant(node));
+            }
+            break;
+
+        case "ForStatement":
+            if (parent.test === node) {
+                state.makeForTest(getBooleanValueIfSimpleConstant(node));
+            } else if (parent.update === node) {
+                state.makeForUpdate();
+            } else if (parent.body === node) {
+                state.makeForBody();
+            }
+            break;
+
+        case "ForInStatement":
+        case "ForOfStatement":
+            if (parent.left === node) {
+                state.makeForInOfLeft();
+            } else if (parent.right === node) {
+                state.makeForInOfRight();
+            } else {
+                assert(parent.body === node);
+                state.makeForInOfBody();
+            }
+            break;
+
+        case "AssignmentPattern":
+            // Fork if this node is at `right`.
+            // `left` is executed always, so it uses the current path.
+            // `popForkContext()` exists at `AssignmentPattern:exit`.
+            if (parent.right === node) {
+                state.pushForkContext();
+                state.forkBypassPath();
+                state.forkPath();
+            }
+            break;
+
+        default:
+            break;
+    }
+}
+
+/**
+ * Updates the code path due to the type of a given node in entering.
+ *
+ * @param {CodePathAnalyzer} analyzer - The instance.
+ * @param {ASTNode} node - The current AST node.
+ * @returns {void}
+ */
+function processCodePathToEnter(analyzer, node) {
+    var codePath = analyzer.codePath;
+    var state = codePath && CodePath.getState(codePath);
+    var parent = node.parent;
+
+    switch (node.type) {
+        case "Program":
+        case "FunctionDeclaration":
+        case "FunctionExpression":
+        case "ArrowFunctionExpression":
+            if (codePath) {
+                // Emits onCodePathSegmentStart events if updated.
+                forwardCurrentToHead(analyzer, node);
+                debug.dumpState(node, state, false);
+            }
+
+            // Create the code path of this scope.
+            codePath = new CodePath(
+                analyzer.idGenerator.next(),
+                codePath,
+                analyzer.onLooped
+            );
+            state = CodePath.getState(codePath);
+            analyzer.codePathStack.push(codePath);
+
+            // Emits onCodePathStart events.
+            debug.dump("onCodePathStart " + codePath.id);
+            analyzer.emitter.emit("onCodePathStart", codePath, node);
+            break;
+
+        case "LogicalExpression":
+            state.pushChoiceContext(node.operator, isForkingByTrueOrFalse(node));
+            break;
+
+        case "ConditionalExpression":
+        case "IfStatement":
+            state.pushChoiceContext("test", false);
+            break;
+
+        case "SwitchStatement":
+            state.pushSwitchContext(node.cases.some(isCaseNode));
+            break;
+
+        case "TryStatement":
+            state.pushTryContext(Boolean(node.finalizer));
+            break;
+
+        case "SwitchCase":
+            // Fork if this node is after the 2st node in `cases`.
+            // It's similar to `else` blocks.
+            // The next `test` node is processed in this path.
+            if (parent.discriminant !== node && parent.cases[0] !== node) {
+                state.forkPath();
+            }
+            break;
+
+        case "WhileStatement":
+        case "DoWhileStatement":
+        case "ForStatement":
+        case "ForInStatement":
+        case "ForOfStatement":
+            state.pushLoopContext(node.type, getLabel(node));
+            break;
+
+        default:
+            break;
+    }
+
+    // Emits onCodePathSegmentStart events if updated.
+    forwardCurrentToHead(analyzer, node);
+    debug.dumpState(node, state, false);
+}
+
+/**
+ * Updates the code path due to the type of a given node in leaving.
+ *
+ * @param {CodePathAnalyzer} analyzer - The instance.
+ * @param {ASTNode} node - The current AST node.
+ * @returns {void}
+ */
+function processCodePathToExit(analyzer, node) {
+    var codePath = analyzer.codePath;
+    var state = CodePath.getState(codePath);
+    var dontForward = false;
+
+    switch (node.type) {
+        case "IfStatement":
+        case "ConditionalExpression":
+        case "LogicalExpression":
+            state.popChoiceContext();
+            break;
+
+        case "SwitchStatement":
+            state.popSwitchContext();
+            break;
+
+        case "SwitchCase":
+            // This is the same as the process at the 1st `consequent` node in
+            // `preprocess` function.
+            // Must do if this `consequent` is empty.
+            if (node.consequent.length === 0) {
+                state.makeSwitchCaseBody(true, !node.test);
+            }
+            if (state.forkContext.reachable) {
+                dontForward = true;
+            }
+            break;
+
+        case "TryStatement":
+            state.popTryContext();
+            break;
+
+        case "BreakStatement":
+            forwardCurrentToHead(analyzer, node);
+            state.makeBreak(node.label && node.label.name);
+            dontForward = true;
+            break;
+
+        case "ContinueStatement":
+            forwardCurrentToHead(analyzer, node);
+            state.makeContinue(node.label && node.label.name);
+            dontForward = true;
+            break;
+
+        case "ReturnStatement":
+            forwardCurrentToHead(analyzer, node);
+            state.makeReturn();
+            dontForward = true;
+            break;
+
+        case "ThrowStatement":
+            forwardCurrentToHead(analyzer, node);
+            state.makeThrow();
+            dontForward = true;
+            break;
+
+        case "Identifier":
+            if (isIdentifierReference(node)) {
+                state.makeFirstThrowablePathInTryBlock();
+                dontForward = true;
+            }
+            break;
+
+        case "CallExpression":
+        case "MemberExpression":
+        case "NewExpression":
+            state.makeFirstThrowablePathInTryBlock();
+            break;
+
+        case "WhileStatement":
+        case "DoWhileStatement":
+        case "ForStatement":
+        case "ForInStatement":
+        case "ForOfStatement":
+            state.popLoopContext();
+            break;
+
+        case "AssignmentPattern":
+            state.popForkContext();
+            break;
+
+        default:
+            break;
+    }
+
+    // Skip updating the current segment to avoid creating useless segments if
+    // the node type is the same as the parent node type.
+    if (!dontForward && (!node.parent || node.type !== node.parent.type)) {
+        // Emits onCodePathSegmentStart events if updated.
+        forwardCurrentToHead(analyzer, node);
+    }
+    debug.dumpState(node, state, true);
+}
+
+/**
+ * Updates the code path to finalize the current code path.
+ *
+ * @param {CodePathAnalyzer} analyzer - The instance.
+ * @param {ASTNode} node - The current AST node.
+ * @returns {void}
+ */
+function postprocess(analyzer, node) {
+    switch (node.type) {
+        case "Program":
+        case "FunctionDeclaration":
+        case "FunctionExpression":
+        case "ArrowFunctionExpression":
+            var codePath = analyzer.codePath;
+
+            // Mark the current path as the final node.
+            CodePath.getState(codePath).makeFinal();
+
+            // Emits onCodePathSegmentEnd event of the current segments.
+            leaveFromCurrentSegment(analyzer, node);
+
+            // Emits onCodePathEnd event of this code path.
+            debug.dump("onCodePathEnd " + codePath.id);
+            analyzer.emitter.emit("onCodePathEnd", codePath, node);
+            debug.dumpDot(codePath);
+
+            codePath = analyzer.codePathStack.pop();
+            debug.dumpState(node, CodePath.getState(codePath), true);
+            break;
+
+        default:
+            break;
+    }
+}
+
+//------------------------------------------------------------------------------
+// Public Interface
+//------------------------------------------------------------------------------
+
+/**
+ * The class to analyze code paths.
+ * This class implements the EventGenerator interface.
+ *
+ * @constructor
+ * @param {EventGenerator} eventGenerator - An event generator to wrap.
+ */
+function CodePathAnalyzer(eventGenerator) {
+    this.original = eventGenerator;
+    this.emitter = eventGenerator.emitter;
+    this.codePathStack = [];
+    this.idGenerator = new IdGenerator("s");
+    this.currentNode = null;
+    this.onLooped = this.onLooped.bind(this);
+}
+
+CodePathAnalyzer.prototype = {
+    constructor: CodePathAnalyzer,
+
+    /**
+     * The current code path object.
+     * @type {CodePath|null}
+     */
+    get codePath() {
+        return getLast(this.codePathStack);
+    },
+
+    /**
+     * Does the process to enter a given AST node.
+     * This updates state of analysis and calls `enterNode` of the wrapped.
+     *
+     * @param {ASTNode} node - A node which is entering.
+     * @returns {void}
+     */
+    enterNode: function(node) {
+        this.currentNode = node;
+
+        // Updates the code path due to node's position in its parent node.
+        if (node.parent) {
+            preprocess(this, node);
+        }
+
+        // Updates the code path.
+        // And emits onCodePathStart/onCodePathSegmentStart events.
+        processCodePathToEnter(this, node);
+
+        // Emits node events.
+        this.original.enterNode(node);
+
+        this.currentNode = null;
+    },
+
+    /**
+     * Does the process to leave a given AST node.
+     * This updates state of analysis and calls `leaveNode` of the wrapped.
+     *
+     * @param {ASTNode} node - A node which is leaving.
+     * @returns {void}
+     */
+    leaveNode: function(node) {
+        this.currentNode = node;
+
+        // Updates the code path.
+        // And emits onCodePathStart/onCodePathSegmentStart events.
+        processCodePathToExit(this, node);
+
+        // Emits node events.
+        this.original.leaveNode(node);
+
+        // Emits the last onCodePathStart/onCodePathSegmentStart events.
+        postprocess(this, node);
+
+        this.currentNode = null;
+    },
+
+    /**
+     * This is called on a code path looped.
+     * Then this raises a looped event.
+     *
+     * @param {CodePathSegment} fromSegment - A segment of prev.
+     * @param {CodePathSegment} toSegment - A segment of next.
+     * @returns {void}
+     */
+    onLooped: function(fromSegment, toSegment) {
+        if (fromSegment.reachable && toSegment.reachable) {
+            debug.dump("onCodePathSegmentLoop " + fromSegment.id + " -> " + toSegment.id);
+            this.emitter.emit(
+                "onCodePathSegmentLoop",
+                fromSegment,
+                toSegment,
+                this.currentNode
+            );
+        }
+    }
+};
+
+module.exports = CodePathAnalyzer;
+
+},{"../util":325,"./code-path":127,"./code-path-segment":125,"./debug-helpers":128,"./id-generator":130,"assert":5}],125:[function(require,module,exports){
+/**
+ * @fileoverview A class of the code path segment.
+ * @author Toru Nagashima
+ * @copyright 2015 Toru Nagashima. All rights reserved.
+ * See LICENSE file in root directory for full license.
+ */
+
+"use strict";
+
+//------------------------------------------------------------------------------
+// Requirements
+//------------------------------------------------------------------------------
+
+var assert = require("assert"),
+    debug = require("./debug-helpers");
+
+//------------------------------------------------------------------------------
+// Helpers
+//------------------------------------------------------------------------------
+
+/**
+ * Replaces unused segments with the previous segments of each unused segment.
+ *
+ * @param {CodePathSegment[]} segments - An array of segments to replace.
+ * @returns {CodePathSegment[]} The replaced array.
+ */
+function flattenUnusedSegments(segments) {
+    var done = Object.create(null);
+    var retv = [];
+
+    for (var i = 0; i < segments.length; ++i) {
+        var segment = segments[i];
+
+        // Ignores duplicated.
+        if (done[segment.id]) {
+            continue;
+        }
+
+        // Use previous segments if unused.
+        if (!segment.internal.used) {
+            for (var j = 0; j < segment.allPrevSegments.length; ++j) {
+                var prevSegment = segment.allPrevSegments[j];
+
+                if (!done[prevSegment.id]) {
+                    done[prevSegment.id] = true;
+                    retv.push(prevSegment);
+                }
+            }
+        } else {
+            done[segment.id] = true;
+            retv.push(segment);
+        }
+    }
+
+    return retv;
+}
+
+/**
+ * Checks whether or not a given segment is reachable.
+ *
+ * @param {CodePathSegment} segment - A segment to check.
+ * @returns {boolean} `true` if the segment is reachable.
+ */
+function isReachable(segment) {
+    return segment.reachable;
+}
+
+//------------------------------------------------------------------------------
+// Public Interface
+//------------------------------------------------------------------------------
+
+/**
+ * A code path segment.
+ *
+ * @constructor
+ * @param {string} id - An identifier.
+ * @param {CodePathSegment[]} allPrevSegments - An array of the previous segments.
+ *   This array includes unreachable segments.
+ * @param {boolean} reachable - A flag which shows this is reachable.
+ */
+function CodePathSegment(id, allPrevSegments, reachable) {
+    /**
+     * The identifier of this code path.
+     * Rules use it to store additional information of each rule.
+     * @type {string}
+     */
+    this.id = id;
+
+    /**
+     * An array of the next segments.
+     * @type {CodePathSegment[]}
+     */
+    this.nextSegments = [];
+
+    /**
+     * An array of the previous segments.
+     * @type {CodePathSegment[]}
+     */
+    this.prevSegments = allPrevSegments.filter(isReachable);
+
+    /**
+     * An array of the next segments.
+     * This array includes unreachable segments.
+     * @type {CodePathSegment[]}
+     */
+    this.allNextSegments = [];
+
+    /**
+     * An array of the previous segments.
+     * This array includes unreachable segments.
+     * @type {CodePathSegment[]}
+     */
+    this.allPrevSegments = allPrevSegments;
+
+    /**
+     * A flag which shows this is reachable.
+     * @type {boolean}
+     */
+    this.reachable = reachable;
+
+    // Internal data.
+    Object.defineProperty(this, "internal", {value: {
+        used: false
+    }});
+
+    /* istanbul ignore if */
+    if (debug.enabled) {
+        this.internal.nodes = [];
+        this.internal.exitNodes = [];
+    }
+}
+
+/**
+ * Creates the root segment.
+ *
+ * @param {string} id - An identifier.
+ * @returns {CodePathSegment} The created segment.
+ */
+CodePathSegment.newRoot = function(id) {
+    return new CodePathSegment(id, [], true);
+};
+
+/**
+ * Creates a segment that follows given segments.
+ *
+ * @param {string} id - An identifier.
+ * @param {CodePathSegment[]} allPrevSegments - An array of the previous segments.
+ * @returns {CodePathSegment} The created segment.
+ */
+CodePathSegment.newNext = function(id, allPrevSegments) {
+    return new CodePathSegment(
+        id,
+        flattenUnusedSegments(allPrevSegments),
+        allPrevSegments.some(isReachable));
+};
+
+/**
+ * Creates an unreachable segment that follows given segments.
+ *
+ * @param {string} id - An identifier.
+ * @param {CodePathSegment[]} allPrevSegments - An array of the previous segments.
+ * @returns {CodePathSegment} The created segment.
+ */
+CodePathSegment.newUnreachable = function(id, allPrevSegments) {
+    return new CodePathSegment(id, flattenUnusedSegments(allPrevSegments), false);
+};
+
+/**
+ * Creates a segment that follows given segments.
+ * This factory method does not connect with `allPrevSegments`.
+ * But this inherits `reachable` flag.
+ *
+ * @param {string} id - An identifier.
+ * @param {CodePathSegment[]} allPrevSegments - An array of the previous segments.
+ * @returns {CodePathSegment} The created segment.
+ */
+CodePathSegment.newDisconnected = function(id, allPrevSegments) {
+    return new CodePathSegment(id, [], allPrevSegments.some(isReachable));
+};
+
+/**
+ * Makes a given segment being used.
+ *
+ * And this function registers the segment into the previous segments as a next.
+ *
+ * @param {CodePathSegment} segment - A segment to mark.
+ * @returns {void}
+ */
+CodePathSegment.markUsed = function(segment) {
+    assert(!segment.internal.used, segment.id + " is marked twice.");
+    segment.internal.used = true;
+
+    var i;
+    if (segment.reachable) {
+        for (i = 0; i < segment.allPrevSegments.length; ++i) {
+            var prevSegment = segment.allPrevSegments[i];
+
+            prevSegment.allNextSegments.push(segment);
+            prevSegment.nextSegments.push(segment);
+        }
+    } else {
+        for (i = 0; i < segment.allPrevSegments.length; ++i) {
+            segment.allPrevSegments[i].allNextSegments.push(segment);
+        }
+    }
+};
+
+module.exports = CodePathSegment;
+
+},{"./debug-helpers":128,"assert":5}],126:[function(require,module,exports){
+/**
+ * @fileoverview A class to manage state of generating a code path.
+ * @author Toru Nagashima
+ * @copyright 2015 Toru Nagashima. All rights reserved.
+ * See LICENSE file in root directory for full license.
+ */
+
+"use strict";
+
+//------------------------------------------------------------------------------
+// Requirements
+//------------------------------------------------------------------------------
+
+var CodePathSegment = require("./code-path-segment"),
+    ForkContext = require("./fork-context"),
+    getLast = require("../util").getLast;
+
+//------------------------------------------------------------------------------
+// Helpers
+//------------------------------------------------------------------------------
+
+/**
+ * Adds given segments into the `dest` array.
+ * If the `others` array does not includes the given segments, adds to the `all`
+ * array as well.
+ *
+ * This adds only reachable and used segments.
+ *
+ * @param {CodePathSegment[]} dest - A destination array (`returnedSegments` or `thrownSegments`).
+ * @param {CodePathSegment[]} others - Another destination array (`returnedSegments` or `thrownSegments`).
+ * @param {CodePathSegment[]} all - The unified destination array (`finalSegments`).
+ * @param {CodePathSegment[]} segments - Segments to add.
+ * @returns {void}
+ */
+function addToReturnedOrThrown(dest, others, all, segments) {
+    for (var i = 0; i < segments.length; ++i) {
+        var segment = segments[i];
+
+        dest.push(segment);
+        if (others.indexOf(segment) === -1) {
+            all.push(segment);
+        }
+    }
+}
+
+/**
+ * Gets a loop-context for a `continue` statement.
+ *
+ * @param {CodePathState} state - A state to get.
+ * @param {string} label - The label of a `continue` statement.
+ * @returns {LoopContext} A loop-context for a `continue` statement.
+ */
+function getContinueContext(state, label) {
+    if (!label) {
+        return state.loopContext;
+    }
+
+    var stack = state.loopContextStack;
+    for (var i = stack.length - 1; i >= 0; --i) {
+        var context = stack[i];
+
+        if (context.label === label) {
+            return context;
+        }
+    }
+
+    /* istanbul ignore next: foolproof (syntax error) */
+    return null;
+}
+
+/**
+ * Gets a context for a `break` statement.
+ *
+ * @param {CodePathState} state - A state to get.
+ * @param {string} label - The label of a `break` statement.
+ * @returns {LoopContext|SwitchContext} A context for a `break` statement.
+ */
+function getBreakContext(state, label) {
+    if (label) {
+        return getContinueContext(state, label);
+    }
+
+    switch (getLast(state.breakKindStack)) {
+        case "loop": return state.loopContext;
+        case "switch": return state.switchContext;
+
+        /* istanbul ignore next: foolproof (syntax error) */
+        default: return null;
+    }
+}
+
+/**
+ * Gets a context for a `return` statement.
+ *
+ * @param {CodePathState} state - A state to get.
+ * @returns {TryContext|CodePathState} A context for a `return` statement.
+ */
+function getReturnContext(state) {
+    var stack = state.tryContextStack;
+    for (var i = stack.length - 1; i >= 0; --i) {
+        var context = stack[i];
+
+        if (context.hasFinalizer && context.position !== "finally") {
+            return context;
+        }
+    }
+
+    return state;
+}
+
+/**
+ * Gets a context for a `throw` statement.
+ *
+ * @param {CodePathState} state - A state to get.
+ * @returns {TryContext|CodePathState} A context for a `throw` statement.
+ */
+function getThrowContext(state) {
+    var stack = state.tryContextStack;
+    for (var i = stack.length - 1; i >= 0; --i) {
+        var context = stack[i];
+
+        if (context.position === "try" ||
+            (context.hasFinalizer && context.position === "catch")
+        ) {
+            return context;
+        }
+    }
+
+    return state;
+}
+
+/**
+ * Removes a given element from a given array.
+ *
+ * @param {any[]} xs - An array to remove the specific element.
+ * @param {any} x - An element to be removed.
+ * @returns {void}
+ */
+function remove(xs, x) {
+    var i = xs.indexOf(x);
+    /* istanbul ignore else: foolproof */
+    if (i >= 0) {
+        xs.splice(i, 1);
+    }
+}
+
+/**
+ * Disconnect given segments.
+ *
+ * This is used in a process for switch statements.
+ * If there is the "default" chunk before other cases, the order is different
+ * between node's and running's.
+ *
+ * @param {CodePathSegment[]} prevSegments - Forward segments to disconnect.
+ * @param {CodePathSegment[]} nextSegments - Backward segments to disconnect.
+ * @returns {void}
+ */
+function removeConnection(prevSegments, nextSegments) {
+    for (var i = 0; i < prevSegments.length; ++i) {
+        var prevSegment = prevSegments[i];
+        var nextSegment = nextSegments[i];
+
+        remove(prevSegment.nextSegments, nextSegment);
+        remove(prevSegment.allNextSegments, nextSegment);
+        remove(nextSegment.prevSegments, prevSegment);
+        remove(nextSegment.allPrevSegments, prevSegment);
+    }
+}
+
+/**
+ * Creates looping path.
+ *
+ * @param {CodePathState} state - The instance.
+ * @param {CodePathSegment[]} fromSegments - Segments which are source.
+ * @param {CodePathSegment[]} toSegments - Segments which are destination.
+ * @returns {void}
+ */
+function makeLooped(state, fromSegments, toSegments) {
+    var end = end = Math.min(fromSegments.length, toSegments.length);
+    for (var i = 0; i < end; ++i) {
+        var fromSegment = fromSegments[i];
+        var toSegment = toSegments[i];
+
+        if (toSegment.reachable) {
+            fromSegment.nextSegments.push(toSegment);
+        }
+        if (fromSegment.reachable) {
+            toSegment.prevSegments.push(fromSegment);
+        }
+        fromSegment.allNextSegments.push(toSegment);
+        toSegment.allPrevSegments.push(fromSegment);
+
+        state.notifyLooped(fromSegment, toSegment);
+    }
+}
+
+/**
+ * Finalizes segments of `test` chunk of a ForStatement.
+ *
+ * - Adds `false` paths to paths which are leaving from the loop.
+ * - Sets `true` paths to paths which go to the body.
+ *
+ * @param {LoopContext} context - A loop context to modify.
+ * @param {ChoiceContext} choiceContext - A choice context of this loop.
+ * @param {CodePathSegment[]} head - The current head paths.
+ * @returns {void}
+ */
+function finalizeTestSegmentsOfFor(context, choiceContext, head) {
+    if (!choiceContext.processed) {
+        choiceContext.trueForkContext.add(head);
+        choiceContext.falseForkContext.add(head);
+    }
+
+    if (context.test !== true) {
+        context.brokenForkContext.addAll(choiceContext.falseForkContext);
+    }
+    context.endOfTestSegments = choiceContext.trueForkContext.makeNext(0, -1);
+}
+
+//------------------------------------------------------------------------------
+// Public Interface
+//------------------------------------------------------------------------------
+
+/**
+ * A class which manages state to analyze code paths.
+ *
+ * @constructor
+ * @param {IdGenerator} idGenerator - An id generator to generate id for code
+ *   path segments.
+ * @param {function} onLooped - A callback function to notify looping.
+ */
+function CodePathState(idGenerator, onLooped) {
+    this.idGenerator = idGenerator;
+    this.notifyLooped = onLooped;
+    this.forkContextStack = [ForkContext.newRoot(idGenerator)];
+    this.choiceContextStack = [];
+    this.switchContextStack = [];
+    this.tryContextStack = [];
+    this.loopContextStack = [];
+    this.breakKindStack = [];
+
+    this.currentSegments = [];
+    this.initialSegment = this.forkContext.head[0];
+
+    // returnedSegments and thrownSegments push elements into finalSegments also.
+    var final = this.finalSegments = [];
+    var returned = this.returnedForkContext = [];
+    var thrown = this.thrownForkContext = [];
+    returned.add = addToReturnedOrThrown.bind(null, returned, thrown, final);
+    thrown.add = addToReturnedOrThrown.bind(null, thrown, returned, final);
+}
+
+CodePathState.prototype = {
+    constructor: CodePathState,
+
+    /**
+     * The head segments.
+     * @type {CodePathSegment[]}
+     */
+    get headSegments() {
+        return this.forkContext.head;
+    },
+
+    /**
+     * The parent forking context.
+     * This is used for the root of new forks.
+     * @type {ForkContext}
+     */
+    get parentForkContext() {
+        var stack = this.forkContextStack;
+        if (stack.length < 2) {
+            return null;
+        }
+        return stack[stack.length - 2];
+    },
+
+    /**
+     * The current forking context.
+     * @type {ForkContext}
+     */
+    get forkContext() {
+        return getLast(this.forkContextStack);
+    },
+
+    /**
+     * The current context of logical expressions.
+     * @type {object}
+     */
+    get choiceContext() {
+        return getLast(this.choiceContextStack);
+    },
+
+    /**
+     * The current context of switch statements.
+     * @type {object}
+     */
+    get switchContext() {
+        return getLast(this.switchContextStack);
+    },
+
+    /**
+     * The current context of loop statements.
+     * @type {object}
+     */
+    get loopContext() {
+        return getLast(this.loopContextStack);
+    },
+
+    /**
+     * The current context of try-catch-finally statements.
+     * @type {object}
+     */
+    get tryContext() {
+        return getLast(this.tryContextStack);
+    },
+
+    /**
+     * Creates and stacks new forking context.
+     *
+     * @param {boolean} forkLeavingPath - A flag which shows being in a
+     *   "finally" block.
+     * @returns {ForkContext} The created context.
+     */
+    pushForkContext: function(forkLeavingPath) {
+        var newContext = ForkContext.newEmpty(
+            this.forkContext,
+            forkLeavingPath
+        );
+
+        this.forkContextStack.push(newContext);
+
+        return newContext;
+    },
+
+    /**
+     * Pops and merges the last forking context.
+     * @returns {ForkContext} The last context.
+     */
+    popForkContext: function() {
+        var lastContext = this.forkContextStack.pop();
+
+        this.forkContext.replaceHead(lastContext.makeNext(0, -1));
+
+        return lastContext;
+    },
+
+    /**
+     * Creates a new path.
+     * @returns {void}
+     */
+    forkPath: function() {
+        this.forkContext.add(this.parentForkContext.makeNext(-1, -1));
+    },
+
+    /**
+     * Creates a bypass path.
+     * This is used for such as IfStatement which does not have "else" chunk.
+     *
+     * @returns {void}
+     */
+    forkBypassPath: function() {
+        this.forkContext.add(this.parentForkContext.head);
+    },
+
+    //--------------------------------------------------------------------------
+    // ConditionalExpression, LogicalExpression, IfStatement
+    //--------------------------------------------------------------------------
+
+    /**
+     * Creates a context for ConditionalExpression, LogicalExpression,
+     * IfStatement, WhileStatement, DoWhileStatement, or ForStatement.
+     *
+     * LogicalExpressions have cases that it goes different paths between the
+     * `true` case and the `false` case.
+     *
+     * For Example:
+     *
+     *     if (a || b) {
+     *         foo();
+     *     } else {
+     *         bar();
+     *     }
+     *
+     * In this case, `b` is evaluated always in the code path of the `else`
+     * block, but it's not so in the code path of the `if` block.
+     * So there are 3 paths.
+     *
+     *     a -> foo();
+     *     a -> b -> foo();
+     *     a -> b -> bar();
+     *
+     * @param {string} kind - A kind string.
+     *   If the new context is LogicalExpression's, this is `"&&"` or `"||"`.
+     *   If it's IfStatement's or ConditionalExpression's, this is `"test"`.
+     *   Otherwise, this is `"loop"`.
+     * @param {boolean} isForkingAsResult - A flag that shows that goes different
+     *   paths between `true` and `false`.
+     * @returns {void}
+     */
+    pushChoiceContext: function(kind, isForkingAsResult) {
+        this.choiceContextStack.push({
+            kind: kind,
+            isForkingAsResult: isForkingAsResult,
+            trueForkContext: ForkContext.newEmpty(this.forkContext),
+            falseForkContext: ForkContext.newEmpty(this.forkContext),
+            processed: false
+        });
+    },
+
+    /**
+     * Pops the last choice context and finalizes it.
+     *
+     * @returns {ChoiceContext} The popped context.
+     */
+    popChoiceContext: function() {
+        var context = this.choiceContextStack.pop();
+        var forkContext = this.forkContext;
+        var headSegments = forkContext.head;
+
+        switch (context.kind) {
+            case "&&":
+            case "||":
+                // If any result were not transferred from child contexts,
+                // this sets the head segments to both cases.
+                // The head segments are the path of the right-hand operand.
+                if (!context.processed) {
+                    context.trueForkContext.add(headSegments);
+                    context.falseForkContext.add(headSegments);
+                }
+
+                // Transfers results to upper context if this context is in
+                // test chunk.
+                if (context.isForkingAsResult) {
+                    var parentContext = this.choiceContext;
+                    parentContext.trueForkContext.addAll(context.trueForkContext);
+                    parentContext.falseForkContext.addAll(context.falseForkContext);
+                    parentContext.processed = true;
+
+                    return context;
+                }
+                break;
+
+            case "test":
+                if (!context.processed) {
+                    // The head segments are the path of the `if` block here.
+                    // Updates the `true` path with the end of the `if` block.
+                    context.trueForkContext.clear();
+                    context.trueForkContext.add(headSegments);
+                } else {
+                    // The head segments are the path of the `else` block here.
+                    // Updates the `false` path with the end of the `else` block.
+                    context.falseForkContext.clear();
+                    context.falseForkContext.add(headSegments);
+                }
+                break;
+
+            case "loop":
+                // Loops are addressed in popLoopContext().
+                // This is called from popLoopContext().
+                return context;
+
+            /* istanbul ignore next */
+            default:
+                throw new Error("unreachable");
+        }
+
+        // Merges all paths.
+        var prevForkContext = context.trueForkContext;
+        prevForkContext.addAll(context.falseForkContext);
+        forkContext.replaceHead(prevForkContext.makeNext(0, -1));
+
+        return context;
+    },
+
+    /**
+     * Makes a code path segment of the right-hand operand of a logical
+     * expression.
+     *
+     * @returns {void}
+     */
+    makeLogicalRight: function() {
+        var context = this.choiceContext;
+        var forkContext = this.forkContext;
+
+        if (context.processed) {
+            // This got segments already from the child choice context.
+            // Creates the next path from own true/false fork context.
+            var prevForkContext =
+                context.kind === "&&" ? context.trueForkContext :
+                /* kind === "||" */ context.falseForkContext;
+
+            forkContext.replaceHead(prevForkContext.makeNext(0, -1));
+            prevForkContext.clear();
+
+            context.processed = false;
+        } else {
+            // This did not get segments from the child choice context.
+            // So addresses the head segments.
+            // The head segments are the path of the left-hand operand.
+            if (context.kind === "&&") {
+                // The path does short-circuit if false.
+                context.falseForkContext.add(forkContext.head);
+            } else {
+                // The path does short-circuit if true.
+                context.trueForkContext.add(forkContext.head);
+            }
+
+            forkContext.replaceHead(forkContext.makeNext(-1, -1));
+        }
+    },
+
+    /**
+     * Makes a code path segment of the `if` block.
+     *
+     * @returns {void}
+     */
+    makeIfConsequent: function() {
+        var context = this.choiceContext;
+        var forkContext = this.forkContext;
+
+        // If any result were not transferred from child contexts,
+        // this sets the head segments to both cases.
+        // The head segments are the path of the test expression.
+        if (!context.processed) {
+            context.trueForkContext.add(forkContext.head);
+            context.falseForkContext.add(forkContext.head);
+        }
+        context.processed = false;
+
+        // Creates new path from the `true` case.
+        forkContext.replaceHead(
+            context.trueForkContext.makeNext(0, -1)
+        );
+    },
+
+    /**
+     * Makes a code path segment of the `else` block.
+     *
+     * @returns {void}
+     */
+    makeIfAlternate: function() {
+        var context = this.choiceContext;
+        var forkContext = this.forkContext;
+
+        // The head segments are the path of the `if` block.
+        // Updates the `true` path with the end of the `if` block.
+        context.trueForkContext.clear();
+        context.trueForkContext.add(forkContext.head);
+        context.processed = true;
+
+        // Creates new path from the `false` case.
+        forkContext.replaceHead(
+            context.falseForkContext.makeNext(0, -1)
+        );
+    },
+
+    //--------------------------------------------------------------------------
+    // SwitchStatement
+    //--------------------------------------------------------------------------
+
+    /**
+     * Creates a context object of SwitchStatement and stacks it.
+     *
+     * @param {boolean} hasCase - `true` if the switch statement has one or more
+     *   case parts.
+     * @returns {void}
+     */
+    pushSwitchContext: function(hasCase) {
+        this.switchContextStack.push({
+            hasCase: hasCase,
+            brokenForkContext: ForkContext.newEmpty(this.forkContext),
+            defaultSegments: null,
+            defaultBodySegments: null,
+            foundDefault: false,
+            lastIsDefault: false,
+            countForks: 0
+        });
+        this.breakKindStack.push("switch");
+    },
+
+    /**
+     * Pops the last context of SwitchStatement and finalizes it.
+     *
+     * - Disposes all forking stack for `case` and `default`.
+     * - Creates the next code path segment from `context.brokenForkContext`.
+     * - If the last `SwitchCase` node is not a `default` part, creates a path
+     *   to the `default` body.
+     *
+     * @returns {void}
+     */
+    popSwitchContext: function() {
+        this.breakKindStack.pop();
+        var context = this.switchContextStack.pop();
+        var forkContext = this.forkContext;
+        var brokenForkContext = context.brokenForkContext;
+
+        if (context.countForks === 0) {
+            // When there is only one `default` chunk and there is one or more
+            // `break` statements, even if forks are nothing, it needs to merge
+            // those.
+            if (!brokenForkContext.empty) {
+                brokenForkContext.add(forkContext.makeNext(-1, -1));
+                forkContext.replaceHead(brokenForkContext.makeNext(0, -1));
+            }
+            return;
+        }
+
+        var lastSegments = forkContext.head;
+        this.forkBypassPath();
+        var lastCaseSegments = forkContext.head;
+
+        // `brokenForkContext` is used to make the next segment.
+        // It must add the last segment into `brokenForkContext`.
+        brokenForkContext.add(lastSegments);
+
+        // A path which is failed in all case test should be connected to path
+        // of `default` chunk.
+        if (!context.lastIsDefault) {
+            if (context.defaultBodySegments) {
+                // Remove a link from `default` label to its chunk.
+                // It's false route.
+                removeConnection(context.defaultSegments, context.defaultBodySegments);
+                makeLooped(this, lastCaseSegments, context.defaultBodySegments);
+            } else {
+                // It handles the last case body as broken if `default` chunk
+                // does not exist.
+                brokenForkContext.add(lastCaseSegments);
+            }
+        }
+
+        // Pops the segment context stack until the entry segment.
+        for (var i = 0; i < context.countForks; ++i) {
+            this.forkContextStack.pop();
+        }
+        // Creates a path from all brokenForkContext paths.
+        // This is a path after switch statement.
+        this.forkContext.replaceHead(brokenForkContext.makeNext(0, -1));
+    },
+
+    /**
+     * Makes a code path segment for a `SwitchCase` node.
+     *
+     * @param {boolean} isEmpty - `true` if the body is empty.
+     * @param {boolean} isDefault - `true` if the body is the default case.
+     * @returns {void}
+     */
+    makeSwitchCaseBody: function(isEmpty, isDefault) {
+        var context = this.switchContext;
+        if (!context.hasCase) {
+            return;
+        }
+
+        // Merge forks.
+        // The parent fork context has two segments.
+        // Those are from the current case and the body of the previous case.
+        var parentForkContext = this.forkContext;
+        var forkContext = this.pushForkContext();
+        forkContext.add(parentForkContext.makeNext(0, -1));
+
+        // Save `default` chunk info.
+        // If the `default` label is not at the last, we must make a path from
+        // the last `case` to the `default` chunk.
+        if (isDefault) {
+            context.defaultSegments = parentForkContext.head;
+            if (isEmpty) {
+                context.foundDefault = true;
+            } else {
+                context.defaultBodySegments = forkContext.head;
+            }
+        } else {
+            if (!isEmpty && context.foundDefault) {
+                context.foundDefault = false;
+                context.defaultBodySegments = forkContext.head;
+            }
+        }
+        context.lastIsDefault = isDefault;
+        context.countForks += 1;
+    },
+
+    //--------------------------------------------------------------------------
+    // TryStatement
+    //--------------------------------------------------------------------------
+
+    /**
+     * Creates a context object of TryStatement and stacks it.
+     *
+     * @param {boolean} hasFinalizer - `true` if the try statement has a
+     *   `finally` block.
+     * @returns {void}
+     */
+    pushTryContext: function(hasFinalizer) {
+        this.tryContextStack.push({
+            position: "try",
+            hasFinalizer: hasFinalizer,
+            returnedForkContext: hasFinalizer
+                ? ForkContext.newEmpty(this.forkContext)
+                : null,
+            thrownForkContext: ForkContext.newEmpty(this.forkContext),
+            lastOfTryIsReachable: false,
+            lastOfCatchIsReachable: false
+        });
+    },
+
+    /**
+     * Pops the last context of TryStatement and finalizes it.
+     *
+     * @returns {void}
+     */
+    popTryContext: function() {
+        var context = this.tryContextStack.pop();
+
+        if (context.position === "catch") {
+            // Merges two paths from the `try` block and `catch` block merely.
+            this.popForkContext();
+            return;
+        }
+        // The following process is executed only when there is the `finally`
+        // block.
+
+        var returned = context.returnedForkContext;
+        var thrown = context.thrownForkContext;
+        if (returned.empty && thrown.empty) {
+            return;
+        }
+
+        // Separate head to normal paths and leaving paths.
+        var headSegments = this.forkContextStack.pop().head;
+        var normalSegments = headSegments.slice(0, headSegments.length / 2 | 0);
+        var leavingSegments = headSegments.slice(headSegments.length / 2 | 0);
+
+        // Forwards the leaving path to upper contexts.
+        if (!returned.empty) {
+            getReturnContext(this).returnedForkContext.add(leavingSegments);
+        }
+        if (!thrown.empty) {
+            getThrowContext(this).thrownForkContext.add(leavingSegments);
+        }
+
+        // Sets the normal path as the next.
+        this.forkContext.replaceHead(normalSegments);
+
+        // If both paths of the `try` block and the `catch` block are
+        // unreachable, the next path becomes unreachable as well.
+        if (!context.lastOfTryIsReachable && !context.lastOfCatchIsReachable) {
+            this.forkContext.makeUnreachable();
+        }
+    },
+
+    /**
+     * Makes a code path segment for a `catch` block.
+     *
+     * @returns {void}
+     */
+    makeCatchBlock: function() {
+        var context = this.tryContext;
+        var forkContext = this.forkContext;
+        var thrown = context.thrownForkContext;
+
+        // Update state.
+        context.position = "catch";
+        context.thrownForkContext = ForkContext.newEmpty(forkContext);
+        context.lastOfTryIsReachable = forkContext.reachable;
+
+        // Merge thrown paths.
+        thrown.add(forkContext.head);
+        var thrownSegments = thrown.makeNext(0, -1);
+
+        // Fork to a bypass and the merged thrown path.
+        this.pushForkContext();
+        this.forkBypassPath();
+        this.forkContext.add(thrownSegments);
+    },
+
+    /**
+     * Makes a code path segment for a `finally` block.
+     *
+     * In the `finally` block, parallel paths are created. The parallel paths
+     * are used as leaving-paths. The leaving-paths are paths from `return`
+     * statements and `throw` statements in a `try` block or a `catch` block.
+     *
+     * @returns {void}
+     */
+    makeFinallyBlock: function() {
+        var context = this.tryContext;
+        var forkContext = this.forkContext;
+        var returned = context.returnedForkContext;
+        var thrown = context.thrownForkContext;
+        var headOfLeavingSegments = forkContext.head;
+
+        // Update state.
+        if (context.position === "catch") {
+            // Merges two paths from the `try` block and `catch` block.
+            this.popForkContext();
+            forkContext = this.forkContext;
+
+            context.lastOfCatchIsReachable = forkContext.reachable;
+        } else {
+            context.lastOfTryIsReachable = forkContext.reachable;
+        }
+        context.position = "finally";
+
+        if (returned.empty && thrown.empty) {
+            // This path does not leave.
+            return;
+        }
+
+        // Create a parallel segment from merging returned and thrown.
+        // This segment will leave at the end of this finally block.
+        var segments = forkContext.makeNext(-1, -1);
+        var j;
+        for (var i = 0; i < forkContext.count; ++i) {
+            var prevSegsOfLeavingSegment = [headOfLeavingSegments[i]];
+
+            for (j = 0; j < returned.segmentsList.length; ++j) {
+                prevSegsOfLeavingSegment.push(returned.segmentsList[j][i]);
+            }
+            for (j = 0; j < thrown.segmentsList.length; ++j) {
+                prevSegsOfLeavingSegment.push(thrown.segmentsList[j][i]);
+            }
+
+            segments.push(CodePathSegment.newNext(
+                this.idGenerator.next(),
+                prevSegsOfLeavingSegment));
+        }
+
+        this.pushForkContext(true);
+        this.forkContext.add(segments);
+    },
+
+    /**
+     * Makes a code path segment from the first throwable node to the `catch`
+     * block or the `finally` block.
+     *
+     * @returns {void}
+     */
+    makeFirstThrowablePathInTryBlock: function() {
+        var forkContext = this.forkContext;
+        if (!forkContext.reachable) {
+            return;
+        }
+
+        var context = getThrowContext(this);
+        if (context === this ||
+            context.position !== "try" ||
+            !context.thrownForkContext.empty
+        ) {
+            return;
+        }
+
+        context.thrownForkContext.add(forkContext.head);
+        forkContext.replaceHead(forkContext.makeNext(-1, -1));
+    },
+
+    //--------------------------------------------------------------------------
+    // Loop Statements
+    //--------------------------------------------------------------------------
+
+    /**
+     * Creates a context object of a loop statement and stacks it.
+     *
+     * @param {string} type - The type of the node which was triggered. One of
+     *   `WhileStatement`, `DoWhileStatement`, `ForStatement`, `ForInStatement`,
+     *   and `ForStatement`.
+     * @param {string|null} label - A label of the node which was triggered.
+     * @returns {void}
+     */
+    pushLoopContext: function(type, label) {
+        var forkContext = this.forkContext;
+        var context;
+
+        switch (type) {
+            case "WhileStatement":
+                this.pushChoiceContext("loop", false);
+                context = {
+                    type: type,
+                    label: label,
+                    test: void 0,
+                    continueDestSegments: null,
+                    brokenForkContext: ForkContext.newEmpty(forkContext)
+                };
+                break;
+
+            case "DoWhileStatement":
+                this.pushChoiceContext("loop", false);
+                context = {
+                    type: type,
+                    label: label,
+                    test: void 0,
+                    entrySegments: null,
+                    continueForkContext: ForkContext.newEmpty(forkContext),
+                    brokenForkContext: ForkContext.newEmpty(forkContext)
+                };
+                break;
+
+            case "ForStatement":
+                this.pushChoiceContext("loop", false);
+                context = {
+                    type: type,
+                    label: label,
+                    test: void 0,
+                    endOfInitSegments: null,
+                    testSegments: null,
+                    endOfTestSegments: null,
+                    updateSegments: null,
+                    endOfUpdateSegments: null,
+                    continueDestSegments: null,
+                    brokenForkContext: ForkContext.newEmpty(forkContext)
+                };
+                break;
+
+            case "ForInStatement":
+            case "ForOfStatement":
+                context = {
+                    type: type,
+                    label: label,
+                    prevSegments: null,
+                    leftSegments: null,
+                    endOfLeftSegments: null,
+                    continueDestSegments: null,
+                    brokenForkContext: ForkContext.newEmpty(forkContext)
+                };
+                break;
+
+            /* istanbul ignore next */
+            default:
+                throw new Error("unknown type: \"" + type + "\"");
+        }
+
+        this.loopContextStack.push(context);
+        this.breakKindStack.push("loop");
+    },
+
+    /**
+     * Pops the last context of a loop statement and finalizes it.
+     *
+     * @returns {void}
+     */
+    popLoopContext: function() {
+        this.breakKindStack.pop();
+        var context = this.loopContextStack.pop();
+        var forkContext = this.forkContext;
+        var choiceContext;
+
+        // Creates a looped path.
+        switch (context.type) {
+            case "WhileStatement":
+            case "ForStatement":
+                choiceContext = this.popChoiceContext();
+                makeLooped(
+                    this,
+                    forkContext.head,
+                    context.continueDestSegments);
+                break;
+
+            case "DoWhileStatement":
+                choiceContext = this.popChoiceContext();
+
+                if (!choiceContext.processed) {
+                    choiceContext.trueForkContext.add(forkContext.head);
+                    choiceContext.falseForkContext.add(forkContext.head);
+                }
+                if (context.test !== true) {
+                    context.brokenForkContext.addAll(
+                        choiceContext.falseForkContext);
+                }
+
+                // `true` paths go to looping.
+                var segmentsList = choiceContext.trueForkContext.segmentsList;
+                for (var i = 0; i < segmentsList.length; ++i) {
+                    makeLooped(
+                        this,
+                        segmentsList[i],
+                        context.entrySegments);
+                }
+                break;
+
+            case "ForInStatement":
+            case "ForOfStatement":
+                context.brokenForkContext.add(forkContext.head);
+                makeLooped(
+                    this,
+                    forkContext.head,
+                    context.leftSegments);
+                break;
+
+            /* istanbul ignore next */
+            default:
+                throw new Error("unreachable");
+        }
+
+        // Go next.
+        if (context.brokenForkContext.empty) {
+            forkContext.replaceHead(forkContext.makeUnreachable(-1, -1));
+        } else {
+            forkContext.replaceHead(context.brokenForkContext.makeNext(0, -1));
+        }
+    },
+
+    /**
+     * Makes a code path segment for the test part of a WhileStatement.
+     *
+     * @param {boolean|undefined} test - The test value (only when constant).
+     * @returns {void}
+     */
+    makeWhileTest: function(test) {
+        var context = this.loopContext;
+        var forkContext = this.forkContext;
+        var testSegments = forkContext.makeNext(0, -1);
+
+        // Update state.
+        context.test = test;
+        context.continueDestSegments = testSegments;
+        forkContext.replaceHead(testSegments);
+    },
+
+    /**
+     * Makes a code path segment for the body part of a WhileStatement.
+     *
+     * @returns {void}
+     */
+    makeWhileBody: function() {
+        var context = this.loopContext;
+        var choiceContext = this.choiceContext;
+        var forkContext = this.forkContext;
+
+        if (!choiceContext.processed) {
+            choiceContext.trueForkContext.add(forkContext.head);
+            choiceContext.falseForkContext.add(forkContext.head);
+        }
+
+        // Update state.
+        if (context.test !== true) {
+            context.brokenForkContext.addAll(choiceContext.falseForkContext);
+        }
+        forkContext.replaceHead(choiceContext.trueForkContext.makeNext(0, -1));
+    },
+
+    /**
+     * Makes a code path segment for the body part of a DoWhileStatement.
+     *
+     * @returns {void}
+     */
+    makeDoWhileBody: function() {
+        var context = this.loopContext;
+        var forkContext = this.forkContext;
+        var bodySegments = forkContext.makeNext(-1, -1);
+
+        // Update state.
+        context.entrySegments = bodySegments;
+        forkContext.replaceHead(bodySegments);
+    },
+
+    /**
+     * Makes a code path segment for the test part of a DoWhileStatement.
+     *
+     * @param {boolean|undefined} test - The test value (only when constant).
+     * @returns {void}
+     */
+    makeDoWhileTest: function(test) {
+        var context = this.loopContext;
+        var forkContext = this.forkContext;
+
+        context.test = test;
+
+        // Creates paths of `continue` statements.
+        if (!context.continueForkContext.empty) {
+            context.continueForkContext.add(forkContext.head);
+            var testSegments = context.continueForkContext.makeNext(0, -1);
+
+            forkContext.replaceHead(testSegments);
+        }
+    },
+
+    /**
+     * Makes a code path segment for the test part of a ForStatement.
+     *
+     * @param {boolean|undefined} test - The test value (only when constant).
+     * @returns {void}
+     */
+    makeForTest: function(test) {
+        var context = this.loopContext;
+        var forkContext = this.forkContext;
+        var endOfInitSegments = forkContext.head;
+        var testSegments = forkContext.makeNext(-1, -1);
+
+        // Update state.
+        context.test = test;
+        context.endOfInitSegments = endOfInitSegments;
+        context.continueDestSegments = context.testSegments = testSegments;
+        forkContext.replaceHead(testSegments);
+    },
+
+    /**
+     * Makes a code path segment for the update part of a ForStatement.
+     *
+     * @returns {void}
+     */
+    makeForUpdate: function() {
+        var context = this.loopContext;
+        var choiceContext = this.choiceContext;
+        var forkContext = this.forkContext;
+
+        // Make the next paths of the test.
+        if (context.testSegments) {
+            finalizeTestSegmentsOfFor(
+                context,
+                choiceContext,
+                forkContext.head);
+        } else {
+            context.endOfInitSegments = forkContext.head;
+        }
+
+        // Update state.
+        var updateSegments = forkContext.makeDisconnected(-1, -1);
+        context.continueDestSegments = context.updateSegments = updateSegments;
+        forkContext.replaceHead(updateSegments);
+    },
+
+    /**
+     * Makes a code path segment for the body part of a ForStatement.
+     *
+     * @returns {void}
+     */
+    makeForBody: function() {
+        var context = this.loopContext;
+        var choiceContext = this.choiceContext;
+        var forkContext = this.forkContext;
+
+        // Update state.
+        if (context.updateSegments) {
+            context.endOfUpdateSegments = forkContext.head;
+
+            // `update` -> `test`
+            if (context.testSegments) {
+                makeLooped(
+                    this,
+                    context.endOfUpdateSegments,
+                    context.testSegments);
+            }
+        } else if (context.testSegments) {
+            finalizeTestSegmentsOfFor(
+                context,
+                choiceContext,
+                forkContext.head);
+        } else {
+            context.endOfInitSegments = forkContext.head;
+        }
+
+        var bodySegments = context.endOfTestSegments;
+        if (!bodySegments) {
+            // If there is not the `test` part, the `body` path comes from the
+            // `init` part and the `update` part.
+            var prevForkContext = ForkContext.newEmpty(forkContext);
+            prevForkContext.add(context.endOfInitSegments);
+            if (context.endOfUpdateSegments) {
+                prevForkContext.add(context.endOfUpdateSegments);
+            }
+
+            bodySegments = prevForkContext.makeNext(0, -1);
+        }
+        context.continueDestSegments = context.continueDestSegments || bodySegments;
+        forkContext.replaceHead(bodySegments);
+    },
+
+    /**
+     * Makes a code path segment for the left part of a ForInStatement and a
+     * ForOfStatement.
+     *
+     * @returns {void}
+     */
+    makeForInOfLeft: function() {
+        var context = this.loopContext;
+        var forkContext = this.forkContext;
+        var leftSegments = forkContext.makeDisconnected(-1, -1);
+
+        // Update state.
+        context.prevSegments = forkContext.head;
+        context.leftSegments = context.continueDestSegments = leftSegments;
+        forkContext.replaceHead(leftSegments);
+    },
+
+    /**
+     * Makes a code path segment for the right part of a ForInStatement and a
+     * ForOfStatement.
+     *
+     * @returns {void}
+     */
+    makeForInOfRight: function() {
+        var context = this.loopContext;
+        var forkContext = this.forkContext;
+        var temp = ForkContext.newEmpty(forkContext);
+        temp.add(context.prevSegments);
+        var rightSegments = temp.makeNext(-1, -1);
+
+        // Update state.
+        context.endOfLeftSegments = forkContext.head;
+        forkContext.replaceHead(rightSegments);
+    },
+
+    /**
+     * Makes a code path segment for the body part of a ForInStatement and a
+     * ForOfStatement.
+     *
+     * @returns {void}
+     */
+    makeForInOfBody: function() {
+        var context = this.loopContext;
+        var forkContext = this.forkContext;
+        var temp = ForkContext.newEmpty(forkContext);
+        temp.add(context.endOfLeftSegments);
+        var bodySegments = temp.makeNext(-1, -1);
+
+        // Make a path: `right` -> `left`.
+        makeLooped(this, forkContext.head, context.leftSegments);
+
+        // Update state.
+        context.brokenForkContext.add(forkContext.head);
+        forkContext.replaceHead(bodySegments);
+    },
+
+    //--------------------------------------------------------------------------
+    // Control Statements
+    //--------------------------------------------------------------------------
+
+    /**
+     * Makes a path for a `break` statement.
+     *
+     * It registers the head segment to a context of `break`.
+     * It makes new unreachable segment, then it set the head with the segment.
+     *
+     * @param {string} label - A label of the break statement.
+     * @returns {void}
+     */
+    makeBreak: function(label) {
+        var forkContext = this.forkContext;
+        if (!forkContext.reachable) {
+            return;
+        }
+
+        var context = getBreakContext(this, label);
+        /* istanbul ignore else: foolproof (syntax error) */
+        if (context) {
+            context.brokenForkContext.add(forkContext.head);
+        }
+        forkContext.replaceHead(forkContext.makeUnreachable(-1, -1));
+    },
+
+    /**
+     * Makes a path for a `continue` statement.
+     *
+     * It makes a looping path.
+     * It makes new unreachable segment, then it set the head with the segment.
+     *
+     * @param {string} label - A label of the continue statement.
+     * @returns {void}
+     */
+    makeContinue: function(label) {
+        var forkContext = this.forkContext;
+        if (!forkContext.reachable) {
+            return;
+        }
+
+        var context = getContinueContext(this, label);
+        /* istanbul ignore else: foolproof (syntax error) */
+        if (context) {
+            if (context.continueDestSegments) {
+                makeLooped(this, forkContext.head, context.continueDestSegments);
+
+                // If the context is a for-in/of loop, this effects a break also.
+                if (context.type === "ForInStatement" ||
+                    context.type === "ForOfStatement"
+                ) {
+                    context.brokenForkContext.add(forkContext.head);
+                }
+            } else {
+                context.continueForkContext.add(forkContext.head);
+            }
+        }
+        forkContext.replaceHead(forkContext.makeUnreachable(-1, -1));
+    },
+
+    /**
+     * Makes a path for a `return` statement.
+     *
+     * It registers the head segment to a context of `return`.
+     * It makes new unreachable segment, then it set the head with the segment.
+     *
+     * @returns {void}
+     */
+    makeReturn: function() {
+        var forkContext = this.forkContext;
+        if (forkContext.reachable) {
+            getReturnContext(this).returnedForkContext.add(forkContext.head);
+            forkContext.replaceHead(forkContext.makeUnreachable(-1, -1));
+        }
+    },
+
+    /**
+     * Makes a path for a `throw` statement.
+     *
+     * It registers the head segment to a context of `throw`.
+     * It makes new unreachable segment, then it set the head with the segment.
+     *
+     * @returns {void}
+     */
+    makeThrow: function() {
+        var forkContext = this.forkContext;
+        if (forkContext.reachable) {
+            getThrowContext(this).thrownForkContext.add(forkContext.head);
+            forkContext.replaceHead(forkContext.makeUnreachable(-1, -1));
+        }
+    },
+
+    /**
+     * Makes the final path.
+     * @returns {void}
+     */
+    makeFinal: function() {
+        var segments = this.currentSegments;
+        if (segments.length > 0 && segments[0].reachable) {
+            this.returnedForkContext.add(segments);
+        }
+    }
+};
+
+module.exports = CodePathState;
+
+},{"../util":325,"./code-path-segment":125,"./fork-context":129}],127:[function(require,module,exports){
+/**
+ * @fileoverview A class of the code path.
+ * @author Toru Nagashima
+ * @copyright 2015 Toru Nagashima. All rights reserved.
+ * See LICENSE file in root directory for full license.
+ */
+
+"use strict";
+
+//------------------------------------------------------------------------------
+// Requirements
+//------------------------------------------------------------------------------
+
+var CodePathState = require("./code-path-state");
+var IdGenerator = require("./id-generator");
+
+//------------------------------------------------------------------------------
+// Public Interface
+//------------------------------------------------------------------------------
+
+/**
+ * A code path.
+ *
+ * @constructor
+ * @param {string} id - An identifier.
+ * @param {CodePath|null} upper - The code path of the upper function scope.
+ * @param {function} onLooped - A callback function to notify looping.
+ */
+function CodePath(id, upper, onLooped) {
+    /**
+     * The identifier of this code path.
+     * Rules use it to store additional information of each rule.
+     * @type {string}
+     */
+    this.id = id;
+
+    /**
+     * The code path of the upper function scope.
+     * @type {CodePath|null}
+     */
+    this.upper = upper;
+
+    /**
+     * The code paths of nested function scopes.
+     * @type {CodePath[]}
+     */
+    this.childCodePaths = [];
+
+    // Initializes internal state.
+    Object.defineProperty(
+        this,
+        "internal",
+        {value: new CodePathState(new IdGenerator(id + "_"), onLooped)});
+
+    // Adds this into `childCodePaths` of `upper`.
+    if (upper) {
+        upper.childCodePaths.push(this);
+    }
+}
+
+CodePath.prototype = {
+    constructor: CodePath,
+
+    /**
+     * The initial code path segment.
+     * @type {CodePathSegment}
+     */
+    get initialSegment() {
+        return this.internal.initialSegment;
+    },
+
+    /**
+     * Final code path segments.
+     * This array is a mix of `returnedSegments` and `thrownSegments`.
+     * @type {CodePathSegment[]}
+     */
+    get finalSegments() {
+        return this.internal.finalSegments;
+    },
+
+    /**
+     * Final code path segments which is with `return` statements.
+     * This array contains the last path segment if it's reachable.
+     * Since the reachable last path returns `undefined`.
+     * @type {CodePathSegment[]}
+     */
+    get returnedSegments() {
+        return this.internal.returnedForkContext;
+    },
+
+    /**
+     * Final code path segments which is with `throw` statements.
+     * @type {CodePathSegment[]}
+     */
+    get thrownSegments() {
+        return this.internal.thrownForkContext;
+    },
+
+    /**
+     * Current code path segments.
+     * @type {CodePathSegment[]}
+     */
+    get currentSegments() {
+        return this.internal.currentSegments;
+    }
+};
+
+/**
+ * Gets the state of a given code path.
+ *
+ * @param {CodePath} codePath - A code path to get.
+ * @returns {CodePathState} The state of the code path.
+ */
+CodePath.getState = function getState(codePath) {
+    return codePath.internal;
+};
+
+module.exports = CodePath;
+
+},{"./code-path-state":126,"./id-generator":130}],128:[function(require,module,exports){
+/**
+ * @fileoverview Helpers to debug for code path analysis.
+ * @author Toru Nagashima
+ * @copyright 2015 Toru Nagashima. All rights reserved.
+ * See LICENSE file in root directory for full license.
+ */
+
+"use strict";
+
+//------------------------------------------------------------------------------
+// Requirements
+//------------------------------------------------------------------------------
+
+var debug = require("debug")("eslint:code-path");
+
+//------------------------------------------------------------------------------
+// Helpers
+//------------------------------------------------------------------------------
+
+/**
+ * Gets id of a given segment.
+ * @param {CodePathSegment} segment - A segment to get.
+ * @returns {string} Id of the segment.
+ */
+/* istanbul ignore next */
+function getId(segment) { // eslint-disable-line require-jsdoc
+    return segment.id + (segment.reachable ? "" : "!");
+}
+
+//------------------------------------------------------------------------------
+// Public Interface
+//------------------------------------------------------------------------------
+
+module.exports = {
+    /**
+     * A flag that debug dumping is enabled or not.
+     * @type {boolean}
+     */
+    enabled: debug.enabled,
+
+    /**
+     * Dumps given objects.
+     *
+     * @param {...any} args - objects to dump.
+     * @returns {void}
+     */
+    dump: debug,
+
+    /**
+     * Dumps the current analyzing state.
+     *
+     * @param {ASTNode} node - A node to dump.
+     * @param {CodePathState} state - A state to dump.
+     * @param {boolean} leaving - A flag whether or not it's leaving
+     * @returns {void}
+     */
+    dumpState: !debug.enabled ? debug : /* istanbul ignore next */ function(node, state, leaving) {
+        for (var i = 0; i < state.currentSegments.length; ++i) {
+            var segInternal = state.currentSegments[i].internal;
+            if (leaving) {
+                segInternal.exitNodes.push(node);
+            } else {
+                segInternal.nodes.push(node);
+            }
+        }
+
+        debug(
+            state.currentSegments.map(getId).join(",") + ") " +
+            node.type + (leaving ? ":exit" : "") + "; " +
+            state.forkContextStack.map(function(context) {
+                return "[" + context.segmentsList.map(function(segments) {
+                    return "(" + segments.map(getId).join(",") + ")";
+                }).join(",") + "]";
+            }).join(",")
+        );
+    },
+
+    /**
+     * Dumps a DOT code of a given code path.
+     * The DOT code can be visialized with Graphvis.
+     *
+     * @param {CodePath} codePath - A code path to dump.
+     * @returns {void}
+     * @see http://www.graphviz.org
+     * @see http://www.webgraphviz.com
+     */
+    dumpDot: !debug.enabled ? debug : /* istanbul ignore next */ function(codePath) {
+        var text =
+            "\n" +
+            "digraph {\n" +
+            "node[shape=box,style=\"rounded,filled\",fillcolor=white];\n" +
+            "initial[label=\"\",shape=circle,style=filled,fillcolor=black,width=0.25,height=0.25];\n";
+
+        if (codePath.returnedSegments.length > 0) {
+            text += "final[label=\"\",shape=doublecircle,style=filled,fillcolor=black,width=0.25,height=0.25];\n";
+        }
+        if (codePath.thrownSegments.length > 0) {
+            text += "thrown[label=\"✘\",shape=circle,width=0.3,height=0.3,fixedsize];\n";
+        }
+
+        var traceMap = Object.create(null);
+        var arrows = this.makeDotArrows(codePath, traceMap);
+
+        for (var id in traceMap) { // eslint-disable-line guard-for-in
+            var segment = traceMap[id];
+
+            text += id + "[";
+
+            if (segment.reachable) {
+                text += "label=\"";
+            } else {
+                text += "style=\"rounded,dashed,filled\",fillcolor=\"#FF9800\",label=\"<<unreachable>>\\n";
+            }
+
+            if (segment.internal.nodes.length > 0) {
+                text += segment.internal.nodes.map(function(node) {
+                    switch (node.type) {
+                        case "Identifier": return node.type + " (" + node.name + ")";
+                        case "Literal": return node.type + " (" + node.value + ")";
+                        default: return node.type;
+                    }
+                }).join("\\n");
+            } else if (segment.internal.exitNodes.length > 0) {
+                text += segment.internal.exitNodes.map(function(node) {
+                    switch (node.type) {
+                        case "Identifier": return node.type + ":exit (" + node.name + ")";
+                        case "Literal": return node.type + ":exit (" + node.value + ")";
+                        default: return node.type + ":exit";
+                    }
+                }).join("\\n");
+            } else {
+                text += "????";
+            }
+
+            text += "\"];\n";
+        }
+
+        text += arrows + "\n";
+        text += "}";
+        debug("DOT", text);
+    },
+
+    /**
+     * Makes a DOT code of a given code path.
+     * The DOT code can be visialized with Graphvis.
+     *
+     * @param {CodePath} codePath - A code path to make DOT.
+     * @param {object} traceMap - Optional. A map to check whether or not segments had been done.
+     * @returns {string} A DOT code of the code path.
+     */
+    makeDotArrows: function(codePath, traceMap) {
+        var stack = [[codePath.initialSegment, 0]];
+        var done = traceMap || Object.create(null);
+        var lastId = codePath.initialSegment.id;
+        var text = "initial->" + codePath.initialSegment.id;
+
+        while (stack.length > 0) {
+            var item = stack.pop();
+            var segment = item[0];
+            var index = item[1];
+            if (done[segment.id] && index === 0) {
+                continue;
+            }
+            done[segment.id] = segment;
+
+            var nextSegment = segment.allNextSegments[index];
+            if (!nextSegment) {
+                continue;
+            }
+
+            if (lastId === segment.id) {
+                text += "->" + nextSegment.id;
+            } else {
+                text += ";\n" + segment.id + "->" + nextSegment.id;
+            }
+            lastId = nextSegment.id;
+
+            stack.unshift([segment, 1 + index]);
+            stack.push([nextSegment, 0]);
+        }
+
+        codePath.returnedSegments.forEach(function(finalSegment) {
+            if (lastId === finalSegment.id) {
+                text += "->final";
+            } else {
+                text += ";\n" + finalSegment.id + "->final";
+            }
+            lastId = null;
+        });
+
+        codePath.thrownSegments.forEach(function(finalSegment) {
+            if (lastId === finalSegment.id) {
+                text += "->thrown";
+            } else {
+                text += ";\n" + finalSegment.id + "->thrown";
+            }
+            lastId = null;
+        });
+
+        return text + ";";
+    }
+};
+
+},{"debug":8}],129:[function(require,module,exports){
+/**
+ * @fileoverview A class to operate forking.
+ *
+ * This is state of forking.
+ * This has a fork list and manages it.
+ *
+ * @author Toru Nagashima
+ * @copyright 2015 Toru Nagashima. All rights reserved.
+ * See LICENSE file in root directory for full license.
+ */
+
+"use strict";
+
+//------------------------------------------------------------------------------
+// Requirements
+//------------------------------------------------------------------------------
+
+var assert = require("assert"),
+    CodePathSegment = require("./code-path-segment");
+
+//------------------------------------------------------------------------------
+// Helpers
+//------------------------------------------------------------------------------
+
+/**
+ * Gets whether or not a given segment is reachable.
+ *
+ * @param {CodePathSegment} segment - A segment to get.
+ * @returns {boolean} `true` if the segment is reachable.
+ */
+function isReachable(segment) {
+    return segment.reachable;
+}
+
+/**
+ * Creates new segments from the specific range of `context.segmentsList`.
+ *
+ * When `context.segmentsList` is `[[a, b], [c, d], [e, f]]`, `begin` is `0`, and
+ * `end` is `-1`, this creates `[g, h]`. This `g` is from `a`, `c`, and `e`.
+ * This `h` is from `b`, `d`, and `f`.
+ *
+ * @param {ForkContext} context - An instance.
+ * @param {number} begin - The first index of the previous segments.
+ * @param {number} end - The last index of the previous segments.
+ * @param {function} create - A factory function of new segments.
+ * @returns {CodePathSegment[]} New segments.
+ */
+function makeSegments(context, begin, end, create) {
+    if (begin < 0) {
+        begin = context.segmentsList.length + begin;
+    }
+    if (end < 0) {
+        end = context.segmentsList.length + end;
+    }
+
+    var segments = [];
+    for (var i = 0; i < context.count; ++i) {
+        var allPrevSegments = [];
+
+        for (var j = begin; j <= end; ++j) {
+            allPrevSegments.push(context.segmentsList[j][i]);
+        }
+
+        segments.push(create(context.idGenerator.next(), allPrevSegments));
+    }
+
+    return segments;
+}
+
+/**
+ * `segments` becomes doubly in a `finally` block. Then if a code path exits by a
+ * control statement (such as `break`, `continue`) from the `finally` block, the
+ * destination's segments may be half of the source segments. In that case, this
+ * merges segments.
+ *
+ * @param {ForkContext} context - An instance.
+ * @param {CodePathSegment[]} segments - Segments to merge.
+ * @returns {CodePathSegment[]} The merged segments.
+ */
+function mergeExtraSegments(context, segments) {
+    while (segments.length > context.count) {
+        var merged = [];
+        for (var i = 0, length = segments.length / 2 | 0; i < length; ++i) {
+            merged.push(CodePathSegment.newNext(
+                context.idGenerator.next(),
+                [segments[i], segments[i + length]]
+            ));
+        }
+        segments = merged;
+    }
+    return segments;
+}
+
+//------------------------------------------------------------------------------
+// Public Interface
+//------------------------------------------------------------------------------
+
+/**
+ * A class to manage forking.
+ *
+ * @constructor
+ * @param {IdGenerator} idGenerator - An identifier generator for segments.
+ * @param {number} count - A number of parallel segments.
+ */
+function ForkContext(idGenerator, count) {
+    this.idGenerator = idGenerator;
+    this.count = count;
+    this.segmentsList = [];
+}
+
+ForkContext.prototype = {
+    constructor: ForkContext,
+
+    /**
+     * The head segments.
+     * @type {CodePathSegment[]}
+     */
+    get head() {
+        var list = this.segmentsList;
+        return list.length === 0 ? [] : list[list.length - 1];
+    },
+
+    /**
+     * A flag which shows empty.
+     * @type {boolean}
+     */
+    get empty() {
+        return this.segmentsList.length === 0;
+    },
+
+    /**
+     * A flag which shows reachable.
+     * @type {boolean}
+     */
+    get reachable() {
+        var segments = this.head;
+        return segments.length > 0 && segments.some(isReachable);
+    },
+
+    /**
+     * Creates new segments from this context.
+     *
+     * @param {number} begin - The first index of previous segments.
+     * @param {number} end - The last index of previous segments.
+     * @returns {CodePathSegment[]} New segments.
+     */
+    makeNext: function(begin, end) {
+        return makeSegments(this, begin, end, CodePathSegment.newNext);
+    },
+
+    /**
+     * Creates new segments from this context.
+     * The new segments is always unreachable.
+     *
+     * @param {number} begin - The first index of previous segments.
+     * @param {number} end - The last index of previous segments.
+     * @returns {CodePathSegment[]} New segments.
+     */
+    makeUnreachable: function(begin, end) {
+        return makeSegments(this, begin, end, CodePathSegment.newUnreachable);
+    },
+
+    /**
+     * Creates new segments from this context.
+     * The new segments don't have connections for previous segments.
+     * But these inherit the reachable flag from this context.
+     *
+     * @param {number} begin - The first index of previous segments.
+     * @param {number} end - The last index of previous segments.
+     * @returns {CodePathSegment[]} New segments.
+     */
+    makeDisconnected: function(begin, end) {
+        return makeSegments(this, begin, end, CodePathSegment.newDisconnected);
+    },
+
+    /**
+     * Adds segments into this context.
+     * The added segments become the head.
+     *
+     * @param {CodePathSegment[]} segments - Segments to add.
+     * @returns {void}
+     */
+    add: function(segments) {
+        assert(segments.length >= this.count, segments.length + " >= " + this.count);
+
+        this.segmentsList.push(mergeExtraSegments(this, segments));
+    },
+
+    /**
+     * Replaces the head segments with given segments.
+     * The current head segments are removed.
+     *
+     * @param {CodePathSegment[]} segments - Segments to add.
+     * @returns {void}
+     */
+    replaceHead: function(segments) {
+        assert(segments.length >= this.count, segments.length + " >= " + this.count);
+
+        this.segmentsList.splice(-1, 1, mergeExtraSegments(this, segments));
+    },
+
+    /**
+     * Adds all segments of a given fork context into this context.
+     *
+     * @param {ForkContext} context - A fork context to add.
+     * @returns {void}
+     */
+    addAll: function(context) {
+        assert(context.count === this.count);
+
+        var source = context.segmentsList;
+        for (var i = 0; i < source.length; ++i) {
+            this.segmentsList.push(source[i]);
+        }
+    },
+
+    /**
+     * Clears all secments in this context.
+     *
+     * @returns {void}
+     */
+    clear: function() {
+        this.segmentsList = [];
+    }
+};
+
+/**
+ * Creates the root fork context.
+ *
+ * @param {IdGenerator} idGenerator - An identifier generator for segments.
+ * @returns {ForkContext} New fork context.
+ */
+ForkContext.newRoot = function(idGenerator) {
+    var context = new ForkContext(idGenerator, 1);
+
+    context.add([CodePathSegment.newRoot(idGenerator.next())]);
+
+    return context;
+};
+
+/**
+ * Creates an empty fork context preceded by a given context.
+ *
+ * @param {ForkContext} parentContext - The parent fork context.
+ * @param {boolean} forkLeavingPath - A flag which shows inside of `finally` block.
+ * @returns {ForkContext} New fork context.
+ */
+ForkContext.newEmpty = function(parentContext, forkLeavingPath) {
+    return new ForkContext(
+        parentContext.idGenerator,
+        (forkLeavingPath ? 2 : 1) * parentContext.count);
+};
+
+module.exports = ForkContext;
+
+},{"./code-path-segment":125,"assert":5}],130:[function(require,module,exports){
+/**
+ * @fileoverview A class of identifiers generator for code path segments.
+ *
+ * Each rule uses the identifier of code path segments to store additional
+ * information of the code path.
+ *
+ * @author Toru Nagashima
+ * @copyright 2015 Toru Nagashima. All rights reserved.
+ * See LICENSE file in root directory for full license.
+ */
+
+"use strict";
+
+//------------------------------------------------------------------------------
+// Public Interface
+//------------------------------------------------------------------------------
+
+/**
+ * A generator for unique ids.
+ *
+ * @constructor
+ * @param {string} prefix - Optional. A prefix of generated ids.
+ */
+function IdGenerator(prefix) {
+    this.prefix = String(prefix);
+    this.n = 0;
+}
+
+/**
+ * Generates id.
+ *
+ * @returns {string} A generated id.
+ */
+IdGenerator.prototype.next = function() {
+    this.n = 1 + this.n | 0;
+    /* istanbul ignore if */
+    if (this.n < 0) {
+        this.n = 1;
+    }
+    return this.prefix + this.n;
+};
+
+module.exports = IdGenerator;
+
+},{}],131:[function(require,module,exports){
 /**
  * @fileoverview Validates configs.
  * @author Brandon Mills
@@ -20779,7 +24204,7 @@ module.exports = {
     validateRuleOptions: validateRuleOptions
 };
 
-},{"../conf/environments":2,"./rules":158,"is-my-json-valid":144}],155:[function(require,module,exports){
+},{"../conf/environments":2,"./rules":135,"is-my-json-valid":111}],132:[function(require,module,exports){
 /**
  * @fileoverview Main ESLint object.
  * @author Nicholas C. Zakas
@@ -20806,7 +24231,8 @@ var estraverse = require("estraverse-fb"),
     CommentEventGenerator = require("./util/comment-event-generator"),
     EventEmitter = require("events").EventEmitter,
     validator = require("./config-validator"),
-    replacements = require("../conf/replacements.json");
+    replacements = require("../conf/replacements.json"),
+    CodePathAnalyzer = require("./code-path-analysis/code-path-analyzer");
 
 var DEFAULT_PARSER = require("../conf/eslint.json").parser;
 
@@ -21551,6 +24977,7 @@ module.exports = (function() {
             }
 
             var eventGenerator = new NodeEventGenerator(api);
+            eventGenerator = new CodePathAnalyzer(eventGenerator);
             eventGenerator = new CommentEventGenerator(eventGenerator, sourceCode);
 
             /*
@@ -21567,7 +24994,6 @@ module.exports = (function() {
                     eventGenerator.leaveNode(node);
                 }
             });
-
         }
 
         // sort by line and column
@@ -21827,7 +25253,7 @@ module.exports = (function() {
 
 }());
 
-},{"../conf/blank-script.json":1,"../conf/environments":2,"../conf/eslint.json":3,"../conf/replacements.json":4,"./config-validator":154,"./rule-context":157,"./rules":158,"./timing":345,"./util":347,"./util/comment-event-generator":348,"./util/node-event-generator":350,"./util/source-code":352,"escope":24,"estraverse-fb":133,"events":8,"object-assign":150}],156:[function(require,module,exports){
+},{"../conf/blank-script.json":1,"../conf/environments":2,"../conf/eslint.json":3,"../conf/replacements.json":4,"./code-path-analysis/code-path-analyzer":124,"./config-validator":131,"./rule-context":134,"./rules":135,"./timing":323,"./util":325,"./util/comment-event-generator":326,"./util/node-event-generator":328,"./util/source-code":330,"escope":82,"estraverse-fb":95,"events":104,"object-assign":116}],133:[function(require,module,exports){
 module.exports = function() {
     var rules = Object.create(null);
     rules["accessor-pairs"] = require("./rules/accessor-pairs");
@@ -21877,6 +25303,7 @@ module.exports = function() {
     rules["newline-after-var"] = require("./rules/newline-after-var");
     rules["no-alert"] = require("./rules/no-alert");
     rules["no-array-constructor"] = require("./rules/no-array-constructor");
+    rules["no-arrow-condition"] = require("./rules/no-arrow-condition");
     rules["no-bitwise"] = require("./rules/no-bitwise");
     rules["no-caller"] = require("./rules/no-caller");
     rules["no-catch-shadow"] = require("./rules/no-catch-shadow");
@@ -22019,7 +25446,7 @@ module.exports = function() {
 
     return rules;
 };
-},{"./rules/accessor-pairs":159,"./rules/array-bracket-spacing":160,"./rules/arrow-parens":161,"./rules/arrow-spacing":162,"./rules/block-scoped-var":163,"./rules/block-spacing":164,"./rules/brace-style":165,"./rules/callback-return":166,"./rules/camelcase":167,"./rules/comma-dangle":168,"./rules/comma-spacing":169,"./rules/comma-style":170,"./rules/complexity":171,"./rules/computed-property-spacing":172,"./rules/consistent-return":173,"./rules/consistent-this":174,"./rules/constructor-super":175,"./rules/curly":176,"./rules/default-case":177,"./rules/dot-location":178,"./rules/dot-notation":179,"./rules/eol-last":180,"./rules/eqeqeq":181,"./rules/func-names":182,"./rules/func-style":183,"./rules/generator-star-spacing":184,"./rules/global-require":185,"./rules/guard-for-in":186,"./rules/handle-callback-err":187,"./rules/id-length":188,"./rules/id-match":189,"./rules/indent":190,"./rules/init-declarations":191,"./rules/jsx-quotes":192,"./rules/key-spacing":193,"./rules/linebreak-style":194,"./rules/lines-around-comment":195,"./rules/max-depth":196,"./rules/max-len":197,"./rules/max-nested-callbacks":198,"./rules/max-params":199,"./rules/max-statements":200,"./rules/new-cap":201,"./rules/new-parens":202,"./rules/newline-after-var":203,"./rules/no-alert":204,"./rules/no-array-constructor":205,"./rules/no-bitwise":206,"./rules/no-caller":207,"./rules/no-catch-shadow":208,"./rules/no-class-assign":209,"./rules/no-cond-assign":210,"./rules/no-console":211,"./rules/no-const-assign":212,"./rules/no-constant-condition":213,"./rules/no-continue":214,"./rules/no-control-regex":215,"./rules/no-debugger":216,"./rules/no-delete-var":217,"./rules/no-div-regex":218,"./rules/no-dupe-args":219,"./rules/no-dupe-class-members":220,"./rules/no-dupe-keys":221,"./rules/no-duplicate-case":222,"./rules/no-else-return":223,"./rules/no-empty":227,"./rules/no-empty-character-class":224,"./rules/no-empty-label":225,"./rules/no-empty-pattern":226,"./rules/no-eq-null":228,"./rules/no-eval":229,"./rules/no-ex-assign":230,"./rules/no-extend-native":231,"./rules/no-extra-bind":232,"./rules/no-extra-boolean-cast":233,"./rules/no-extra-parens":234,"./rules/no-extra-semi":235,"./rules/no-fallthrough":236,"./rules/no-floating-decimal":237,"./rules/no-func-assign":238,"./rules/no-implicit-coercion":239,"./rules/no-implied-eval":240,"./rules/no-inline-comments":241,"./rules/no-inner-declarations":242,"./rules/no-invalid-regexp":243,"./rules/no-invalid-this":244,"./rules/no-irregular-whitespace":245,"./rules/no-iterator":246,"./rules/no-label-var":247,"./rules/no-labels":248,"./rules/no-lone-blocks":249,"./rules/no-lonely-if":250,"./rules/no-loop-func":251,"./rules/no-magic-numbers":252,"./rules/no-mixed-requires":253,"./rules/no-mixed-spaces-and-tabs":254,"./rules/no-multi-spaces":255,"./rules/no-multi-str":256,"./rules/no-multiple-empty-lines":257,"./rules/no-native-reassign":258,"./rules/no-negated-condition":259,"./rules/no-negated-in-lhs":260,"./rules/no-nested-ternary":261,"./rules/no-new":266,"./rules/no-new-func":262,"./rules/no-new-object":263,"./rules/no-new-require":264,"./rules/no-new-wrappers":265,"./rules/no-obj-calls":267,"./rules/no-octal":269,"./rules/no-octal-escape":268,"./rules/no-param-reassign":270,"./rules/no-path-concat":271,"./rules/no-plusplus":272,"./rules/no-process-env":273,"./rules/no-process-exit":274,"./rules/no-proto":275,"./rules/no-redeclare":276,"./rules/no-regex-spaces":277,"./rules/no-restricted-modules":278,"./rules/no-restricted-syntax":279,"./rules/no-return-assign":280,"./rules/no-script-url":281,"./rules/no-self-compare":282,"./rules/no-sequences":283,"./rules/no-shadow":285,"./rules/no-shadow-restricted-names":284,"./rules/no-spaced-func":286,"./rules/no-sparse-arrays":287,"./rules/no-sync":288,"./rules/no-ternary":289,"./rules/no-this-before-super":290,"./rules/no-throw-literal":291,"./rules/no-trailing-spaces":292,"./rules/no-undef":294,"./rules/no-undef-init":293,"./rules/no-undefined":295,"./rules/no-underscore-dangle":296,"./rules/no-unexpected-multiline":297,"./rules/no-unneeded-ternary":298,"./rules/no-unreachable":299,"./rules/no-unused-expressions":300,"./rules/no-unused-vars":301,"./rules/no-use-before-define":302,"./rules/no-useless-call":303,"./rules/no-useless-concat":304,"./rules/no-var":305,"./rules/no-void":306,"./rules/no-warning-comments":307,"./rules/no-with":308,"./rules/object-curly-spacing":309,"./rules/object-shorthand":310,"./rules/one-var":311,"./rules/operator-assignment":312,"./rules/operator-linebreak":313,"./rules/padded-blocks":314,"./rules/prefer-arrow-callback":315,"./rules/prefer-const":316,"./rules/prefer-reflect":317,"./rules/prefer-spread":318,"./rules/prefer-template":319,"./rules/quote-props":320,"./rules/quotes":321,"./rules/radix":322,"./rules/require-jsdoc":323,"./rules/require-yield":324,"./rules/semi":326,"./rules/semi-spacing":325,"./rules/sort-vars":327,"./rules/space-after-keywords":328,"./rules/space-before-blocks":329,"./rules/space-before-function-paren":330,"./rules/space-before-keywords":331,"./rules/space-in-parens":332,"./rules/space-infix-ops":333,"./rules/space-return-throw-case":334,"./rules/space-unary-ops":335,"./rules/spaced-comment":336,"./rules/strict":337,"./rules/use-isnan":338,"./rules/valid-jsdoc":339,"./rules/valid-typeof":340,"./rules/vars-on-top":341,"./rules/wrap-iife":342,"./rules/wrap-regex":343,"./rules/yoda":344}],157:[function(require,module,exports){
+},{"./rules/accessor-pairs":136,"./rules/array-bracket-spacing":137,"./rules/arrow-parens":138,"./rules/arrow-spacing":139,"./rules/block-scoped-var":140,"./rules/block-spacing":141,"./rules/brace-style":142,"./rules/callback-return":143,"./rules/camelcase":144,"./rules/comma-dangle":145,"./rules/comma-spacing":146,"./rules/comma-style":147,"./rules/complexity":148,"./rules/computed-property-spacing":149,"./rules/consistent-return":150,"./rules/consistent-this":151,"./rules/constructor-super":152,"./rules/curly":153,"./rules/default-case":154,"./rules/dot-location":155,"./rules/dot-notation":156,"./rules/eol-last":157,"./rules/eqeqeq":158,"./rules/func-names":159,"./rules/func-style":160,"./rules/generator-star-spacing":161,"./rules/global-require":162,"./rules/guard-for-in":163,"./rules/handle-callback-err":164,"./rules/id-length":165,"./rules/id-match":166,"./rules/indent":167,"./rules/init-declarations":168,"./rules/jsx-quotes":169,"./rules/key-spacing":170,"./rules/linebreak-style":171,"./rules/lines-around-comment":172,"./rules/max-depth":173,"./rules/max-len":174,"./rules/max-nested-callbacks":175,"./rules/max-params":176,"./rules/max-statements":177,"./rules/new-cap":178,"./rules/new-parens":179,"./rules/newline-after-var":180,"./rules/no-alert":181,"./rules/no-array-constructor":182,"./rules/no-arrow-condition":183,"./rules/no-bitwise":184,"./rules/no-caller":185,"./rules/no-catch-shadow":186,"./rules/no-class-assign":187,"./rules/no-cond-assign":188,"./rules/no-console":189,"./rules/no-const-assign":190,"./rules/no-constant-condition":191,"./rules/no-continue":192,"./rules/no-control-regex":193,"./rules/no-debugger":194,"./rules/no-delete-var":195,"./rules/no-div-regex":196,"./rules/no-dupe-args":197,"./rules/no-dupe-class-members":198,"./rules/no-dupe-keys":199,"./rules/no-duplicate-case":200,"./rules/no-else-return":201,"./rules/no-empty":205,"./rules/no-empty-character-class":202,"./rules/no-empty-label":203,"./rules/no-empty-pattern":204,"./rules/no-eq-null":206,"./rules/no-eval":207,"./rules/no-ex-assign":208,"./rules/no-extend-native":209,"./rules/no-extra-bind":210,"./rules/no-extra-boolean-cast":211,"./rules/no-extra-parens":212,"./rules/no-extra-semi":213,"./rules/no-fallthrough":214,"./rules/no-floating-decimal":215,"./rules/no-func-assign":216,"./rules/no-implicit-coercion":217,"./rules/no-implied-eval":218,"./rules/no-inline-comments":219,"./rules/no-inner-declarations":220,"./rules/no-invalid-regexp":221,"./rules/no-invalid-this":222,"./rules/no-irregular-whitespace":223,"./rules/no-iterator":224,"./rules/no-label-var":225,"./rules/no-labels":226,"./rules/no-lone-blocks":227,"./rules/no-lonely-if":228,"./rules/no-loop-func":229,"./rules/no-magic-numbers":230,"./rules/no-mixed-requires":231,"./rules/no-mixed-spaces-and-tabs":232,"./rules/no-multi-spaces":233,"./rules/no-multi-str":234,"./rules/no-multiple-empty-lines":235,"./rules/no-native-reassign":236,"./rules/no-negated-condition":237,"./rules/no-negated-in-lhs":238,"./rules/no-nested-ternary":239,"./rules/no-new":244,"./rules/no-new-func":240,"./rules/no-new-object":241,"./rules/no-new-require":242,"./rules/no-new-wrappers":243,"./rules/no-obj-calls":245,"./rules/no-octal":247,"./rules/no-octal-escape":246,"./rules/no-param-reassign":248,"./rules/no-path-concat":249,"./rules/no-plusplus":250,"./rules/no-process-env":251,"./rules/no-process-exit":252,"./rules/no-proto":253,"./rules/no-redeclare":254,"./rules/no-regex-spaces":255,"./rules/no-restricted-modules":256,"./rules/no-restricted-syntax":257,"./rules/no-return-assign":258,"./rules/no-script-url":259,"./rules/no-self-compare":260,"./rules/no-sequences":261,"./rules/no-shadow":263,"./rules/no-shadow-restricted-names":262,"./rules/no-spaced-func":264,"./rules/no-sparse-arrays":265,"./rules/no-sync":266,"./rules/no-ternary":267,"./rules/no-this-before-super":268,"./rules/no-throw-literal":269,"./rules/no-trailing-spaces":270,"./rules/no-undef":272,"./rules/no-undef-init":271,"./rules/no-undefined":273,"./rules/no-underscore-dangle":274,"./rules/no-unexpected-multiline":275,"./rules/no-unneeded-ternary":276,"./rules/no-unreachable":277,"./rules/no-unused-expressions":278,"./rules/no-unused-vars":279,"./rules/no-use-before-define":280,"./rules/no-useless-call":281,"./rules/no-useless-concat":282,"./rules/no-var":283,"./rules/no-void":284,"./rules/no-warning-comments":285,"./rules/no-with":286,"./rules/object-curly-spacing":287,"./rules/object-shorthand":288,"./rules/one-var":289,"./rules/operator-assignment":290,"./rules/operator-linebreak":291,"./rules/padded-blocks":292,"./rules/prefer-arrow-callback":293,"./rules/prefer-const":294,"./rules/prefer-reflect":295,"./rules/prefer-spread":296,"./rules/prefer-template":297,"./rules/quote-props":298,"./rules/quotes":299,"./rules/radix":300,"./rules/require-jsdoc":301,"./rules/require-yield":302,"./rules/semi":304,"./rules/semi-spacing":303,"./rules/sort-vars":305,"./rules/space-after-keywords":306,"./rules/space-before-blocks":307,"./rules/space-before-function-paren":308,"./rules/space-before-keywords":309,"./rules/space-in-parens":310,"./rules/space-infix-ops":311,"./rules/space-return-throw-case":312,"./rules/space-unary-ops":313,"./rules/spaced-comment":314,"./rules/strict":315,"./rules/use-isnan":316,"./rules/valid-jsdoc":317,"./rules/valid-typeof":318,"./rules/vars-on-top":319,"./rules/wrap-iife":320,"./rules/wrap-regex":321,"./rules/yoda":322}],134:[function(require,module,exports){
 /**
  * @fileoverview RuleContext utility for rules
  * @author Nicholas C. Zakas
@@ -22184,7 +25611,7 @@ RuleContext.prototype = {
 
 module.exports = RuleContext;
 
-},{"./util/rule-fixer":351}],158:[function(require,module,exports){
+},{"./util/rule-fixer":329}],135:[function(require,module,exports){
 /**
  * @fileoverview Defines a storage for rules.
  * @author Nicholas C. Zakas
@@ -22278,7 +25705,7 @@ exports.testClear = function() {
 // loads built-in rules
 load();
 
-},{"./load-rules":156}],159:[function(require,module,exports){
+},{"./load-rules":133}],136:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag wrapping non-iife in parens
  * @author Gyandeep Singh
@@ -22425,7 +25852,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],160:[function(require,module,exports){
+},{}],137:[function(require,module,exports){
 /**
  * @fileoverview Disallows or enforces spaces inside of array brackets.
  * @author Jamund Ferguson
@@ -22544,7 +25971,7 @@ module.exports = function(context) {
     * @returns {boolean} Whether or not the node is an object type.
     */
     function isObjectType(node) {
-        return node.type === "ObjectExpression" || node.type === "ObjectPattern";
+        return node && (node.type === "ObjectExpression" || node.type === "ObjectPattern");
     }
 
     /**
@@ -22553,7 +25980,7 @@ module.exports = function(context) {
     * @returns {boolean} Whether or not the node is an array type.
     */
     function isArrayType(node) {
-        return node.type === "ArrayExpression" || node.type === "ArrayPattern";
+        return node && (node.type === "ArrayExpression" || node.type === "ArrayPattern");
     }
 
     /**
@@ -22636,7 +26063,7 @@ module.exports.schema = [
     }
 ];
 
-},{"../ast-utils":153}],161:[function(require,module,exports){
+},{"../ast-utils":123}],138:[function(require,module,exports){
 /**
  * @fileoverview Rule to require parens in arrow function arguments.
  * @author Jxck
@@ -22690,7 +26117,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],162:[function(require,module,exports){
+},{}],139:[function(require,module,exports){
 /**
  * @fileoverview Rule to require parens in arrow function arguments.
  * @author Jxck
@@ -22816,7 +26243,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],163:[function(require,module,exports){
+},{}],140:[function(require,module,exports){
 /**
  * @fileoverview Rule to check for "block scoped" variables by binding context
  * @author Matt DuVall <http://www.mattduvall.com>
@@ -22960,7 +26387,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],164:[function(require,module,exports){
+},{}],141:[function(require,module,exports){
 /**
  * @fileoverview A rule to disallow or enforce spaces inside of single line blocks.
  * @author Toru Nagashima
@@ -23076,7 +26503,7 @@ module.exports.schema = [
     {enum: ["always", "never"]}
 ];
 
-},{"../ast-utils":153}],165:[function(require,module,exports){
+},{"../ast-utils":123}],142:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag block statements that do not use the one true brace style
  * @author Ian Christian Myers
@@ -23305,7 +26732,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],166:[function(require,module,exports){
+},{}],143:[function(require,module,exports){
 /**
  * @fileoverview Enforce return after a callback.
  * @author Jamund Ferguson
@@ -23449,7 +26876,7 @@ module.exports.schema = [{
     items: { type: "string" }
 }];
 
-},{}],167:[function(require,module,exports){
+},{}],144:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag non-camelcased identifiers
  * @author Nicholas C. Zakas
@@ -23562,7 +26989,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],168:[function(require,module,exports){
+},{}],145:[function(require,module,exports){
 /**
  * @fileoverview Rule to forbid or enforce dangling commas.
  * @author Ian Christian Myers
@@ -23772,7 +27199,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],169:[function(require,module,exports){
+},{}],146:[function(require,module,exports){
 /**
  * @fileoverview Comma spacing - validates spacing before and after comma
  * @author Vignesh Anand aka vegetableman.
@@ -23962,7 +27389,7 @@ module.exports.schema = [
     }
 ];
 
-},{"../ast-utils":153}],170:[function(require,module,exports){
+},{"../ast-utils":123}],147:[function(require,module,exports){
 /**
  * @fileoverview Comma style - enforces comma styles of two types: last and first
  * @author Vignesh Anand aka vegetableman
@@ -24150,7 +27577,7 @@ module.exports.schema = [
     }
 ];
 
-},{"../ast-utils":153}],171:[function(require,module,exports){
+},{"../ast-utils":123}],148:[function(require,module,exports){
 /**
  * @fileoverview Counts the cyclomatic complexity of each function of the script. See http://en.wikipedia.org/wiki/Cyclomatic_complexity.
  * Counts the number of if, conditional, for, whilte, try, switch/case,
@@ -24273,7 +27700,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],172:[function(require,module,exports){
+},{}],149:[function(require,module,exports){
 /**
  * @fileoverview Disallows or enforces spaces inside computed properties.
  * @author Jamund Ferguson
@@ -24428,7 +27855,7 @@ module.exports.schema = [
     }
 ];
 
-},{"../ast-utils":153}],173:[function(require,module,exports){
+},{"../ast-utils":123}],150:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag consistent return values
  * @author Nicholas C. Zakas
@@ -24505,7 +27932,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],174:[function(require,module,exports){
+},{}],151:[function(require,module,exports){
 /**
  * @fileoverview Rule to enforce consistent naming of "this" context variables
  * @author Raphael Pigulla
@@ -24626,7 +28053,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],175:[function(require,module,exports){
+},{}],152:[function(require,module,exports){
 /**
  * @fileoverview A rule to verify `super()` callings in constructor.
  * @author Toru Nagashima
@@ -24736,7 +28163,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],176:[function(require,module,exports){
+},{}],153:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag statements without curly braces
  * @author Nicholas C. Zakas
@@ -25002,7 +28429,7 @@ module.exports.schema = {
     ]
 };
 
-},{"../ast-utils":153}],177:[function(require,module,exports){
+},{"../ast-utils":123}],154:[function(require,module,exports){
 /**
  * @fileoverview require default case in switch statements
  * @author Aliaksei Shytkin
@@ -25070,7 +28497,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],178:[function(require,module,exports){
+},{}],155:[function(require,module,exports){
 /**
  * @fileoverview Validates newlines before and after dots
  * @author Greg Cochard
@@ -25132,7 +28559,7 @@ module.exports.schema = [
     }
 ];
 
-},{"../ast-utils":153}],179:[function(require,module,exports){
+},{"../ast-utils":123}],156:[function(require,module,exports){
 /**
  * @fileoverview Rule to warn about using dot notation instead of square bracket notation when possible.
  * @author Josh Perez
@@ -25193,7 +28620,7 @@ module.exports.schema = [
     }
 ];
 
-},{"../util/keywords":349}],180:[function(require,module,exports){
+},{"../util/keywords":327}],157:[function(require,module,exports){
 /**
  * @fileoverview Require file to end with single newline.
  * @author Nodeca Team <https://github.com/nodeca>
@@ -25214,8 +28641,10 @@ module.exports = function(context) {
 
         "Program": function checkBadEOF(node) {
             // Get the whole source code, not for node only.
-            var src = context.getSource(), location = {column: 1};
-
+            var src = context.getSource(),
+                location = {column: 1},
+                linebreakStyle = context.options[0] || "unix",
+                linebreak = linebreakStyle === "unix" ? "\n" : "\r\n";
             if (src.length === 0) {
                 return;
             }
@@ -25228,7 +28657,7 @@ module.exports = function(context) {
                     loc: location,
                     message: "Newline required at end of file but not found.",
                     fix: function(fixer) {
-                        return fixer.insertTextAfterRange([0, src.length], "\n");
+                        return fixer.insertTextAfterRange([0, src.length], linebreak);
                     }
                 });
             }
@@ -25238,9 +28667,13 @@ module.exports = function(context) {
 
 };
 
-module.exports.schema = [];
+module.exports.schema = [
+    {
+        "enum": ["unix", "windows"]
+    }
+];
 
-},{}],181:[function(require,module,exports){
+},{}],158:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag statements that use != and == instead of !== and ===
  * @author Nicholas C. Zakas
@@ -25347,7 +28780,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],182:[function(require,module,exports){
+},{}],159:[function(require,module,exports){
 /**
  * @fileoverview Rule to warn when a function expression does not have a name.
  * @author Kyle T. Nunery
@@ -25394,7 +28827,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],183:[function(require,module,exports){
+},{}],160:[function(require,module,exports){
 /**
  * @fileoverview Rule to enforce a particular function style
  * @author Nicholas C. Zakas
@@ -25480,7 +28913,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],184:[function(require,module,exports){
+},{}],161:[function(require,module,exports){
 /**
  * @fileoverview Rule to check the spacing around the * in generator functions.
  * @author Jamund Ferguson
@@ -25596,7 +29029,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],185:[function(require,module,exports){
+},{}],162:[function(require,module,exports){
 /**
  * @fileoverview Rule for disallowing require() outside of the top-level module context
  * @author Jamund Ferguson
@@ -25633,7 +29066,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],186:[function(require,module,exports){
+},{}],163:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag for-in loops without if statements inside
  * @author Nicholas C. Zakas
@@ -25667,7 +29100,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],187:[function(require,module,exports){
+},{}],164:[function(require,module,exports){
 /**
  * @fileoverview Ensure handling of errors when we know they exist.
  * @author Jamund Ferguson
@@ -25750,7 +29183,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],188:[function(require,module,exports){
+},{}],165:[function(require,module,exports){
 /**
  * @fileoverview Rule that warns when identifier names are shorter or longer
  *               than the values provided in configuration.
@@ -25858,7 +29291,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],189:[function(require,module,exports){
+},{}],166:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag non-matching identifiers
  * @author Matthieu Larcher
@@ -25989,7 +29422,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],190:[function(require,module,exports){
+},{}],167:[function(require,module,exports){
 /**
  * @fileoverview This option sets a specific tab width for your code
 
@@ -26708,7 +30141,7 @@ module.exports.schema = [
     }
 ];
 
-},{"object-assign":150,"util":12}],191:[function(require,module,exports){
+},{"object-assign":116,"util":121}],168:[function(require,module,exports){
 /**
  * @fileoverview A rule to control the style of variable initializations.
  * @author Colin Ihrig
@@ -26830,7 +30263,7 @@ module.exports.schema = {
     ]
 };
 
-},{}],192:[function(require,module,exports){
+},{}],169:[function(require,module,exports){
 /**
  * @fileoverview A rule to ensure consistent quotes used in jsx syntax.
  * @author Mathias Schreck <https://github.com/lo1tuma>
@@ -26895,7 +30328,7 @@ module.exports.schema = [
     }
 ];
 
-},{"../ast-utils":153}],193:[function(require,module,exports){
+},{"../ast-utils":123}],170:[function(require,module,exports){
 /**
  * @fileoverview Rule to specify spacing of object literal keys and values
  * @author Brandon Mills
@@ -27236,7 +30669,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],194:[function(require,module,exports){
+},{}],171:[function(require,module,exports){
 /**
  * @fileoverview Rule to forbid mixing LF and LFCR line breaks.
  * @author Erik Mueller
@@ -27282,7 +30715,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],195:[function(require,module,exports){
+},{}],172:[function(require,module,exports){
 /**
  * @fileoverview Enforces empty lines around comments.
  * @author Jamund Ferguson
@@ -27598,7 +31031,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],196:[function(require,module,exports){
+},{}],173:[function(require,module,exports){
 /**
  * @fileoverview A rule to set the maximum depth block can be nested in a function.
  * @author Ian Christian Myers
@@ -27710,7 +31143,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],197:[function(require,module,exports){
+},{}],174:[function(require,module,exports){
 /**
  * @fileoverview Rule to check for max length on a line.
  * @author Matt DuVall <http://www.mattduvall.com>
@@ -27877,7 +31310,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],198:[function(require,module,exports){
+},{}],175:[function(require,module,exports){
 /**
  * @fileoverview Rule to enforce a maximum number of nested callbacks.
  * @author Ian Christian Myers
@@ -27952,7 +31385,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],199:[function(require,module,exports){
+},{}],176:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag when a function has too many parameters
  * @author Ilya Volodin
@@ -27999,7 +31432,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],200:[function(require,module,exports){
+},{}],177:[function(require,module,exports){
 /**
  * @fileoverview A rule to set the maximum number of statements in a function.
  * @author Ian Christian Myers
@@ -28079,7 +31512,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],201:[function(require,module,exports){
+},{}],178:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag use of constructors without capital letters
  * @author Nicholas C. Zakas
@@ -28312,7 +31745,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],202:[function(require,module,exports){
+},{}],179:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag when using constructor without parentheses
  * @author Ilya Volodin
@@ -28343,7 +31776,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],203:[function(require,module,exports){
+},{}],180:[function(require,module,exports){
 /**
  * @fileoverview Rule to check empty newline after "var" statement
  * @author Gopal Venkatesan
@@ -28521,7 +31954,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],204:[function(require,module,exports){
+},{}],181:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag use of alert, confirm, prompt
  * @author Nicholas C. Zakas
@@ -28676,7 +32109,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],205:[function(require,module,exports){
+},{}],182:[function(require,module,exports){
 /**
  * @fileoverview Disallow construction of dense arrays using the Array constructor
  * @author Matt DuVall <http://www.mattduvall.com/>
@@ -28715,7 +32148,97 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],206:[function(require,module,exports){
+},{}],183:[function(require,module,exports){
+/**
+ * @fileoverview A rule to warn against using arrow functions in conditions.
+ * @author Jxck <https://github.com/Jxck>
+ * @copyright 2015 Luke Karrys. All rights reserved.
+ * The MIT License (MIT)
+
+ * Copyright (c) 2015 Jxck
+
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
+"use strict";
+
+//------------------------------------------------------------------------------
+// Helpers
+//------------------------------------------------------------------------------
+
+/**
+ * Checks whether or not a node is an arrow function expression.
+ * @param {ASTNode} node - node to test
+ * @returns {boolean} `true` if the node is an arrow function expression.
+ */
+function isArrowFunction(node) {
+    return node.test.type === "ArrowFunctionExpression";
+}
+
+/**
+ * Checks whether or not a node is a conditional expression.
+ * @param {ASTNode} node - node to test
+ * @returns {boolean} `true` if the node is a conditional expression.
+ */
+function isConditional(node) {
+    return node.body.type === "ConditionalExpression";
+}
+
+//------------------------------------------------------------------------------
+// Rule Definition
+//------------------------------------------------------------------------------
+
+module.exports = function(context) {
+    /**
+     * Reports if a conditional statement is an arrow function.
+     * @param {ASTNode} node - A node to check and report.
+     * @returns {void}
+     */
+    function checkCondition(node) {
+        if (isArrowFunction(node)) {
+            context.report(node, "Arrow function `=>` used inside {{statementType}} instead of comparison operator.", {statementType: node.type});
+        }
+    }
+
+    /**
+     * Reports if an arrow function contains an ambiguous conditional.
+     * @param {ASTNode} node - A node to check and report.
+     * @returns {void}
+     */
+    function checkArrowFunc(node) {
+        if (isConditional(node)) {
+            context.report(node, "Arrow function used ambiguously with a conditional expression.");
+        }
+    }
+
+    return {
+        "IfStatement": checkCondition,
+        "WhileStatement": checkCondition,
+        "ForStatement": checkCondition,
+        "ConditionalExpression": checkCondition,
+        "ArrowFunctionExpression": checkArrowFunc
+    };
+};
+
+module.exports.schema = [];
+
+},{}],184:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag bitwise identifiers
  * @author Nicholas C. Zakas
@@ -28774,7 +32297,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],207:[function(require,module,exports){
+},{}],185:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag use of arguments.callee and arguments.caller.
  * @author Nicholas C. Zakas
@@ -28805,7 +32328,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],208:[function(require,module,exports){
+},{}],186:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag variable leak in CatchClauses in IE 8 and earlier
  * @author Ian Christian Myers
@@ -28871,7 +32394,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],209:[function(require,module,exports){
+},{}],187:[function(require,module,exports){
 /**
  * @fileoverview A rule to disallow modifying variables of class declarations
  * @author Toru Nagashima
@@ -28921,7 +32444,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{"../ast-utils":153}],210:[function(require,module,exports){
+},{"../ast-utils":123}],188:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag assignment in a conditional statement's test expression
  * @author Stephen Murray <spmurrayzzz>
@@ -29056,7 +32579,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],211:[function(require,module,exports){
+},{}],189:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag use of console object
  * @author Nicholas C. Zakas
@@ -29085,7 +32608,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],212:[function(require,module,exports){
+},{}],190:[function(require,module,exports){
 /**
  * @fileoverview A rule to disallow modifying variables that are declared using `const`
  * @author Toru Nagashima
@@ -29128,7 +32651,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{"../ast-utils":153}],213:[function(require,module,exports){
+},{"../ast-utils":123}],191:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag use constant conditions
  * @author Christian Schulz <http://rndm.de>
@@ -29203,7 +32726,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],214:[function(require,module,exports){
+},{}],192:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag use of continue statement
  * @author Borislav Zhivkov
@@ -29228,7 +32751,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],215:[function(require,module,exports){
+},{}],193:[function(require,module,exports){
 /**
  * @fileoverview Rule to forbid control charactes from regular expressions.
  * @author Nicholas C. Zakas
@@ -29294,7 +32817,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],216:[function(require,module,exports){
+},{}],194:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag use of a debugger statement
  * @author Nicholas C. Zakas
@@ -29318,7 +32841,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],217:[function(require,module,exports){
+},{}],195:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag when deleting variables
  * @author Ilya Volodin
@@ -29345,7 +32868,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],218:[function(require,module,exports){
+},{}],196:[function(require,module,exports){
 /**
  * @fileoverview Rule to check for ambiguous div operator in regexes
  * @author Matt DuVall <http://www.mattduvall.com>
@@ -29374,7 +32897,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],219:[function(require,module,exports){
+},{}],197:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag duplicate arguments
  * @author Jamund Ferguson
@@ -29449,7 +32972,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],220:[function(require,module,exports){
+},{}],198:[function(require,module,exports){
 /**
  * @fileoverview A rule to disallow duplicate name in class members.
  * @author Toru Nagashima
@@ -29533,7 +33056,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],221:[function(require,module,exports){
+},{}],199:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag use of duplicate keys in an object.
  * @author Ian Christian Myers
@@ -29583,7 +33106,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],222:[function(require,module,exports){
+},{}],200:[function(require,module,exports){
 /**
  * @fileoverview Rule to disallow a duplicate case label.
   * @author Dieter Oberkofler
@@ -29618,7 +33141,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],223:[function(require,module,exports){
+},{}],201:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag `else` after a `return` in `if`
  * @author Ian Christian Myers
@@ -29764,7 +33287,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],224:[function(require,module,exports){
+},{}],202:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag the use of empty character classes in regular expressions
  * @author Ian Christian Myers
@@ -29811,7 +33334,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],225:[function(require,module,exports){
+},{}],203:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag when label is not used for a loop or switch
  * @author Ilya Volodin
@@ -29840,7 +33363,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],226:[function(require,module,exports){
+},{}],204:[function(require,module,exports){
 /**
  * @fileoverview Rule to disallow an empty pattern
  * @author Alberto Rodríguez
@@ -29870,7 +33393,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],227:[function(require,module,exports){
+},{}],205:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag use of an empty block statement
  * @author Nicholas C. Zakas
@@ -29921,7 +33444,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],228:[function(require,module,exports){
+},{}],206:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag comparisons to null without a type-checking
  * operator.
@@ -29952,7 +33475,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],229:[function(require,module,exports){
+},{}],207:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag use of eval() statement
  * @author Nicholas C. Zakas
@@ -29980,7 +33503,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],230:[function(require,module,exports){
+},{}],208:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag assignment of the exception parameter
  * @author Stephen Murray <spmurrayzzz>
@@ -30019,7 +33542,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{"../ast-utils":153}],231:[function(require,module,exports){
+},{"../ast-utils":123}],209:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag adding properties to native object's prototypes.
  * @author David Nelson
@@ -30122,7 +33645,7 @@ module.exports.schema = [
     }
 ];
 
-},{"globals":142}],232:[function(require,module,exports){
+},{"globals":108}],210:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag unnecessary bind calls
  * @author Bence Dányi <bence@danyi.me>
@@ -30208,7 +33731,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],233:[function(require,module,exports){
+},{}],211:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag unnecessary double negation in Boolean contexts
  * @author Brandon Mills
@@ -30281,7 +33804,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],234:[function(require,module,exports){
+},{}],212:[function(require,module,exports){
 /**
  * @fileoverview Disallow parenthesising higher precedence subexpressions.
  * @author Michael Ficarra
@@ -30764,7 +34287,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],235:[function(require,module,exports){
+},{}],213:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag use of unnecessary semicolons
  * @author Nicholas C. Zakas
@@ -30849,7 +34372,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],236:[function(require,module,exports){
+},{}],214:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag fall-through cases in switch statements.
  * @author Matt DuVall <http://mattduvall.com/>
@@ -30948,7 +34471,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],237:[function(require,module,exports){
+},{}],215:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag use of a leading/trailing decimal point in a numeric literal
  * @author James Allardice
@@ -30980,7 +34503,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],238:[function(require,module,exports){
+},{}],216:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag use of function declaration identifiers as variables.
  * @author Ian Christian Myers
@@ -31069,7 +34592,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{"../ast-utils":153}],239:[function(require,module,exports){
+},{"../ast-utils":123}],217:[function(require,module,exports){
 /**
  * @fileoverview A rule to disallow the type conversions with shorter notations.
  * @author Toru Nagashima
@@ -31272,7 +34795,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],240:[function(require,module,exports){
+},{}],218:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag use of implied eval via setTimeout and setInterval
  * @author James Allardice
@@ -31417,7 +34940,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],241:[function(require,module,exports){
+},{}],219:[function(require,module,exports){
 /**
  * @fileoverview Enforces or disallows inline comments.
  * @author Greg Cochard
@@ -31473,7 +34996,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{"../ast-utils":153}],242:[function(require,module,exports){
+},{"../ast-utils":123}],220:[function(require,module,exports){
 /**
  * @fileoverview Rule to enforce declarations in program or function body root.
  * @author Brandon Mills
@@ -31553,7 +35076,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],243:[function(require,module,exports){
+},{}],221:[function(require,module,exports){
 /**
  * @fileoverview Validate strings passed to the RegExp constructor
  * @author Michael Ficarra
@@ -31620,7 +35143,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{"espree":"espree"}],244:[function(require,module,exports){
+},{"espree":"espree"}],222:[function(require,module,exports){
 /**
  * @fileoverview A rule to disallow `this` keywords outside of classes or class-like objects.
  * @author Toru Nagashima
@@ -31972,7 +35495,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{"../ast-utils":153}],245:[function(require,module,exports){
+},{"../ast-utils":123}],223:[function(require,module,exports){
 /**
  * @fileoverview Rule to disalow whitespace that is not a tab or space, whitespace inside strings and comments are allowed
  * @author Jonathan Kingston
@@ -32109,7 +35632,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],246:[function(require,module,exports){
+},{}],224:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag usage of __iterator__ property
  * @author Ian Christian Myers
@@ -32139,7 +35662,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],247:[function(require,module,exports){
+},{}],225:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag labels that are the same as an identifier
  * @author Ian Christian Myers
@@ -32212,7 +35735,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],248:[function(require,module,exports){
+},{}],226:[function(require,module,exports){
 /**
  * @fileoverview Disallow Labeled Statements
  * @author Nicholas C. Zakas
@@ -32258,7 +35781,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],249:[function(require,module,exports){
+},{}],227:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag blocks with no reason to exist
  * @author Brandon Mills
@@ -32366,7 +35889,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],250:[function(require,module,exports){
+},{}],228:[function(require,module,exports){
 /**
  * @fileoverview Rule to disallow if as the only statmenet in an else block
  * @author Brandon Mills
@@ -32398,7 +35921,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],251:[function(require,module,exports){
+},{}],229:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag creation of function inside a loop
  * @author Ilya Volodin
@@ -32518,7 +36041,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],252:[function(require,module,exports){
+},{}],230:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag statements that use magic numbers (adapted from https://github.com/danielstjules/buddy.js)
  * @author Vincent Lemeunier
@@ -32650,7 +36173,7 @@ module.exports.schema = [{
     "additionalProperties": false
 }];
 
-},{}],253:[function(require,module,exports){
+},{}],231:[function(require,module,exports){
 /**
  * @fileoverview Rule to enforce grouped require statements for Node.JS
  * @author Raphael Pigulla
@@ -32836,7 +36359,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],254:[function(require,module,exports){
+},{}],232:[function(require,module,exports){
 /**
  * @fileoverview Disallow mixed spaces and tabs for indentation
  * @author Jary Niebur
@@ -32972,7 +36495,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],255:[function(require,module,exports){
+},{}],233:[function(require,module,exports){
 /**
  * @fileoverview Disallow use of multiple spaces.
  * @author Nicholas C. Zakas
@@ -33113,7 +36636,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],256:[function(require,module,exports){
+},{}],234:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag when using multiline strings
  * @author Ilya Volodin
@@ -33158,7 +36681,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],257:[function(require,module,exports){
+},{}],235:[function(require,module,exports){
 /**
  * @fileoverview Disallows multiple blank lines.
  * implementation adapted from the no-trailing-spaces rule.
@@ -33213,9 +36736,9 @@ module.exports = function(context) {
                 trimmedLines[i] = x;
             });
 
-            // a single empty line at the end is a valid case regardless of the value of "max" option
-            if (trimmedLines[trimmedLines.length - 2] !== "" &&
-                trimmedLines[trimmedLines.length - 1] === "") {
+            // swallow the final newline, as some editors add it automatically
+            // and we don't want it to cause an issue
+            if (trimmedLines[trimmedLines.length - 1] === "") {
                 trimmedLines = trimmedLines.slice(0, -1);
             }
 
@@ -33258,7 +36781,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],258:[function(require,module,exports){
+},{}],236:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag when re-assigning native objects
  * @author Ilya Volodin
@@ -33343,7 +36866,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],259:[function(require,module,exports){
+},{}],237:[function(require,module,exports){
 /**
  * @fileoverview Rule to disallow a negated condition
  * @author Alberto Rodríguez
@@ -33419,7 +36942,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],260:[function(require,module,exports){
+},{}],238:[function(require,module,exports){
 /**
  * @fileoverview A rule to disallow negated left operands of the `in` operator
  * @author Michael Ficarra
@@ -33446,7 +36969,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],261:[function(require,module,exports){
+},{}],239:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag nested ternary expressions
  * @author Ian Christian Myers
@@ -33472,7 +36995,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],262:[function(require,module,exports){
+},{}],240:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag when using new Function
  * @author Ilya Volodin
@@ -33511,7 +37034,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],263:[function(require,module,exports){
+},{}],241:[function(require,module,exports){
 /**
  * @fileoverview A rule to disallow calls to the Object constructor
  * @author Matt DuVall <http://www.mattduvall.com/>
@@ -33538,7 +37061,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],264:[function(require,module,exports){
+},{}],242:[function(require,module,exports){
 /**
  * @fileoverview Rule to disallow use of new operator with the `require` function
  * @author Wil Moore III
@@ -33565,7 +37088,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],265:[function(require,module,exports){
+},{}],243:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag when using constructor for wrapper objects
  * @author Ilya Volodin
@@ -33593,7 +37116,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],266:[function(require,module,exports){
+},{}],244:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag statements with function invocation preceded by
  * "new" and not part of assignment
@@ -33622,7 +37145,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],267:[function(require,module,exports){
+},{}],245:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag use of an object property of the global object (Math and JSON) as a function
  * @author James Allardice
@@ -33652,7 +37175,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],268:[function(require,module,exports){
+},{}],246:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag octal escape sequences in string literals.
  * @author Ian Christian Myers
@@ -33693,7 +37216,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],269:[function(require,module,exports){
+},{}],247:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag when initializing octal literal
  * @author Ilya Volodin
@@ -33720,7 +37243,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],270:[function(require,module,exports){
+},{}],248:[function(require,module,exports){
 /**
  * @fileoverview Disallow reassignment of function parameters.
  * @author Nat Burns
@@ -33858,7 +37381,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],271:[function(require,module,exports){
+},{}],249:[function(require,module,exports){
 /**
  * @fileoverview Disallow string concatenation when using __dirname and __filename
  * @author Nicholas C. Zakas
@@ -33899,10 +37422,11 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],272:[function(require,module,exports){
+},{}],250:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag use of unary increment and decrement operators.
  * @author Ian Christian Myers
+ * @author Brody McKee (github.com/mrmckeb)
  */
 
 "use strict";
@@ -33913,9 +37437,19 @@ module.exports.schema = [];
 
 module.exports = function(context) {
 
+    var config = context.options[0],
+        allowInForAfterthought = false;
+
+    if (typeof config === "object") {
+        allowInForAfterthought = config.allowForLoopAfterthoughts === true;
+    }
+
     return {
 
         "UpdateExpression": function(node) {
+            if (allowInForAfterthought && node.parent.type === "ForStatement") {
+                return;
+            }
             context.report(node, "Unary operator '" + node.operator + "' used.");
         }
 
@@ -33923,9 +37457,19 @@ module.exports = function(context) {
 
 };
 
-module.exports.schema = [];
+module.exports.schema = [
+    {
+        "type": "object",
+        "properties": {
+            "allowForLoopAfterthoughts": {
+                "type": "boolean"
+            }
+        },
+        "additionalProperties": false
+    }
+];
 
-},{}],273:[function(require,module,exports){
+},{}],251:[function(require,module,exports){
 /**
  * @fileoverview Disallow the use of process.env()
  * @author Vignesh Anand
@@ -33957,7 +37501,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],274:[function(require,module,exports){
+},{}],252:[function(require,module,exports){
 /**
  * @fileoverview Disallow the use of process.exit()
  * @author Nicholas C. Zakas
@@ -33992,7 +37536,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],275:[function(require,module,exports){
+},{}],253:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag usage of __proto__ property
  * @author Ilya Volodin
@@ -34022,7 +37566,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],276:[function(require,module,exports){
+},{}],254:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag when the same variable is declared more then once.
  * @author Ilya Volodin
@@ -34117,7 +37661,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],277:[function(require,module,exports){
+},{}],255:[function(require,module,exports){
 /**
  * @fileoverview Rule to count multiple spaces in regular expressions
  * @author Matt DuVall <http://www.mattduvall.com/>
@@ -34154,7 +37698,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],278:[function(require,module,exports){
+},{}],256:[function(require,module,exports){
 /**
  * @fileoverview Restrict usage of specified node modules.
  * @author Christian Schulz
@@ -34241,7 +37785,7 @@ module.exports.schema = {
     "uniqueItems": true
 };
 
-},{}],279:[function(require,module,exports){
+},{}],257:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag use of certain node types
  * @author Burak Yigit Kaya
@@ -34289,7 +37833,7 @@ module.exports.schema = {
     "minItems": 1
 };
 
-},{"espree":"espree"}],280:[function(require,module,exports){
+},{"espree":"espree"}],258:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag when return statement contains assignment
  * @author Ilya Volodin
@@ -34344,7 +37888,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],281:[function(require,module,exports){
+},{}],259:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag when using javascript: urls
  * @author Ilya Volodin
@@ -34380,7 +37924,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],282:[function(require,module,exports){
+},{}],260:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag comparison where left part is the same as the right
  * part.
@@ -34411,7 +37955,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],283:[function(require,module,exports){
+},{}],261:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag use of comma operator
  * @author Brandon Mills
@@ -34507,7 +38051,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],284:[function(require,module,exports){
+},{}],262:[function(require,module,exports){
 /**
  * @fileoverview Disallow shadowing of NaN, undefined, and Infinity (ES5 section 15.1.1)
  * @author Michael Ficarra
@@ -34566,7 +38110,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],285:[function(require,module,exports){
+},{}],263:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag on declaring variables already declared in the outer scope
  * @author Ilya Volodin
@@ -34583,8 +38127,19 @@ module.exports = function(context) {
 
     var options = {
         builtinGlobals: Boolean(context.options[0] && context.options[0].builtinGlobals),
-        hoist: (context.options[0] && context.options[0].hoist) || "functions"
+        hoist: (context.options[0] && context.options[0].hoist) || "functions",
+        allow: (context.options[0] && context.options[0].allow) || []
     };
+
+    /**
+     * Check if variable name is allowed.
+     *
+     * @param  {ASTNode} variable The variable to check.
+     * @returns {boolean} Whether or not the variable name is allowed.
+     */
+    function isAllowed(variable) {
+        return options.allow.indexOf(variable.name) !== -1;
+    }
 
     /**
      * Checks if a variable of the class name in the class scope of ClassDeclaration.
@@ -34711,7 +38266,8 @@ module.exports = function(context) {
                 // Skip "arguments".
                 variable.identifiers.length > 0 &&
                 // Skip variables of a class name in the class scope of ClassDeclaration.
-                !isDuplicatedClassNameVariable(variable)
+                !isDuplicatedClassNameVariable(variable) &&
+                !isAllowed(variable)
             );
         });
 
@@ -34744,13 +38300,19 @@ module.exports.schema = [
         "type": "object",
         "properties": {
             "builtinGlobals": {"type": "boolean"},
-            "hoist": {"enum": ["all", "functions", "never"]}
+            "hoist": {"enum": ["all", "functions", "never"]},
+            "allow": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            }
         },
         "additionalProperties": false
     }
 ];
 
-},{}],286:[function(require,module,exports){
+},{}],264:[function(require,module,exports){
 /**
  * @fileoverview Rule to check that spaced function application
  * @author Matt DuVall <http://www.mattduvall.com>
@@ -34808,7 +38370,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],287:[function(require,module,exports){
+},{}],265:[function(require,module,exports){
 /**
  * @fileoverview Disallow sparse arrays
  * @author Nicholas C. Zakas
@@ -34843,7 +38405,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],288:[function(require,module,exports){
+},{}],266:[function(require,module,exports){
 /**
  * @fileoverview Rule to check for properties whose identifier ends with the string Sync
  * @author Matt DuVall<http://mattduvall.com/>
@@ -34875,7 +38437,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],289:[function(require,module,exports){
+},{}],267:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag use of ternary operators.
  * @author Ian Christian Myers
@@ -34901,7 +38463,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],290:[function(require,module,exports){
+},{}],268:[function(require,module,exports){
 /**
  * @fileoverview A rule to disallow using `this`/`super` before `super()`.
  * @author Toru Nagashima
@@ -35047,7 +38609,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],291:[function(require,module,exports){
+},{}],269:[function(require,module,exports){
 /**
  * @fileoverview Rule to restrict what can be thrown as an exception.
  * @author Dieter Oberkofler
@@ -35119,7 +38681,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],292:[function(require,module,exports){
+},{}],270:[function(require,module,exports){
 /**
  * @fileoverview Disallow trailing spaces at the end of lines.
  * @author Nodeca Team <https://github.com/nodeca>
@@ -35227,7 +38789,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],293:[function(require,module,exports){
+},{}],271:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag when initializing to undefined
  * @author Ilya Volodin
@@ -35257,7 +38819,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],294:[function(require,module,exports){
+},{}],272:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag references to undeclared variables.
  * @author Mark Macdonald
@@ -35370,7 +38932,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],295:[function(require,module,exports){
+},{}],273:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag references to the undefined variable.
  * @author Michael Ficarra
@@ -35399,7 +38961,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],296:[function(require,module,exports){
+},{}],274:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag trailing underscores in variable declarations.
  * @author Matt DuVall <http://www.mattduvall.com>
@@ -35537,7 +39099,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],297:[function(require,module,exports){
+},{}],275:[function(require,module,exports){
 /**
  * @fileoverview Rule to spot scenarios where a newline looks like it is ending a statement, but is not.
  * @author Glen Mailer
@@ -35597,7 +39159,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],298:[function(require,module,exports){
+},{}],276:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag no-unneeded-ternary
  * @author Gyandeep Singh
@@ -35661,7 +39223,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],299:[function(require,module,exports){
+},{}],277:[function(require,module,exports){
 /**
  * @fileoverview Checks for unreachable code due to return, throws, break, and continue.
  * @author Joel Feenstra
@@ -35768,7 +39330,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],300:[function(require,module,exports){
+},{}],278:[function(require,module,exports){
 /**
  * @fileoverview Flag expressions in statement position that do not side effect
  * @author Michael Ficarra
@@ -35876,7 +39438,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],301:[function(require,module,exports){
+},{}],279:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag declared but unused variables
  * @author Ilya Volodin
@@ -36209,7 +39771,7 @@ module.exports.schema = [
     }
 ];
 
-},{"escape-string-regexp":22}],302:[function(require,module,exports){
+},{"escape-string-regexp":80}],280:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag use of variables before they are defined
  * @author Ilya Volodin
@@ -36334,7 +39896,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],303:[function(require,module,exports){
+},{}],281:[function(require,module,exports){
 /**
  * @fileoverview A rule to disallow unnecessary `.call()` and `.apply()`.
  * @author Toru Nagashima
@@ -36432,7 +39994,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{"../ast-utils":153}],304:[function(require,module,exports){
+},{"../ast-utils":123}],282:[function(require,module,exports){
 /**
  * @fileoverview disallow unncessary concatenation of template strings
  * @author Henry Zhu
@@ -36523,7 +40085,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{"../ast-utils":153}],305:[function(require,module,exports){
+},{"../ast-utils":123}],283:[function(require,module,exports){
 /**
  * @fileoverview Rule to check for the usage of var.
  * @author Jamund Ferguson
@@ -36551,7 +40113,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],306:[function(require,module,exports){
+},{}],284:[function(require,module,exports){
 /**
  * @fileoverview Rule to disallow use of void operator.
  * @author Mike Sidorov
@@ -36581,7 +40143,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],307:[function(require,module,exports){
+},{}],285:[function(require,module,exports){
 /**
  * @fileoverview Rule that warns about used warning comments
  * @author Alexander Schmidt <https://github.com/lxanders>
@@ -36692,7 +40254,7 @@ module.exports.schema = [
     }
 ];
 
-},{"../ast-utils":153}],308:[function(require,module,exports){
+},{"../ast-utils":123}],286:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag use of with statement
  * @author Nicholas C. Zakas
@@ -36716,7 +40278,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],309:[function(require,module,exports){
+},{}],287:[function(require,module,exports){
 /**
  * @fileoverview Disallows or enforces spaces inside of object literals.
  * @author Jamund Ferguson
@@ -36983,7 +40545,7 @@ module.exports.schema = [
     }
 ];
 
-},{"../ast-utils":153}],310:[function(require,module,exports){
+},{"../ast-utils":123}],288:[function(require,module,exports){
 /**
  * @fileoverview Rule to enforce concise object methods and properties.
  * @author Jamund Ferguson
@@ -37059,7 +40621,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],311:[function(require,module,exports){
+},{}],289:[function(require,module,exports){
 /**
  * @fileoverview A rule to control the use of single variable declarations.
  * @author Ian Christian Myers
@@ -37376,7 +40938,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],312:[function(require,module,exports){
+},{}],290:[function(require,module,exports){
 /**
  * @fileoverview Rule to replace assignment expressions with operator assignment
  * @author Brandon Mills
@@ -37496,7 +41058,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],313:[function(require,module,exports){
+},{}],291:[function(require,module,exports){
 /**
  * @fileoverview Operator linebreak - enforces operator linebreak style of two types: after and before
  * @author Benoît Zugmeyer
@@ -37644,7 +41206,7 @@ module.exports.schema = [
     }
 ];
 
-},{"../ast-utils":153}],314:[function(require,module,exports){
+},{"../ast-utils":123}],292:[function(require,module,exports){
 /**
  * @fileoverview A rule to ensure blank lines within blocks.
  * @author Mathias Schreck <https://github.com/lo1tuma>
@@ -37771,7 +41333,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],315:[function(require,module,exports){
+},{}],293:[function(require,module,exports){
 /**
  * @fileoverview A rule to suggest using arrow functions as callbacks.
  * @author Toru Nagashima
@@ -37979,7 +41541,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],316:[function(require,module,exports){
+},{}],294:[function(require,module,exports){
 /**
  * @fileoverview A rule to suggest using of const declaration for variables that are never modified after declared.
  * @author Toru Nagashima
@@ -38072,7 +41634,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],317:[function(require,module,exports){
+},{}],295:[function(require,module,exports){
 /**
  * @fileoverview Rule to suggest using "Reflect" api over Function/Object methods
  * @author Keith Cirkel <http://keithcirkel.co.uk>
@@ -38174,7 +41736,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],318:[function(require,module,exports){
+},{}],296:[function(require,module,exports){
 /**
  * @fileoverview A rule to suggest using of the spread operator instead of `.apply()`.
  * @author Toru Nagashima
@@ -38268,7 +41830,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{"../ast-utils":153}],319:[function(require,module,exports){
+},{"../ast-utils":123}],297:[function(require,module,exports){
 /**
  * @fileoverview A rule to suggest using template literals instead of string concatenation.
  * @author Toru Nagashima
@@ -38366,7 +41928,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{"../ast-utils":153}],320:[function(require,module,exports){
+},{"../ast-utils":123}],298:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag non-quoted property names in object literals.
  * @author Mathias Bynens <http://mathiasbynens.be/>
@@ -38596,7 +42158,7 @@ module.exports.schema = {
     ]
 };
 
-},{"../util/keywords":349,"espree":"espree"}],321:[function(require,module,exports){
+},{"../util/keywords":327,"espree":"espree"}],299:[function(require,module,exports){
 /**
  * @fileoverview A rule to choose between single and double quote marks
  * @author Matt DuVall <http://www.mattduvall.com/>, Brandon Payton
@@ -38777,7 +42339,7 @@ module.exports.schema = [
     }
 ];
 
-},{"../ast-utils":153,"to-double-quotes":151,"to-single-quotes":152}],322:[function(require,module,exports){
+},{"../ast-utils":123,"to-double-quotes":118,"to-single-quotes":119}],300:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag use of parseInt without a radix argument
  * @author James Allardice
@@ -38826,7 +42388,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],323:[function(require,module,exports){
+},{}],301:[function(require,module,exports){
 /**
  * @fileoverview Rule to check for jsdoc presence.
  * @author Gyandeep Singh
@@ -38866,7 +42428,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],324:[function(require,module,exports){
+},{}],302:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag the generator functions that does not have yield.
  * @author Toru Nagashima
@@ -38930,7 +42492,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],325:[function(require,module,exports){
+},{}],303:[function(require,module,exports){
 /**
  * @fileoverview Validates spacing before and after semicolon
  * @author Mathias Schreck
@@ -39105,7 +42667,7 @@ module.exports.schema = [
     }
 ];
 
-},{"../ast-utils":153}],326:[function(require,module,exports){
+},{"../ast-utils":123}],304:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag missing semicolons.
  * @author Nicholas C. Zakas
@@ -39272,7 +42834,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],327:[function(require,module,exports){
+},{}],305:[function(require,module,exports){
 /**
  * @fileoverview Rule to require sorting of variables within a single Variable Declaration block
  * @author Ilya Volodin
@@ -39327,7 +42889,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],328:[function(require,module,exports){
+},{}],306:[function(require,module,exports){
 /**
  * @fileoverview Rule to enforce the number of spaces after certain keywords
  * @author Nick Fisher
@@ -39441,7 +43003,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],329:[function(require,module,exports){
+},{}],307:[function(require,module,exports){
 /**
  * @fileoverview A rule to ensure whitespace before blocks.
  * @author Mathias Schreck <https://github.com/lo1tuma>
@@ -39574,7 +43136,7 @@ module.exports.schema = [
     }
 ];
 
-},{"../ast-utils":153}],330:[function(require,module,exports){
+},{"../ast-utils":123}],308:[function(require,module,exports){
 /**
  * @fileoverview Rule to validate spacing before function paren.
  * @author Mathias Schreck <https://github.com/lo1tuma>
@@ -39721,7 +43283,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],331:[function(require,module,exports){
+},{}],309:[function(require,module,exports){
 /**
  * @fileoverview Require or disallow spaces before keywords
  * @author Marko Raatikka
@@ -39934,7 +43496,7 @@ module.exports.schema = [
     }
 ];
 
-},{"../ast-utils":153}],332:[function(require,module,exports){
+},{"../ast-utils":123}],310:[function(require,module,exports){
 /**
  * @fileoverview Disallows or enforces spaces inside of parentheses.
  * @author Jonathan Rajavuori
@@ -40226,7 +43788,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],333:[function(require,module,exports){
+},{}],311:[function(require,module,exports){
 /**
  * @fileoverview Require spaces around infix operators
  * @author Michael Ficarra
@@ -40374,7 +43936,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],334:[function(require,module,exports){
+},{}],312:[function(require,module,exports){
 /**
  * @fileoverview Require spaces following return, throw, and case
  * @author Michael Ficarra
@@ -40426,7 +43988,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],335:[function(require,module,exports){
+},{}],313:[function(require,module,exports){
 /**
  * @fileoverview This rule shoud require or disallow spaces before or after unary operations.
  * @author Marcin Kumorek
@@ -40607,7 +44169,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],336:[function(require,module,exports){
+},{}],314:[function(require,module,exports){
 /**
  * @fileoverview Source code for spaced-comments rule
  * @author Gyandeep Singh
@@ -40860,7 +44422,7 @@ module.exports.schema = [
     }
 ];
 
-},{"escape-string-regexp":22}],337:[function(require,module,exports){
+},{"escape-string-regexp":80}],315:[function(require,module,exports){
 /**
  * @fileoverview Rule to control usage of strict mode directives.
  * @author Brandon Mills
@@ -41086,7 +44648,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],338:[function(require,module,exports){
+},{}],316:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag comparisons to the value NaN
  * @author James Allardice
@@ -41114,7 +44676,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],339:[function(require,module,exports){
+},{}],317:[function(require,module,exports){
 /**
  * @fileoverview Validates JSDoc comments are syntactically correct
  * @author Nicholas C. Zakas
@@ -41364,7 +44926,7 @@ module.exports.schema = [
     }
 ];
 
-},{"doctrine":13}],340:[function(require,module,exports){
+},{"doctrine":10}],318:[function(require,module,exports){
 /**
  * @fileoverview Ensures that the results of typeof are compared against a valid string
  * @author Ian Christian Myers
@@ -41408,7 +44970,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],341:[function(require,module,exports){
+},{}],319:[function(require,module,exports){
 /**
  * @fileoverview Rule to enforce var declarations are only at the top of a function.
  * @author Danny Fritz
@@ -41525,7 +45087,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],342:[function(require,module,exports){
+},{}],320:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag when IIFE is not wrapped in parens
  * @author Ilya Volodin
@@ -41581,7 +45143,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],343:[function(require,module,exports){
+},{}],321:[function(require,module,exports){
 /**
  * @fileoverview Rule to flag when regex literals are not wrapped in parens
  * @author Matt DuVall <http://www.mattduvall.com>
@@ -41621,7 +45183,7 @@ module.exports = function(context) {
 
 module.exports.schema = [];
 
-},{}],344:[function(require,module,exports){
+},{}],322:[function(require,module,exports){
 /**
  * @fileoverview Rule to require or disallow yoda comparisons
  * @author Nicholas C. Zakas
@@ -41865,7 +45427,7 @@ module.exports.schema = [
     }
 ];
 
-},{}],345:[function(require,module,exports){
+},{}],323:[function(require,module,exports){
 (function (process){
 /**
  * @fileoverview Tracks performance of individual rules.
@@ -42007,7 +45569,7 @@ module.exports = (function() {
 }());
 
 }).call(this,require('_process'))
-},{"_process":10}],346:[function(require,module,exports){
+},{"_process":117}],324:[function(require,module,exports){
 /**
  * @fileoverview Object to handle access and retrieval of tokens.
  * @author Brandon Mills
@@ -42210,7 +45772,7 @@ module.exports = function(tokens) {
     return api;
 };
 
-},{}],347:[function(require,module,exports){
+},{}],325:[function(require,module,exports){
 /**
  * @fileoverview Common utilities.
  */
@@ -42347,7 +45909,17 @@ exports.removeNameSpace = function removeNameSpace(pluginName) {
 
 exports.PLUGIN_NAME_PREFIX = PLUGIN_NAME_PREFIX;
 
-},{}],348:[function(require,module,exports){
+/**
+ * Gets the last element of a given array.
+ * @param {any[]} xs - An array to get.
+ * @returns {any|null} The last element, or `null` if the array is empty.
+ */
+exports.getLast = function(xs) {
+    var length = xs.length;
+    return (length === 0 ? null : xs[length - 1]);
+};
+
+},{}],326:[function(require,module,exports){
 /**
  * @fileoverview The event generator for comments.
  * @author Toru Nagashima
@@ -42465,7 +46037,7 @@ CommentEventGenerator.prototype = {
 
 module.exports = CommentEventGenerator;
 
-},{}],349:[function(require,module,exports){
+},{}],327:[function(require,module,exports){
 /**
  * @fileoverview A shared list of ES3 keywords.
  * @author Josh Perez
@@ -42535,7 +46107,7 @@ module.exports = [
     "with"
 ];
 
-},{}],350:[function(require,module,exports){
+},{}],328:[function(require,module,exports){
 /**
  * @fileoverview The event generator for AST nodes.
  * @author Toru Nagashima
@@ -42592,7 +46164,7 @@ NodeEventGenerator.prototype = {
 
 module.exports = NodeEventGenerator;
 
-},{}],351:[function(require,module,exports){
+},{}],329:[function(require,module,exports){
 /**
  * @fileoverview An object that creates fix commands for rules.
  * @author Nicholas C. Zakas
@@ -42741,7 +46313,7 @@ RuleFixer.prototype = {
 
 module.exports = RuleFixer;
 
-},{}],352:[function(require,module,exports){
+},{}],330:[function(require,module,exports){
 /**
  * @fileoverview Abstraction of JavaScript source code.
  * @author Nicholas C. Zakas
@@ -43017,5 +46589,5 @@ SourceCode.prototype = {
 
 module.exports = SourceCode;
 
-},{"../token-store.js":346,"estraverse":135,"object-assign":150}]},{},[155])(155)
+},{"../token-store.js":324,"estraverse":97,"object-assign":116}]},{},[132])(132)
 });

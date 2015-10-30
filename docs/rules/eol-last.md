@@ -40,6 +40,10 @@ function doSmth() {
 // spaces here
 ```
 
+### Options
+
+This rule may take one option which is either `unix` (LF) or `windows` (CRLF). When omitted `unix` is assumed.
+
 ## Version
 
 This rule was introduced in ESLint 0.7.1.

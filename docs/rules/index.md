@@ -211,6 +211,7 @@ These rules are only relevant to ES6 environments.
 * [arrow-spacing](arrow-spacing) - require space before/after arrow function's arrow (fixable)
 * [constructor-super](constructor-super) - verify calls of `super()` in constructors
 * [generator-star-spacing](generator-star-spacing) - enforce spacing around the `*` in generator functions (fixable)
+* [no-arrow-condition](no-arrow-condition) - disallow arrow functions where a condition is expected
 * [no-class-assign](no-class-assign) - disallow modifying variables of class declarations
 * [no-const-assign](no-const-assign) - disallow modifying variables that are declared using `const`
 * [no-dupe-class-members](no-dupe-class-members) - disallow duplicate name in class members
